@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/avm-react-app/%20/static/css/main.d1b05096.chunk.css",
-    "main.js": "/avm-react-app/%20/static/js/main.7b63fd03.chunk.js",
-    "main.js.map": "/avm-react-app/%20/static/js/main.7b63fd03.chunk.js.map",
-    "runtime-main.js": "/avm-react-app/%20/static/js/runtime-main.8e3aad87.js",
-    "runtime-main.js.map": "/avm-react-app/%20/static/js/runtime-main.8e3aad87.js.map",
-    "static/js/2.97ccdadd.chunk.js": "/avm-react-app/%20/static/js/2.97ccdadd.chunk.js",
-    "static/js/2.97ccdadd.chunk.js.map": "/avm-react-app/%20/static/js/2.97ccdadd.chunk.js.map",
-    "index.html": "/avm-react-app/%20/index.html",
-    "precache-manifest.445cb94fe31095467f50dc25874d3905.js": "/avm-react-app/%20/precache-manifest.445cb94fe31095467f50dc25874d3905.js",
-    "service-worker.js": "/avm-react-app/%20/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/avm-react-app/%20/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.97ccdadd.chunk.js.LICENSE.txt": "/avm-react-app/%20/static/js/2.97ccdadd.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/avm-react-app/%20/static/media/logo.5d5d9eef.svg"
+    "main.css": "/avm-react-app/static/css/main.d1b05096.chunk.css",
+    "main.js": "/avm-react-app/static/js/main.c79e79c4.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.c79e79c4.chunk.js.map",
+    "runtime-main.js": "/avm-react-app/static/js/runtime-main.b4bcb460.js",
+    "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.b4bcb460.js.map",
+    "static/js/2.97ccdadd.chunk.js": "/avm-react-app/static/js/2.97ccdadd.chunk.js",
+    "static/js/2.97ccdadd.chunk.js.map": "/avm-react-app/static/js/2.97ccdadd.chunk.js.map",
+    "index.html": "/avm-react-app/index.html",
+    "precache-manifest.6e61ad1bd8d9b9daa9c74f5a88512f8d.js": "/avm-react-app/precache-manifest.6e61ad1bd8d9b9daa9c74f5a88512f8d.js",
+    "service-worker.js": "/avm-react-app/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/avm-react-app/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.97ccdadd.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.97ccdadd.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/avm-react-app/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8e3aad87.js",
+    "static/js/runtime-main.b4bcb460.js",
     "static/js/2.97ccdadd.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.7b63fd03.chunk.js"
+    "static/js/main.c79e79c4.chunk.js"
   ]
 }
