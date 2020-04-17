@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/avm-react-app/%20/static/css/main.d1b05096.chunk.css",
+    "main.js": "/avm-react-app/%20/static/js/main.64493a8a.chunk.js",
+    "main.js.map": "/avm-react-app/%20/static/js/main.64493a8a.chunk.js.map",
+    "runtime-main.js": "/avm-react-app/%20/static/js/runtime-main.8e3aad87.js",
+    "runtime-main.js.map": "/avm-react-app/%20/static/js/runtime-main.8e3aad87.js.map",
+    "static/js/2.97ccdadd.chunk.js": "/avm-react-app/%20/static/js/2.97ccdadd.chunk.js",
+    "static/js/2.97ccdadd.chunk.js.map": "/avm-react-app/%20/static/js/2.97ccdadd.chunk.js.map",
+    "index.html": "/avm-react-app/%20/index.html",
+    "precache-manifest.c98d53725c8015c5cb7e01e8a8fc46f1.js": "/avm-react-app/%20/precache-manifest.c98d53725c8015c5cb7e01e8a8fc46f1.js",
+    "service-worker.js": "/avm-react-app/%20/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/avm-react-app/%20/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.97ccdadd.chunk.js.LICENSE.txt": "/avm-react-app/%20/static/js/2.97ccdadd.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/avm-react-app/%20/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e3aad87.js",
+    "static/js/2.97ccdadd.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.64493a8a.chunk.js"
+  ]
+}
