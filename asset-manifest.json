@@ -1,23 +1,28 @@
 {
   "files": {
-    "main.css": "/avm-react-app/static/css/main.d1b05096.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.c79e79c4.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.c79e79c4.chunk.js.map",
+    "main.css": "/avm-react-app/static/css/main.606a079d.chunk.css",
+    "main.js": "/avm-react-app/static/js/main.78e8ab54.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.78e8ab54.chunk.js.map",
     "runtime-main.js": "/avm-react-app/static/js/runtime-main.b4bcb460.js",
     "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.b4bcb460.js.map",
-    "static/js/2.97ccdadd.chunk.js": "/avm-react-app/static/js/2.97ccdadd.chunk.js",
-    "static/js/2.97ccdadd.chunk.js.map": "/avm-react-app/static/js/2.97ccdadd.chunk.js.map",
+    "static/css/2.0cd06e21.chunk.css": "/avm-react-app/static/css/2.0cd06e21.chunk.css",
+    "static/js/2.16d2ab1e.chunk.js": "/avm-react-app/static/js/2.16d2ab1e.chunk.js",
+    "static/js/2.16d2ab1e.chunk.js.map": "/avm-react-app/static/js/2.16d2ab1e.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.6e61ad1bd8d9b9daa9c74f5a88512f8d.js": "/avm-react-app/precache-manifest.6e61ad1bd8d9b9daa9c74f5a88512f8d.js",
+    "precache-manifest.5c9cf27b9de0b27f9cc466617399f90f.js": "/avm-react-app/precache-manifest.5c9cf27b9de0b27f9cc466617399f90f.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/avm-react-app/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.97ccdadd.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.97ccdadd.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/avm-react-app/static/media/logo.5d5d9eef.svg"
+    "static/css/2.0cd06e21.chunk.css.map": "/avm-react-app/static/css/2.0cd06e21.chunk.css.map",
+    "static/css/main.606a079d.chunk.css.map": "/avm-react-app/static/css/main.606a079d.chunk.css.map",
+    "static/js/2.16d2ab1e.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.16d2ab1e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/avm-react-app/static/media/MaskGroup3.6e79ed0d.png",
+    "static/media/audio_world.png": "/avm-react-app/static/media/audio_world.f8684df1.png",
+    "static/media/audio_world02.png": "/avm-react-app/static/media/audio_world02.73fdce19.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b4bcb460.js",
-    "static/js/2.97ccdadd.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.c79e79c4.chunk.js"
+    "static/css/2.0cd06e21.chunk.css",
+    "static/js/2.16d2ab1e.chunk.js",
+    "static/css/main.606a079d.chunk.css",
+    "static/js/main.78e8ab54.chunk.js"
   ]
 }
