@@ -639,6 +639,7 @@ export default class Main extends React.Component {
                   <OfferCard datos={offerData[5]} />
                   <OfferCard datos={offerData[6]} />
                   <OfferCard datos={offerData[7]} />
+                  <OfferCard datos={offerData[0]} />
                 </OwlCarousel>
               </article>
             </section>
