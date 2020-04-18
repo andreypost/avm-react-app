@@ -1,43 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6d3e21e2ec1fc93741c4ab6185d6df93",
+    "revision": "21a88dbefae464ce9b924e89e11bdc0e",
     "url": "/avm-react-app/index.html"
   },
   {
-    "revision": "94931b9c6a08790e3d18",
+    "revision": "18360c52fb221068723c",
     "url": "/avm-react-app/static/css/2.0cd06e21.chunk.css"
   },
   {
-    "revision": "d21e7558e2fe64c243fd",
-    "url": "/avm-react-app/static/css/main.606a079d.chunk.css"
+    "revision": "3fe1103d1af2ebfc75d8",
+    "url": "/avm-react-app/static/css/main.b0c51f23.chunk.css"
   },
   {
-    "revision": "94931b9c6a08790e3d18",
-    "url": "/avm-react-app/static/js/2.16d2ab1e.chunk.js"
+    "revision": "18360c52fb221068723c",
+    "url": "/avm-react-app/static/js/2.1f199478.chunk.js"
   },
   {
     "revision": "925e52c28b12d63edac5d05fc71f820f",
-    "url": "/avm-react-app/static/js/2.16d2ab1e.chunk.js.LICENSE.txt"
+    "url": "/avm-react-app/static/js/2.1f199478.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d21e7558e2fe64c243fd",
-    "url": "/avm-react-app/static/js/main.78e8ab54.chunk.js"
+    "revision": "3fe1103d1af2ebfc75d8",
+    "url": "/avm-react-app/static/js/main.740ce4d9.chunk.js"
   },
   {
     "revision": "b5d9085408121ae50e63",
     "url": "/avm-react-app/static/js/runtime-main.b4bcb460.js"
   },
   {
-    "revision": "ed1d7107998c6acaf128f962a925c8e5",
-    "url": "/avm-react-app/static/media/Image1.ed1d7107.png"
-  },
-  {
     "revision": "5be8989d8e41e183bbcac85277402656",
     "url": "/avm-react-app/static/media/Image2.5be8989d.png"
   },
   {
-    "revision": "82b23e1afff4b7e05f69749f3d08116b",
-    "url": "/avm-react-app/static/media/MaskGroup0.82b23e1a.png"
+    "revision": "8bf369d2548b1f6bbfc280511c17cb5d",
+    "url": "/avm-react-app/static/media/Image_003.8bf369d2.jpg"
+  },
+  {
+    "revision": "40cda7a5699e53dd75d90166ea62fd8a",
+    "url": "/avm-react-app/static/media/Image_005.40cda7a5.jpg"
+  },
+  {
+    "revision": "4bf766706d414cdb6b4644c22dcf67f7",
+    "url": "/avm-react-app/static/media/Image_006.4bf76670.jpg"
   },
   {
     "revision": "4b23662bb14ce5cf56461a4b061d24fa",
@@ -50,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6e79ed0d1a6467b10a74c4a39950a656",
     "url": "/avm-react-app/static/media/MaskGroup3.6e79ed0d.png"
+  },
+  {
+    "revision": "ed1d7107998c6acaf128f962a925c8e5",
+    "url": "/avm-react-app/static/media/Offer_001.ed1d7107.png"
   },
   {
     "revision": "f8684df10523c20f41fc7d4fafba54a3",
