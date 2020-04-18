@@ -1,16 +1,20 @@
 import React from 'react';
-// import 'owl.carousel';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link } from "react-router-dom";
 import Header from './components/Header';
-import Footer from './components/Footer'
+import cardData from './cardData';
+import offerData from './offerData';
+import ProductCard from './components/ProductCard';
+import DiscountCard from './components/DiscountCard';
+import OfferCard from './components/OfferCard';
+import Footer from './components/Footer';
 import ModalsPro from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup1.png';
 import photo_002 from './img/MaskGroup2.png';
 import photo_003 from './img/MaskGroup3.png';
-import photo_004 from './img/MaskGroup0.png';
+// import photo_004 from './img/Image1.png';
 // import photo_005 from './img/audio_world.png';
 // import photo_006 from './img/audio_world.png';
 
@@ -18,6 +22,32 @@ import photo_004 from './img/MaskGroup0.png';
 export default class Main extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0)
+    const showContentTabs = (container) => {
+      if (!container) return
+      let tabs = container.querySelector('.tabs__caption'),
+        currentTab = container.querySelector('.active'),
+        content = container.querySelector('.tabs__content'),
+        currentContent = content.querySelector('.active')
+      tabs.onclick = (e) => {
+        let tab = e.target.closest('.tab')
+        if (!tab || tab.classList.contains('active')) return
+        let blocks = content.querySelectorAll('.tabs__block')
+        for (let block of blocks) {
+          if (block.dataset.tab === tab.dataset.tab) {
+            block.classList.add('active')
+            currentContent.classList.remove('active')
+            currentContent = block
+            if (container.querySelector('A')) {
+              container.querySelector('A').href = tab.dataset.href
+            }
+          }
+        }
+        currentTab.classList.remove('active')
+        currentTab = tab
+        currentTab.classList.add('active')
+      }
+    }
+    showContentTabs(document.getElementById('tabsMainPage'))
     //   $('.owl-carousel.producers__img').owlCarousel({
     //     loop: true,
     //     rewind: true,
@@ -42,30 +72,6 @@ export default class Main extends React.Component {
     //     }
     // })
 
-    // $('.owl-carousel').owlCarousel({
-    //     loop: false,
-    //     rewind: true,
-    //     margin: 10,
-    //     nav: true,
-    //     dots: false,
-    //     autoplay: false,
-    //     navText: false,
-    //     // autoplayHoverPause: false,
-        // responsive: {
-        //     0: {
-        //         items: 2
-        //     },
-        //     768: {
-        //         items: 3
-        //     },
-        //     1024: {
-        //         items: 4
-        //     },
-        //     1280: {
-        //         items: 5
-        //     }
-        // }
-    // })
     const forbidScrollNav = (elem) => {
       if (!elem) return
       let uls = elem.querySelectorAll('ul'),
@@ -474,17 +480,17 @@ export default class Main extends React.Component {
                 </div>
                 <div className="carousel-item">
                   <a href=" ">
-                    <img src={photo_004} className="d-block w-100" alt="..." />
-                  </a>
-                </div>
-                <div className="carousel-item">
-                  <a href=" ">
                     <img src={photo_001} className="d-block w-100" alt="..." />
                   </a>
                 </div>
                 <div className="carousel-item">
                   <a href=" ">
                     <img src={photo_002} className="d-block w-100" alt="..." />
+                  </a>
+                </div>
+                <div className="carousel-item">
+                  <a href=" ">
+                    <img src={photo_003} className="d-block w-100" alt="..." />
                   </a>
                 </div>
               </div>
@@ -515,477 +521,143 @@ export default class Main extends React.Component {
               <h2>ПРОСМОТРЕННЫЕ ТОВАРЫ</h2>
               <a href="_viewed_products.html">Все товары</a>
             </hgroup>
-            <article>
-              <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
-              responsive={ {0: { items: 2 }, 768:{ items: 3 },  1024:{ items: 4 }, 1280:{ items: 5 }} }>
-              {/* <OwlCarousel className="owl-carousel owl-theme" loop={false} margin={10} nav responsive={ "0"= "{ items: 2 }", 768:{ items: 3 }, 1024:{ items: 4 }, 1280:{ items: 5 }}> */}
-
-                <div className="item products__card" >
-                  <div className="flexbet">
-                    <div className="flexcenter">
-                      <div className="products__icon relative">
-                        {/* <i className="products__credit"></i> */}
-                        <img src="./img/Groupe464.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__gift"></i> */}
-                        <img src="./img/Groupe465.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__video"></i> */}
-                        <img src="./img/Groupe466.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>Посмотреть видео:</h4>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__gift"></i> */}
-                        <img src="./img/Groupe467.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flexcenter">
-                      <i className="products__compare" data-product="id"></i>
-                      <i className="products__love" data-product="id"></i>
-                    </div>
-                  </div>
-                  <img src="./img/Image1.png" alt="" />
-                  <div className="description__card">
-                    <a href="_procard_base.html" className="products__name">Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap
-                        Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap</a>
-                  </div>
-                  <div className="flexcenter juststart">
-                    <a href=" " className="products__comments">Оставить отзыв</a>
-                  </div>
-                  <div className="products__div flexbet alignend">
-                    <div className="flexcol alignstart">
-                      <h3 className="products__price flexcenter">105
-                            120<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
-                    </div>
-                    <div className="flexcol">
-                      <i className="discount__log selfnend relative" data-product="">Хочу скидку!</i>
-                      <a href=" " className="products__buy" data-product="">КУПИТЬ</a>
-                    </div>
-                  </div>
-                  <a href=" " className="products__buy products__buymob selfcenter">КУПИТЬ</a>
-                </div>
-
-                <div className="item discount__card">
-                  <div className="flexbet">
-                    <div className="flexcenter">
-                      <div className="products__icon relative">
-                        <i className="products__credit"></i>
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        <i className="products__gift"></i>
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        <i className="products__video"></i>
-                        <div className="products__popup flexcol">
-                          <h4>Посмотреть видео:</h4>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flexcenter">
-                      <i className="products__compare"></i>
-                      <i className="products__love"></i>
-                    </div>
-                  </div>
-                  <img src="./img/Image2.png" alt="" />
-                  <div className="description__card">
-                    <p className="discount__sales marginbot2010">Акция! Честный кредит до 24 месяцев. Акция! Акция!
-                    Честный кредит
-                    до
-                        24 месяцев. Акция! Акция! Честный кредит до 24 месяцев. Акция!</p>
-                    <a href="_procard_base.html" className="products__name">Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap
-                        Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap</a>
-                  </div>
-                  <div className="flexcenter juststart">
-                    <div className="products__rating flexcenter ">
-                      <input type="radio" name="productName01" id="productName01_01" /><label
-                        htmlFor="productName01_01"></label>
-                      <input type="radio" name="productName01" id="productName01_02" /><label
-                        htmlFor="productName01_02"></label>
-                      <input type="radio" name="productName01" id="productName01_03" /><label
-                        htmlFor="productName01_03"></label>
-                      <input type="radio" name="productName01" id="productName01_04" /><label
-                        htmlFor="productName01_04"></label>
-                      <input type="radio" name="productName01" id="productName01_05" /><label
-                        htmlFor="productName01_05"></label>
-                    </div>
-                    <a href=" " className="products__comments">Отзывов: <span>30</span></a>
-                  </div>
-                  <div className="products__div flexbet alignend">
-                    <div className="products__info flexcol alignstart">
-                      <h5 className="discount__price flexcenter relative">112 120<span>&nbsp;грн</span></h5>
-                      <h3 className="products__price flexcenter">105
-                            120<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
-                    </div>
-                    <div className="flexcol">
-                      <a href=" " className="products__buy">КУПИТЬ</a>
-                    </div>
-                  </div>
-                  <a href=" " className="products__buy products__buymob selfcenter">КУПИТЬ</a>
-                </div>
-
-                <div className="item products__card" >
-                  <div className="flexbet">
-                    <div className="flexcenter">
-                      <div className="products__icon relative">
-                        {/* <i className="products__credit"></i> */}
-                        <img src="./img/Groupe464.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__gift"></i> */}
-                        <img src="./img/Groupe465.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__video"></i> */}
-                        <img src="./img/Groupe466.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>Посмотреть видео:</h4>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__gift"></i> */}
-                        <img src="./img/Groupe467.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flexcenter">
-                      <i className="products__compare" data-product="id"></i>
-                      <i className="products__love" data-product="id"></i>
-                    </div>
-                  </div>
-                  <img src="./img/Image1.png" alt="" />
-                  <div className="description__card">
-                    <a href="_procard_base.html" className="products__name">Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap
-                        Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap</a>
-                  </div>
-                  <div className="flexcenter juststart">
-                    <a href=" " className="products__comments">Оставить отзыв</a>
-                  </div>
-                  <div className="products__div flexbet alignend">
-                    <div className="flexcol alignstart">
-                      <h3 className="products__price flexcenter">105
-                            120<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
-                    </div>
-                    <div className="flexcol">
-                      <i className="discount__log selfnend relative" data-product="">Хочу скидку!</i>
-                      <a href=" " className="products__buy" data-product="">КУПИТЬ</a>
-                    </div>
-                  </div>
-                  <a href=" " className="products__buy products__buymob selfcenter">КУПИТЬ</a>
-                </div>
-
-                <div className="item discount__card">
-                  <div className="flexbet">
-                    <div className="flexcenter">
-                      <div className="products__icon relative">
-                        <i className="products__credit"></i>
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        <i className="products__gift"></i>
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        <i className="products__video"></i>
-                        <div className="products__popup flexcol">
-                          <h4>Посмотреть видео:</h4>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flexcenter">
-                      <i className="products__compare"></i>
-                      <i className="products__love"></i>
-                    </div>
-                  </div>
-                  <img src="./img/Image2.png" alt="" />
-                  <div className="description__card">
-                    <p className="discount__sales marginbot2010">Акция! Честный кредит до 24 месяцев. Акция! Акция!
-                    Честный кредит
-                    до
-                        24 месяцев. Акция! Акция! Честный кредит до 24 месяцев. Акция!</p>
-                    <a href="_procard_base.html" className="products__name">Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap
-                        Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap</a>
-                  </div>
-                  <div className="flexcenter juststart">
-                    <div className="products__rating flexcenter ">
-                      <input type="radio" name="productName02" id="productName02_01" /><label
-                        htmlFor="productName02_01"></label>
-                      <input type="radio" name="productName02" id="productName02_02" /><label
-                        htmlFor="productName02_02"></label>
-                      <input type="radio" name="productName02" id="productName02_03" /><label
-                        htmlFor="productName02_03"></label>
-                      <input type="radio" name="productName02" id="productName02_04" /><label
-                        htmlFor="productName02_04"></label>
-                      <input type="radio" name="productName02" id="productName02_05" /><label
-                        htmlFor="productName02_05"></label>
-                    </div>
-                    <a href=" " className="products__comments">Отзывов: <span>30</span></a>
-                  </div>
-                  <div className="products__div flexbet alignend">
-                    <div className="products__info flexcol alignstart">
-                      <h5 className="discount__price flexcenter relative">112 120<span>&nbsp;грн</span></h5>
-                      <h3 className="products__price flexcenter">105
-                            120<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
-                    </div>
-                    <div className="flexcol">
-                      <a href=" " className="products__buy">КУПИТЬ</a>
-                    </div>
-                  </div>
-                  <a href=" " className="products__buy products__buymob selfcenter">КУПИТЬ</a>
-                </div>
-
-                <div className="item products__card" >
-                  <div className="flexbet">
-                    <div className="flexcenter">
-                      <div className="products__icon relative">
-                        {/* <i className="products__credit"></i> */}
-                        <img src="./img/Groupe464.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__gift"></i> */}
-                        <img src="./img/Groupe465.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__video"></i> */}
-                        <img src="./img/Groupe466.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>Посмотреть видео:</h4>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        {/* <i className="products__gift"></i> */}
-                        <img src="./img/Groupe467.png" alt="" />
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flexcenter">
-                      <i className="products__compare" data-product="id"></i>
-                      <i className="products__love" data-product="id"></i>
-                    </div>
-                  </div>
-                  <img src="./img/Image1.png" alt="" />
-                  <div className="description__card">
-                    <a href="_procard_base.html" className="products__name">Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap
-                        Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap</a>
-                  </div>
-                  <div className="flexcenter juststart">
-                    <a href=" " className="products__comments">Оставить отзыв</a>
-                  </div>
-                  <div className="products__div flexbet alignend">
-                    <div className="flexcol alignstart">
-                      <h3 className="products__price flexcenter">105
-                            120<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
-                    </div>
-                    <div className="flexcol">
-                      <i className="discount__log selfnend relative" data-product="">Хочу скидку!</i>
-                      <a href=" " className="products__buy" data-product="">КУПИТЬ</a>
-                    </div>
-                  </div>
-                  <a href=" " className="products__buy products__buymob selfcenter">КУПИТЬ</a>
-                </div>
-
-                <div className="item discount__card">
-                  <div className="flexbet">
-                    <div className="flexcenter">
-                      <div className="products__icon relative">
-                        <i className="products__credit"></i>
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        <i className="products__gift"></i>
-                        <div className="products__popup flexcol">
-                          <h4>До 10 месяцев рассрочка для Вас 0%</h4>
-                          <h6>Чтобы оформить "Оплату частями" необходимо:</h6>
-                          <h6>Наличие кредитной карты ПриватБанка с активированной услугой "Оплата
-                          Частями"
-                                </h6>
-                          <h6>Доступный кредитный лимит</h6>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                      <div className="products__icon relative">
-                        <i className="products__video"></i>
-                        <div className="products__popup flexcol">
-                          <h4>Посмотреть видео:</h4>
-                          <a href=" ">Подробнее</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flexcenter">
-                      <i className="products__compare"></i>
-                      <i className="products__love"></i>
-                    </div>
-                  </div>
-                  <img src="./img/Image2.png" alt="" />
-                  <div className="description__card">
-                    <p className="discount__sales marginbot2010">Акция! Честный кредит до 24 месяцев. Акция! Акция!
-                    Честный кредит
-                    до
-                        24 месяцев. Акция! Акция! Честный кредит до 24 месяцев. Акция!</p>
-                    <a href="_procard_base.html" className="products__name">Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap
-                        Усилитель мощности Naim Nap v175 Naim Nap v175Nap Nap</a>
-                  </div>
-                  <div className="flexcenter juststart">
-                    <div className="products__rating flexcenter ">
-                      <input type="radio" name="productName03" id="productName03_01" /><label
-                        htmlFor="productName03_01"></label>
-                      <input type="radio" name="productName03" id="productName03_02" /><label
-                        htmlFor="productName03_02"></label>
-                      <input type="radio" name="productName03" id="productName03_03" /><label
-                        htmlFor="productName03_03"></label>
-                      <input type="radio" name="productName03" id="productName03_04" /><label
-                        htmlFor="productName03_04"></label>
-                      <input type="radio" name="productName03" id="productName03_05" /><label
-                        htmlFor="productName03_05"></label>
-                    </div>
-                    <a href=" " className="products__comments">Отзывов: <span>30</span></a>
-                  </div>
-                  <div className="products__div flexbet alignend">
-                    <div className="products__info flexcol alignstart">
-                      <h5 className="discount__price flexcenter relative">112 120<span>&nbsp;грн</span></h5>
-                      <h3 className="products__price flexcenter">105
-                            120<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
-                    </div>
-                    <div className="flexcol">
-                      <a href=" " className="products__buy">КУПИТЬ</a>
-                    </div>
-                  </div>
-                  <a href=" " className="products__buy products__buymob selfcenter">КУПИТЬ</a>
-                </div>
-
-              </OwlCarousel>
-
+            <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+              responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+              <ProductCard datos={cardData[0]} />
+              <DiscountCard datos={cardData[1]} />
+              <ProductCard datos={cardData[2]} />
+              <DiscountCard datos={cardData[3]} />
+              <ProductCard datos={cardData[4]} />
+              <DiscountCard datos={cardData[5]} />
+              <ProductCard datos={cardData[6]} />
+              <DiscountCard datos={cardData[7]} />
+            </OwlCarousel>
+            <article className="main__addicons flexcenter alignstart flexwrap">
+              <div className="main__dialer flexcol">
+                <div><i></i></div>
+                <h4>Официальный дилер</h4>
+                <h5>с 1999 года</h5>
+              </div>
+              <div className="main__room flexcol">
+                <div><i></i></div>
+                <h4>Прослушивание</h4>
+                <h5>в новом шоу-руме</h5>
+              </div>
+              <div className="main__expert flexcol">
+                <div><i></i></div>
+                <h4>Ваш личный эксперт</h4>
+                <h5>поможет с выбором цена/качество</h5>
+              </div>
+              <div className="main__prices flexcol">
+                <div><i></i></div>
+                <h4>Доступные цены</h4>
+                <h5>на рынке аудио-видео техники</h5>
+              </div>
             </article>
           </section>
+          <section className="carousel__section">
+            <div id="tabsMainPage">
+              <div className="tabs__caption global__hgroup flexcenter justbeet">
+                <hgroup className="flexbet">
+                  <h2 className="tab active" data-tab="hits" data-href="_bestsellers.html">ХИТ ПРОДАЖ</h2>
+                  <h2 className="tab" data-tab="sales" data-href="_all_stocks.html">АКЦИИ</h2>
+                  <h2 className="tab" data-tab="novelty" data-href="_new_items.html">НОВИНКИ</h2>
+                  <h2 className="tab" data-tab="stocks" data-href="_markdown.html">УЦЕНКА</h2>
+                </hgroup>
+                <a href="_bestsellers.html">Все товары</a>
+              </div>
+              <div className="tabs__content">
+                <article className="tabs__block active" data-tab="hits">
+                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                    responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                    <ProductCard datos={cardData[0]} />
+                    <DiscountCard datos={cardData[1]} />
+                    <ProductCard datos={cardData[2]} />
+                    <DiscountCard datos={cardData[3]} />
+                    <ProductCard datos={cardData[4]} />
+                    <DiscountCard datos={cardData[5]} />
+                    <ProductCard datos={cardData[6]} />
+                    <DiscountCard datos={cardData[7]} />
+                  </OwlCarousel>
+                </article>
+                <article className="tabs__block" data-tab="sales">
+                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                    responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                    <ProductCard datos={cardData[7]} />
+                    <DiscountCard datos={cardData[6]} />
+                    <ProductCard datos={cardData[5]} />
+                    <DiscountCard datos={cardData[4]} />
+                    <ProductCard datos={cardData[3]} />
+                    <DiscountCard datos={cardData[2]} />
+                    <ProductCard datos={cardData[1]} />
+                    <DiscountCard datos={cardData[0]} />
+                  </OwlCarousel>
+                </article>
+                <article className="tabs__block" data-tab="novelty">
+                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                    responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                    <DiscountCard datos={cardData[1]} />
+                    <ProductCard datos={cardData[2]} />
+                    <DiscountCard datos={cardData[3]} />
+                    <ProductCard datos={cardData[4]} />
+                    <DiscountCard datos={cardData[5]} />
+                    <ProductCard datos={cardData[6]} />
+                    <DiscountCard datos={cardData[7]} />
+                    <ProductCard datos={cardData[0]} />
+                  </OwlCarousel>
+                </article>
+                <article className="tabs__block" data-tab="stocks">
+                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                    responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                    <DiscountCard datos={cardData[0]} />
+                    <ProductCard datos={cardData[7]} />
+                    <DiscountCard datos={cardData[6]} />
+                    <ProductCard datos={cardData[5]} />
+                    <DiscountCard datos={cardData[4]} />
+                    <ProductCard datos={cardData[3]} />
+                    <DiscountCard datos={cardData[2]} />
+                    <ProductCard datos={cardData[1]} />
+                  </OwlCarousel>
+                </article>
+              </div>
+            </div>
+          </section>
+          <article className="offer__special">
+            <section className="carousel__section">
+              <hgroup className="global__hgroup flexbet">
+                <h2>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</h2>
+                <a href="_category.html">Все товары</a>
+              </hgroup>
+              <article>
+                <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                  responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                  <OfferCard datos={offerData[0]} />
+                  <OfferCard datos={offerData[1]} />
+                  <OfferCard datos={offerData[2]} />
+                  <OfferCard datos={offerData[3]} />
+                  <OfferCard datos={offerData[4]} />
+                  <OfferCard datos={offerData[5]} />
+                  <OfferCard datos={offerData[6]} />
+                  <OfferCard datos={offerData[7]} />
+                </OwlCarousel>
+              </article>
+            </section>
+          </article>
+
+
+          <article className="mailing__article">
+            <section>
+              <form action="" id="mailingForm" className="flexbet">
+                <hgroup>
+                  <h2>ПОДПИСАТЬСЯ НА РАССЫЛКУ</h2>
+                  <h3>Хотите первым узнавать об акциях и распродажах?</h3>
+                </hgroup>
+                <input type="text" placeholder="Имя" required />
+                <input type="email" placeholder="Email" required />
+                <button form="mailingForm">ПОДПИСАТЬСЯ</button>
+              </form>
+            </section>
+          </article>
         </main>
         <Footer />
         <ModalsPro pathname={this.props.history.location.pathname} />

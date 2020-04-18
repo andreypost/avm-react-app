@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
-
 class ModalsPro extends React.Component {
     componenetDidMount() {
         console.log(this.props)

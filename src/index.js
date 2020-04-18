@@ -2,34 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
-// import './bootstrap_v_4.4.1.css';
 import './reset.css';
-// import './owl.carousel.css';
-// import './owl.theme.default.css';
-// import OwlCarousel from 'react-owl-carousel';
-import 'bootstrap';
-// import 'react-owl-carousel';
-// import 'owl.carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
-// import OwlCarousel from 'react-owl-carousel';
-// import 'jquery';
-// import './jquery_v_3.4.1.js';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './index.css';
-
-// import 'react-owl-carousel';
-// import 'owl.carousel';
-
-// import './owl_carousel_v_2.2.1.js';
+import 'bootstrap';
 
 import Main from './Main';
 import Services from './Services';
 import Category from './Category';
-// import App from './App';
+import ProcardBase from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
-
 
 export const App = () => {
   return (
@@ -37,8 +18,8 @@ export const App = () => {
         <Route exact path="/" component={Main} />
         <Route path="/Services" component={Services} />
         <Route path="/Category" component={Category} />
-       {/* <Route path="/schedule" component={Schedule} />
-        <Route path="/team" component={Team} />
+        <Route path="/ProcardBase" component={ProcardBase} />
+        {/*<Route path="/team" component={Team} />
         <Route path="/coach_joyce" component={Coach_Joyce} />
         <Route path="/coach_john" component={Coach_John} />
         <Route path="/coach_samantha" component={Coach_Samantha} />
@@ -56,8 +37,6 @@ export const App = () => {
     </HashRouter>
   );
 }
-
-
 
 ReactDOM.render(
   <React.StrictMode>
