@@ -631,6 +631,7 @@ export default class Main extends React.Component {
               <article>
                 <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
                   responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                  <OfferCard datos={offerData[7]} />
                   <OfferCard datos={offerData[0]} />
                   <OfferCard datos={offerData[1]} />
                   <OfferCard datos={offerData[2]} />

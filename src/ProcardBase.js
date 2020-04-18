@@ -15,7 +15,7 @@ import ModalsPro from "./components/ModalsPro";
 
 export default class ProcardBase extends React.Component {
     componentDidMount() {
-        console.log(this.props)
+        // console.log(this.props)
     }
     render() {
         return(
