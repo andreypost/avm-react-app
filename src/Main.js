@@ -14,9 +14,12 @@ import ModalsPro from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup1.png';
 import photo_002 from './img/MaskGroup2.png';
 import photo_003 from './img/MaskGroup3.png';
-// import photo_004 from './img/Image1.png';
-// import photo_005 from './img/audio_world.png';
-// import photo_006 from './img/audio_world.png';
+import photo_004 from './img/Logo_19.png';
+import photo_005 from './img/Logo_20.png';
+import photo_006 from './img/Logo_21.png';
+import photo_007 from './img/Logo_22.png';
+import photo_008 from './img/Logo_23.png';
+// import photo_009 from './img/Logo_21.png';
 
 
 export default class Main extends React.Component {
@@ -48,30 +51,6 @@ export default class Main extends React.Component {
       }
     }
     showContentTabs(document.getElementById('tabsMainPage'))
-    //   $('.owl-carousel.producers__img').owlCarousel({
-    //     loop: true,
-    //     rewind: true,
-    //     margin: 10,
-    //     nav: false,
-    //     dots: false,
-    //     autoplay: true,
-    //     navText: false,
-    //     responsive: {
-    //         0: {
-    //             items: 2
-    //         },
-    //         768: {
-    //             items: 3
-    //         },
-    //         1024: {
-    //             items: 4
-    //         },
-    //         1280: {
-    //             items: 5
-    //         }
-    //     }
-    // })
-
     const forbidScrollNav = (elem) => {
       if (!elem) return
       let uls = elem.querySelectorAll('ul'),
@@ -521,7 +500,7 @@ export default class Main extends React.Component {
               <h2>ПРОСМОТРЕННЫЕ ТОВАРЫ</h2>
               <a href="_viewed_products.html">Все товары</a>
             </hgroup>
-            <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+            <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
               responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
               <ProductCard datos={cardData[0]} />
               <DiscountCard datos={cardData[1]} />
@@ -568,7 +547,7 @@ export default class Main extends React.Component {
               </div>
               <div className="tabs__content">
                 <article className="tabs__block active" data-tab="hits">
-                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                     responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
                     <ProductCard datos={cardData[0]} />
                     <DiscountCard datos={cardData[1]} />
@@ -581,7 +560,7 @@ export default class Main extends React.Component {
                   </OwlCarousel>
                 </article>
                 <article className="tabs__block" data-tab="sales">
-                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                     responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
                     <ProductCard datos={cardData[7]} />
                     <DiscountCard datos={cardData[6]} />
@@ -594,7 +573,7 @@ export default class Main extends React.Component {
                   </OwlCarousel>
                 </article>
                 <article className="tabs__block" data-tab="novelty">
-                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                     responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
                     <DiscountCard datos={cardData[1]} />
                     <ProductCard datos={cardData[2]} />
@@ -607,7 +586,7 @@ export default class Main extends React.Component {
                   </OwlCarousel>
                 </article>
                 <article className="tabs__block" data-tab="stocks">
-                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
+                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                     responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
                     <DiscountCard datos={cardData[0]} />
                     <ProductCard datos={cardData[7]} />
@@ -628,23 +607,131 @@ export default class Main extends React.Component {
                 <h2>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</h2>
                 <a href="_category.html">Все товары</a>
               </hgroup>
-              <article>
-                <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
-                  responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                  <OfferCard datos={offerData[7]} />
-                  <OfferCard datos={offerData[0]} />
-                  <OfferCard datos={offerData[1]} />
-                  <OfferCard datos={offerData[2]} />
-                  <OfferCard datos={offerData[3]} />
-                  <OfferCard datos={offerData[4]} />
-                  <OfferCard datos={offerData[5]} />
-                  <OfferCard datos={offerData[6]} />
-                  <OfferCard datos={offerData[7]} />
-                  <OfferCard datos={offerData[0]} />
-                </OwlCarousel>
-              </article>
+              <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
+                responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                <OfferCard datos={offerData[0]} />
+                <OfferCard datos={offerData[1]} />
+                <OfferCard datos={offerData[2]} />
+                <OfferCard datos={offerData[0]} />
+                <OfferCard datos={offerData[1]} />
+                <OfferCard datos={offerData[2]} />
+                <OfferCard datos={offerData[0]} />
+                <OfferCard datos={offerData[1]} />
+                <OfferCard datos={offerData[2]} />
+              </OwlCarousel>
             </section>
           </article>
+          <article className="producers__section">
+            <section className="carousel__section">
+              <hgroup className="global__hgroup flexbet">
+                <h2>ПРОИЗВОДИТЕЛИ</h2>
+                <a href="_all_manufacturers.html">Все производители</a>
+              </hgroup>
+              <OwlCarousel className="owl-carousel producers__img owl-theme" loop={true} rewind={true} margin={10} nav={false} dots={false} autoplay={true} navText={false}
+                responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                <div className="item">
+                  <img src={photo_004} alt="" />
+                </div>
+                <div className="item">
+                  <img src={photo_005} alt="" />
+                </div>
+                <div className="item">
+                  <img src={photo_006} alt="" />
+                </div>
+                <div className="item">
+                  <img src={photo_007} alt="" />
+                </div>
+                <div className="item">
+                  <img src={photo_008} alt="" />
+                </div>
+                <div className="item">
+                  <img src={photo_004} alt="" />
+                </div>
+                <div className="item">
+                  <img src={photo_005} alt="" />
+                </div>
+                <div className="item">
+                  <img src={photo_006} alt="" />
+                </div>
+              </OwlCarousel>
+              <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
+                responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                <div className="item producers__card">
+                  <a href="">A</a>
+                  <a href="">Accurate Audio</a>
+                  <a href="">Accustic Arts</a>
+                  <a href="">Acer</a>
+                  <a href="">Acoustic Energy</a>
+                  <a href="">Acoustic Revive</a>
+                  <a href="">Acoustic Solid</a>
+                </div>
+                <div className="item producers__card">
+                  <a href="">B</a>
+                  <a href="">B&W</a>
+                  <a href="">Bang & Olufsen</a>
+                  <a href="">Barco</a>
+                  <a href="">Barefoot Sound</a>
+                  <a href="">BC Acoustique</a>
+                  <a href="">BDI</a>
+                </div>
+                <div className="item producers__card">
+                  <a href="">C</a>
+                  <a href="">Cabasse</a>
+                  <a href="">Cambridge Audio</a>
+                  <a href="">Campfire Audio</a>
+                  <a href="">Canon</a>
+                  <a href="">Canton</a>
+                  <a href="">Cardas</a>
+                </div>
+                <div className="item producers__card">
+                  <a href="">D</a>
+                  <a href="">Dali</a>
+                  <a href="">Datasat</a>
+                  <a href="">Davis</a>
+                  <a href="">Definitive Technology</a>
+                  <a href="">Dell</a>
+                  <a href="">Denon </a>
+                </div>
+                <div className="item producers__card">
+                  <a href="">E</a>
+                  <a href="">E-MU</a>
+                  <a href="">EAR Yoshino</a>
+                  <a href="">Earthquake</a>
+                  <a href="">Ecosse</a>
+                  <a href="">EgglestonWorks</a>
+                  <a href="">Elac</a>
+                </div>
+                <div className="item producers__card">
+                  <a href="">F</a>
+                  <a href="">Fender</a>
+                  <a href="">Fibaro</a>
+                  <a href="">FIIO</a>
+                  <a href="">FilmoScope</a>
+                  <a href="">Finite Elemente</a>
+                  <a href="">Fischer Audio</a>
+                </div>
+                <div className="item producers__card">
+                  <a href="">G</a>
+                  <a href="">Accurate Audio</a>
+                  <a href="">Accustic Arts</a>
+                  <a href="">Acer</a>
+                  <a href="">Acoustic Energy</a>
+                  <a href="">Acoustic Revive</a>
+                  <a href="">Acoustic Solid</a>
+                </div>
+                <div className="item producers__card">
+                  <a href="">H</a>
+                  <a href="">B&W</a>
+                  <a href="">Bang & Olufsen</a>
+                  <a href="">Barco</a>
+                  <a href="">Barefoot Sound</a>
+                  <a href="">BC Acoustique</a>
+                  <a href="">BDI</a>
+                </div>
+              </OwlCarousel>
+            </section>
+          </article>
+
 
 
           <article className="mailing__article">
