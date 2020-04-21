@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21a88dbefae464ce9b924e89e11bdc0e",
+    "revision": "c3c786b4995679e73785ccc83fe077e1",
     "url": "/avm-react-app/index.html"
   },
   {
-    "revision": "18360c52fb221068723c",
+    "revision": "62b3c8f29815ba6915fa",
     "url": "/avm-react-app/static/css/2.0cd06e21.chunk.css"
   },
   {
-    "revision": "3fe1103d1af2ebfc75d8",
+    "revision": "30015b7b3c30bc00b152",
     "url": "/avm-react-app/static/css/main.b0c51f23.chunk.css"
   },
   {
-    "revision": "18360c52fb221068723c",
-    "url": "/avm-react-app/static/js/2.1f199478.chunk.js"
+    "revision": "62b3c8f29815ba6915fa",
+    "url": "/avm-react-app/static/js/2.1877ffb1.chunk.js"
   },
   {
     "revision": "925e52c28b12d63edac5d05fc71f820f",
-    "url": "/avm-react-app/static/js/2.1f199478.chunk.js.LICENSE.txt"
+    "url": "/avm-react-app/static/js/2.1877ffb1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3fe1103d1af2ebfc75d8",
-    "url": "/avm-react-app/static/js/main.740ce4d9.chunk.js"
+    "revision": "30015b7b3c30bc00b152",
+    "url": "/avm-react-app/static/js/main.95c588bf.chunk.js"
   },
   {
     "revision": "b5d9085408121ae50e63",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avm-react-app/static/media/Image_006.4bf76670.jpg"
   },
   {
+    "revision": "e0df6fc4e010279093092c2c6f709939",
+    "url": "/avm-react-app/static/media/Logo_23.e0df6fc4.png"
+  },
+  {
     "revision": "4b23662bb14ce5cf56461a4b061d24fa",
     "url": "/avm-react-app/static/media/MaskGroup1.4b23662b.png"
   },
@@ -58,6 +62,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ed1d7107998c6acaf128f962a925c8e5",
     "url": "/avm-react-app/static/media/Offer_001.ed1d7107.png"
+  },
+  {
+    "revision": "c0244986d0732a409b5c370d1481e941",
+    "url": "/avm-react-app/static/media/Offer_002.c0244986.jpg"
+  },
+  {
+    "revision": "7c0b1c7efcd0dee310d7e320d163e689",
+    "url": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg"
   },
   {
     "revision": "f8684df10523c20f41fc7d4fafba54a3",
