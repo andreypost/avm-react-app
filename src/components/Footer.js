@@ -93,7 +93,7 @@ export default class Footer extends React.Component {
                         <div className="footer__desk flexcol">
                             <div className="flexbet">
                                 <div>
-                                    <img src={photo_001} alt="" />
+                                    <Link to="/"><img src={photo_001} alt="" /></Link>
                                 </div>
                                 <ul className="flexcenter">
                                     <li><a href="_category.html">Каталог товаров</a></li>

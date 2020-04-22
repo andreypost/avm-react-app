@@ -5,10 +5,12 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link } from "react-router-dom";
 import Header from './components/Header';
 import cardData from './cardData';
-import offerData from './offerData';
 import ProductCard from './components/ProductCard';
 import DiscountCard from './components/DiscountCard';
+import offerData from './offerData';
 import OfferCard from './components/OfferCard';
+import newsData from './newsData';
+import NewsCard from './components/NewsCard';
 import Footer from './components/Footer';
 import ModalsPro from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup1.png';
@@ -19,8 +21,6 @@ import photo_005 from './img/Logo_20.png';
 import photo_006 from './img/Logo_21.png';
 import photo_007 from './img/Logo_22.png';
 import photo_008 from './img/Logo_23.png';
-// import photo_009 from './img/Logo_21.png';
-
 
 export default class Main extends React.Component {
   componentDidMount() {
@@ -51,6 +51,7 @@ export default class Main extends React.Component {
       }
     }
     showContentTabs(document.getElementById('tabsMainPage'))
+    showContentTabs(document.getElementById('tabsNews'))
     const forbidScrollNav = (elem) => {
       if (!elem) return
       let uls = elem.querySelectorAll('ul'),
@@ -533,8 +534,6 @@ export default class Main extends React.Component {
                 <h5>на рынке аудио-видео техники</h5>
               </div>
             </article>
-          </section>
-          <section className="carousel__section">
             <div id="tabsMainPage">
               <div className="tabs__caption global__hgroup flexcenter justbeet">
                 <hgroup className="flexbet">
@@ -657,83 +656,291 @@ export default class Main extends React.Component {
               <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                 responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
                 <div className="item producers__card">
-                  <a href="">A</a>
-                  <a href="">Accurate Audio</a>
-                  <a href="">Accustic Arts</a>
-                  <a href="">Acer</a>
-                  <a href="">Acoustic Energy</a>
-                  <a href="">Acoustic Revive</a>
-                  <a href="">Acoustic Solid</a>
+                  <a href=" ">A</a>
+                  <a href=" ">Accurate Audio</a>
+                  <a href=" ">Accustic Arts</a>
+                  <a href=" ">Acer</a>
+                  <a href=" ">Acoustic Energy</a>
+                  <a href=" ">Acoustic Revive</a>
+                  <a href=" ">Acoustic Solid</a>
                 </div>
                 <div className="item producers__card">
-                  <a href="">B</a>
-                  <a href="">B&W</a>
-                  <a href="">Bang & Olufsen</a>
-                  <a href="">Barco</a>
-                  <a href="">Barefoot Sound</a>
-                  <a href="">BC Acoustique</a>
-                  <a href="">BDI</a>
+                  <a href=" ">B</a>
+                  <a href=" ">B&W</a>
+                  <a href=" ">Bang & Olufsen</a>
+                  <a href=" ">Barco</a>
+                  <a href=" ">Barefoot Sound</a>
+                  <a href=" ">BC Acoustique</a>
+                  <a href=" ">BDI</a>
                 </div>
                 <div className="item producers__card">
-                  <a href="">C</a>
-                  <a href="">Cabasse</a>
-                  <a href="">Cambridge Audio</a>
-                  <a href="">Campfire Audio</a>
-                  <a href="">Canon</a>
-                  <a href="">Canton</a>
-                  <a href="">Cardas</a>
+                  <a href=" ">C</a>
+                  <a href=" ">Cabasse</a>
+                  <a href=" ">Cambridge Audio</a>
+                  <a href=" ">Campfire Audio</a>
+                  <a href=" ">Canon</a>
+                  <a href=" ">Canton</a>
+                  <a href=" ">Cardas</a>
                 </div>
                 <div className="item producers__card">
-                  <a href="">D</a>
-                  <a href="">Dali</a>
-                  <a href="">Datasat</a>
-                  <a href="">Davis</a>
-                  <a href="">Definitive Technology</a>
-                  <a href="">Dell</a>
-                  <a href="">Denon </a>
+                  <a href=" ">D</a>
+                  <a href=" ">Dali</a>
+                  <a href=" ">Datasat</a>
+                  <a href=" ">Davis</a>
+                  <a href=" ">Definitive Technology</a>
+                  <a href=" ">Dell</a>
+                  <a href=" ">Denon </a>
                 </div>
                 <div className="item producers__card">
-                  <a href="">E</a>
-                  <a href="">E-MU</a>
-                  <a href="">EAR Yoshino</a>
-                  <a href="">Earthquake</a>
-                  <a href="">Ecosse</a>
-                  <a href="">EgglestonWorks</a>
-                  <a href="">Elac</a>
+                  <a href=" ">E</a>
+                  <a href=" ">E-MU</a>
+                  <a href=" ">EAR Yoshino</a>
+                  <a href=" ">Earthquake</a>
+                  <a href=" ">Ecosse</a>
+                  <a href=" ">EgglestonWorks</a>
+                  <a href=" ">Elac</a>
                 </div>
                 <div className="item producers__card">
-                  <a href="">F</a>
-                  <a href="">Fender</a>
-                  <a href="">Fibaro</a>
-                  <a href="">FIIO</a>
-                  <a href="">FilmoScope</a>
-                  <a href="">Finite Elemente</a>
-                  <a href="">Fischer Audio</a>
+                  <a href=" ">F</a>
+                  <a href=" ">Fender</a>
+                  <a href=" ">Fibaro</a>
+                  <a href=" ">FIIO</a>
+                  <a href=" ">FilmoScope</a>
+                  <a href=" ">Finite Elemente</a>
+                  <a href=" ">Fischer Audio</a>
                 </div>
                 <div className="item producers__card">
-                  <a href="">G</a>
-                  <a href="">Accurate Audio</a>
-                  <a href="">Accustic Arts</a>
-                  <a href="">Acer</a>
-                  <a href="">Acoustic Energy</a>
-                  <a href="">Acoustic Revive</a>
-                  <a href="">Acoustic Solid</a>
+                  <a href=" ">G</a>
+                  <a href=" ">Gamut</a>
+                  <a href=" ">Gauder Akustic</a>
+                  <a href=" ">Genelec</a>
+                  <a href=" ">GigaWatt</a>
+                  <a href=" ">Goertz</a>
+                  <a href=" ">Gold Note</a>
                 </div>
                 <div className="item producers__card">
-                  <a href="">H</a>
-                  <a href="">B&W</a>
-                  <a href="">Bang & Olufsen</a>
-                  <a href="">Barco</a>
-                  <a href="">Barefoot Sound</a>
-                  <a href="">BC Acoustique</a>
-                  <a href="">BDI</a>
+                  <a href=" ">H</a>
+                  <a href=" ">Hamilex</a>
+                  <a href=" ">Hannl Vinyl Care</a>
+                  <a href=" ">Hannspree</a>
+                  <a href=" ">Harbeth</a>
+                  <a href=" ">Harman Kardon</a>
+                  <a href=" ">Harman Kardon Multimedia</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">I</a>
+                  <a href=" ">iBasso</a>
+                  <a href=" ">Ibiza</a>
+                  <a href=" ">ICE</a>
+                  <a href=" ">iEast</a>
+                  <a href=" ">IFI</a>
+                  <a href=" ">Imerge</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">J</a>
+                  <a href=" ">Jadis</a>
+                  <a href=" ">JAMO</a>
+                  <a href=" ">Jarre</a>
+                  <a href=" ">JBL</a>
+                  <a href=" ">Jbl Multimedia</a>
+                  <a href=" ">JBL Pro</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">K</a>
+                  <a href=" ">Kalista</a>
+                  <a href=" ">KEF</a>
+                  <a href=" ">Kennerton</a>
+                  <a href=" ">Kenwood</a>
+                  <a href=" ">Kimber Kable</a>
+                  <a href=" ">Kinera</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">L</a>
+                  <a href=" ">L.K.S. Audio</a>
+                  <a href=" ">Lars && Ivan</a>
+                  <a href=" ">Lasmex</a>
+                  <a href=" ">Lautsenn</a>
+                  <a href=" ">Lector</a>
+                  <a href=" ">Lehmannaudio</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">M</a>
+                  <a href=" ">Mac Audio</a>
+                  <a href=" ">Magico</a>
+                  <a href=" ">Magnat</a>
+                  <a href=" ">Magnum Dynalab</a>
+                  <a href=" ">Manley</a>
+                  <a href=" ">Marantz</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">N</a>
+                  <a href=" ">NAD</a>
+                  <a href=" ">Nagaoka</a>
+                  <a href=" ">Naim</a>
+                  <a href=" ">Nakamichi</a>
+                  <a href=" ">Nativ</a>
+                  <a href=" ">NBS</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">O</a>
+                  <a href=" ">Octave</a>
+                  <a href=" ">Oehlbach</a>
+                  <a href=" ">Okki Nokki</a>
+                  <a href=" ">Olive</a>
+                  <a href=" ">OmniMount</a>
+                  <a href=" ">Onkyo</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">P</a>
+                  <a href=" ">Panasonic</a>
+                  <a href=" ">Paradigm</a>
+                  <a href=" ">Parasound</a>
+                  <a href=" ">Partington</a>
+                  <a href=" ">Pass Labs</a>
+                  <a href=" ">Pathos</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">Q</a>
+                  <a href=" ">Q Acoustics</a>
+                  <a href=" ">QLS</a>
+                  <a href=" ">QSC</a>
+                  <a href=" ">Quad</a>
+                  <a href=" ">Questyle</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">R</a>
+                  <a href=" ">Radiotehnika</a>
+                  <a href=" ">Radius</a>
+                  <a href=" ">RBH</a>
+                  <a href=" ">Real Cable</a>
+                  <a href=" ">Rega</a>
+                  <a href=" ">REL</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">S</a>
+                  <a href=" ">S.M.S.L</a>
+                  <a href=" ">SAEC</a>
+                  <a href=" ">Samsung</a>
+                  <a href=" ">Sanyo</a>
+                  <a href=" ">Schnepel</a>
+                  <a href=" ">Schroers & Schroers</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">T</a>
+                  <a href=" ">T+A</a>
+                  <a href=" ">T-Peos</a>
+                  <a href=" ">Taga Harmony</a>
+                  <a href=" ">Tannoy</a>
+                  <a href=" ">Tascam</a>
+                  <a href=" ">Teac</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">U</a>
+                  <a href=" ">uCube</a>
+                  <a href=" ">Ultralink</a>
+                  <a href=" ">Ultrasone</a>
+                  <a href=" ">Unison Research</a>
+                  <a href=" ">Urbanears</a>
+                  <a href=" ">URC</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">V</a>
+                  <a href=" ">V-Moda</a>
+                  <a href=" ">VAC</a>
+                  <a href=" ">Van Den Hul</a>
+                  <a href=" ">Velodyne</a>
+                  <a href=" ">Vestax</a>
+                  <a href=" ">Vibrapod</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">W</a>
+                  <a href=" ">Wadia</a>
+                  <a href=" ">Wharfedale</a>
+                  <a href=" ">Whizzer</a>
+                  <a href=" ">WHT</a>
+                  <a href=" ">Wilson Audio</a>
+                  <a href=" ">Wilson-Benesch</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">X</a>
+                  <a href=" ">XLO</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">Y</a>
+                  <a href=" ">Yamaha</a>
+                  <a href=" ">Yba</a>
+                  <a href=" ">Your Day</a>
+                  <a href=" ">YUIN</a>
+                  <a href=" ">YuLong</a>
+                </div>
+                <div className="item producers__card">
+                  <a href=" ">Z</a>
+                  <a href=" ">Zappiti</a>
+                  <a href=" ">Zesto Audio</a>
+                  <a href=" ">Zingali</a>
+                  <a href=" ">ZMF</a>
                 </div>
               </OwlCarousel>
             </section>
           </article>
-
-
-
+          <article className="news__section">
+            <section className="carousel__section">
+              <div id="tabsNews">
+                <div className="tabs__caption global__hgroup flexcenter justbeet">
+                  <hgroup className="flexbet">
+                    <h2 className="tab active" data-tab="news" data-href="/info/?news">НОВОСТИ</h2>
+                    <h2 className="tab" data-tab="articles" data-href="/info/?article">СТАТЬИ</h2>
+                    <h2 className="tab" data-tab="reviews" data-href="/info/?review">ОБЗОРЫ</h2>
+                  </hgroup>
+                  <a href="/info/?news">Все новости</a>
+                </div>
+                <div className="tabs__content">
+                  <article className="tabs__block active" data-tab="news">
+                    <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
+                      responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                      <NewsCard datos={newsData[0]} />
+                      <NewsCard datos={newsData[1]} />
+                      <NewsCard datos={newsData[2]} />
+                      <NewsCard datos={newsData[3]} />
+                      <NewsCard datos={newsData[4]} />
+                      <NewsCard datos={newsData[5]} />
+                      <NewsCard datos={newsData[6]} />
+                      <NewsCard datos={newsData[7]} />
+                      <NewsCard datos={newsData[0]} />
+                    </OwlCarousel>
+                  </article>
+                  <article className="tabs__block" data-tab="articles">
+                    <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
+                      responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                      <NewsCard datos={newsData[1]} />
+                      <NewsCard datos={newsData[2]} />
+                      <NewsCard datos={newsData[3]} />
+                      <NewsCard datos={newsData[4]} />
+                      <NewsCard datos={newsData[5]} />
+                      <NewsCard datos={newsData[6]} />
+                      <NewsCard datos={newsData[7]} />
+                      <NewsCard datos={newsData[0]} />
+                      <NewsCard datos={newsData[1]} />
+                    </OwlCarousel>
+                  </article>
+                  <article className="tabs__block" data-tab="reviews">
+                    <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
+                      responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                      <NewsCard datos={newsData[2]} />
+                      <NewsCard datos={newsData[3]} />
+                      <NewsCard datos={newsData[4]} />
+                      <NewsCard datos={newsData[5]} />
+                      <NewsCard datos={newsData[6]} />
+                      <NewsCard datos={newsData[7]} />
+                      <NewsCard datos={newsData[0]} />
+                      <NewsCard datos={newsData[1]} />
+                      <NewsCard datos={newsData[2]} />
+                    </OwlCarousel>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </article>
           <article className="mailing__article">
             <section>
               <form action="" id="mailingForm" className="flexbet">
