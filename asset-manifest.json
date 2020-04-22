@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/avm-react-app/static/css/main.b0c51f23.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.95c588bf.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.95c588bf.chunk.js.map",
+    "main.js": "/avm-react-app/static/js/main.5fde6971.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.5fde6971.chunk.js.map",
     "runtime-main.js": "/avm-react-app/static/js/runtime-main.b4bcb460.js",
     "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.b4bcb460.js.map",
     "static/css/2.0cd06e21.chunk.css": "/avm-react-app/static/css/2.0cd06e21.chunk.css",
-    "static/js/2.1877ffb1.chunk.js": "/avm-react-app/static/js/2.1877ffb1.chunk.js",
-    "static/js/2.1877ffb1.chunk.js.map": "/avm-react-app/static/js/2.1877ffb1.chunk.js.map",
+    "static/js/2.28397912.chunk.js": "/avm-react-app/static/js/2.28397912.chunk.js",
+    "static/js/2.28397912.chunk.js.map": "/avm-react-app/static/js/2.28397912.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.8ed30164eb5fe5f3ec7c33fe3e397c53.js": "/avm-react-app/precache-manifest.8ed30164eb5fe5f3ec7c33fe3e397c53.js",
+    "precache-manifest.4454e1edc399ccb58e4946bdd9d63d6c.js": "/avm-react-app/precache-manifest.4454e1edc399ccb58e4946bdd9d63d6c.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
     "static/css/2.0cd06e21.chunk.css.map": "/avm-react-app/static/css/2.0cd06e21.chunk.css.map",
     "static/css/main.b0c51f23.chunk.css.map": "/avm-react-app/static/css/main.b0c51f23.chunk.css.map",
-    "static/js/2.1877ffb1.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.1877ffb1.chunk.js.LICENSE.txt",
+    "static/js/2.28397912.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.28397912.chunk.js.LICENSE.txt",
     "static/media/index.css": "/avm-react-app/static/media/Offer_001.ed1d7107.png",
     "static/media/Image_003.jpg": "/avm-react-app/static/media/Image_003.8bf369d2.jpg",
     "static/media/Image_005.jpg": "/avm-react-app/static/media/Image_005.40cda7a5.jpg",
@@ -22,13 +22,16 @@
     "static/media/Offer_002.jpg": "/avm-react-app/static/media/Offer_002.c0244986.jpg",
     "static/media/Offer_003.jpg": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg",
     "static/media/audio_world.png": "/avm-react-app/static/media/audio_world.f8684df1.png",
-    "static/media/audio_world02.png": "/avm-react-app/static/media/audio_world02.73fdce19.png"
+    "static/media/audio_world02.png": "/avm-react-app/static/media/audio_world02.73fdce19.png",
+    "static/media/news_000.png": "/avm-react-app/static/media/news_000.7ef4c390.png",
+    "static/media/news_004.jpg": "/avm-react-app/static/media/news_004.85721095.jpg",
+    "static/media/news_006.jpg": "/avm-react-app/static/media/news_006.96c4229b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b4bcb460.js",
     "static/css/2.0cd06e21.chunk.css",
-    "static/js/2.1877ffb1.chunk.js",
+    "static/js/2.28397912.chunk.js",
     "static/css/main.b0c51f23.chunk.css",
-    "static/js/main.95c588bf.chunk.js"
+    "static/js/main.5fde6971.chunk.js"
   ]
 }
