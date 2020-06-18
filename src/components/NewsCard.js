@@ -15,7 +15,7 @@ export default class NewsCard extends React.Component {
                     <div className="news__viewed flexcenter justbeet">
                         <p>{this.props.datos.date}</p>
                         <p className="flexcenter"><i></i>43</p>
-                        <a href="" className="news__href">Подробнее</a>
+                        <a href=" " className="news__href">Подробнее</a>
                     </div>
                 </div>
             </div>

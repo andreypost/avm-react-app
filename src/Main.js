@@ -4,6 +4,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link } from "react-router-dom";
 import Header from './components/Header';
+import icons from './img/icons.svg';
 import cardData from './cardData';
 import ProductCard from './components/ProductCard';
 import DiscountCard from './components/DiscountCard';
@@ -113,7 +114,14 @@ export default class Main extends React.Component {
   render() {
     return (
       <>
-        <Header />
+        <Header>
+          <Link to="Category" className="header__iconcatalog flexcenter">
+            <svg>
+              <use xlinkHref={`${icons}#diamonds`}>
+                </use>
+            </svg>
+            Каталог товаров</Link>
+        </Header>
         <main>
           <section className="banner__section flexcenter">
             <div className="nav__catalog relative">

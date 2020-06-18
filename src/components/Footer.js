@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import photo_001 from '../img/audio_world02.png';
+import icons from '../img/icons.svg';
+// import photo_001 from '../img/audio_world02.png';
 
 export default class Footer extends React.Component {
     componentDidMount() {
@@ -93,7 +94,11 @@ export default class Footer extends React.Component {
                         <div className="footer__desk flexcol">
                             <div className="flexbet">
                                 <div>
-                                    <Link to="/"><img src={photo_001} alt="" /></Link>
+                                    <Link to="/">
+                                        <svg>
+                                            <use xlinkHref={`${icons}#logo`}></use>
+                                        </svg>
+                                    </Link>
                                 </div>
                                 <ul className="flexcenter">
                                     <li><a href="_category.html">Каталог товаров</a></li>
@@ -145,10 +150,26 @@ export default class Footer extends React.Component {
                             <div className="horizont"></div>
                         </div>
                         <div className="footer__social flexcenter justcenter">
-                            <a href=" "><i className="footer__insta"></i></a>
-                            <a href=" "><i className="footer__face"></i></a>
-                            <a href=" "><i className="footer__tube"></i></a>
-                            <a href=" "><i className="footer__tweet"></i></a>
+                            <a href=" ">
+                                <svg>
+                                    <use xlinkHref={`${icons}#insta`}></use>
+                                </svg>
+                            </a>
+                            <a href=" ">
+                                <svg>
+                                    <use xlinkHref={`${icons}#facebook`}></use>
+                                </svg>
+                            </a>
+                            <a href=" ">
+                                <svg>
+                                    <use xlinkHref={`${icons}#youtube`}></use>
+                                </svg>
+                            </a>
+                            <a href=" ">
+                                <svg>
+                                    <use xlinkHref={`${icons}#telegram`}></use>
+                                </svg>
+                            </a>
                         </div>
                         <h5>Copyright © 1999-2020 Pear Solution</h5>
                     </section>

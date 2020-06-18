@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import photo_001 from '../img/audio_world.png';
+import icons from '../img/icons.svg';
+import photo_001 from '../img/Image365.png';
+import photo_002 from '../img/Image_002.jpg';
+import photo_003 from '../img/installicon_01.png';
+import photo_004 from '../img/Image145.png';
+import photo_005 from '../img/Image_000.jpg';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
     componentDidMount() {
         let widthInner = window.innerWidth,
             tooltipElem = null,
@@ -33,66 +38,129 @@ class Header extends React.Component {
         }
         showTooltip(document.querySelector('.header__call'), document.getElementById('headerHoverCall'))
 
-        const showIconTooltip = (e) => {
-            let target = e.target,
-                tooltipHtml = target.dataset.headertooltip
-            if (!tooltipHtml || target.children[0].innerHTML !== '') return
-            target.onclick = (e) => {
-                if (target.children[0].innerHTML === '') {
-                    e.preventDefault()
+        const searchHeader = (searchInput) => {
+            let searchSelected,
+                searchRequestId,
+                searchRequest = null
+            const updateAutocomplete = (data) => {
+                if (data.id !== searchRequestId) return
+                closeAllLists()
+                searchSelected = -1
+                let root = document.createElement('div')
+                root.classList.add('autocomplete__items')
+                searchInput.parentNode.append(root)
+                for (let i = 0; i < data.items.length; i++) {
+                    let info = data.items[i],
+                        item = document.createElement('div')
+                    item.classList.add('flexstart', 'autocomplete__div')
+                    // item.innerHTML = info.image 
+                    console.log(info)
+                    item.innerHTML = '<img class="autocomplete__image" src="' + info.image.photo_003 + '" alt="">' + info.text
+                    // item.innerHTML += "<input type='hidden' value='" + info.text + "'>"
+                    item.addEventListener('click', () => {
+                        window.location.href = info.href
+                    })
+                    root.append(item)
                 }
             }
-            if (widthInner <= 768) return
-            tooltipElem = document.createElement('div')
-            tooltipElem.className = 'flexcenter'
-            tooltipElem.classList.add('headertooltip')
-            tooltipElem.innerHTML = tooltipHtml
-            document.body.append(tooltipElem)
-            let coords = target.getBoundingClientRect()
-            // let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
-            //   if (left < 0) left = 0; // don't cross the left window edge
-
-            //   let top = coords.top - tooltipElem.offsetHeight - 5;
-            //   if (top < 0) { // if crossing the top window edge, show below instead
-            //     top = coords.top + target.offsetHeight + 5;
-            //   }
-            tooltipElem.style.left = `${coords.left - 225}px`
-            tooltipElem.style.top = `${coords.top + 50}px`
-
+            const requestValue = (value) => {
+                searchRequest = null
+                searchRequestId = Math.floor(Math.random() * 1000000000000)
+                const callback = (data) => {
+                    updateAutocomplete(data)
+                }
+                let data = {}
+                data.request = value
+                data.id = searchRequestId
+                data.items = [{ image: '../img/Image365.png', text: "Meridian SOOL MEDIA SOURCE 600", href: "/13095meridian-sool-media-source-600" },
+                { image: { photo_003 }, text: "Bose Soundlink Mini Soft Cover", href: "/22675bose-soundlink-mini-soft-cover" },
+                { image: { photo_004 }, text: "Усилитель Sonance Sonamp 12-50", href: "/42271usilitel-sonance-sonamp-12-50" },
+                { image: { photo_005 }, text: "Саундбар Sonance SB46L Soundbar", href: "/42269saundbar-sonance-sb46l-soundbar" },
+                { image: { photo_002 }, text: "Саундбар Sonance SB46M Soundbar", href: "/42270saundbar-sonance-sb46m-soundbar" },
+                { image: { photo_001 }, text: "Цифровой медиа плеер Meridian SOOLOOS SOURCE ONE", href: "/13101tsifrovoy-media-pleer-meridian-sooloos-source-one" },
+                { image: { photo_003 }, text: "Сетевой плеер Meridian Sooloos Media Source 200", href: "/44932setevoy-pleer-meridian-sooloos-media-source-200" },
+                { image: { photo_004 }, text: "Комплект ландшафтной акустики Sonance Sonarray SR1 System", href: "/45704komplekt-landshaftnoy-akustiki-sonance-sonarray-sr1-system" },
+                { image: { photo_005 }, text: "Phono кабель WireWorld SOLSTICE 7 SOT 1m", href: "/23714phono-kabel-wireworld-solstice-7-sot-1m" },
+                { image: { photo_002 }, text: "Phono кабель WireWorld SOLSTICE 7 SOT 1.5m", href: "/23715phono-kabel-wireworld-solstice-7-sot-1.5m" }]
+                // sendXHR('/search/request/', data, callback)
+                updateAutocomplete(data)
+            }
+            searchInput.addEventListener('input', () => {
+                if (!searchInput.value) {
+                    closeAllLists()
+                    return
+                }
+                if (searchRequest) clearTimeout(searchRequest)
+                searchRequest = setTimeout(() => requestValue(searchInput.value), 250)
+            })
+            searchInput.addEventListener('keydown', (e) => {
+                let x = document.querySelectorAll('.autocomplete__div')
+                if (!x) return
+                if (e.key === 'ArrowDown') {
+                    searchSelected++
+                    addActive(x)
+                } else if (e.key === 'ArrowUp') {
+                    searchSelected--
+                    addActive(x)
+                } else if (e.key === 'Enter') {
+                    if (searchSelected > -1) {
+                        e.preventDefault()
+                        if (x) x[searchSelected].click()
+                    }
+                }
+            })
+            const addActive = (x) => {
+                removeActive(x)
+                if (searchSelected >= x.length) searchSelected = 0
+                if (searchSelected < 0) searchSelected = (x.length - 1)
+                x[searchSelected].classList.add('autocomplete__active')
+            }
+            const removeActive = (x) => {
+                for (let div of x) {
+                    div.classList.remove('autocomplete__active')
+                }
+            }
+            const closeAllLists = (elem) => {
+                let x = document.querySelector('.autocomplete__items')
+                if (x && elem !== x && elem !== searchInput) x.remove()
+            }
+            document.addEventListener('click', (e) => {
+                closeAllLists(e.target)
+            })
         }
-        const hideTooltip = () => {
-            if (tooltipElem) {
-                tooltipElem.remove()
-                tooltipElem = null
+        searchHeader(document.getElementById('searchInput'))
+
+        const showIconTooltip = (elems) => {
+            for (let elem of elems) {
+                elem.onclick = (e) => {
+                    if (elem.previousElementSibling.innerHTML === '') e.preventDefault()
+                }
             }
         }
-        document.addEventListener('mouseover', (e) => showIconTooltip(e))
-        document.removeEventListener('mouseover', (e) => showIconTooltip(e))
-        document.addEventListener('mouseout', () => hideTooltip())
-        document.removeEventListener('mouseout', () => hideTooltip())
+        showIconTooltip(document.querySelectorAll('.header__dataicons a'))
 
         const showModal = (modal) => {
             if (currentModal) {
-                hideModal(currentModal)
+                hideModal(modal)
                 currentModal = null
             }
             let width = document.documentElement.clientWidth
             document.body.style.overflowY = 'hidden'
             document.body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
             // document.body.style.paddingRight = `${6}px`
-            currentModal = modal
-            currentModal.style.display = 'block'
+            currentModal = true
+            modal.style.display = 'block'
             // if (modal.id == 'basketProduct' || modal.id == 'verificationOrder') {
             //     verticalSlider(document.querySelectorAll('.verticalSlider'))
             //     modal.querySelector('.basketHeaderResult').innerHTML = document.querySelector('.product__count').innerHTML
             // }
-            currentModal.onclick = (e) => {
+            modal.onclick = (e) => {
                 let target = e.target.closest('.button__closegl, .global__back, .makeOrder, .cardbuyClose')
                 if (!target) return
                 if (target.classList.contains('button__closegl') ||
                     target.classList.contains('global__back') ||
                     target.classList === 'cardbuyClose') {
-                    hideModal(currentModal)
+                    hideModal(modal)
                 } else if (target.classList.contains('makeOrder')) {
                     // chekoutOrderModal(e, modal)
                     // e.preventDefault()
@@ -107,12 +175,12 @@ class Header extends React.Component {
             }
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
-                    hideModal(currentModal)
+                    hideModal(modal)
                 }
             })
             window.addEventListener('click', (e) => {
-                if (e.target === currentModal) {
-                    hideModal(currentModal)
+                if (e.target === modal) {
+                    hideModal(modal)
                 }
             })
         }
@@ -133,26 +201,21 @@ class Header extends React.Component {
         getAllElementsModal(document.querySelectorAll('.header__burget'), document.getElementById('burgerMenuMob'))
         getAllElementsModal(document.querySelectorAll('.navmob__catalogue'), document.getElementById('catalogueMob'))
 
-        const isUser = (user) => {
-            if (!user) return
-            for (let elem of user) {
-                elem.onclick = (e) => {
-                    e.preventDefault()
-                    window.location.assign('_cabinet_discount.html')
-                }
-            }
-        }
-        isUser(document.querySelectorAll('.header__user'))
 
-        const isGuest = (guest) => {
-            if (!guest) return
-            for (let elem of guest) {
+        const isGuest = (elems) => {
+            if (!elems) return
+            for (let elem of elems) {
                 elem.onclick = (e) => {
                     e.preventDefault()
-                    showModal(document.getElementById('enterCabinet'))
+                    if (elem.classList.contains('header__user')) {
+                        window.location.assign('/cabinet/')
+                    } else {
+                        showModal(document.getElementById('enterCabinet'))
+                    }
                 }
             }
         }
+        isGuest(document.querySelectorAll('.header__user'))
         isGuest(document.querySelectorAll('.header__guest'))
     }
     render() {
@@ -163,21 +226,42 @@ class Header extends React.Component {
                         <section className="flexbet">
                             <div className="header__contacts flexbet">
                                 <div className="header__call flexcol relative">
-                                    <div className="">
-                                        {/* <Link to='/training' className="white">Discover more</Link> */}
+                                    <div className="flexcol">
                                         <a href="tel:+380509309378" className="flexcenter">
-                                            <i className="header__phone"></i>(050)930 93 78<i className="header__callarrow"></i>
+                                            <svg className="header__phone">
+                                                <use xlinkHref={`${icons}#tel`}></use>
+                                            </svg>
+                                            (050) 930 93 78
+                                            <svg className="header__callarrow">
+                                                <use xlinkHref={`${icons}#arrow`}></use>
+                                            </svg>
                                         </a>
-                                        <i className="header__line"></i>
+                                        <svg className="header__line">
+                                            <use xlinkHref={`${icons}#hatchline`}></use>
+                                        </svg>
                                     </div>
                                     <div id="headerHoverCall">
                                         <div id="headerCall" className="flexcol alignstart relative">
-                                            <i className="button__closegl"></i>
+                                            <svg className="button__closegl">
+                                                <use xlinkHref={`${icons}#cross`}></use>
+                                            </svg>
                                             <h3>Контактные номера телефонов</h3>
-                                            <a href="tel:0509309378" className="flexcenter"><i></i>(050) 930-93-78</a>
-                                            <a href="tel:0677608203" className="flexcenter"><i></i>(067) 760-82-03</a>
-                                            <a href="tel:0630301967" className="flexcenter"><i></i>(063) 030-19-67</a>
-                                            <a href="tel:0442277684" className="flexcenter"><i></i>(044) 227-76-84</a>
+                                            <a href="tel:0509309378" className="flexcenter">
+                                                <svg>
+                                                    <use xlinkHref={`${icons}#vodaphone`}></use>
+                                                </svg>(050) 930 93 78</a>
+                                            <a href="tel:0677608203" className="flexcenter">
+                                                <svg>
+                                                    <use xlinkHref={`${icons}#kyivstar`}></use>
+                                                </svg>(067) 760 82 03</a>
+                                            <a href="tel:0630301967" className="flexcenter">
+                                                <svg>
+                                                    <use xlinkHref={`${icons}#life`}></use>
+                                                </svg>(063) 030 19 67</a>
+                                            <a href="tel:0442277684" className="flexcenter">
+                                                <svg>
+                                                    <use xlinkHref={`${icons}#phone`}></use>
+                                                </svg>(044) 227 76 84</a>
                                         </div>
                                     </div>
                                 </div>
@@ -186,45 +270,79 @@ class Header extends React.Component {
                             </div>
                             <div className="header__rightnav flexcenter">
                                 <div className="header__language flexcenter">
-                                    <i className="header__globus"></i>
+                                    <svg className="header__globus">
+                                        <use xlinkHref={`${icons}#globe`}></use>
+                                    </svg>
                                     <a href=" " className="active">Ru</a>
                                     <div className="header__vertical"></div>
                                     <a href=" ">Ua</a>
                                 </div>
                                 <div className="header__guest header__avatar flexcenter">
                                     {/* <div className="header__user header__avatar flexcenter"> */}
-                                    <i></i>
-                                    <div className="column">
+                                    <svg>
+                                        <use xlinkHref={`${icons}#avatar`}></use>
+                                    </svg>
+                                    <div className="flexcol">
                                         <h3>Личный кабинет</h3>
-                                        <i className="header__line"></i>
+                                        <svg className="header__line">
+                                            <use xlinkHref={`${icons}#hatchline`}></use>
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
                         </section>
                     </article>
                     <section className="header__settings flexbet">
-                        <div><i className="header__burget"></i></div>
-                        <Link to="/"><img src={photo_001} className="header__world" alt="" /></Link>
-                        <form id="header__search" action="#" method="post">
-                            <input className="header__input" type="text" name="search" placeholder="Поиск" required data-text="Найти"></input>
-                            <button form="header__search" className="header__button flexcenter" type="submit">
-                                <i></i>
+                        <div>
+                            <svg className="header__burget">
+                                <use xlinkHref={`${icons}#burger`}></use>
+                            </svg>
+                        </div>
+                        <Link to="/">
+                            <svg className="header__world">
+                                <use xlinkHref={`${icons}#logo`}></use>
+                            </svg>
+                        </Link>
+                        <form id="headerSearch" className="header__search relative" action="/search" method="get">
+                            <input id="searchInput" className="header__input" type="text" autoComplete="off" name="search" placeholder="Поиск" required />
+                            <button form="headerSearch" className="header__button flexcenter" type="submit">
+                                <svg>
+                                    <use xlinkHref={`${icons}#loupe`}></use>
+                                </svg>
                             </button>
                         </form>
-                        <div className="flexbet">
-                            <a href=" "><i className="header__guest header__avatarmob"></i></a>
-                            {/* <a href=" "><i className="header__user header__avatarmob"></i></a> */}
-                            <a href="_product_comparison.html"><i className="header__compare relative"
-                                data-headertooltip="Ваш список дла сравнения пуст!"><span className="compare__count flexcenter"></span></i></a>
-                            <a href="_cabinet_wish.html"><i className="header__love relative"
-                                data-headertooltip="Ваш список желания пуст!"><span className="love__count flexcenter"></span></i></a>
-                            <a href="_cabinet_basket.html"><i className="header__order relative" data-headertooltip="Ваша корзина пуста!"><span
-                                className="product__count flexcenter"></span></i></a>
+                        <div className="flexbet header__dataicons relative">
+                            {/* <a href=" " className="header__user noneDesk block768"> */}
+                            <a href=" " className="header__guest noneDesk block768">
+                                <svg>
+                                    <use xlinkHref={`${icons}#avatar`}></use>
+                                </svg>
+                            </a>
+
+                            <span className="compare__count flexcenter white"></span>
+                            <a href="_product_comparison.html" className="relative" data-headertooltip="Ваш список дла сравнения пуст!">
+                                <svg>
+                                    <use xlinkHref={`${icons}#compare`}></use>
+                                </svg>
+                            </a>
+
+                            <span className="love__count flexcenter white"></span>
+                            <a href="_cabinet_wish.html" className="relative" data-headertooltip="Ваш список желания пуст!">
+                                <svg>
+                                    <use xlinkHref={`${icons}#love`}></use>
+                                </svg>
+                            </a>
+                            <span className="product__count flexcenter white">3</span>
+                            <a href="_cabinet_basket.html" className="relative" data-headertooltip="Ваша корзина пуста!">
+                                <svg>
+                                    <use xlinkHref={`${icons}#order`}></use>
+                                </svg>
+                            </a>
                         </div>
                     </section>
                     <article className="header__nav">
                         <section className="flexbet">
-                            <Link to="Category" className="header__iconcatalog flexcenter"><i></i>Каталог товаров</Link>
+                            {this.props.children}
                             <ul className="header__cataloglinks flexcenter">
                                 <li><Link to="Services">Услуги</Link></li>
                                 <li><a href="_listening_room.html">Зал прослушивания</a></li>
@@ -232,8 +350,12 @@ class Header extends React.Component {
                                 <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
                                 <li><a href="_installment_plan.html">Рассрочка</a></li>
                                 <li><a href="_all_stocks.html">Акции</a></li>
-                                <li className="header__about relative"><a href="_about_us.html" className="flexcenter">О Нас<i
-                                    className="header__navarrow"></i></a>
+                                <li className="header__about relative">
+                                    <a href="_about_us.html" className="flexcenter">О Нас
+                                        <svg className="header__callarrow">
+                                            <use xlinkHref={`${icons}#arrow`}></use>
+                                        </svg>
+                                    </a>
                                     <ul className="header__listabout">
                                         <li><a href="_certificate.html">Сертификат</a></li>
                                         <li><a href="_jobs.html">Вакансии</a></li>
@@ -272,7 +394,7 @@ class Header extends React.Component {
                                 </ul>
                             </li>
                             <li><a href="index.html">Главная</a></li>
-                            <li><a href="_services.html">Услуги</a></li>
+                            <li><Link to="Services">Услуги</Link></li>
                             <li><a href="_listening_room.html">Зал прослушивания</a></li>
                             <li><a href="_payment_delivery.html">Оплата и доставка</a></li>
                             <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
@@ -596,4 +718,3 @@ class Header extends React.Component {
         );
     }
 }
-export default Header;
