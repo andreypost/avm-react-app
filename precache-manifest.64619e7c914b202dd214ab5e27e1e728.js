@@ -1,35 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e5e2e8a4c413dea3247c7a2020c4a7fe",
+    "revision": "6ce1c7a4fe1f5c988bcbf2a7f45f6534",
     "url": "/avm-react-app/index.html"
   },
   {
-    "revision": "a6823b8ce444eb52c9e5",
+    "revision": "48cc2b8a8a25800ccecd",
     "url": "/avm-react-app/static/css/2.0cd06e21.chunk.css"
   },
   {
-    "revision": "42f0304a8d1a23939adf",
-    "url": "/avm-react-app/static/css/main.b0c51f23.chunk.css"
+    "revision": "bff62436f2185d36663f",
+    "url": "/avm-react-app/static/css/main.2adda501.chunk.css"
   },
   {
-    "revision": "a6823b8ce444eb52c9e5",
-    "url": "/avm-react-app/static/js/2.28397912.chunk.js"
+    "revision": "48cc2b8a8a25800ccecd",
+    "url": "/avm-react-app/static/js/2.fdf249e7.chunk.js"
   },
   {
     "revision": "925e52c28b12d63edac5d05fc71f820f",
-    "url": "/avm-react-app/static/js/2.28397912.chunk.js.LICENSE.txt"
+    "url": "/avm-react-app/static/js/2.fdf249e7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "42f0304a8d1a23939adf",
-    "url": "/avm-react-app/static/js/main.5fde6971.chunk.js"
+    "revision": "bff62436f2185d36663f",
+    "url": "/avm-react-app/static/js/main.38bc4b69.chunk.js"
   },
   {
     "revision": "b5d9085408121ae50e63",
     "url": "/avm-react-app/static/js/runtime-main.b4bcb460.js"
   },
   {
+    "revision": "4e9d0bdd49d4c608fc1eb2cc611e033f",
+    "url": "/avm-react-app/static/media/Image1.4e9d0bdd.png"
+  },
+  {
+    "revision": "f713ea48eea27a59eb4e5a4d1001a8c7",
+    "url": "/avm-react-app/static/media/Image145.f713ea48.png"
+  },
+  {
     "revision": "5be8989d8e41e183bbcac85277402656",
     "url": "/avm-react-app/static/media/Image2.5be8989d.png"
+  },
+  {
+    "revision": "cd74dada2cb305368849cd1bcd0e7cad",
+    "url": "/avm-react-app/static/media/Image365.cd74dada.png"
   },
   {
     "revision": "8bf369d2548b1f6bbfc280511c17cb5d",
@@ -72,12 +84,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg"
   },
   {
-    "revision": "f8684df10523c20f41fc7d4fafba54a3",
-    "url": "/avm-react-app/static/media/audio_world.f8684df1.png"
+    "revision": "29791429217cbc50479f9eb5ddf5fe30",
+    "url": "/avm-react-app/static/media/icons.29791429.svg"
   },
   {
-    "revision": "73fdce198e0ae3929a6a8427c12d0e82",
-    "url": "/avm-react-app/static/media/audio_world02.73fdce19.png"
+    "revision": "38de651aa976bfbc4318e2a9ec8d63f2",
+    "url": "/avm-react-app/static/media/installicon_01.38de651a.png"
   },
   {
     "revision": "7ef4c390a205a4c3a0eaeb526d12dec5",
@@ -90,5 +102,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "96c4229bbaeae186ad48ff947f1c8e2d",
     "url": "/avm-react-app/static/media/news_006.96c4229b.jpg"
+  },
+  {
+    "revision": "67030ff7111805245e315e71d7d4c257",
+    "url": "/avm-react-app/static/media/sprites.67030ff7.png"
   }
 ]);
