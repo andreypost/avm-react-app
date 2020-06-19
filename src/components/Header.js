@@ -351,7 +351,7 @@ export default class Header extends React.Component {
                                 <li><a href="_installment_plan.html">Рассрочка</a></li>
                                 <li><a href="_all_stocks.html">Акции</a></li>
                                 <li className="header__about relative">
-                                    <a href="_about_us.html" className="flexcenter">О Нас
+                                    <a href="_about_us.html" className="flexcenter">О нас
                                         <svg className="header__callarrow">
                                             <use xlinkHref={`${icons}#arrow`}></use>
                                         </svg>
@@ -362,7 +362,7 @@ export default class Header extends React.Component {
                                         <li><a href="_cooperation.html">Сотрудничество</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="_contacts.html">Конткаты</a></li>
+                                <li><a href="_contacts.html">Контакты</a></li>
                                 <li><a href="_bonus_program.html" className="header__bonus">Бонусная программа</a></li>
                             </ul>
                         </section>

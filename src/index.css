@@ -577,7 +577,7 @@ footer, .services__price h3 {
   top: 100%;
   padding: 15px;
   box-shadow: 0px 0px 5px var(--lightgrey);
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .button__closegl {
@@ -5161,6 +5161,10 @@ about_us, certificate, jobs - pages */
   .block1180, .products__buy.products__buymob {
     display: block;
   }
+  .header__iconcatalog {
+    padding: 17px 0 0px;
+    font-size: 18px;
+  }
   #carouselIndex .carousel-control-prev-icon {
     margin-left: -75px;
   }
@@ -5189,7 +5193,7 @@ about_us, certificate, jobs - pages */
   .discount__log, .discount__card .products__price {
     margin: 0;
   }
-  .products__info, .item5, .item9, #receivedOrder {
+  .header__cataloglinks, .products__info, .item5, .item9, #receivedOrder {
     width: 100%;
   }
   .products__info {
@@ -5228,6 +5232,8 @@ about_us, certificate, jobs - pages */
   }
   .comparison__category {
     justify-content: flex-start;
+  }
+  .header__cataloglinks>li>a, .comparison__category {
     margin: 20px auto;
   }
   .comparison__section {
@@ -5276,6 +5282,50 @@ about_us, certificate, jobs - pages */
   .cabinet__empty h3 {
     flex-flow: column;
   }
+  .header__contacts, .header__rightnav {
+    width: 100%;
+  }
+  .header__info>section, .header__call, .header__contacts h3, .header__rightnav {
+    padding: unset;
+  }
+  .header__contacts h3:first-of-type {
+    margin: unset;
+  }
+  .header__contacts, .header__rightnav {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .header__rightnav {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .header__contacts h3:first-of-type {
+    order: 1;
+  }
+  .header__call {
+    order: 2;
+  }
+  .header__contacts h3:last-of-type {
+    order: 3;
+  }
+  #headerHoverCall {
+    min-width: 310px;
+    left: calc(30% - 100px);
+  }
+  #headerCall>a, #headerCall>h3 {
+    margin: 3px 0;
+    font-size: 16px;
+  }
+  .header__language {
+    margin: 0 auto 0 calc(26% - 40px);
+  }
+  .header__avatar {
+    margin: 0 calc(25% - 40px) 0 auto;
+  }
+  .header__avatar>svg {
+    margin: 0 10px;
+  }
   .header__settings>a:nth-of-type(1), .header__world {
     width: 240px;
     height: 80px;
@@ -5286,9 +5336,6 @@ about_us, certificate, jobs - pages */
   }
   .header__cataloglinks a, .base__code, .base__social {
     font-size: 12px;
-  }
-  .header__cataloglinks a {
-    margin-left: 5px;
   }
   .header__listabout {
     left: -25px;
