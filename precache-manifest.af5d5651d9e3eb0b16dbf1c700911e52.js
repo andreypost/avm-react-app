@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0ff453a22d96becfd143b8948a7043e",
+    "revision": "17adbc46b72268af1197bc1d47fba646",
     "url": "/avm-react-app/index.html"
   },
   {
-    "revision": "48cc2b8a8a25800ccecd",
+    "revision": "fdd74e805740a0b39ce4",
     "url": "/avm-react-app/static/css/2.0cd06e21.chunk.css"
   },
   {
-    "revision": "ee34a231d8f4e2837d2a",
-    "url": "/avm-react-app/static/css/main.016646cb.chunk.css"
+    "revision": "9ae62b1d3ef5246bd2ba",
+    "url": "/avm-react-app/static/css/main.78d18dd5.chunk.css"
   },
   {
-    "revision": "48cc2b8a8a25800ccecd",
-    "url": "/avm-react-app/static/js/2.fdf249e7.chunk.js"
+    "revision": "fdd74e805740a0b39ce4",
+    "url": "/avm-react-app/static/js/2.62a3ed3a.chunk.js"
   },
   {
     "revision": "925e52c28b12d63edac5d05fc71f820f",
-    "url": "/avm-react-app/static/js/2.fdf249e7.chunk.js.LICENSE.txt"
+    "url": "/avm-react-app/static/js/2.62a3ed3a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ee34a231d8f4e2837d2a",
-    "url": "/avm-react-app/static/js/main.ec5f4497.chunk.js"
+    "revision": "9ae62b1d3ef5246bd2ba",
+    "url": "/avm-react-app/static/js/main.d712dde0.chunk.js"
   },
   {
     "revision": "b5d9085408121ae50e63",
@@ -72,6 +72,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avm-react-app/static/media/MaskGroup3.6e79ed0d.png"
   },
   {
+    "revision": "f161d6d8f58441d79c996e94b47b7dc7",
+    "url": "/avm-react-app/static/media/MaskGroup6.f161d6d8.png"
+  },
+  {
     "revision": "ed1d7107998c6acaf128f962a925c8e5",
     "url": "/avm-react-app/static/media/Offer_001.ed1d7107.png"
   },
@@ -84,8 +88,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg"
   },
   {
-    "revision": "29791429217cbc50479f9eb5ddf5fe30",
-    "url": "/avm-react-app/static/media/icons.29791429.svg"
+    "revision": "9aa1198f7298d264668011d156d539eb",
+    "url": "/avm-react-app/static/media/icons.9aa1198f.svg"
   },
   {
     "revision": "38de651aa976bfbc4318e2a9ec8d63f2",
@@ -102,6 +106,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "96c4229bbaeae186ad48ff947f1c8e2d",
     "url": "/avm-react-app/static/media/news_006.96c4229b.jpg"
+  },
+  {
+    "revision": "232f83153274aba055b505cf541db019",
+    "url": "/avm-react-app/static/media/services05.232f8315.png"
+  },
+  {
+    "revision": "219112c7306af52b8c33a8b89fd09ed7",
+    "url": "/avm-react-app/static/media/services06.219112c7.png"
   },
   {
     "revision": "67030ff7111805245e315e71d7d4c257",

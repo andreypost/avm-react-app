@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/avm-react-app/static/css/main.016646cb.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.ec5f4497.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.ec5f4497.chunk.js.map",
+    "main.css": "/avm-react-app/static/css/main.78d18dd5.chunk.css",
+    "main.js": "/avm-react-app/static/js/main.d712dde0.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.d712dde0.chunk.js.map",
     "runtime-main.js": "/avm-react-app/static/js/runtime-main.b4bcb460.js",
     "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.b4bcb460.js.map",
     "static/css/2.0cd06e21.chunk.css": "/avm-react-app/static/css/2.0cd06e21.chunk.css",
-    "static/js/2.fdf249e7.chunk.js": "/avm-react-app/static/js/2.fdf249e7.chunk.js",
-    "static/js/2.fdf249e7.chunk.js.map": "/avm-react-app/static/js/2.fdf249e7.chunk.js.map",
+    "static/js/2.62a3ed3a.chunk.js": "/avm-react-app/static/js/2.62a3ed3a.chunk.js",
+    "static/js/2.62a3ed3a.chunk.js.map": "/avm-react-app/static/js/2.62a3ed3a.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.6f090f4d6129c46312c889f988617807.js": "/avm-react-app/precache-manifest.6f090f4d6129c46312c889f988617807.js",
+    "precache-manifest.af5d5651d9e3eb0b16dbf1c700911e52.js": "/avm-react-app/precache-manifest.af5d5651d9e3eb0b16dbf1c700911e52.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
     "static/css/2.0cd06e21.chunk.css.map": "/avm-react-app/static/css/2.0cd06e21.chunk.css.map",
-    "static/css/main.016646cb.chunk.css.map": "/avm-react-app/static/css/main.016646cb.chunk.css.map",
-    "static/js/2.fdf249e7.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.fdf249e7.chunk.js.LICENSE.txt",
+    "static/css/main.78d18dd5.chunk.css.map": "/avm-react-app/static/css/main.78d18dd5.chunk.css.map",
+    "static/js/2.62a3ed3a.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.62a3ed3a.chunk.js.LICENSE.txt",
     "static/media/index.css": "/avm-react-app/static/media/sprites.67030ff7.png",
     "static/media/Image145.png": "/avm-react-app/static/media/Image145.f713ea48.png",
     "static/media/Image365.png": "/avm-react-app/static/media/Image365.cd74dada.png",
@@ -24,20 +24,23 @@
     "static/media/MaskGroup1.png": "/avm-react-app/static/media/MaskGroup1.4b23662b.png",
     "static/media/MaskGroup2.png": "/avm-react-app/static/media/MaskGroup2.23bb1639.png",
     "static/media/MaskGroup3.png": "/avm-react-app/static/media/MaskGroup3.6e79ed0d.png",
+    "static/media/MaskGroup6.png": "/avm-react-app/static/media/MaskGroup6.f161d6d8.png",
     "static/media/Offer_001.png": "/avm-react-app/static/media/Offer_001.ed1d7107.png",
     "static/media/Offer_002.jpg": "/avm-react-app/static/media/Offer_002.c0244986.jpg",
     "static/media/Offer_003.jpg": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg",
-    "static/media/icons.svg": "/avm-react-app/static/media/icons.29791429.svg",
+    "static/media/icons.svg": "/avm-react-app/static/media/icons.9aa1198f.svg",
     "static/media/installicon_01.png": "/avm-react-app/static/media/installicon_01.38de651a.png",
     "static/media/news_000.png": "/avm-react-app/static/media/news_000.7ef4c390.png",
     "static/media/news_004.jpg": "/avm-react-app/static/media/news_004.85721095.jpg",
-    "static/media/news_006.jpg": "/avm-react-app/static/media/news_006.96c4229b.jpg"
+    "static/media/news_006.jpg": "/avm-react-app/static/media/news_006.96c4229b.jpg",
+    "static/media/services05.png": "/avm-react-app/static/media/services05.232f8315.png",
+    "static/media/services06.png": "/avm-react-app/static/media/services06.219112c7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.b4bcb460.js",
     "static/css/2.0cd06e21.chunk.css",
-    "static/js/2.fdf249e7.chunk.js",
-    "static/css/main.016646cb.chunk.css",
-    "static/js/main.ec5f4497.chunk.js"
+    "static/js/2.62a3ed3a.chunk.js",
+    "static/css/main.78d18dd5.chunk.css",
+    "static/js/main.d712dde0.chunk.js"
   ]
 }
