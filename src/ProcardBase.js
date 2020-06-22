@@ -1,12 +1,10 @@
 import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 // import { Link } from "react-router-dom";
 import Header from './components/Header';
 import { Catalogue } from './components/Catalogue';
-import cardData from './cardData';
-import ProductCard from './components/ProductCard';
+import cardData from './components/cardData';
+import { ProductCard } from './components/ProductCard';
 import SeoMailing from './components/SeoMailing';
 import Footer from './components/Footer'
 import ModalsPro from "./components/ModalsPro";

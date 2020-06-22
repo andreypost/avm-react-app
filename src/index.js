@@ -4,6 +4,8 @@ import { HashRouter, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import './reset.css';
 import './index.css';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'bootstrap';
 
 import Main from './Main';

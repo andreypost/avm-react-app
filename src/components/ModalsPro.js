@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default class ModalsPro extends React.Component {
     componenetDidMount() {
-        console.log(this.props)
+        // console.log(this.props)
         let currentModal = null
         const showModal = (modal) => {
             if (currentModal) {

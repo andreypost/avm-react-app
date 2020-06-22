@@ -9,9 +9,9 @@ import photo_005 from '../img/Image_000.jpg';
 
 export default class Header extends React.Component {
     componentDidMount() {
-        let widthInner = window.innerWidth,
-            tooltipElem = null,
-            currentModal = null
+        // let widthInner = window.innerWidth,
+        // tooltipElem = null,
+        let currentModal = null
         const showTooltip = (elem, tooltip) => {
             if (!elem) return
             elem.onmouseover = () => {
@@ -220,155 +220,153 @@ export default class Header extends React.Component {
     }
     render() {
         return (
-            <>
-                <header id="header" className="header">
-                    <article className="header__info header__top">
-                        <section className="flexbet">
-                            <div className="header__contacts flexbet">
-                                <div className="header__call flexcol relative">
-                                    <div className="flexcol">
-                                        <a href="tel:+380509309378" className="flexcenter">
-                                            <svg className="header__phone">
-                                                <use xlinkHref={`${icons}#tel`}></use>
-                                            </svg>
+            <header>
+                <article className="header__info header__top">
+                    <section className="flexbet">
+                        <div className="header__contacts flexbet">
+                            <div className="header__call flexcol relative">
+                                <div className="flexcol">
+                                    <a href="tel:+380509309378" className="flexcenter">
+                                        <svg className="header__phone">
+                                            <use xlinkHref={`${icons}#tel`}></use>
+                                        </svg>
                                             (050) 930 93 78
                                             <svg className="header__callarrow">
-                                                <use xlinkHref={`${icons}#arrow`}></use>
-                                            </svg>
-                                        </a>
-                                        <svg className="header__line">
-                                            <use xlinkHref={`${icons}#hatchline`}></use>
-                                        </svg>
-                                    </div>
-                                    <div id="headerHoverCall">
-                                        <div id="headerCall" className="flexcol alignstart relative">
-                                            <svg className="button__closegl">
-                                                <use xlinkHref={`${icons}#cross`}></use>
-                                            </svg>
-                                            <h3>Контактные номера телефонов</h3>
-                                            <a href="tel:0509309378" className="flexcenter">
-                                                <svg>
-                                                    <use xlinkHref={`${icons}#vodaphone`}></use>
-                                                </svg>(050) 930 93 78</a>
-                                            <a href="tel:0677608203" className="flexcenter">
-                                                <svg>
-                                                    <use xlinkHref={`${icons}#kyivstar`}></use>
-                                                </svg>(067) 760 82 03</a>
-                                            <a href="tel:0630301967" className="flexcenter">
-                                                <svg>
-                                                    <use xlinkHref={`${icons}#life`}></use>
-                                                </svg>(063) 030 19 67</a>
-                                            <a href="tel:0442277684" className="flexcenter">
-                                                <svg>
-                                                    <use xlinkHref={`${icons}#phone`}></use>
-                                                </svg>(044) 227 76 84</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3>г. Киев, ул. Д. Луценко, 12A</h3>
-                                <h3>ПН-ВС с 9:00 до 22:00</h3>
-                            </div>
-                            <div className="header__rightnav flexcenter">
-                                <div className="header__language flexcenter">
-                                    <svg className="header__globus">
-                                        <use xlinkHref={`${icons}#globe`}></use>
-                                    </svg>
-                                    <a href=" " className="active">Ru</a>
-                                    <div className="header__vertical"></div>
-                                    <a href=" ">Ua</a>
-                                </div>
-                                <div className="header__guest header__avatar flexcenter">
-                                    {/* <div className="header__user header__avatar flexcenter"> */}
-                                    <svg>
-                                        <use xlinkHref={`${icons}#avatar`}></use>
-                                    </svg>
-                                    <div className="flexcol">
-                                        <h3>Личный кабинет</h3>
-                                        <svg className="header__line">
-                                            <use xlinkHref={`${icons}#hatchline`}></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </article>
-                    <section className="header__settings flexbet">
-                        <div>
-                            <svg className="header__burget">
-                                <use xlinkHref={`${icons}#burger`}></use>
-                            </svg>
-                        </div>
-                        <Link to="/">
-                            <svg className="header__world">
-                                <use xlinkHref={`${icons}#logo`}></use>
-                            </svg>
-                        </Link>
-                        <form id="headerSearch" className="header__search relative" action="/search" method="get">
-                            <input id="searchInput" className="header__input" type="text" autoComplete="off" name="search" placeholder="Поиск" required />
-                            <button form="headerSearch" className="header__button flexcenter" type="submit">
-                                <svg>
-                                    <use xlinkHref={`${icons}#loupe`}></use>
-                                </svg>
-                            </button>
-                        </form>
-                        <div className="flexbet header__dataicons relative">
-                            {/* <a href=" " className="header__user noneDesk block768"> */}
-                            <a href=" " className="header__guest noneDesk block768">
-                                <svg>
-                                    <use xlinkHref={`${icons}#avatar`}></use>
-                                </svg>
-                            </a>
-
-                            <span className="compare__count flexcenter white"></span>
-                            <a href="_product_comparison.html" className="relative" data-headertooltip="Ваш список дла сравнения пуст!">
-                                <svg>
-                                    <use xlinkHref={`${icons}#compare`}></use>
-                                </svg>
-                            </a>
-
-                            <span className="love__count flexcenter white"></span>
-                            <a href="_cabinet_wish.html" className="relative" data-headertooltip="Ваш список желания пуст!">
-                                <svg>
-                                    <use xlinkHref={`${icons}#love`}></use>
-                                </svg>
-                            </a>
-                            <span className="product__count flexcenter white">3</span>
-                            <a href="_cabinet_basket.html" className="relative" data-headertooltip="Ваша корзина пуста!">
-                                <svg>
-                                    <use xlinkHref={`${icons}#order`}></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </section>
-                    <article className="header__nav">
-                        <section className="flexbet">
-                            {this.props.children[0]}
-                            <ul className="header__cataloglinks flexcenter">
-                                <li><Link to="Services">Услуги</Link></li>
-                                <li><a href="_listening_room.html">Зал прослушивания</a></li>
-                                <li><a href="_payment_delivery.html">Оплата и доставка</a></li>
-                                <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
-                                <li><a href="_installment_plan.html">Рассрочка</a></li>
-                                <li><a href="_all_stocks.html">Акции</a></li>
-                                <li className="header__about relative">
-                                    <a href="_about_us.html" className="flexcenter">О нас
-                                        <svg className="header__callarrow">
                                             <use xlinkHref={`${icons}#arrow`}></use>
                                         </svg>
                                     </a>
-                                    <ul className="header__listabout">
-                                        <li><a href="_certificate.html">Сертификат</a></li>
-                                        <li><a href="_jobs.html">Вакансии</a></li>
-                                        <li><a href="_cooperation.html">Сотрудничество</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="_contacts.html">Контакты</a></li>
-                                <li><a href="_bonus_program.html" className="header__bonus">Бонусная программа</a></li>
-                            </ul>
-                        </section>
-                    </article>
-                    {this.props.children[1]}
-                </header>
+                                    <svg className="header__line">
+                                        <use xlinkHref={`${icons}#hatchline`}></use>
+                                    </svg>
+                                </div>
+                                <div id="headerHoverCall">
+                                    <div id="headerCall" className="flexcol alignstart relative">
+                                        <svg className="button__closegl">
+                                            <use xlinkHref={`${icons}#cross`}></use>
+                                        </svg>
+                                        <h3>Контактные номера телефонов</h3>
+                                        <a href="tel:0509309378" className="flexcenter">
+                                            <svg>
+                                                <use xlinkHref={`${icons}#vodaphone`}></use>
+                                            </svg>(050) 930 93 78</a>
+                                        <a href="tel:0677608203" className="flexcenter">
+                                            <svg>
+                                                <use xlinkHref={`${icons}#kyivstar`}></use>
+                                            </svg>(067) 760 82 03</a>
+                                        <a href="tel:0630301967" className="flexcenter">
+                                            <svg>
+                                                <use xlinkHref={`${icons}#life`}></use>
+                                            </svg>(063) 030 19 67</a>
+                                        <a href="tel:0442277684" className="flexcenter">
+                                            <svg>
+                                                <use xlinkHref={`${icons}#phone`}></use>
+                                            </svg>(044) 227 76 84</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>г. Киев, ул. Д. Луценко, 12A</h3>
+                            <h3>ПН-ВС с 9:00 до 22:00</h3>
+                        </div>
+                        <div className="header__rightnav flexcenter">
+                            <div className="header__language flexcenter">
+                                <svg className="header__globus">
+                                    <use xlinkHref={`${icons}#globe`}></use>
+                                </svg>
+                                <a href=" " className="active">Ru</a>
+                                <div className="header__vertical"></div>
+                                <a href=" ">Ua</a>
+                            </div>
+                            <div className="header__guest header__avatar flexcenter">
+                                {/* <div className="header__user header__avatar flexcenter"> */}
+                                <svg>
+                                    <use xlinkHref={`${icons}#avatar`}></use>
+                                </svg>
+                                <div className="flexcol">
+                                    <h3>Личный кабинет</h3>
+                                    <svg className="header__line">
+                                        <use xlinkHref={`${icons}#hatchline`}></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+                <section className="header__settings flexbet">
+                    <div>
+                        <svg className="header__burget">
+                            <use xlinkHref={`${icons}#burger`}></use>
+                        </svg>
+                    </div>
+                    <Link to="/">
+                        <svg className="header__world">
+                            <use xlinkHref={`${icons}#logo`}></use>
+                        </svg>
+                    </Link>
+                    <form id="headerSearch" className="header__search relative" action="/search" method="get">
+                        <input id="searchInput" className="header__input" type="text" autoComplete="off" name="search" placeholder="Поиск" required />
+                        <button form="headerSearch" className="header__button flexcenter" type="submit">
+                            <svg>
+                                <use xlinkHref={`${icons}#loupe`}></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <div className="flexbet header__dataicons relative">
+                        {/* <a href=" " className="header__user noneDesk block768"> */}
+                        <a href=" " className="header__guest noneDesk block768">
+                            <svg>
+                                <use xlinkHref={`${icons}#avatar`}></use>
+                            </svg>
+                        </a>
+
+                        <span className="compare__count flexcenter white"></span>
+                        <a href="_product_comparison.html" className="relative" data-headertooltip="Ваш список дла сравнения пуст!">
+                            <svg>
+                                <use xlinkHref={`${icons}#compare`}></use>
+                            </svg>
+                        </a>
+
+                        <span className="love__count flexcenter white"></span>
+                        <a href="_cabinet_wish.html" className="relative" data-headertooltip="Ваш список желания пуст!">
+                            <svg>
+                                <use xlinkHref={`${icons}#love`}></use>
+                            </svg>
+                        </a>
+                        <span className="product__count flexcenter white">3</span>
+                        <a href="_cabinet_basket.html" className="relative" data-headertooltip="Ваша корзина пуста!">
+                            <svg>
+                                <use xlinkHref={`${icons}#order`}></use>
+                            </svg>
+                        </a>
+                    </div>
+                </section>
+                <article className="header__nav">
+                    <section className="flexbet">
+                        {this.props.children[0]}
+                        <ul className="header__cataloglinks flexcenter">
+                            <li><Link to="Services">Услуги</Link></li>
+                            <li><a href="_listening_room.html">Зал прослушивания</a></li>
+                            <li><a href="_payment_delivery.html">Оплата и доставка</a></li>
+                            <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
+                            <li><a href="_installment_plan.html">Рассрочка</a></li>
+                            <li><a href="_all_stocks.html">Акции</a></li>
+                            <li className="header__about relative">
+                                <a href="_about_us.html" className="flexcenter">О нас
+                                        <svg className="header__callarrow">
+                                        <use xlinkHref={`${icons}#arrow`}></use>
+                                    </svg>
+                                </a>
+                                <ul className="header__listabout">
+                                    <li><a href="_certificate.html">Сертификат</a></li>
+                                    <li><a href="_jobs.html">Вакансии</a></li>
+                                    <li><a href="_cooperation.html">Сотрудничество</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="_contacts.html">Контакты</a></li>
+                            <li><a href="_bonus_program.html" className="header__bonus">Бонусная программа</a></li>
+                        </ul>
+                    </section>
+                </article>
+                {this.props.children[1]}
                 <div id="burgerMenuMob">
                     <article className="relative">
                         <div className="button__closegl"></div>
@@ -391,10 +389,10 @@ export default class Header extends React.Component {
                                     <li><a href="_cabinet_comments.html">Мои отзывы и комментарии</a></li>
                                     <li><a href="_cabinet_viewed.html">Просмотренные товары</a></li>
                                     <li><a href="_cabinet_orders.html">Мои заказы</a></li>
-                                    <li><a href="index.html" className="orange">Выход</a></li>
+                                    <li><Link to="/" className="orange">Выход</Link></li>
                                 </ul>
                             </li>
-                            <li><a href="index.html">Главная</a></li>
+                            <li><Link to="/">Главная</Link></li>
                             <li><Link to="Services">Услуги</Link></li>
                             <li><a href="_listening_room.html">Зал прослушивания</a></li>
                             <li><a href="_payment_delivery.html">Оплата и доставка</a></li>
@@ -708,14 +706,14 @@ export default class Header extends React.Component {
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="_category.html" className="flexcenter juststart">Все категории</a></li>
+                            <li><Link to="Category" className="flexcenter juststart">Все категории</Link></li>
                             <li className="global__back orange">
                                 <h6>Назад</h6>
                             </li>
                         </ul>
                     </article>
                 </div>
-            </>
+            </header>
         );
     }
 }

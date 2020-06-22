@@ -2,6 +2,7 @@ import React from 'react';
 // import { Link } from "react-router-dom";
 import Header from './components/Header';
 import { Catalogue } from './components/Catalogue';
+import NewsSection from './components/NewsSection';
 import SeoMailing from './components/SeoMailing';
 import Footer from './components/Footer';
 import ModalsPro from "./components/ModalsPro";
@@ -39,7 +40,6 @@ export default class Main extends React.Component {
             <h3 className="navmob__catalogue">Каталог товаров</h3>
           </section>
         </Header>
-
         <main>
           <section className="services__banner carousel__section">
             <ul className="flexstart breadcrumbs flexwrap">
@@ -60,11 +60,11 @@ export default class Main extends React.Component {
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <iframe src="https://www.youtube.com/embed/vTNw7oFE-tc"
-                    frameBorder="0" allowFullScreen=""></iframe>
+                    frameBorder="0" allowFullScreen="" title="video_01"></iframe>
                 </div>
                 <div className="carousel-item">
                   <iframe src="https://www.youtube.com/embed/RG9TMn1FJzc"
-                    frameBorder="0" allowFullScreen=""></iframe>
+                    frameBorder="0" allowFullScreen="" title="video_02"></iframe>
                 </div>
                 <div className="carousel-item">
                   <img src={photo_001} className="d-block w-100" alt="..." />
@@ -243,13 +243,13 @@ export default class Main extends React.Component {
                 <hgroup>
                   <h1 className="services__desktext">Выезд эксперта АУДИО ВИДЕО МИР</h1>
                 </hgroup>
-                <label for="name">Имя</label>
+                <label htmlFor="name">Имя</label>
                 <input type="text" name="name" placeholder="Юрий" required />
-                <label for="phone">Номер телефона</label>
+                <label htmlFor="phone">Номер телефона</label>
                 <input type="text" name="phone" pattern="[0-9]{10}" placeholder="0673334444" required />
-                <label for="comment">Комментарий</label>
+                <label htmlFor="comment">Комментарий</label>
                 <textarea name="comment" rows="5" className="flexcenter"></textarea>
-                <label for="date">Дата</label>
+                <label htmlFor="date">Дата</label>
                 <input type="date" name="date" placeholder="" required />
                 <button form="expertVisit">ЗАПИСАТЬСЯ</button>
               </form>
@@ -376,46 +376,43 @@ export default class Main extends React.Component {
                     Все работы выполняются качественно и в оговоренные сроки!</h2>
             </hgroup>
           </section>
-
           <section className="services__banner completed_projects carousel__section">
             <hgroup className="global__hgroup flexstart">
-                <h1>НАШИ РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h1>
+              <h1>НАШИ РЕАЛИЗОВАННЫЕ ПРОЕКТЫ</h1>
             </hgroup>
             <div id="carouselBottom" className="carousel slide banner__carousel" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-target="#carouselBottom" data-slide-to="0" className="active"></li>
-                    <li data-target="#carouselBottom" data-slide-to="1"></li>
-                    <li data-target="#carouselBottom" data-slide-to="2"></li>
-                    <li data-target="#carouselBottom" data-slide-to="3"></li>
-                    <li data-target="#carouselBottom" data-slide-to="4"></li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={photo_008} className="d-block w-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={photo_009} className="d-block w-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={photo_010} className="d-block w-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={photo_001} className="d-block w-100" alt="..." />
-                    </div>
+              <ol className="carousel-indicators">
+                <li data-target="#carouselBottom" data-slide-to="0" className="active"></li>
+                <li data-target="#carouselBottom" data-slide-to="1"></li>
+                <li data-target="#carouselBottom" data-slide-to="2"></li>
+                <li data-target="#carouselBottom" data-slide-to="3"></li>
+                <li data-target="#carouselBottom" data-slide-to="4"></li>
+              </ol>
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img src={photo_008} className="d-block w-100" alt="..." />
                 </div>
-                <a className="carousel-control-prev" href="#carouselBottom" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselBottom" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
+                <div className="carousel-item">
+                  <img src={photo_009} className="d-block w-100" alt="..." />
+                </div>
+                <div className="carousel-item">
+                  <img src={photo_010} className="d-block w-100" alt="..." />
+                </div>
+                <div className="carousel-item">
+                  <img src={photo_001} className="d-block w-100" alt="..." />
+                </div>
+              </div>
+              <a className="carousel-control-prev" href="#carouselBottom" role="button" data-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="sr-only">Previous</span>
+              </a>
+              <a className="carousel-control-next" href="#carouselBottom" role="button" data-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="sr-only">Next</span>
+              </a>
             </div>
-        </section>
-
-
-
+          </section>
+          <NewsSection />
           <SeoMailing />
         </main>
         <Footer />

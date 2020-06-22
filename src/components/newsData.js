@@ -1,11 +1,11 @@
-import photo_000 from './img/news_000.png';
-import photo_001 from './img/news_001.png';
-import photo_002 from './img/news_002.jpg';
-import photo_003 from './img/news_003.jpg';
-import photo_004 from './img/news_004.jpg';
-import photo_005 from './img/news_005.jpg';
-import photo_006 from './img/news_006.jpg';
-import photo_007 from './img/news_007.jpg';
+import photo_000 from '../img/news_000.png';
+import photo_001 from '../img/news_001.png';
+import photo_002 from '../img/news_002.jpg';
+import photo_003 from '../img/news_003.jpg';
+import photo_004 from '../img/news_004.jpg';
+import photo_005 from '../img/news_005.jpg';
+import photo_006 from '../img/news_006.jpg';
+import photo_007 from '../img/news_007.jpg';
 
 export default [
     {

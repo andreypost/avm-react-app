@@ -1,17 +1,15 @@
 import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link } from "react-router-dom";
 import icons from './icons.svg';
 import Header from './components/Header';
-import cardData from './cardData';
-import ProductCard from './components/ProductCard';
-import DiscountCard from './components/DiscountCard';
+import HitsSection from './components/HitsSection';
+import cardData from './components/cardData';
+import { ProductCard } from './components/ProductCard';
+import { DiscountCard } from './components/DiscountCard';
 import offerData from './offerData';
-import OfferCard from './components/OfferCard';
-import newsData from './newsData';
-import NewsCard from './components/NewsCard';
+import { OfferCard } from './components/OfferCard';
+import NewsSection from './components/NewsSection';
 import SeoMailing from './components/SeoMailing';
 import Footer from './components/Footer';
 import ModalsPro from "./components/ModalsPro";
@@ -53,7 +51,6 @@ export default class Main extends React.Component {
       }
     }
     showContentTabs(document.getElementById('tabsMainPage'))
-    showContentTabs(document.getElementById('tabsNews'))
     const forbidScrollNav = (elem) => {
       if (!elem) return
       let uls = elem.querySelectorAll('ul'),
@@ -122,6 +119,7 @@ export default class Main extends React.Component {
                 </use>
             </svg>
             Каталог товаров</Link>
+          <></>
         </Header>
         <main>
           <section className="banner__section flexcenter">
@@ -543,77 +541,13 @@ export default class Main extends React.Component {
                 <h5>на рынке аудио-видео техники</h5>
               </div>
             </article>
-            <div id="tabsMainPage">
-              <div className="tabs__caption global__hgroup flexcenter justbeet">
-                <hgroup className="flexbet">
-                  <h2 className="tab active" data-tab="hits" data-href="_bestsellers.html">ХИТ ПРОДАЖ</h2>
-                  <h2 className="tab" data-tab="sales" data-href="_all_stocks.html">АКЦИИ</h2>
-                  <h2 className="tab" data-tab="novelty" data-href="_new_items.html">НОВИНКИ</h2>
-                  <h2 className="tab" data-tab="stocks" data-href="_markdown.html">УЦЕНКА</h2>
-                </hgroup>
-                <a href="_bestsellers.html">Все товары</a>
-              </div>
-              <div className="tabs__content">
-                <article className="tabs__block active" data-tab="hits">
-                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-                    responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                    <ProductCard datos={cardData[0]} />
-                    <DiscountCard datos={cardData[1]} />
-                    <ProductCard datos={cardData[2]} />
-                    <DiscountCard datos={cardData[3]} />
-                    <ProductCard datos={cardData[4]} />
-                    <DiscountCard datos={cardData[5]} />
-                    <ProductCard datos={cardData[6]} />
-                    <DiscountCard datos={cardData[7]} />
-                  </OwlCarousel>
-                </article>
-                <article className="tabs__block" data-tab="sales">
-                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-                    responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                    <ProductCard datos={cardData[7]} />
-                    <DiscountCard datos={cardData[6]} />
-                    <ProductCard datos={cardData[5]} />
-                    <DiscountCard datos={cardData[4]} />
-                    <ProductCard datos={cardData[3]} />
-                    <DiscountCard datos={cardData[2]} />
-                    <ProductCard datos={cardData[1]} />
-                    <DiscountCard datos={cardData[0]} />
-                  </OwlCarousel>
-                </article>
-                <article className="tabs__block" data-tab="novelty">
-                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-                    responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                    <DiscountCard datos={cardData[1]} />
-                    <ProductCard datos={cardData[2]} />
-                    <DiscountCard datos={cardData[3]} />
-                    <ProductCard datos={cardData[4]} />
-                    <DiscountCard datos={cardData[5]} />
-                    <ProductCard datos={cardData[6]} />
-                    <DiscountCard datos={cardData[7]} />
-                    <ProductCard datos={cardData[0]} />
-                  </OwlCarousel>
-                </article>
-                <article className="tabs__block" data-tab="stocks">
-                  <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-                    responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                    <DiscountCard datos={cardData[0]} />
-                    <ProductCard datos={cardData[7]} />
-                    <DiscountCard datos={cardData[6]} />
-                    <ProductCard datos={cardData[5]} />
-                    <DiscountCard datos={cardData[4]} />
-                    <ProductCard datos={cardData[3]} />
-                    <DiscountCard datos={cardData[2]} />
-                    <ProductCard datos={cardData[1]} />
-                  </OwlCarousel>
-                </article>
-              </div>
-            </div>
+            <HitsSection />
           </section>
           <article className="offer__special">
             <section className="carousel__section">
               <hgroup className="global__hgroup flexbet">
                 <h2>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</h2>
-                <a href="_category.html">Все товары</a>
+                <Link to="Category">Все товары</Link>
               </hgroup>
               <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                 responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
@@ -892,64 +826,7 @@ export default class Main extends React.Component {
               </OwlCarousel>
             </section>
           </article>
-          <article className="news__section">
-            <section className="carousel__section">
-              <div id="tabsNews">
-                <div className="tabs__caption global__hgroup flexcenter justbeet">
-                  <hgroup className="flexbet">
-                    <h2 className="tab active" data-tab="news" data-href="/info/?news">НОВОСТИ</h2>
-                    <h2 className="tab" data-tab="articles" data-href="/info/?article">СТАТЬИ</h2>
-                    <h2 className="tab" data-tab="reviews" data-href="/info/?review">ОБЗОРЫ</h2>
-                  </hgroup>
-                  <a href="/info/?news">Все новости</a>
-                </div>
-                <div className="tabs__content">
-                  <article className="tabs__block active" data-tab="news">
-                    <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-                      responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                      <NewsCard datos={newsData[0]} />
-                      <NewsCard datos={newsData[1]} />
-                      <NewsCard datos={newsData[2]} />
-                      <NewsCard datos={newsData[3]} />
-                      <NewsCard datos={newsData[4]} />
-                      <NewsCard datos={newsData[5]} />
-                      <NewsCard datos={newsData[6]} />
-                      <NewsCard datos={newsData[7]} />
-                      <NewsCard datos={newsData[0]} />
-                    </OwlCarousel>
-                  </article>
-                  <article className="tabs__block" data-tab="articles">
-                    <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-                      responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                      <NewsCard datos={newsData[1]} />
-                      <NewsCard datos={newsData[2]} />
-                      <NewsCard datos={newsData[3]} />
-                      <NewsCard datos={newsData[4]} />
-                      <NewsCard datos={newsData[5]} />
-                      <NewsCard datos={newsData[6]} />
-                      <NewsCard datos={newsData[7]} />
-                      <NewsCard datos={newsData[0]} />
-                      <NewsCard datos={newsData[1]} />
-                    </OwlCarousel>
-                  </article>
-                  <article className="tabs__block" data-tab="reviews">
-                    <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-                      responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                      <NewsCard datos={newsData[2]} />
-                      <NewsCard datos={newsData[3]} />
-                      <NewsCard datos={newsData[4]} />
-                      <NewsCard datos={newsData[5]} />
-                      <NewsCard datos={newsData[6]} />
-                      <NewsCard datos={newsData[7]} />
-                      <NewsCard datos={newsData[0]} />
-                      <NewsCard datos={newsData[1]} />
-                      <NewsCard datos={newsData[2]} />
-                    </OwlCarousel>
-                  </article>
-                </div>
-              </div>
-            </section>
-          </article>
+          <NewsSection />
           <SeoMailing />
         </main>
         <Footer />
