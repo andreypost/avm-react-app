@@ -218,6 +218,11 @@ export default class Header extends React.Component {
         isGuest(document.querySelectorAll('.header__user'))
         isGuest(document.querySelectorAll('.header__guest'))
     }
+    componentWillUnmount() {
+        document.body.style.overflow = ''
+        document.body.style.overflowY = ''
+        document.body.style.paddingRight = 0 + 'px'
+    }
     render() {
         return (
             <header>
