@@ -4,9 +4,10 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 // import { Link } from "react-router-dom";
 import Header from './components/Header';
-import Catalogue from './components/Catalogue';
+import { Catalogue } from './components/Catalogue';
 import cardData from './cardData';
 import ProductCard from './components/ProductCard';
+import SeoMailing from './components/SeoMailing';
 import Footer from './components/Footer'
 import ModalsPro from "./components/ModalsPro";
 // import photo_001 from './img/MaskGroup1.png';
@@ -23,11 +24,11 @@ export default class ProcardBase extends React.Component {
       <>
         <Header>
           <Catalogue />
+          <section className="header__navmob">
+              <h3 className="navmob__catalogue">Каталог товаров</h3>
+          </section>
         </Header>
         <main>
-          <section className="header__navmob">
-            <h3 className="navmob__catalogue">Каталог товаров</h3>
-          </section>
           <section className="carousel__section">
             <hgroup className="global__hgroup flexbet">
               <h2>ПРОСМОТРЕННЫЕ ТОВАРЫ</h2>
@@ -43,6 +44,7 @@ export default class ProcardBase extends React.Component {
 
             </article>
           </section>
+          <SeoMailing />
         </main>
         <Footer />
         <ModalsPro pathname={this.props.history.location.pathname} />

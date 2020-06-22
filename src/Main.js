@@ -3,8 +3,8 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { Link } from "react-router-dom";
+import icons from './icons.svg';
 import Header from './components/Header';
-import icons from './img/icons.svg';
 import cardData from './cardData';
 import ProductCard from './components/ProductCard';
 import DiscountCard from './components/DiscountCard';
@@ -12,6 +12,7 @@ import offerData from './offerData';
 import OfferCard from './components/OfferCard';
 import newsData from './newsData';
 import NewsCard from './components/NewsCard';
+import SeoMailing from './components/SeoMailing';
 import Footer from './components/Footer';
 import ModalsPro from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup1.png';
@@ -949,19 +950,7 @@ export default class Main extends React.Component {
               </div>
             </section>
           </article>
-          <article className="mailing__article">
-            <section>
-              <form action="" id="mailingForm" className="flexbet">
-                <hgroup>
-                  <h2>ПОДПИСАТЬСЯ НА РАССЫЛКУ</h2>
-                  <h3>Хотите первым узнавать об акциях и распродажах?</h3>
-                </hgroup>
-                <input type="text" placeholder="Имя" required />
-                <input type="email" placeholder="Email" required />
-                <button form="mailingForm">ПОДПИСАТЬСЯ</button>
-              </form>
-            </section>
-          </article>
+          <SeoMailing />
         </main>
         <Footer />
         <ModalsPro pathname={this.props.history.location.pathname} />

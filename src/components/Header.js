@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import icons from '../img/icons.svg';
+import icons from '../icons.svg';
 import photo_001 from '../img/Image365.png';
 import photo_002 from '../img/Image_002.jpg';
 import photo_003 from '../img/installicon_01.png';
@@ -342,7 +342,7 @@ export default class Header extends React.Component {
                     </section>
                     <article className="header__nav">
                         <section className="flexbet">
-                            {this.props.children}
+                            {this.props.children[0]}
                             <ul className="header__cataloglinks flexcenter">
                                 <li><Link to="Services">Услуги</Link></li>
                                 <li><a href="_listening_room.html">Зал прослушивания</a></li>
@@ -367,6 +367,7 @@ export default class Header extends React.Component {
                             </ul>
                         </section>
                     </article>
+                    {this.props.children[1]}
                 </header>
                 <div id="burgerMenuMob">
                     <article className="relative">

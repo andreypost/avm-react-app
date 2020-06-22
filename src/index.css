@@ -1,3 +1,4 @@
+
 :root {
   --white: #FFFFFF;
   --black: #000000;
@@ -90,9 +91,9 @@ a, i, span, label, button, .global__list ul.block,
 .start__price.active, .box__column.active {
   display: flex;
 }
-svg {
+/* svg {
   display: inline-block;
-}
+} */
 a {
   text-decoration: none;
 }
@@ -651,6 +652,7 @@ footer, .services__price h3 {
 .header__search {
   display: flex;
   width: 62%;
+  position: relative;
 }
 
 .header__input {
@@ -669,13 +671,20 @@ footer, .services__price h3 {
 }
 
 .autocomplete__div {
-  font-size: 14px;
   cursor: pointer;
+}
+.autocomplete__div p {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--black);
+}
+.autocomplete__div h4 {
+  color: var(--orange);
 }
 
 .autocomplete__image {
   width: 50px;
-  height: 40px;
+  height: 50px;
   margin: 5px 20px 5px 15px;
 }
 
@@ -1135,7 +1144,7 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
   width: 100% !important;
 }
 
-/* .products__credit, .products__gift, .products__video {
+.products__credit, .products__gift, .products__video {
   width: 30px;
   height: 26px;
   background: url(./img/Groupe461.png) center center no-repeat;
@@ -5146,6 +5155,10 @@ about_us, certificate, jobs - pages */
   .base__discount {
     width: 20%;
   }
+  .autocomplete__items {
+    /* width: 90%; */
+    /* left: 5%; */
+  }
 }
 
 
@@ -5293,7 +5306,7 @@ about_us, certificate, jobs - pages */
   }
   .header__contacts, .header__rightnav {
     display: grid;
-    grid-template-rows: 50px;
+    grid-template-rows: 40px;
     grid-template-columns: repeat(3, 1fr);
   }
   .header__rightnav {
@@ -5340,6 +5353,14 @@ about_us, certificate, jobs - pages */
   .header__listabout {
     left: -25px;
     top: 53px;
+  }
+  .header__search {
+    position: unset;
+  }
+  .autocomplete__items {
+    width: 90%;
+    left: 5%;
+    top: 143px;
   }
   #mailingForm hgroup, #mailingForm input, .singlestocks .global__filtermob {
     margin: 0 0 20px;
@@ -5988,7 +6009,7 @@ about_us, certificate, jobs - pages */
     height: 150px;
   }
   .autocomplete__items {
-    top: 22px;
+    top: 34px;
   }
   .autocomplete__div {
     font-size: 12px;
@@ -6081,7 +6102,7 @@ about_us, certificate, jobs - pages */
   #installExpertVisitMob button, .verify__total h2, .verify__total h1 span {
     font-size: 15px;
   }
-  .jobs__section h2, .contacts__attention h3, .contacts__showroom h3, .received__count h1 {
+  .autocomplete__div h5, .jobs__section h2, .contacts__attention h3, .contacts__showroom h3, .received__count h1 {
     font-size: 14px;
   }
   .px13_580, .global__hgroup h2, .products__price, #mailingForm button,
@@ -6274,10 +6295,13 @@ about_us, certificate, jobs - pages */
   #mailingForm {
     padding: 20px;
   }
-  .width580, #mailingForm input, .services__form,
+  .width580, .autocomplete__items, #mailingForm input, .services__form,
   .listening__form, .item8, .contacts__form, .oneclick__input>div,
   .cardbuy__additional, .cabinet__empty>a, .basegift__result a {
     width: 100%;
+  }
+  .autocomplete__items {
+    left: 0;
   }
   #mailingForm input {
     padding: 6px;
@@ -6742,11 +6766,6 @@ about_us, certificate, jobs - pages */
   }
   .header__search {
     position: unset;
-  }
-  .autocomplete__items {
-    width: 90%;
-    top: 37px;
-    left: 5%;
   }
   .box__table, .box__grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

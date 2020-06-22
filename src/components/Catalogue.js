@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import icons from '../img/icons.svg';
+import icons from '../icons.svg';
 
-const Catalogue = () => {
+export const Catalogue = () => {
     return (
         <>
             <article className="header__listindex relative">
@@ -343,4 +343,3 @@ const Catalogue = () => {
         </>
     )
 }
-export default Catalogue
