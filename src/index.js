@@ -8,10 +8,10 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'bootstrap';
 
-import Main from './Main';
-import Services from './Services';
-import Category from './Category';
-import ProcardBase from './ProcardBase';
+import { Main } from './Main';
+import { Services } from './Services';
+import { Category } from './Category';
+import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
 
 export const App = () => {
