@@ -21,13 +21,30 @@ import photo_010 from './img/MaskGroup3.png';
 export const Services = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
-    const toggleAllText = (elems) => {
+    const onClickHandler = (elems, onClickListener) => {
       for (let elem of elems) {
-        elem.onclick = () => {
-          elem.nextElementSibling.classList.toggle('block')
-          elem.classList.toggle('active')
-        }
+        elem.addEventListener('click', (e) => {
+          onClickListener(e, elem)
+        })
       }
+    }
+    const pausePlayVideo = (elems) => {
+      const onClickListener = (e, elem) => {
+        let target = e.target.closest('.carousel-control-prev,.carousel-control-next, .carousel-indicators')
+        if (!target) return
+        let iframe = elem.querySelector('.carousel-inner .active iframe')
+        if (!iframe) return
+        elem.querySelector('.carousel-inner .active iframe').src = iframe.src
+      }
+      onClickHandler(elems, onClickListener)
+    }
+    pausePlayVideo(document.querySelectorAll('.carousel'))
+    const toggleAllText = (elems) => {
+      const onClickListener = (e, elem) => {
+        elem.nextElementSibling.classList.toggle('block')
+        elem.classList.toggle('active')
+      }
+      onClickHandler(elems, onClickListener)
     }
     toggleAllText(document.querySelectorAll('.services__heading'))
   })
