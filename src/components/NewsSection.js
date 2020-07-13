@@ -30,7 +30,7 @@ export const NewsSection = () => {
             }
         }
         showContentTabs(document.getElementById('tabsNews'))
-    })
+    }, [])
     return (
         <article className="news__section">
             <section className="carousel__section">

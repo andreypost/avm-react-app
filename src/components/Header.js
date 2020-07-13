@@ -66,9 +66,9 @@ export const Header = (props) => {
             const requestValue = (value) => {
                 searchRequest = null
                 searchRequestId = Math.floor(Math.random() * 1000000000000)
-                const callback = (data) => {
-                    updateAutocomplete(data)
-                }
+                // const callback = (data) => {
+                //     updateAutocomplete(data)
+                // }
                 let data = {}
                 data.request = value
                 data.id = searchRequestId
@@ -220,7 +220,7 @@ export const Header = (props) => {
             document.body.style.overflowY = ''
             document.body.style.paddingRight = 0 + 'px'
         }
-    })
+    }, [])
     return (
         <header>
             <article className="header__info header__top">

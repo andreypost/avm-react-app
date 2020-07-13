@@ -16,7 +16,7 @@ import { ModalsPro } from "./components/ModalsPro";
 export const ProcardBase = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
   return (
     <>
       <Header>

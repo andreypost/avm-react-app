@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import icons from '../icons.svg';
 
 export const ModalsPro = () => {
     useEffect(() => {
@@ -68,7 +69,7 @@ export const ModalsPro = () => {
         getAllElementsModal(document.querySelectorAll('.buy__products'), document.getElementById('addProduct'))
         getAllElementsModal(document.querySelectorAll('.goBasket'), document.getElementById('basketProduct'))
         getAllElementsModal(document.querySelectorAll('.makeOrder'), document.getElementById('verificationOrder'))
-        getAllElementsModal(document.querySelectorAll('.emptyClass'), document.getElementById('orderPlaced'))
+        // getAllElementsModal(document.querySelectorAll('.emptyClass'), document.getElementById('orderPlaced'))
         getAllElementsModal(document.querySelectorAll('.discount__sales'), document.getElementById('honestСredit'))
         getAllElementsModal(document.querySelectorAll('.discount__log'), document.getElementById('wishDiscount'))
         getAllElementsModal(document.querySelectorAll('.base__discount'), document.getElementById('wishDiscount'))
@@ -77,7 +78,7 @@ export const ModalsPro = () => {
         getAllElementsModal(document.querySelectorAll('.imgModalShow'), document.getElementById('cardImgVideo'))
         getAllElementsModal(document.querySelectorAll('.global__filtermob'), document.getElementById('filterMob'))
         getAllElementsModal(document.querySelectorAll('.global__sortmob'), document.getElementById('filterSearch'))
-    })
+    }, [])
     return (
         <>
             <div id="addProduct">
@@ -1257,12 +1258,15 @@ export const ModalsPro = () => {
                     </div>
                 </article>
             </div>
-            <div id="orderPlaced">
+            <div id="infoModal">
                 <article className="flexcenter relative">
-                    <div className="button__closegl"></div>
-                    <hgroup>
-                        <h3 className="flexcenter black"><i></i>Ваш заказ оформлен!</h3>
-                    </hgroup>
+                    <i className="button__closegl"></i>
+                    <div className="flexcenter">
+                        <svg>
+                            <use xlinkHref={`${icons}#checkmarker`}></use>
+                        </svg>
+                        <h3 className="black"></h3>
+                    </div>
                 </article>
             </div>
             <div id="honestСredit">

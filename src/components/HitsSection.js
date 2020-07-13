@@ -32,7 +32,7 @@ export const HitsSection = () => {
             }
         }
         showContentTabs(document.getElementById('tabsMainPage'))
-    })
+    }, [])
     return (
         <div id="tabsMainPage">
             <div className="tabs__caption global__hgroup flexcenter justbeet">

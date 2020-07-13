@@ -9,7 +9,7 @@ export const SeoMailing = () => {
             }
         }
         showTextToggleClick(document.querySelector('.see__seo'))
-    })
+    }, [])
     return (
         <>
             <article className="mailing__article">

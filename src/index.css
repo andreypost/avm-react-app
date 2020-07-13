@@ -1,4 +1,3 @@
-
 :root {
   --white: #FFFFFF;
   --black: #000000;
@@ -73,7 +72,7 @@ section {
 .footer__mob, .htextmob_768, .global__rating input, .box__table,
 .services__text, .global__filterset, .global__filtermob, .box__column,
 .item6 .discount__log, .ordercab__status h4, .header__dataicons span:empty,
-.htextmob__580, .comparision__addremove {
+.htextmob__580, .comparision__addremove, .formtooltip {
   display: none;
 }
 a, i, span, label, button, .global__list ul.block,
@@ -112,7 +111,7 @@ a, i, input, .header__avatar, .button__closegl, .header__about,
 .wrapperOrders .removeOrders, .verify__article hgroup h3,
 .global__filtermob, .global__sortmob, .base__credit h5, .sliderFilter,
 .verify__button, .cardbuy__additional h5, .cardsliderRight img, .base__social,
-.header__listindex {
+.header__listindex, .forgetPass {
   cursor: pointer;
 }
 .global__label, .global__filterlabel, .base__profits h5,
@@ -427,7 +426,7 @@ a, .blue, .discount__card .products__name:hover, #headerCall>a, #headerCall>h3,
 .services__addtext, .error__section a, .item8 a, .promo__button, .aboutus__links a:hover,
 .base__headerbuy a, .basegift__result a, .cabinet__leftside a.active, .wishcab__result button,
 #cabinetForm button, #wishForm button, #oneClickForm button, #cardImgVideo .buy__products,
-.blockcard__hgroup {
+.blockcard__hgroup, #forgetPassForm button {
   background: var(--blue);
 }
 #headerHoverCall, .header__vertical, .autocomplete__items, .header__dataicons span:empty+a:hover::before,
@@ -585,8 +584,9 @@ footer, .services__price h3 {
   width: 24px;
   height: 24px;
   position: absolute;
-  right: -5px;
-  top: 2px;
+  right: 0;
+  top: 0;
+  padding: 30px;
   background: url(./img/close_butt.png) center center no-repeat;
   z-index: 9999;
 }
@@ -594,9 +594,9 @@ footer, .services__price h3 {
 #headerHoverCall .button__closegl {
   width: 16px;
   height: 16px;
-  right: 0;
   top: 6px;
   background: unset;
+  padding: unset;
 }
 
 #headerCall>a, #headerCall>h3 {
@@ -1117,10 +1117,15 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 .base__card a, .blockcard__name *, .blockcard__header *,
 .comments__text *, .specific__description tr *, .reviews__href *,
 .reviews__description *, .commentcab__card hgroup *,
-.ordercab__card hgroup *, .box__offerheader * , .searchnews__header * {
+.ordercab__card hgroup *, .box__offerheader * , .searchnews__header *,
+.additionalServices span:nth-of-type(n+3) {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+.additionalServices span:nth-of-type(n+3) {
+  -webkit-line-clamp: 1;
+  padding-right: 20px;
 }
 .offer__card a, .news__card a, .column__article a, .column__href *,
 .stocksliderBlock h4, .blockcard__name *, .blockcard__header *,
@@ -1139,8 +1144,11 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 .glossary__articles h3, .column__article h4, .column__description * {
   -webkit-line-clamp: 5;
 }
-.description__card img, .promo__description img, .articleinner__section * img,
+/* .description__card img, .promo__description img, .articleinner__section * img,
 .articleinner__section * iframe {
+  width: 100% !important;
+} */
+.description__card img, .promo__description img, .articleinner__section * iframe {
   width: 100% !important;
 }
 
@@ -1408,11 +1416,10 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 /* producers section */
 
 .producers__card {
-  min-height: 240px;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  display: grid;
+  grid-template-rows: 60px;
+  grid-auto-rows: 30px;
+  align-items: center;
   padding-left: 60px;
 }
 
@@ -1688,6 +1695,14 @@ footer h5 {
   font-size: 14px;
 }
 
+.global__deskfilter li a, .global__filterarrow  {
+  display: inline-flex;
+}
+
+.filter__result, .deskreset__filter {
+  display: table;
+}
+
 .global__deskfilter .horizont {
   height: 1px;
 }
@@ -1773,6 +1788,7 @@ footer h5 {
 .global__filterarrow span:nth-of-type(2).block, .global__filterarrow i:nth-of-type(2).block {
   display: block;
 }
+
 
 /* filter range price */
 
@@ -1906,6 +1922,14 @@ footer h5 {
 .global__rating {
   width: 170px;
   flex-direction: row-reverse;
+}
+
+.global__rating label, .products__rating label {
+  transition: all .5s;
+}
+
+.scale {
+  transform: scale(1.3);
 }
 
 .global__rating label:before, .global__rating label:after {
@@ -2335,26 +2359,14 @@ input[type="date" i] {
 
 /* article inner page */
 
-/* Рекомендации заказчика, Артем.
-.articleinner__section a {
-  display: inline;
-  text-decoration: underline;
-}
-
-.articleinner__section span {
-  display: inline;
-}
-
-.articleinner__section strong {
-  font-weight: bold;
-} */
+/* Рекомендации заказчика, Артем */
 
 .articleinner__section hgroup h1 {
   font-size: 28px;
 }
 
 .articleinner__headerimg img {
-  height: 720px;
+  /* height: 720px; */
 }
 
 .articleinner__stars01 {
@@ -2426,7 +2438,8 @@ input[type="date" i] {
 .articleinner__description h3, .articleinner__verdict h3 {
   line-height: 29px;
 }
-.articleinner__section * p {  /* this style was set for to reset styles from redactor */
+/* this style was set for to reset styles from redactor */
+.articleinner__section * p {  
   margin-bottom: 20px !important;
   font-size: 18px !important;
   line-height: 29px !important;
@@ -2450,6 +2463,11 @@ input[type="date" i] {
 .articleinner__pm {
   align-items: flex-start;
 }
+
+.articleinner__pm h3 {
+  padding-bottom: 20px;
+}
+
 .articleinner__pm, .articleinner__pm h3 {
   border-bottom: 2px solid var(--grey);
 }
@@ -2457,7 +2475,8 @@ input[type="date" i] {
 .articleinner__plus, .articleinner__minus {
   display: grid;
   grid-template-rows: 80px;
-  grid-auto-rows: 150px;
+  grid-auto-rows: 120px;
+  align-items: center;
 }
 
 .articleinner__line {
@@ -2499,9 +2518,15 @@ input[type="date" i] {
   margin: 50px 0 35px;
 }
 
+.articleinner__butt {
+  flex-wrap: wrap;
+}
+
 .articleinner__butt button {
-  width: auto;
-  margin-right: 20px;
+  max-width: 180px;
+  min-width: 160px;
+  min-height: 80px;
+  margin: 20px 20px 20px 0;
   border: 2px solid var(--gray);
   padding: 10px;
 }
@@ -2516,6 +2541,10 @@ input[type="date" i] {
 
 .articleinner_news {
   margin-top: 0;
+}
+
+.selectTextSend a, .selectTextSend span {
+  display: inline;
 }
 
 /* goods filter page && others */
@@ -2580,6 +2609,7 @@ input[type="date" i] {
   max-width: 260px;
   min-height: 260px;
   max-height: 260px;
+  padding: 10px;
 }
 
 .item2 {
@@ -2842,10 +2872,11 @@ input[type="date" i] {
 
 .comparison__category {
   margin: 20px 0 20px 340px;
+  justify-content: flex-start;
 }
 
 .comparison__category a {
-  margin: 0 8px 5px 0;
+  margin: 0 10px 5px 0;
   font-size: 18px;
   line-height: 24px;
 }
@@ -2859,7 +2890,9 @@ input[type="date" i] {
   overflow-x: auto;
   overflow-y: hidden;
 }
-
+.comparison__table {
+  margin-bottom: 40px;
+}
 .comparison__row>div, .comparison__top>div {
   min-width: 280px;
   max-width: 280px;
@@ -3491,7 +3524,7 @@ about_us, certificate, jobs - pages */
   height: 8px;
   position: absolute;
   top: 4px;
-  right: -16px;
+  right: -20px;
   background-position: -171px -213px;
   transition: all .5s;
 }
@@ -3510,15 +3543,14 @@ about_us, certificate, jobs - pages */
 }
 
 .base__descriptprofit p {
-  margin-bottom: 10px;
   font-size: 12px;
 }
 
 .base__credit {
-  margin-left: 3%;
+  /* margin-left: 3%; */
 }
 .base__discount {
-  width: 40%;
+  /* width: 40%; */
 }
 
 .base__credit h5 {
@@ -3695,6 +3727,12 @@ about_us, certificate, jobs - pages */
   padding: 20px 15px;
   border: 1px solid var(--lightgrey);
   box-shadow: 0 0 7px var(--lightgrey);
+}
+.sticky {
+  position: sticky;
+  top: 20px;
+  background: var(--white);
+  z-index: 999;
 }
 .basefloat__header img {
   min-width: 180px;
@@ -4312,8 +4350,8 @@ about_us, certificate, jobs - pages */
 #enterCabinet, #wishDiscount, #honestСredit, #addProduct,
 #basketProduct, #verificationOrder, #getProductCredit,
 #burgerMenuMob, #catalogueMob, #filterMob, #filterSearch,
-#cardImgVideo, #buyOneClick, #orderPlaced, #textSent,
-#sentReviewModal, #reviewSent, #subscribedInfo, .header__shadow {
+#cardImgVideo, #buyOneClick, #infoModal,
+#sentReviewModal, #forgetPassModal, .header__shadow {
   display: none;
   position: fixed;
   left: 0;
@@ -4333,15 +4371,15 @@ about_us, certificate, jobs - pages */
 #addProduct>article, #basketProduct>article, #verificationOrder>article,
 #getProductCredit>article, #burgerMenuMob article, #catalogueMob article,
 #filterMob article, #filterSearch article, #cardImgVideo>article,
-#buyOneClick>article, #orderPlaced>article, #textSent>article,
-#sentReviewModal>div, #reviewSent>article, #subscribedInfo>article {
+#buyOneClick>article, #sentReviewModal>div, #infoModal>article,
+#forgetPassModal>div {
   width: 1080px;
   margin: 1% auto 0;
   background: var(--white);
 }
 
-#enterCabinet>div, #orderPlaced>article, #textSent>article,
-#sentReviewModal>div, #reviewSent>article {
+#enterCabinet>div, #sentReviewModal>div, #infoModal>article,
+#forgetPassModal>div {
   width: 810px;
 }
 
@@ -4354,20 +4392,8 @@ about_us, certificate, jobs - pages */
   margin-top: 20px;
 }
 
-#enterCabinet .button__closegl, #wishDiscount .button__closegl,
-#honestСredit .button__closegl, #addProduct .button__closegl,
-#basketProduct .button__closegl, #verificationOrder .button__closegl,
-#getProductCredit .button__closegl, #burgerMenuMob .button__closegl,
-#catalogueMob .button__closegl, #filterMob .button__closegl,
-#filterSearch .button__closegl, #cardImgVideo .button__closegl,
-#buyOneClick .button__closegl, #orderPlaced .button__closegl,
-#textSent .button__closegl, #reviewSent .button__closegl,
-#sentReviewModal .button__closegl, #subscribedInfo .button__closegl {
-  padding: 30px;
-}
-
 #cabinetForm, #enterCabinet article, #wishForm,
-#reviewFormSent {
+#reviewFormSent, #forgetPassForm {
   width: 70%;
   margin: 0 auto;
 }
@@ -4377,25 +4403,30 @@ about_us, certificate, jobs - pages */
   padding-bottom: 60px;
 }
 
-#cabinetForm h1 {
+#cabinetForm h1, #forgetPassForm h2 {
   margin: 40px auto 10px;
   text-align: center;
   font-size: 28px;
 }
 
-#cabinetForm>label, #wishForm label {
+#cabinetForm>label, #wishForm label, #forgetPassForm label {
   margin: 20px auto 5px 20px;
   font-size: 15px;
   text-align: left;
 }
 
-#cabinetForm>input, #wishForm input, #oneClickForm input {
+#forgetPassForm label {
+  margin: 20px auto 10px 0;
+}
+
+#cabinetForm>input, #wishForm input, #oneClickForm input,
+#forgetPassForm input {
   height: 43px;
   border: 2px solid var(--middleblue);
   padding: 8px 16px;
 }
 
-#cabinetForm input:focus {
+#cabinetForm input:focus, #forgetPassForm input:focus {
   border: 2px solid var(--blue);
 }
 
@@ -4409,16 +4440,29 @@ about_us, certificate, jobs - pages */
   font-size: 15px;
 }
 
-/* modal cabinet form */
+.forgetPass {
+  text-decoration: underline;
+}
+
+/* modals cabinetForm, forgetPassForm */
 
 #cabinetForm .global__label {
   font-size: 15px;
 }
 
-#cabinetForm button, #wishForm button, #oneClickForm button {
+#forgetPassForm input, #forgetPassForm input::placeholder {
+  font-size: 16px;
+}
+
+#cabinetForm button, #wishForm button, #oneClickForm button,
+#forgetPassForm button {
   width: 30%;
   padding: 10px;
   font-size: 20px;
+}
+
+#forgetPassForm button {
+  margin: 40px auto 80px;
 }
 
 #enterCabinet article h3 {
@@ -4677,17 +4721,24 @@ about_us, certificate, jobs - pages */
 #addProduct>article {
   height: 320px;
 }
-#addProduct hgroup, #orderPlaced hgroup, #textSent hgroup, #reviewSent hgroup,
-#subscribedInfo hgroup {
+
+#addProduct hgroup, #infoModal div {
   padding: 10px;
 }
-#addProduct h3, #orderPlaced h3, #textSent h3, #reviewSent h3,
-#subscribedInfo h3 {
+#addProduct h3, #infoModal h3 {
   font-size: 20px;
-  line-height: 16px;
+  line-height: 18px;
 }
-#addProduct h3 i, #orderPlaced h3 i, #textSent h3 i, #reviewSent h3 i,
-#subscribedInfo h3 i {
+#infoModal svg {
+  width: 45px;
+  height: 30px;
+  /* margin-right: 10px; */
+}
+#infoModal h3 span {
+  font-size: 14px;
+  margin-top: 10px;
+}
+#addProduct h3 i {
   padding: 20px;
   background: url(./img/checkmark_add.png) center center no-repeat;
 }
@@ -4708,8 +4759,7 @@ about_us, certificate, jobs - pages */
   background: var(--blue);
 }
 /*  */
-#orderPlaced>article, #textSent>article, #reviewSent>article,
-#subscribedInfo>article {
+#infoModal>article {
   height: 250px;
 }
 /* modal basket */
@@ -4746,13 +4796,13 @@ about_us, certificate, jobs - pages */
 .additionalServices span:nth-of-type(2) {
   min-width: 50%;
 }
-.additionalServices span:nth-of-type(n+3) {
+/* .additionalServices span:nth-of-type(n+3) { remove, after test, duplicale styles
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 1;
   padding-right: 20px;
-}
+} */
 .additionalServices span:nth-of-type(n+2) {
   font-size: 13px;
 }
@@ -5150,10 +5200,10 @@ about_us, certificate, jobs - pages */
     padding-left: 0;
   }
   .base__credit {
-    margin-left: unset;
+    /* margin-left: unset; */
   }
   .base__discount {
-    width: 20%;
+    /* width: 20%; */
   }
   .autocomplete__items {
     /* width: 90%; */
@@ -5219,8 +5269,7 @@ about_us, certificate, jobs - pages */
   }
   #wishDiscount article, #addProduct>article, #basketProduct>article,
   #verificationOrder>article, #cardImgVideo>article, #buyOneClick>article,
-  #getProductCredit>article, #orderPlaced>article, #textSent>article,
-  #reviewSent>article, #subscribedInfo>article {
+  #getProductCredit>article, #infoModal>article {
     width: 90%;
   }
   .error__section a {
@@ -5371,7 +5420,8 @@ about_us, certificate, jobs - pages */
   .footer__desk li {
     margin: 5px auto;
   }
-  #enterCabinet>div, #sentReviewModal>div {
+  #enterCabinet>div, #sentReviewModal>div,
+   #forgetPassModal>div {
     width: 90%;
   }
   .articleinner__stars01 .global__rating {
@@ -5457,7 +5507,7 @@ about_us, certificate, jobs - pages */
 
 @media screen and (max-width: 768px) {
   .none768, .header__info, .header__button,
-  .header__cataloglinks a, .header__nav, .nav__catalog,
+  .header__cataloglinks a, .header__nav, .nav__catalog, .news__card .news__href,
   #carouselIndex .carousel-indicators a, #carouselIndex .carousel-control-next,
   #carouselIndex .carousel-control-prev, .banner__carousel .carousel-control-prev,
   .banner__carousel .carousel-control-next, .header__pricedesk h1,
@@ -5501,10 +5551,13 @@ about_us, certificate, jobs - pages */
   .header__search {
     width: 120%; 
   }
-  .manufacturers__articles h1 {
+  .manufacturers__articles h1, .base__headerprice h1 {
     font-size: 30px;
   }
-  #cabinetForm button {
+  #forgetPassForm h2 {
+    font-size: 22px;
+  }
+  #cabinetForm button, #forgetPassForm button {
     font-size: 18px;
   }
   #cabinetForm h1, #wishDiscount h3, .glossary__section h1, .glossaryinner__section hgroup h1,
@@ -5526,23 +5579,27 @@ about_us, certificate, jobs - pages */
   .listening__section h4, .glossary__list a, .manufacturers__list a, .glossary__articles a,
   .glossaryinner__section h3, #addProduct h3, #addProduct h4, #addProduct h5,
   #registrationForm label, .discountcab__catalogue th, .discountcab__catalogue td,
-  #orderPlaced h3, #textSent h3, #reviewSent h3, .item6 .discount__log,
-  #subscribedInfo h3 {
+  .item6 .discount__log, #infoModal h3, #forgetPassForm label {
     font-size: 13px;
   }
   .header__input, .header__input::placeholder, .seo__section h3,
   .error__section h3, .error__section h4, .installcard__price>a,
-  .discountcab__catalogue hgroup h3 {
+  .discountcab__catalogue hgroup h3, #forgetPassForm input, #forgetPassForm input::placeholder {
     font-size: 12px;
   }
-  .px11_768, #tabsMainPage .tabs__caption a, #tabsNews .tabs__caption a, .seo__section h4, .breadcrumbs a, .breadcrumbs li:last-child, .services__price h6 span {
+  .px11_768, #tabsMainPage .tabs__caption a, #tabsNews .tabs__caption a, .seo__section h4, .breadcrumbs a,
+  .breadcrumbs li:last-child, .services__price h6 span, #infoModal h3 span {
     font-size: 11px;
   }
-  .header__dataicons span, .error__section h5, .error__section a, .glossary__articles h3 {
+  .header__dataicons span, .error__section h5, .error__section a, .glossary__articles h3,
+  .base__headerprice h1 span {
     font-size: 10px;
   }
   .services__price .services__colorstar {
     font-size: 8px;
+  }
+  .base__headerprice h1 span {
+    line-height: 10px;
   }
   .header__input {
     height: 22px;
@@ -5634,30 +5691,36 @@ about_us, certificate, jobs - pages */
   .seo__section h4 {
     margin-top: 20px;
   }
-  #cabinetForm, #wishForm, #reviewFormSent {
+  #enterCabinet>div, #wishDiscount article, #honestСredit article,
+  #addProduct>article, #basketProduct>article, #verificationOrder>article,
+  #getProductCredit>article, #burgerMenuMob article, #catalogueMob article,
+  #filterMob article, #filterSearch article, #cardImgVideo>article,
+  #buyOneClick>article, #sentReviewModal>div, #infoModal>article,
+  #forgetPassModal>div {
+    width: 95%;
+    margin-top: 2%;
+  }
+  #cabinetForm, #wishForm, #reviewFormSent, #forgetPassForm {
     width: 90%;
     padding-bottom: 30px;
   }
   #cabinetForm>label, #wishForm label {
     margin: 10px auto 5px 10px;
   }
-  #cabinetForm button {
+  #cabinetForm button, #forgetPassForm button {
     width: 55%;
   }
-  #enterCabinet>div, #wishDiscount article, #honestСredit article,
-  #addProduct>article, #basketProduct>article, #verificationOrder>article,
-  #getProductCredit>article, #burgerMenuMob article, #catalogueMob article,
-  #filterMob article, #filterSearch article, #cardImgVideo>article,
-  #buyOneClick>article, #orderPlaced>article, #textSent>article,
-  #reviewSent>article, #sentReviewModal>div, #subscribedInfo>article {
-    width: 95%;
-    margin-top: 2%;
+  #forgetPassForm button {
+    margin-bottom: 40px;
   }
   #wishDiscount hgroup {
     padding: 10px 0 0 10px;
   }
   #wishDiscount h3 {
     margin: 20px 0;
+  }
+  #infoModal h3 span {
+    margin-top: 5px;
   }
   .breadcrumbs a, .breadcrumbs li:last-child {
     margin: 5px 5px 10px 0;
@@ -5772,7 +5835,7 @@ about_us, certificate, jobs - pages */
     justify-content: space-between;
   }
   .articleinner__headerimg img {
-    height: 320px;
+    /* height: 320px; */
   }
   .articleinner__stars01 {
     grid-template-columns: repeat(2, 1fr);
@@ -5800,6 +5863,9 @@ about_us, certificate, jobs - pages */
   }
   .articleinner__pm, .articleinner__pm h3, .comporision__base, .base__switch a, .cardsliderRight {
     border: none;
+  }
+  .articleinner__pm h3 {
+    padding-bottom: 0;
   }
   .table__select, .column__select {
     margin-left: 20px;
@@ -5881,7 +5947,6 @@ about_us, certificate, jobs - pages */
     height: unset;
   }
   .base__headerprice h1 {
-    font-size: 40px;
     line-height: 46px;
   }
   .base__description img {
@@ -5979,7 +6044,7 @@ about_us, certificate, jobs - pages */
     border: none;
   }
   .base__discount {
-    width: 35%;
+    /* width: 35%; */
   }
   /* styles for Плати Позже modal */
   .popup-credit-content table tr td {
@@ -6004,9 +6069,8 @@ about_us, certificate, jobs - pages */
     width: 70%;
     margin: 0 auto;
   }
-  #orderPlaced>article, #textSent>article, #reviewSent>article,
-  #subscribedInfo>article {
-    height: 150px;
+  #infoModal>article {
+    height: 180px;
   }
   .autocomplete__items {
     top: 34px;
@@ -6043,7 +6107,7 @@ about_us, certificate, jobs - pages */
 
 
 @media screen and (max-width: 580px) {
-  .none580, #arrowUp, .news__card .news__href, .footer__desk,
+  .none580, #arrowUp, .footer__desk,
   .promo__href a, .comparison__header, .header__1440 {
     display: none;
   }
@@ -6258,6 +6322,16 @@ about_us, certificate, jobs - pages */
   .products__icon img {
     width: 28px;
   }
+  .offer__card, .news__card {
+    /* height: 320px; */
+    height: 260px;
+  }
+  .offer__card>div, .news__card>div {
+    height: 130px;
+  }
+  .news__card {
+    border: none;
+  }
   .owl-theme .owl-nav [class*='owl-prev'], .owl-theme .owl-nav [class*='owl-next'] {
     top: 33%;
   }
@@ -6320,7 +6394,7 @@ about_us, certificate, jobs - pages */
   .footer__mob, .articles__section hgroup h1, .articleinner__section hgroup h1 {
     margin: 0 auto;
   }
-  #cabinetForm>input, .base__switch a {
+  #cabinetForm>input, .base__switch a, #forgetPassForm input {
     height: 33px;
   }
   #wishForm textarea, #buyOneClick textarea {
@@ -6444,9 +6518,11 @@ about_us, certificate, jobs - pages */
     margin-right: 10px;
   }
   .articleinner__butt button {
-    width: 80px;
-    margin-right: 10px;
-    padding: 5px 0;
+    max-width: 120px;
+    min-width: 120px;
+    min-height: 40px;
+    margin: 10px 10px 10px 0;
+    padding: 5px;
   }
   .articleinner__verdict h5 {
     margin: 0 0 15px 0;
@@ -6551,11 +6627,10 @@ about_us, certificate, jobs - pages */
     height: 40px;
   }
   .base__headerprice h1 {
-    font-size: 35px;
     line-height: 35px;
   }
   .base__headerbuy a {
-    width: 170px;
+    width: 150px;
     height: 40px;
   }
   .base__credit, .base__description hgroup h1 {
@@ -6781,13 +6856,13 @@ about_us, certificate, jobs - pages */
   .header__dataicons {
     margin: unset;
   }
-  .offer__card, .news__card {
-    height: 320px;
-  }
   .products__card>img, .discount__card>img {
     height: 75px;
   }
-  .articleinner__headerimg img, .glossaryinner__imgbox {
+  /* .articleinner__headerimg img, .glossaryinner__imgbox {
+    height: 180px;
+  } */
+  .glossaryinner__imgbox {
     height: 180px;
   }
   .manufacturers__articles .tabsBlock>div {
@@ -6798,6 +6873,9 @@ about_us, certificate, jobs - pages */
   }
   .inputForm03 {
     width: 100%;
+  }
+  .base__headerprice h1 {
+    font-size: 26px;
   }
 }
 
@@ -6842,7 +6920,7 @@ about_us, certificate, jobs - pages */
 }
 
 
-/* 
+/* 6815
 promo__offer -> _all_stocks, _all_promotions
 box__offer -> _goods_filter, _category, _subcategory, _product_search
 offer__card -> _articles, _product_search, index

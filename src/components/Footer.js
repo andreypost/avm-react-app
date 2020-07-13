@@ -25,7 +25,7 @@ export const Footer = () => {
         window.addEventListener('scroll', () => {
             document.getElementById('arrowUp').hidden = document.documentElement.clientHeight / 2 > document.documentElement.scrollTop
         })
-    })
+    }, [])
     return (
         <footer>
             <section className="footer__section">

@@ -47,7 +47,7 @@ export const Services = () => {
       onClickHandler(elems, onClickListener)
     }
     toggleAllText(document.querySelectorAll('.services__heading'))
-  })
+  }, [])
   return (
     <>
       <Header>
