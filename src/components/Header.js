@@ -347,7 +347,7 @@ export const Header = (props) => {
                     <ul className="header__cataloglinks flexcenter">
                         <li><Link to="Services">Услуги</Link></li>
                         <li><Link to="Hall">Зал прослушивания</Link></li>
-                        <li><a href="_payment_delivery.html">Оплата и доставка</a></li>
+                        <li><Link to="Delivery">Оплата и доставка</Link></li>
                         <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
                         <li><a href="_installment_plan.html">Рассрочка</a></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
@@ -397,7 +397,7 @@ export const Header = (props) => {
                         <li><Link to="/">Главная</Link></li>
                         <li><Link to="Services">Услуги</Link></li>
                         <li><Link to="Hall">Зал прослушивания</Link></li>
-                        <li><a href="_payment_delivery.html">Оплата и доставка</a></li>
+                        <li><Link to="Delivery.html">Оплата и доставка</Link></li>
                         <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
                         <li><a href="_installment_plan.html">Рассрочка</a></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
