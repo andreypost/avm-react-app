@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const DiscountCard = (props) => {
     return (
-        <div className="item discount__card" >
+        <div className={"item discount__card " + props.datos.clase} >
             <div className="flexbet">
                 <div className="flexcenter">
                     <div className="products__icon relative">

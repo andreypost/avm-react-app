@@ -509,14 +509,14 @@ export const Main = (props) => {
           </hgroup>
           <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
             responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-            <ProductCard datos={cardData[0]} />
-            <DiscountCard datos={cardData[1]} />
+            <ProductCard datos={cardData[24]} />
+            <DiscountCard datos={cardData[23]} />
             <ProductCard datos={cardData[2]} />
-            <DiscountCard datos={cardData[3]} />
-            <ProductCard datos={cardData[4]} />
-            <DiscountCard datos={cardData[5]} />
+            <DiscountCard datos={cardData[15]} />
+            <ProductCard datos={cardData[25]} />
+            <DiscountCard datos={cardData[26]} />
             <ProductCard datos={cardData[6]} />
-            <DiscountCard datos={cardData[7]} />
+            <DiscountCard datos={cardData[8]} />
           </OwlCarousel>
           <article className="main__addicons flexcenter alignstart flexwrap">
             <div className="main__dialer flexcol">

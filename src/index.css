@@ -32,9 +32,12 @@ section {
   text-align: center;
 }
 
-.grid, .box__grid, .box__table.active {
+.grid, .box__grid, .box__table.active, .producers__card, .services__grid,
+.articleinner__stars01, .articleinner__plus, .articleinner__minus, .column__card,
+.reviews__card {
   display: grid;
 }
+
 .flexcenter {
   display: flex;
   justify-content: space-around;
@@ -87,9 +90,15 @@ a, i, span, label, button, .global__list ul.block,
 #regularCustomerForm.active, .showInputForm.active+.inputForm {
   display: block;
 }
-.start__price.active, .box__column.active {
+.header__search, .header__dataicons span:empty+a:hover::before,
+.nav__catalog ul li a, .products__card, .discount__card, .products__comments,
+.start__price.active, .box__column.active, .pagination__item,
+.select__item div, .select__clone, .item1, .item2 h5, .promo__offerheader,
+.contacts__social, .base__social:hover .products__popup,
+.cardsliderNav div, .specific__description tr, .infocab__confirm {
   display: flex;
 }
+
 /* svg {
   display: inline-block;
 } */
@@ -272,22 +281,28 @@ body * {
   grid-area: item06;
 }
 .box__table, .box__grid {
-  align-self: flex-start;
   grid-gap: 10px;
   /* grid-template-columns: repeat(auto-fill, 255px); */
   grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
-  justify-content: center;
   margin: 0 auto 40px auto;
 }
-.flexwrap {
+
+.flexcolumn, .infocab__confirm, .products__card, .discount__card, .promo__offerheader {
+  flex-flow: column;
+}
+
+.flexwrap, .articleinner__butt, .contacts__social {
   flex-wrap: wrap;
 }
 
-.juststart {
+.juststart, .nav__catalog .lastItem, .item5, .comparison__category,
+.infocab__confirm {
   justify-content: flex-start;
 }
 
-.justcenter {
+.justcenter, .box__table, .box__grid, .header__dataicons span:empty+a:hover::before,
+.header__navlist, .pagination__item, .select__item div, .select__clone, .item1,
+.cardsliderNav div {
   justify-content: center;
 }
 
@@ -295,15 +310,21 @@ body * {
   justify-content: flex-end;
 }
 
-.justbeet {
+.justbeet, .nav__catalog ul li a, .articleinner__stars01, .comporision__base,
+.contacts__social, .verify__methods, .verify__methods .select__clone,
+.verify__methods .select__item div {
   justify-content: space-between;
 }
 
-.aligncenter {
+.aligncenter, .header__dataicons span:empty+a:hover::before, .nav__catalog ul li a,
+.header__navlist, .products__card, .discount__card, .producers__card, .pagination__item,
+.select__item div, .select__clone, .articleinner__stars01, .articleinner__plus,
+.articleinner__minus, .item1, .cardsliderNav div {
   align-items: center;
 }
 
-.alignstart {
+.alignstart, .offer__card>div, .news__card>div, .articleinner__pm, .item2,
+.infocab__confirm {
   align-items: flex-start;
 }
 
@@ -311,7 +332,7 @@ body * {
   align-items: flex-end;
 }
 
-.selfstart {
+.selfstart, .box__table, .box__grid, #registrationForm label {
   align-self: flex-start;
 }
 
@@ -650,7 +671,6 @@ footer, .services__price h3 {
 /* header__search */
 
 .header__search {
-  display: flex;
   width: 62%;
   position: relative;
 }
@@ -714,9 +734,6 @@ footer, .services__price h3 {
 
 .header__dataicons span:empty+a:hover::before {
   content: attr(data-headertooltip);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   right: 8px;
   top: 50px;
@@ -833,9 +850,6 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 }
 
 .nav__catalog ul li a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 15px 0;
 }
 
@@ -911,6 +925,7 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
   content: "";
   background: url(./img/sprites.png) no-repeat;
 }
+
 .nav__first>li>a:not(.lastItem):after, .nav__second>li>a:after,
 .base__navmob a:after {
   background-position: -40px -250px;
@@ -931,11 +946,6 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 .nav__second>li>a.marginRight:after {
   margin-right: 726px;
 }
-
-.nav__catalog .lastItem {
-  justify-content: flex-start;
-}
-
 .nav__first>li:nth-of-type(1)>a:before,
 .catalogue__list>li:nth-of-type(1)>a:before {
   background-position: -51px -26px;
@@ -984,8 +994,6 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 
 .header__navlist {
   max-width: 1380px;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 56px;
   left: 0;
@@ -1091,9 +1099,6 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
   padding: 40px 0;
 }
 .products__card, .discount__card {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
   padding: 15px 10px;
 }
 
@@ -1102,6 +1107,9 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
   height: 350px;
   margin-bottom: 10px;
   border: 1px solid var(--lightblue);
+}
+.owl-carousel .products__card, .owl-carousel .discount__card {
+  margin-top: 10px;
 }
 .offer__card img, .news__card img, .box__offer img, .promo__offer img,
 .search__news img {
@@ -1254,7 +1262,6 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 }
 
 .products__comments {
-  display: flex;
   margin: 15px 0;
   font-size: 12px;
 }
@@ -1388,7 +1395,6 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 }
 
 .offer__card>div, .news__card>div {
-  align-items: flex-start;
   text-align: left;
   height: 180px;
   padding: 0 10px;
@@ -1416,10 +1422,8 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 /* producers section */
 
 .producers__card {
-  display: grid;
   grid-template-rows: 60px;
   grid-auto-rows: 30px;
-  align-items: center;
   padding-left: 60px;
 }
 
@@ -1598,9 +1602,6 @@ footer h5 {
 
 .pagination__item {
   min-width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 6px;
 }
 
@@ -1884,9 +1885,6 @@ footer h5 {
 }
 
 .select__item div, .select__clone {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 16px;
 }
 
@@ -2105,7 +2103,6 @@ input[type="date" i] {
 }
 
 .services__grid {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 400px;
   grid-gap: 20px 60px;
@@ -2370,11 +2367,8 @@ input[type="date" i] {
 }
 
 .articleinner__stars01 {
-  display: grid;
   grid-template-columns: 1fr 4fr 0.8fr 1fr;
   grid-auto-rows: minmax(60px, auto);
-  align-items: center;
-  justify-content: space-between;
 }
 
 .articleinner__stars01 .articleinner__viewed {
@@ -2460,10 +2454,6 @@ input[type="date" i] {
   margin: 40px 0;
 }
 
-.articleinner__pm {
-  align-items: flex-start;
-}
-
 .articleinner__pm h3 {
   padding-bottom: 20px;
 }
@@ -2473,10 +2463,8 @@ input[type="date" i] {
 }
 
 .articleinner__plus, .articleinner__minus {
-  display: grid;
   grid-template-rows: 80px;
   grid-auto-rows: 120px;
-  align-items: center;
 }
 
 .articleinner__line {
@@ -2516,10 +2504,6 @@ input[type="date" i] {
 
 .articleinner__verdict h5 {
   margin: 50px 0 35px;
-}
-
-.articleinner__butt {
-  flex-wrap: wrap;
 }
 
 .articleinner__butt button {
@@ -2591,7 +2575,6 @@ input[type="date" i] {
 }
 
 .column__card {
-  display: grid;
   grid-template-areas: "item1 item2 item2 item2 item2 item3 item7" "item1 item4 item4 item4 item4 item4 item8" "item1 item5 item5 item6 item6 item6 item9";
   grid-gap: 5px;
   padding: 10px;
@@ -2599,9 +2582,6 @@ input[type="date" i] {
 
 .item1 {
   grid-area: item1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .item1 img, .column__article img {
@@ -2614,7 +2594,6 @@ input[type="date" i] {
 
 .item2 {
   grid-area: item2;
-  align-items: flex-start;
 }
 
 .item2 .products__name {
@@ -2622,7 +2601,6 @@ input[type="date" i] {
 }
 
 .item2 h5 {
-  display: flex;
   margin-top: 5px;
   font-size: 14px;
 }
@@ -2639,7 +2617,6 @@ input[type="date" i] {
 .item5 {
   grid-area: item5;
   /* width: 100px; */
-  justify-content: flex-start;
 }
 
 .item6 {
@@ -2744,26 +2721,26 @@ input[type="date" i] {
 }
 
 /* pages: bestsellers, newitems, markdown */
-.bestsellers__catalogue .products__card,
-.bestsellers__catalogue .discount__card,
-.bestsellers__catalogue .column__card,
-.newitems__catalogue .products__card,
-.newitems__catalogue .discount__card,
-.newitems__catalogue .column__card,
-.markdown__catalogue .products__card,
-.markdown__catalogue .discount__card,
-.markdown__catalogue .column__card {
+.bestseller__product.products__card,
+.bestseller__product.discount__card,
+.bestseller__product.column__card,
+.newitem__product.products__card,
+.newitem__product.discount__card,
+.newitem__product.column__card,
+.markdown__product.products__card,
+.markdown__product.discount__card,
+.markdown__product.column__card {
   position: relative;
 }
-.bestsellers__catalogue .products__card::before,
-.bestsellers__catalogue .discount__card::before,
-.bestsellers__catalogue .column__card::before,
-.newitems__catalogue .products__card::before,
-.newitems__catalogue .discount__card::before,
-.newitems__catalogue .column__card::before,
-.markdown__catalogue .products__card::before,
-.markdown__catalogue .discount__card::before,
-.markdown__catalogue .column__card::before {
+.bestseller__product.products__card::before,
+.bestseller__product.discount__card::before,
+.bestseller__product.column__card::before,
+.newitem__product.products__card::before,
+.newitem__product.discount__card::before,
+.newitem__product.column__card::before,
+.markdown__product.products__card::before,
+.markdown__product.discount__card::before,
+.markdown__product.column__card::before {
     width: 100px;
     content: "ХИТ ПРОДАЖ";
     position: absolute;
@@ -2774,20 +2751,20 @@ input[type="date" i] {
     border-radius: 8px;
     padding: 3px;
 }
-.bestsellers__catalogue .column__card::before,
-.newitems__catalogue .column__card::before,
-.markdown__catalogue .column__card::before {
+.bestseller__product.column__card::before,
+.newitem__product.column__card::before,
+.markdown__product.column__card::before {
   left: 9%;
 }
-.newitems__catalogue .products__card::before,
-.newitems__catalogue .discount__card::before,
-.newitems__catalogue .column__card::before {
+.newitem__product.products__card::before,
+.newitem__product.discount__card::before,
+.newitem__product.column__card::before {
     content: "НОВИНКА";
 }
-.markdown__catalogue .products__card::before,
-.markdown__catalogue .discount__card::before,
-.markdown__catalogue .column__card::before {
-    content: "Уценка";
+.markdown__product.products__card::before,
+.markdown__product.discount__card::before,
+.markdown__product.column__card::before {
+    content: "УЦЕНКА";
 }
 
 /* all promo page && all stocks page */
@@ -2798,8 +2775,6 @@ input[type="date" i] {
 }
 
 .promo__offerheader {
-  display: flex;
-  flex-flow: column;
   height: 180px;
   padding: 10px;
 }
@@ -2872,7 +2847,6 @@ input[type="date" i] {
 
 .comparison__category {
   margin: 20px 0 20px 340px;
-  justify-content: flex-start;
 }
 
 .comparison__category a {
@@ -2918,7 +2892,6 @@ input[type="date" i] {
 
 .comporision__base {
   height: 350px;
-  justify-content: space-between;
   border: 1px solid var(--lightblue);
 }
 
@@ -3014,10 +2987,6 @@ about_us, certificate, jobs - pages */
 
 .delivery__section h5, .delivery__section h6, .delivery__section>a, .payment__section h6, .payment__section>a, .paydel__important h5, .paydel__important h6, .warranty__section h5, .installplan__section h5, .jobs__section h5 {
   margin-left: 140px;
-}
-
-.delivery__section h5, .warranty__section h5, .installplan__section h5, .jobs__section h5 {
-  display: flex;
 }
 
 .delivery__section h5::before, .warranty__section h5::before, .installplan__section h5::before, .jobs__section h5::before {
@@ -3130,12 +3099,6 @@ about_us, certificate, jobs - pages */
   font-size: 20px;
 }
 
-.contacts__social {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .contacts__social>div {
   min-width: 240px;
   padding: 10px;
@@ -3146,7 +3109,6 @@ about_us, certificate, jobs - pages */
 }
 
 .contacts__social a {
-  display: flex;
   margin-bottom: 10px;
   padding-left: 40px;
   font-size: 20px;
@@ -3277,10 +3239,6 @@ about_us, certificate, jobs - pages */
   left: 41px;
 }
 
-.base__social:hover .products__popup {
-  display: flex;
-}
-
 .base__social a, .wishcab__social a {
   padding: 15px 10px;
   background: url(./img/social_05.png) center center no-repeat;
@@ -3335,9 +3293,6 @@ about_us, certificate, jobs - pages */
 }
 
 .cardsliderNav div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 80px;
   height: 85px;
   border-bottom: none;
@@ -3831,10 +3786,10 @@ about_us, certificate, jobs - pages */
   color: var(--lightblue);
 }
 .comments__card {
-  display: flex;
+  /* display: flex; // probable not need
   flex-flow: column;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: flex-start; */
   min-width: 100%;
   max-width: 100%;
   min-height: 150px;
@@ -3896,7 +3851,6 @@ about_us, certificate, jobs - pages */
   font-weight: 500;
 }
 .specific__description tr {
-  display: flex;
   height: 40px;
 }
 .specific__description table td {
@@ -3982,7 +3936,6 @@ about_us, certificate, jobs - pages */
 }
 /* reviews card page */
 .reviews__card {
-  display: grid;
   grid-template-areas:
       "item01 item02 item02"
       "item01 item03 item03"
@@ -4057,7 +4010,6 @@ about_us, certificate, jobs - pages */
   min-width: 145px;
   max-width: 145px;
   margin-right: 10px;
-  align-self: flex-start;
   font-size: 15px;
   color: #888888;
 }
@@ -4186,7 +4138,7 @@ about_us, certificate, jobs - pages */
   font-size: 15px;
   color: #888888;
 }
-.infocab__confirm label {
+.infocab__confirm label, #changeUserPass .showPassword  {
   line-height: unset;
   color: var(--blue);
 }
@@ -4890,7 +4842,6 @@ about_us, certificate, jobs - pages */
 }
 .verify__methods {
   grid-template-columns: 48% 48%;
-  justify-content: space-between;
 }
 .inputForm01, .inputForm02 {
   padding: 10px 0;
@@ -4922,7 +4873,6 @@ about_us, certificate, jobs - pages */
   border: 2px solid var(--lightblue);
 }
 .verify__methods .select__clone, .verify__methods .select__item div {
-  justify-content: space-between;
   font-size: 13px;
   padding: 5px 5px 5px 10px;
 }
@@ -5529,7 +5479,7 @@ about_us, certificate, jobs - pages */
   }
   .col768, .articleinner__stars>div, .articleinner__pm, .articleinner__stars02>div,
   .base__switch, #cardSlider, #cardSliderModal, #registrationForm>div,
-  #infoUserForm>div {
+  #infoUserForm>div, .base__headerprice h1 {
     flex-flow: column;
   }
   .cardsliderNav {
@@ -5551,7 +5501,8 @@ about_us, certificate, jobs - pages */
   .header__search {
     width: 120%; 
   }
-  .manufacturers__articles h1, .base__headerprice h1 {
+  .manufacturers__articles h1, .base__headerprice h1,
+  .basefloat__block .base__headerprice h1 {
     font-size: 30px;
   }
   #forgetPassForm h2 {
@@ -5592,13 +5543,13 @@ about_us, certificate, jobs - pages */
     font-size: 11px;
   }
   .header__dataicons span, .error__section h5, .error__section a, .glossary__articles h3,
-  .base__headerprice h1 span {
+  .base__headerprice h1 span, .basefloat__block .base__headerprice h1 span {
     font-size: 10px;
   }
   .services__price .services__colorstar {
     font-size: 8px;
   }
-  .base__headerprice h1 span {
+  .base__headerprice h1 span, .basefloat__block .base__headerprice h1 span {
     line-height: 10px;
   }
   .header__input {
@@ -5947,7 +5898,9 @@ about_us, certificate, jobs - pages */
     height: unset;
   }
   .base__headerprice h1 {
-    line-height: 46px;
+    /* line-height: 46px; */
+    line-height: 28px;
+    margin-bottom: 5px;
   }
   .base__description img {
     min-width: 100%;
@@ -6132,9 +6085,6 @@ about_us, certificate, jobs - pages */
   .base__plus {
     font-size: 40px;
   }
-  .basefloat__block .base__headerprice h1 {
-    font-size: 35px;
-  }
   .stocks__counter h1, .basegift__result h2 {
     font-size: 25px;
   }
@@ -6232,10 +6182,8 @@ about_us, certificate, jobs - pages */
   .articleinner__stars h2, .articleinner__stars h3, .articleinner__stars01 h4,
   .articleinner__stars01 h3, .articleinner__img a, .search__result,
   .item6 .discount__log, .column__article a, .box__offer a,
-  .comparison__category a, #feedbackForm h4, .base__headerprice h1 span,
-  .blockcard__click h2, .cardbuy__additional h5, .received__count h5,
-  .received__count h2, .basefloat__block .base__headerprice h1 span, .wishcab__result h6,
-  .start__price a, .searchnews__header h6 {
+  .comparison__category a, #feedbackForm h4, .blockcard__click h2, .cardbuy__additional h5, .received__count h5,
+  .received__count h2, .wishcab__result h6, .start__price a, .searchnews__header h6 {
     font-size: 10px;
   }
   .discount__sales, .blockcard__name h6 {
@@ -6245,15 +6193,15 @@ about_us, certificate, jobs - pages */
   .item6 .products__comments, .column__article h5, .column__article p,
   .box__offerheader h5, .box__offer .news__viewed p, .column__article .news__viewed a,
   th, .blockcard__inner>h2 span, .received__card h3 span,
-  .bestsellers__catalogue .products__card::before,
-  .bestsellers__catalogue .discount__card::before,
-  .bestsellers__catalogue .column__card::before,
-  .newitems__catalogue .products__card::before,
-  .newitems__catalogue .discount__card::before,
-  .newitems__catalogue .column__card::before,
-  .markdown__catalogue .products__card::before,
-  .markdown__catalogue .discount__card::before,
-  .markdown__catalogue .column__card::before {
+  .bestseller__product.products__card::before,
+  .bestseller__product.discount__card::before,
+  .bestseller__product.column__card::before,
+  .newitem__product.products__card::before,
+  .newitem__product.discount__card::before,
+  .newitem__product.column__card::before,
+  .markdown__product.products__card::before,
+  .markdown__product.discount__card::before,
+  .markdown__product.column__card::before {
     font-size: 8px;
   }
   td {
@@ -6300,7 +6248,7 @@ about_us, certificate, jobs - pages */
   .commentcab__card h5 {
     line-height: 14px;
   }
-  .base__headerprice h1 span, .searchnews__header h6 {
+  .searchnews__header h6 {
     line-height: 10px;
   }
   th, td {
@@ -6626,9 +6574,6 @@ about_us, certificate, jobs - pages */
     width: 40px;
     height: 40px;
   }
-  .base__headerprice h1 {
-    line-height: 35px;
-  }
   .base__headerbuy a {
     width: 150px;
     height: 40px;
@@ -6807,15 +6752,15 @@ about_us, certificate, jobs - pages */
   .manufacturers__articles a {
     width: 33%;
   }
-  .bestsellers__catalogue .products__card::before,
-  .bestsellers__catalogue .discount__card::before,
-  .bestsellers__catalogue .column__card::before,
-  .newitems__catalogue .products__card::before,
-  .newitems__catalogue .discount__card::before,
-  .newitems__catalogue .column__card::before,
-  .markdown__catalogue .products__card::before,
-  .markdown__catalogue .discount__card::before,
-  .markdown__catalogue .column__card::before {
+  .bestseller__product.products__card::before,
+  .bestseller__product.discount__card::before,
+  .bestseller__product.column__card::before,
+  .newitem__product.products__card::before,
+  .newitem__product.discount__card::before,
+  .newitem__product.column__card::before,
+  .markdown__product.products__card::before,
+  .markdown__product.discount__card::before,
+  .markdown__product.column__card::before {
     width: 80px;
     top: -8px;
   }

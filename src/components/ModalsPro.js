@@ -1265,7 +1265,7 @@ export const ModalsPro = () => {
                         <svg>
                             <use xlinkHref={`${icons}#checkmarker`}></use>
                         </svg>
-                        <h3 className="black"></h3>
+                        <h3 className="black"> </h3>
                     </div>
                 </article>
             </div>

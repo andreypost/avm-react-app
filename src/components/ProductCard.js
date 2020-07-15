@@ -7,7 +7,7 @@ import photo_004 from '../img/Groupe467.png';
 
 export const ProductCard = (props) => {
     return (
-        <div className="item products__card" >
+        <div className={"item products__card " + props.datos.clase} >
             <div className="flexbet">
                 <div className="flexcenter">
                     <div className="products__icon relative">

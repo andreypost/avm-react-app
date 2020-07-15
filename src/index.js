@@ -9,8 +9,9 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'bootstrap';
 
 import { Main } from './Main';
-import { Services } from './Services';
 import { Category } from './Category';
+import { Services } from './Services';
+import { Hall } from './Hall';
 import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
 
@@ -21,8 +22,8 @@ export const App = () => {
         <Route path="/Services" component={Services} />
         <Route path="/Category" component={Category} />
         <Route path="/ProcardBase" component={ProcardBase} />
-        {/*<Route path="/team" component={Team} />
-        <Route path="/coach_joyce" component={Coach_Joyce} />
+        <Route path="/Hall" component={Hall} />
+        {/*<Route path="/coach_joyce" component={Coach_Joyce} />
         <Route path="/coach_john" component={Coach_John} />
         <Route path="/coach_samantha" component={Coach_Samantha} />
         <Route path="/coach_cameron" component={Coach_Cameron} />
