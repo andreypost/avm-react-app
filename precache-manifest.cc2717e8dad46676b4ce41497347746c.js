@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e9a6d03d99aa51f8ea5dd94ec826d54",
+    "revision": "ac06e910c19d7e4947e9175a9a780f29",
     "url": "/avm-react-app/index.html"
   },
   {
-    "revision": "8eef5c693276f6f6eb1d",
+    "revision": "90fd65fdba19df085fde",
     "url": "/avm-react-app/static/css/2.0cd06e21.chunk.css"
   },
   {
-    "revision": "9ace547fa5eb74914dbe",
+    "revision": "25a5781eb71561223397",
     "url": "/avm-react-app/static/css/main.909b442a.chunk.css"
   },
   {
-    "revision": "8eef5c693276f6f6eb1d",
-    "url": "/avm-react-app/static/js/2.59307851.chunk.js"
+    "revision": "90fd65fdba19df085fde",
+    "url": "/avm-react-app/static/js/2.bd9495b5.chunk.js"
   },
   {
     "revision": "925e52c28b12d63edac5d05fc71f820f",
-    "url": "/avm-react-app/static/js/2.59307851.chunk.js.LICENSE.txt"
+    "url": "/avm-react-app/static/js/2.bd9495b5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9ace547fa5eb74914dbe",
-    "url": "/avm-react-app/static/js/main.abdf142e.chunk.js"
+    "revision": "25a5781eb71561223397",
+    "url": "/avm-react-app/static/js/main.b2cd8d84.chunk.js"
   },
   {
     "revision": "b5d9085408121ae50e63",
@@ -88,12 +88,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg"
   },
   {
+    "revision": "360e334fc922c933f07ecb27e7531257",
+    "url": "/avm-react-app/static/media/center_logo_01.360e334f.png"
+  },
+  {
+    "revision": "06eb1c8e35e921c082464a9d63a999a5",
+    "url": "/avm-react-app/static/media/center_logo_03.06eb1c8e.png"
+  },
+  {
     "revision": "81165bea6afcfd572b3b3439567cf762",
     "url": "/avm-react-app/static/media/icons.81165bea.svg"
   },
   {
+    "revision": "6eb7fa9b0f11d2fc2dd5c9a28275af91",
+    "url": "/avm-react-app/static/media/installbank_01.6eb7fa9b.png"
+  },
+  {
+    "revision": "31a41044af0fb2dfb0cfaa24bfd74563",
+    "url": "/avm-react-app/static/media/installbank_04.31a41044.png"
+  },
+  {
     "revision": "38de651aa976bfbc4318e2a9ec8d63f2",
     "url": "/avm-react-app/static/media/installicon_01.38de651a.png"
+  },
+  {
+    "revision": "91dca7d7de88891e815a51a0109c720e",
+    "url": "/avm-react-app/static/media/installicon_02.91dca7d7.png"
+  },
+  {
+    "revision": "b964021efe31f0712fb4c071fa1df04d",
+    "url": "/avm-react-app/static/media/installicon_03.b964021e.png"
   },
   {
     "revision": "7ef4c390a205a4c3a0eaeb526d12dec5",
