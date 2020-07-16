@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { SeoMailing } from './components/SeoMailing';
@@ -19,12 +19,12 @@ export const Delivery = () => {
                 </section>
             </Header>
             <main>
-                <section className="services__banner carousel__section">
+                <section>
                     <ul className="flexstart breadcrumbs flexwrap">
-                        <li><a href="/">Главная &gt;</a></li>
+                        <li><Link to="/">Главная &gt;</Link></li>
                         <li>Оплата и доставка</li>
                     </ul>
-                    <article className="htextmob_768">
+                    <article className="htextmob_768 marginbot2010">
                         <h4>Оплата и доставка</h4>
                     </article>
                     <article className="textleft header__1440 marginbot4020">

@@ -13,6 +13,8 @@ import { Category } from './Category';
 import { Services } from './Services';
 import { Hall } from './Hall';
 import { Delivery } from './Delivery';
+import { Warranty } from './Warranty';
+import { Credit } from './Credit';
 import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
 
@@ -25,9 +27,9 @@ export const App = () => {
         <Route path="/ProcardBase" component={ProcardBase} />
         <Route path="/Hall" component={Hall} />
         <Route path="/Delivery" component={Delivery} />
-        {/*<Route path="/coach_john" component={Coach_John} />
-        <Route path="/coach_samantha" component={Coach_Samantha} />
-        <Route path="/coach_cameron" component={Coach_Cameron} />
+        <Route path="/Warranty" component={Warranty} />
+        <Route path="/Credit" component={Credit} />
+        {/*<Route path="/coach_cameron" component={Coach_Cameron} />
         <Route path="/coach_marvin" component={Coach_Marvin} />
         <Route path="/coach_kayla" component={Coach_Kayla} />
         <Route path="/club" component={Club} />

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import OwlCarousel from 'react-owl-carousel';
-// import { Link } from "react-router-dom";
+// import OwlCarousel from 'react-owl-carousel';
+import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
-import cardData from './components/cardData';
-import { ProductCard } from './components/ProductCard';
+// import cardData from './components/cardData';
+// import { ProductCard } from './components/ProductCard';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer'
 import { ModalsPro } from "./components/ModalsPro";
@@ -26,21 +26,14 @@ export const ProcardBase = (props) => {
         </section>
       </Header>
       <main>
-        <section className="carousel__section">
-          <hgroup className="global__hgroup flexbet">
-            <h2>ПРОСМОТРЕННЫЕ ТОВАРЫ</h2>
-            <a href="_viewed_products.html">Все товары</a>
-          </hgroup>
-          <article>
-            <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind margin={10} nav dots={false} autoplay={false} navText={false}
-              responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-
-              <ProductCard datos={cardData[0]} />
-
-            </OwlCarousel>
-
-          </article>
+      <section>
+            <ul className="flexstart breadcrumbs flexwrap">
+                <li><Link to="/">Главная &gt;</Link></li>
+                <li><a href="_all_manufacturers.html">Производители &gt;</a></li>
+                <li>Минисистема Marshall Acton Black</li>
+            </ul>
         </section>
+       
         <SeoMailing />
       </main>
       <Footer />

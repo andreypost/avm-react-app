@@ -42,11 +42,11 @@ export const Footer = () => {
                             <li><Link to="Category">Каталог товаров</Link></li>
                             <li><a href="_glossary.html">Глоссарий</a></li>
                             <li><Link to="Services">Услуги</Link></li>
-                            <li><a href="_listening_room.html">Зал прослушивания</a></li>
-                            <li><a href="_payment_delivery.html">Оплата и доставка</a></li>
-                            <li><a href="_installment_plan.html">Рассрочка</a></li>
+                            <li><Link to="Hall">Зал прослушивания</Link></li>
+                            <li><Link to="Delivery">Оплата и доставка</Link></li>
+                            <li><Link to="Credit">Рассрочка</Link></li>
                             <li><a href="_all_stocks.html">Акции</a></li>
-                            <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
+                            <li><Link to="Warranty">Гарантия и сервис</Link></li>
                             <li><a href="_about_us.html">О Нас</a></li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@ export const Footer = () => {
                                 <li><Link to="Category">Каталог товаров</Link></li>
                                 <li><a href="_glossary.html">Глоссарий</a></li>
                                 <li><Link to="Services">Услуги</Link></li>
-                                <li><a href="_listening_room.html">Зал прослушивания</a></li>
+                                <li><Link to="Hall">Зал прослушивания</Link></li>
                             </ul>
                         </li>
                     </ul>
@@ -77,10 +77,10 @@ export const Footer = () => {
                         <li className="global__list"><a href=" "
                             className="global__href footer__href flexcenter">Информация<i></i><i></i></a>
                             <ul>
-                                <li><a href="_payment_delivery.html">Оплата и доставка</a></li>
-                                <li><a href="_installment_plan.html">Рассрочка</a></li>
+                                <li><Link to="Delivery">Оплата и доставка</Link></li>
+                                <li><Link to="Credit">Рассрочка</Link></li>
                                 <li><a href="_all_stocks.html">Акции</a></li>
-                                <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
+                                <li><Link to="Warranty">Гарантия и сервис</Link></li>
                                 <li><a href="_about_us.html">О Нас</a></li>
                             </ul>
                         </li>

@@ -348,12 +348,12 @@ export const Header = (props) => {
                         <li><Link to="Services">Услуги</Link></li>
                         <li><Link to="Hall">Зал прослушивания</Link></li>
                         <li><Link to="Delivery">Оплата и доставка</Link></li>
-                        <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
-                        <li><a href="_installment_plan.html">Рассрочка</a></li>
+                        <li><Link to="Warranty">Гарантия и сервис</Link></li>
+                        <li><Link to="Credit">Рассрочка</Link></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
                         <li className="header__about relative">
                             <a href="_about_us.html" className="flexcenter">О нас
-                                        <svg className="header__callarrow">
+                                <svg className="header__callarrow">
                                     <use xlinkHref={`${icons}#arrow`}></use>
                                 </svg>
                             </a>
@@ -397,9 +397,9 @@ export const Header = (props) => {
                         <li><Link to="/">Главная</Link></li>
                         <li><Link to="Services">Услуги</Link></li>
                         <li><Link to="Hall">Зал прослушивания</Link></li>
-                        <li><Link to="Delivery.html">Оплата и доставка</Link></li>
-                        <li><a href="_warranty_service.html">Гарантия и сервис</a></li>
-                        <li><a href="_installment_plan.html">Рассрочка</a></li>
+                        <li><Link to="Delivery">Оплата и доставка</Link></li>
+                        <li><Link to="Warranty">Гарантия и сервис</Link></li>
+                        <li><Link to="Credit">Рассрочка</Link></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
                         <li><a href="_contacts.html">Конткаты</a></li>
                         <li className="global__list"><a href="_about_us.html" className="global__href global__arrow flexcenter">О

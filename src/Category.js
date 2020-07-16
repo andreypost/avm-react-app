@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { SeoMailing } from './components/SeoMailing';
@@ -20,6 +20,14 @@ export const Category = () => {
         </section>
       </Header>
       <main>
+        <section>
+          <ul className="flexstart breadcrumbs flexwrap">
+            <li><Link to="/">Главная &gt;</Link></li>
+            <li>Каталог товаров</li>
+          </ul>
+
+          
+        </section>
         <SeoMailing />
       </main>
       <Footer />

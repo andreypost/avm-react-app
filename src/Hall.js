@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { NewsSection } from './components/NewsSection';
@@ -33,7 +33,7 @@ export const Hall = () => {
             <main>
                 <section className="services__banner carousel__section">
                     <ul className="flexstart breadcrumbs flexwrap">
-                        <li><a href="/">Главная &gt;</a></li>
+                        <li><Link to="/">Главная &gt;</Link></li>
                         <li>Зал прослушивания</li>
                     </ul>
                     <article className="htextmob_768">
