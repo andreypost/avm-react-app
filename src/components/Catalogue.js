@@ -1,8 +1,67 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import icons from '../icons.svg';
 
 export const Catalogue = () => {
+    useEffect(() => {
+        const forbidScrollNav = (elem) => {
+          if (!elem) return
+          let uls = elem.querySelectorAll('ul'),
+            second = elem.querySelectorAll('.nav__second'),
+            third = elem.querySelectorAll('.nav__third'),
+            secondLinks = elem.querySelectorAll('.nav__second>li>a')
+          for (let ul of uls) {
+            ul.previousElementSibling.classList.add('active')
+          }
+          for (let dos of second) {
+            dos.onmouseover = () => {
+              document.body.style.overflowY = 'hidden'
+              document.body.style.paddingRight = `${6}px`
+              dos.onmouseout = () => {
+                document.body.style.overflowY = ''
+                document.body.style.paddingRight = `${0}px`
+              }
+            }
+          }
+          const addMargin = () => {
+            for (let a of secondLinks) {
+              a.classList.add('marginRight')
+            }
+          }
+          const removeMargin = () => {
+            for (let a of secondLinks) {
+              a.classList.remove('marginRight')
+            }
+          }
+          const addRight = () => {
+            for (let tres of third) {
+              tres.style.right = 40.35 + '%'
+            }
+          }
+          const removeRight = () => {
+            for (let tres of third) {
+              tres.style.right = 40 + '%'
+            }
+          }
+          for (let tres of third) {
+            tres.onmouseover = () => {
+              for (let dos of second) {
+                dos.style.overflowY = 'hidden'
+              }
+              addMargin()
+              addRight()
+              tres.onmouseout = (e) => {
+                for (let dos of second) {
+                  dos.style.overflowY = 'scroll'
+                }
+                removeMargin()
+                removeRight()
+              }
+            }
+          }
+        }
+        forbidScrollNav(document.querySelector('.nav__first'))
+      }, [])
     return (
         <>
             <article className="header__listindex relative">
