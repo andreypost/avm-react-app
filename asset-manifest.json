@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/avm-react-app/static/css/main.909b442a.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.b2cd8d84.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.b2cd8d84.chunk.js.map",
+    "main.js": "/avm-react-app/static/js/main.73aa171b.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.73aa171b.chunk.js.map",
     "runtime-main.js": "/avm-react-app/static/js/runtime-main.b4bcb460.js",
     "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.b4bcb460.js.map",
     "static/css/2.0cd06e21.chunk.css": "/avm-react-app/static/css/2.0cd06e21.chunk.css",
-    "static/js/2.bd9495b5.chunk.js": "/avm-react-app/static/js/2.bd9495b5.chunk.js",
-    "static/js/2.bd9495b5.chunk.js.map": "/avm-react-app/static/js/2.bd9495b5.chunk.js.map",
+    "static/js/2.d8c6b850.chunk.js": "/avm-react-app/static/js/2.d8c6b850.chunk.js",
+    "static/js/2.d8c6b850.chunk.js.map": "/avm-react-app/static/js/2.d8c6b850.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.cc2717e8dad46676b4ce41497347746c.js": "/avm-react-app/precache-manifest.cc2717e8dad46676b4ce41497347746c.js",
+    "precache-manifest.8cb3aa60f078f2c9c1025c839a1f34a0.js": "/avm-react-app/precache-manifest.8cb3aa60f078f2c9c1025c839a1f34a0.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
     "static/css/2.0cd06e21.chunk.css.map": "/avm-react-app/static/css/2.0cd06e21.chunk.css.map",
     "static/css/main.909b442a.chunk.css.map": "/avm-react-app/static/css/main.909b442a.chunk.css.map",
-    "static/js/2.bd9495b5.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.bd9495b5.chunk.js.LICENSE.txt",
+    "static/js/2.d8c6b850.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.d8c6b850.chunk.js.LICENSE.txt",
     "static/media/index.css": "/avm-react-app/static/media/sprites.67030ff7.png",
     "static/media/Image145.png": "/avm-react-app/static/media/Image145.f713ea48.png",
     "static/media/Image365.png": "/avm-react-app/static/media/Image365.cd74dada.png",
@@ -45,8 +45,8 @@
   "entrypoints": [
     "static/js/runtime-main.b4bcb460.js",
     "static/css/2.0cd06e21.chunk.css",
-    "static/js/2.bd9495b5.chunk.js",
+    "static/js/2.d8c6b850.chunk.js",
     "static/css/main.909b442a.chunk.css",
-    "static/js/main.b2cd8d84.chunk.js"
+    "static/js/main.73aa171b.chunk.js"
   ]
 }
