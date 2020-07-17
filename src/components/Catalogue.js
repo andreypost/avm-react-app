@@ -5,7 +5,6 @@ import icons from '../icons.svg';
 export const Catalogue = () => {
     useEffect(() => {
         const forbidScrollNav = (elem) => {
-          if (!elem) return
           let uls = elem.querySelectorAll('ul'),
             second = elem.querySelectorAll('.nav__second'),
             third = elem.querySelectorAll('.nav__third'),
