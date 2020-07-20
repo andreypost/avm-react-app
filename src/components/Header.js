@@ -363,8 +363,8 @@ export const Header = (props) => {
                                 <li><Link to="Cooperation">Сотрудничество</Link></li>
                             </ul>
                         </li>
-                        <li><a href="_contacts.html">Контакты</a></li>
-                        <li><a href="_bonus_program.html" className="header__bonus">Бонусная программа</a></li>
+                        <li><Link to="Contacts">Конткаты</Link></li>
+                        <li><Link to="Bonus" className="header__bonus">Бонусная программа</Link></li>
                     </ul>
                 </section>
             </article>
@@ -401,7 +401,7 @@ export const Header = (props) => {
                         <li><Link to="Warranty">Гарантия и сервис</Link></li>
                         <li><Link to="Credit">Рассрочка</Link></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
-                        <li><a href="_contacts.html">Конткаты</a></li>
+                        <li><Link to="Contacts">Конткаты</Link></li>
                         <li className="global__list"><Link to="About" className="global__href global__arrow flexcenter">О
                         Нас<i></i><i></i></Link>
                             <ul>
@@ -410,7 +410,7 @@ export const Header = (props) => {
                                 <li><Link to="Cooperation">Сотрудничество</Link></li>
                             </ul>
                         </li>
-                        <li><a href="_bonus_program.html" className="header__bonus">Бонусная программа</a></li>
+                        <li><Link to="Bonus" className="header__bonus">Бонусная программа</Link></li>
                     </ul>
                 </article>
             </div>

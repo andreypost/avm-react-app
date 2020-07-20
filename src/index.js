@@ -19,6 +19,8 @@ import { About } from './About';
 import { Cooperation } from './Cooperation';
 import { Sertificate } from './Sertificate';
 import { Career } from './Career';
+import { Contacts } from './Contacts';
+import { Bonus } from './Bonus';
 import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
 
@@ -37,9 +39,9 @@ export const App = () => {
         <Route path="/Cooperation" component={Cooperation} />
         <Route path="/Sertificate" component={Sertificate} />
         <Route path="/Career" component={Career} />
-        {/*<Route path="/blog" component={Blog} />
-        <Route path="/blog_article" component={Blog_Article} />
-        <Route path="/faq" component={Faq} />
+        <Route path="/Contacts" component={Contacts} />
+        <Route path="/Bonus" component={Bonus} />
+        {/*<Route path="/faq" component={Faq} />
         <Route path="/reserve_choose" component={Reserve_Choose} />
         <Route path="/reserve_identify" component={Reserve_Identify} />
         <Route path="/reserve_member" component={Reserve_Member} />
