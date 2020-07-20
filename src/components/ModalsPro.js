@@ -2,9 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import icons from '../icons.svg';
 
-export const ModalsPro = () => {
+export const ModalsPro = (props) => {
     useEffect(() => {
-        // console.log(props)
         let currentModal = null
         const showModal = (modal) => {
             if (currentModal) {
@@ -14,7 +13,6 @@ export const ModalsPro = () => {
             let width = document.documentElement.clientWidth
             document.body.style.overflowY = 'hidden'
             document.body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
-            // document.body.style.paddingRight = `${6}px`
             currentModal = modal
             currentModal.style.display = 'block'
             // if (modal.id == 'basketProduct' || modal.id == 'verificationOrder') {
@@ -22,23 +20,17 @@ export const ModalsPro = () => {
             //     modal.querySelector('.basketHeaderResult').innerHTML = document.querySelector('.product__count').innerHTML
             // }
             currentModal.onclick = (e) => {
-                let target = e.target.closest('.button__closegl, .global__back, .makeOrder, .cardbuyClose')
+                let target = e.target.closest('.button__closegl, .global__back, .makeOrder, .cardbuyClose, a')
                 if (!target) return
                 if (target.classList.contains('button__closegl') ||
                     target.classList.contains('global__back') ||
-                    target.classList === 'cardbuyClose') {
+                    target.classList === 'cardbuyClose' ||
+                    (target.tagName === 'A' && (target.href).includes(props.pathname))) {
                     hideModal(currentModal)
                 } else if (target.classList.contains('makeOrder')) {
                     // chekoutOrderModal(e, modal)
                     // e.preventDefault()
                 }
-                // } else if (target.classList == 'contRdGl') {
-                //     e.preventDefault()
-                //     let input = target.querySelector('input')
-                //     input.checked = !input.checked
-                // } else if (target.tagName == 'A' && (target.href).includes(props.pathname)) {
-                //     hideModal(currentModal)
-                // }
             }
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
@@ -78,7 +70,7 @@ export const ModalsPro = () => {
         getAllElementsModal(document.querySelectorAll('.imgModalShow'), document.getElementById('cardImgVideo'))
         getAllElementsModal(document.querySelectorAll('.global__filtermob'), document.getElementById('filterMob'))
         getAllElementsModal(document.querySelectorAll('.global__sortmob'), document.getElementById('filterSearch'))
-    }, [])
+    }, [props])
     return (
         <>
             <div id="addProduct">

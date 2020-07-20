@@ -8,7 +8,7 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup6.png';
 
-export const Hall = () => {
+export const Hall = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
         const pausePlayVideo = (elem) => {
@@ -24,7 +24,7 @@ export const Hall = () => {
     }, [])
     return (
         <>
-            <Header>
+            <Header pathname={props.history.location.pathname}>
                 <Catalogue />
                 <section className="header__navmob">
                     <h3 className="navmob__catalogue">Каталог товаров</h3>
@@ -133,7 +133,7 @@ export const Hall = () => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro />
+            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

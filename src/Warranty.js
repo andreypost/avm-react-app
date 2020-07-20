@@ -9,13 +9,13 @@ import photo_001 from './img/center_logo_01.png';
 import photo_002 from './img/center_logo_02.png';
 import photo_003 from './img/center_logo_03.png';
 
-export const Warranty = () => {
+export const Warranty = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
     return (
         <>
-            <Header>
+            <Header pathname={props.history.location.pathname}>
                 <Catalogue />
                 <section className="header__navmob">
                     <h3 className="navmob__catalogue">Каталог товаров</h3>
@@ -197,7 +197,7 @@ export const Warranty = () => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro />
+            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

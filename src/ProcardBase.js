@@ -19,7 +19,7 @@ export const ProcardBase = (props) => {
   }, [])
   return (
     <>
-      <Header>
+      <Header pathname={props.history.location.pathname}>
         <Catalogue />
         <section className="header__navmob">
           <h3 className="navmob__catalogue">Каталог товаров</h3>

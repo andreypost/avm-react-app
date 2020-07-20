@@ -6,13 +6,13 @@ import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-export const Delivery = () => {
+export const Delivery = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
     return (
         <>
-            <Header>
+            <Header pathname={props.history.location.pathname}>
                 <Catalogue />
                 <section className="header__navmob">
                     <h3 className="navmob__catalogue">Каталог товаров</h3>
@@ -117,7 +117,7 @@ export const Delivery = () => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro />
+            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

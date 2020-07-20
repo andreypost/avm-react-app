@@ -109,7 +109,7 @@ export const Main = (props) => {
   }, [])
   return (
     <>
-      <Header>
+      <Header pathname={props.history.location.pathname}>
         <Link to="Category" className="header__iconcatalog flexcenter">
           <svg>
             <use xlinkHref={`${icons}#diamonds`}>

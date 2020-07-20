@@ -18,7 +18,7 @@ import photo_009 from './img/MaskGroup2.png';
 import photo_010 from './img/MaskGroup3.png';
 
 
-export const Services = () => {
+export const Services = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0)
     const onClickHandler = (elems, onClickListener) => {
@@ -50,7 +50,7 @@ export const Services = () => {
   }, [])
   return (
     <>
-      <Header>
+      <Header pathname={props.history.location.pathname}>
         <Catalogue />
         <section className="header__navmob">
           <h3 className="navmob__catalogue">Каталог товаров</h3>
@@ -432,7 +432,7 @@ export const Services = () => {
         <SeoMailing />
       </main>
       <Footer />
-      <ModalsPro />
+      <ModalsPro pathname={props.history.location.pathname} />
     </>
   )
 }

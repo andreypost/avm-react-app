@@ -18,13 +18,13 @@ import photo_010 from './img/installbank_05.png';
 import photo_011 from './img/installbank_06.png';
 import photo_012 from './img/installbank_07.png';
 
-export const Credit = () => {
+export const Credit = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
     return (
         <>
-            <Header>
+            <Header pathname={props.history.location.pathname}>
                 <Catalogue />
                 <section className="header__navmob">
                     <h3 className="navmob__catalogue">Каталог товаров</h3>
@@ -372,7 +372,7 @@ export const Credit = () => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro />
+            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

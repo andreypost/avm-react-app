@@ -7,13 +7,13 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
 
-export const Category = () => {
+export const Category = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   return (
     <>
-      <Header>
+      <Header pathname={props.history.location.pathname}>
         <Catalogue />
         <section className="header__navmob">
           <h3 className="navmob__catalogue">Каталог товаров</h3>
@@ -31,7 +31,7 @@ export const Category = () => {
         <SeoMailing />
       </main>
       <Footer />
-      <ModalsPro />
+      <ModalsPro pathname={props.history.location.pathname}/>
     </>
   )
 }

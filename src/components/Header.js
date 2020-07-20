@@ -154,11 +154,12 @@ export const Header = (props) => {
             //     modal.querySelector('.basketHeaderResult').innerHTML = document.querySelector('.product__count').innerHTML
             // }
             modal.onclick = (e) => {
-                let target = e.target.closest('.button__closegl, .global__back, .makeOrder, .cardbuyClose')
+                let target = e.target.closest('.button__closegl, .global__back, .makeOrder, .cardbuyClose, a')
                 if (!target) return
                 if (target.classList.contains('button__closegl') ||
                     target.classList.contains('global__back') ||
-                    target.classList === 'cardbuyClose') {
+                    target.classList === 'cardbuyClose' ||
+                    (target.tagName === 'A' && (target.href).includes(props.pathname))) {
                     hideModal(modal)
                 } else if (target.classList.contains('makeOrder')) {
                     // chekoutOrderModal(e, modal)
@@ -220,7 +221,7 @@ export const Header = (props) => {
             document.body.style.overflowY = ''
             document.body.style.paddingRight = 0 + 'px'
         }
-    }, [])
+    }, [props])
     return (
         <header>
             <article className="header__info header__top">
@@ -345,26 +346,26 @@ export const Header = (props) => {
                 <section className="flexbet">
                     {props.children[0]}
                     <ul className="header__cataloglinks flexcenter">
-                        <li><Link to="Services">Услуги</Link></li>
-                        <li><Link to="Hall">Зал прослушивания</Link></li>
-                        <li><Link to="Delivery">Оплата и доставка</Link></li>
-                        <li><Link to="Warranty">Гарантия и сервис</Link></li>
-                        <li><Link to="Credit">Рассрочка</Link></li>
+                        <li><Link to="Services" replace>Услуги</Link></li>
+                        <li><Link to="Hall" replace>Зал прослушивания</Link></li>
+                        <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
+                        <li><Link to="Warranty" replace>Гарантия и сервис</Link></li>
+                        <li><Link to="Credit" replace>Рассрочка</Link></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
                         <li className="header__about relative">
-                            <Link to="About" className="flexcenter">О нас
+                            <Link to="About" className="flexcenter" replace>О нас
                                 <svg className="header__callarrow">
                                     <use xlinkHref={`${icons}#arrow`}></use>
                                 </svg>
                             </Link>
                             <ul className="header__listabout">
-                                <li><Link to="Sertificate">Сертификат</Link></li>
-                                <li><Link to="Career">Вакансии</Link></li>
-                                <li><Link to="Cooperation">Сотрудничество</Link></li>
+                                <li><Link to="Sertificate" replace>Сертификат</Link></li>
+                                <li><Link to="Career" replace>Вакансии</Link></li>
+                                <li><Link to="Cooperation" replace>Сотрудничество</Link></li>
                             </ul>
                         </li>
-                        <li><Link to="Contacts">Конткаты</Link></li>
-                        <li><Link to="Bonus" className="header__bonus">Бонусная программа</Link></li>
+                        <li><Link to="Contacts" replace>Конткаты</Link></li>
+                        <li><Link to="Bonus" className="header__bonus" replace>Бонусная программа</Link></li>
                     </ul>
                 </section>
             </article>
@@ -394,23 +395,23 @@ export const Header = (props) => {
                                 <li><Link to="/" className="orange">Выход</Link></li>
                             </ul>
                         </li>
-                        <li><Link to="/">Главная</Link></li>
-                        <li><Link to="Services">Услуги</Link></li>
-                        <li><Link to="Hall">Зал прослушивания</Link></li>
-                        <li><Link to="Delivery">Оплата и доставка</Link></li>
-                        <li><Link to="Warranty">Гарантия и сервис</Link></li>
-                        <li><Link to="Credit">Рассрочка</Link></li>
+                        <li><Link to="/" replace>Главная</Link></li>
+                        <li><Link to="Services" replace>Услуги</Link></li>
+                        <li><Link to="Hall" replace>Зал прослушивания</Link></li>
+                        <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
+                        <li><Link to="Warranty" replace>Гарантия и сервис</Link></li>
+                        <li><Link to="Credit" replace>Рассрочка</Link></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
-                        <li><Link to="Contacts">Конткаты</Link></li>
-                        <li className="global__list"><Link to="About" className="global__href global__arrow flexcenter">О
+                        <li><Link to="Contacts" replace>Конткаты</Link></li>
+                        <li className="global__list"><Link to="About" className="global__href global__arrow flexcenter" replace>О
                         Нас<i></i><i></i></Link>
                             <ul>
-                                <li><Link to="Sertificate">Сертификат</Link></li>
-                                <li><Link to="Career">Вакансии</Link></li>
-                                <li><Link to="Cooperation">Сотрудничество</Link></li>
+                                <li><Link to="Sertificate" replace>Сертификат</Link></li>
+                                <li><Link to="Career" replace>Вакансии</Link></li>
+                                <li><Link to="Cooperation" replace>Сотрудничество</Link></li>
                             </ul>
                         </li>
-                        <li><Link to="Bonus" className="header__bonus">Бонусная программа</Link></li>
+                        <li><Link to="Bonus" className="header__bonus" replace>Бонусная программа</Link></li>
                     </ul>
                 </article>
             </div>

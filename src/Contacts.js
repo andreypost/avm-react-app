@@ -9,13 +9,13 @@ import photo_001 from './img/contacticon_01.png';
 import photo_002 from './img/contacticon_02.png';
 import photo_003 from './img/contacticon_03.png';
 
-export const Contacts = () => {
+export const Contacts = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
     return (
         <>
-            <Header>
+            <Header pathname={props.history.location.pathname}>
                 <Catalogue />
                 <section className="header__navmob">
                     <h3 className="navmob__catalogue">Каталог товаров</h3>
@@ -118,7 +118,7 @@ export const Contacts = () => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro />
+            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

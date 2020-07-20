@@ -7,13 +7,13 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup2.png';
 
-export const Bonus = () => {
+export const Bonus = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
     return (
         <>
-            <Header>
+            <Header pathname={props.history.location.pathname}>
                 <Catalogue />
                 <section className="header__navmob">
                     <h3 className="navmob__catalogue">Каталог товаров</h3>
@@ -131,7 +131,7 @@ export const Bonus = () => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro />
+            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

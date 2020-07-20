@@ -39,15 +39,15 @@ export const Footer = () => {
                             </Link>
                         </div>
                         <ul className="flexcenter">
-                            <li><Link to="Category">Каталог товаров</Link></li>
+                            <li><Link to="Category" replace>Каталог товаров</Link></li>
                             <li><a href="_glossary.html">Глоссарий</a></li>
-                            <li><Link to="Services">Услуги</Link></li>
-                            <li><Link to="Hall">Зал прослушивания</Link></li>
-                            <li><Link to="Delivery">Оплата и доставка</Link></li>
-                            <li><Link to="Credit">Рассрочка</Link></li>
+                            <li><Link to="Services" replace>Услуги</Link></li>
+                            <li><Link to="Hall" replace>Зал прослушивания</Link></li>
+                            <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
+                            <li><Link to="Credit" replace>Рассрочка</Link></li>
                             <li><a href="_all_stocks.html">Акции</a></li>
-                            <li><Link to="Warranty">Гарантия и сервис</Link></li>
-                            <li><Link to="About">О Нас</Link></li>
+                            <li><Link to="Warranty" replace>Гарантия и сервис</Link></li>
+                            <li><Link to="About" replace>О Нас</Link></li>
                         </ul>
                     </div>
                     <h6>Доставка по Киеву и Украине, России и Казахстану, Белоруссии, основные города: Алушта, Белая
@@ -65,10 +65,10 @@ export const Footer = () => {
                         <li className="global__list"><a href=" "
                             className="global__href footer__href flexcenter">Покупателям<i></i><i></i></a>
                             <ul>
-                                <li><Link to="Category">Каталог товаров</Link></li>
+                                <li><Link to="Category" replace>Каталог товаров</Link></li>
                                 <li><a href="_glossary.html">Глоссарий</a></li>
-                                <li><Link to="Services">Услуги</Link></li>
-                                <li><Link to="Hall">Зал прослушивания</Link></li>
+                                <li><Link to="Services" replace>Услуги</Link></li>
+                                <li><Link to="Hall" replace>Зал прослушивания</Link></li>
                             </ul>
                         </li>
                     </ul>
@@ -77,11 +77,11 @@ export const Footer = () => {
                         <li className="global__list"><a href=" "
                             className="global__href footer__href flexcenter">Информация<i></i><i></i></a>
                             <ul>
-                                <li><Link to="Delivery">Оплата и доставка</Link></li>
-                                <li><Link to="Credit">Рассрочка</Link></li>
+                                <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
+                                <li><Link to="Credit" replace>Рассрочка</Link></li>
                                 <li><a href="_all_stocks.html">Акции</a></li>
-                                <li><Link to="Warranty">Гарантия и сервис</Link></li>
-                                <li><Link to="About">О Нас</Link></li>
+                                <li><Link to="Warranty" replace>Гарантия и сервис</Link></li>
+                                <li><Link to="About" replace>О Нас</Link></li>
                             </ul>
                         </li>
                     </ul>
