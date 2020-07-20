@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/avm-react-app/static/css/main.909b442a.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.9352d126.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.9352d126.chunk.js.map",
+    "main.js": "/avm-react-app/static/js/main.4f35d264.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.4f35d264.chunk.js.map",
     "runtime-main.js": "/avm-react-app/static/js/runtime-main.b4bcb460.js",
     "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.b4bcb460.js.map",
     "static/css/2.0cd06e21.chunk.css": "/avm-react-app/static/css/2.0cd06e21.chunk.css",
-    "static/js/2.d8c6b850.chunk.js": "/avm-react-app/static/js/2.d8c6b850.chunk.js",
-    "static/js/2.d8c6b850.chunk.js.map": "/avm-react-app/static/js/2.d8c6b850.chunk.js.map",
+    "static/js/2.8aadd704.chunk.js": "/avm-react-app/static/js/2.8aadd704.chunk.js",
+    "static/js/2.8aadd704.chunk.js.map": "/avm-react-app/static/js/2.8aadd704.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.355860df7212688228ed48a5fbed9acf.js": "/avm-react-app/precache-manifest.355860df7212688228ed48a5fbed9acf.js",
+    "precache-manifest.f2f38e2000c4397ff16a24394f45e898.js": "/avm-react-app/precache-manifest.f2f38e2000c4397ff16a24394f45e898.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
     "static/css/2.0cd06e21.chunk.css.map": "/avm-react-app/static/css/2.0cd06e21.chunk.css.map",
     "static/css/main.909b442a.chunk.css.map": "/avm-react-app/static/css/main.909b442a.chunk.css.map",
-    "static/js/2.d8c6b850.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.d8c6b850.chunk.js.LICENSE.txt",
+    "static/js/2.8aadd704.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.8aadd704.chunk.js.LICENSE.txt",
     "static/media/index.css": "/avm-react-app/static/media/sprites.67030ff7.png",
     "static/media/Image145.png": "/avm-react-app/static/media/Image145.f713ea48.png",
     "static/media/Image365.png": "/avm-react-app/static/media/Image365.cd74dada.png",
@@ -30,6 +30,7 @@
     "static/media/Offer_003.jpg": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg",
     "static/media/center_logo_01.png": "/avm-react-app/static/media/center_logo_01.360e334f.png",
     "static/media/center_logo_03.png": "/avm-react-app/static/media/center_logo_03.06eb1c8e.png",
+    "static/media/certificate.png": "/avm-react-app/static/media/certificate.a4d29533.png",
     "static/media/icons.svg": "/avm-react-app/static/media/icons.81165bea.svg",
     "static/media/installbank_01.png": "/avm-react-app/static/media/installbank_01.6eb7fa9b.png",
     "static/media/installbank_04.png": "/avm-react-app/static/media/installbank_04.31a41044.png",
@@ -45,8 +46,8 @@
   "entrypoints": [
     "static/js/runtime-main.b4bcb460.js",
     "static/css/2.0cd06e21.chunk.css",
-    "static/js/2.d8c6b850.chunk.js",
+    "static/js/2.8aadd704.chunk.js",
     "static/css/main.909b442a.chunk.css",
-    "static/js/main.9352d126.chunk.js"
+    "static/js/main.4f35d264.chunk.js"
   ]
 }
