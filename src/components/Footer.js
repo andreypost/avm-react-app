@@ -47,7 +47,7 @@ export const Footer = () => {
                             <li><Link to="Credit">Рассрочка</Link></li>
                             <li><a href="_all_stocks.html">Акции</a></li>
                             <li><Link to="Warranty">Гарантия и сервис</Link></li>
-                            <li><a href="_about_us.html">О Нас</a></li>
+                            <li><Link to="About">О Нас</Link></li>
                         </ul>
                     </div>
                     <h6>Доставка по Киеву и Украине, России и Казахстану, Белоруссии, основные города: Алушта, Белая
@@ -81,7 +81,7 @@ export const Footer = () => {
                                 <li><Link to="Credit">Рассрочка</Link></li>
                                 <li><a href="_all_stocks.html">Акции</a></li>
                                 <li><Link to="Warranty">Гарантия и сервис</Link></li>
-                                <li><a href="_about_us.html">О Нас</a></li>
+                                <li><Link to="About">О Нас</Link></li>
                             </ul>
                         </li>
                     </ul>

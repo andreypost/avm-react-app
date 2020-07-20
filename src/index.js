@@ -15,6 +15,10 @@ import { Hall } from './Hall';
 import { Delivery } from './Delivery';
 import { Warranty } from './Warranty';
 import { Credit } from './Credit';
+import { About } from './About';
+import { Cooperation } from './Cooperation';
+import { Sertificate } from './Sertificate';
+import { Career } from './Career';
 import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
 
@@ -29,11 +33,11 @@ export const App = () => {
         <Route path="/Delivery" component={Delivery} />
         <Route path="/Warranty" component={Warranty} />
         <Route path="/Credit" component={Credit} />
-        {/*<Route path="/coach_cameron" component={Coach_Cameron} />
-        <Route path="/coach_marvin" component={Coach_Marvin} />
-        <Route path="/coach_kayla" component={Coach_Kayla} />
-        <Route path="/club" component={Club} />
-        <Route path="/blog" component={Blog} />
+        <Route path="/About" component={About} />
+        <Route path="/Cooperation" component={Cooperation} />
+        <Route path="/Sertificate" component={Sertificate} />
+        <Route path="/Career" component={Career} />
+        {/*<Route path="/blog" component={Blog} />
         <Route path="/blog_article" component={Blog_Article} />
         <Route path="/faq" component={Faq} />
         <Route path="/reserve_choose" component={Reserve_Choose} />

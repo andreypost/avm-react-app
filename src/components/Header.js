@@ -352,15 +352,15 @@ export const Header = (props) => {
                         <li><Link to="Credit">Рассрочка</Link></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
                         <li className="header__about relative">
-                            <a href="_about_us.html" className="flexcenter">О нас
+                            <Link to="About" className="flexcenter">О нас
                                 <svg className="header__callarrow">
                                     <use xlinkHref={`${icons}#arrow`}></use>
                                 </svg>
-                            </a>
+                            </Link>
                             <ul className="header__listabout">
-                                <li><a href="_certificate.html">Сертификат</a></li>
-                                <li><a href="_jobs.html">Вакансии</a></li>
-                                <li><a href="_cooperation.html">Сотрудничество</a></li>
+                                <li><Link to="Sertificate">Сертификат</Link></li>
+                                <li><Link to="Career">Вакансии</Link></li>
+                                <li><Link to="Cooperation">Сотрудничество</Link></li>
                             </ul>
                         </li>
                         <li><a href="_contacts.html">Контакты</a></li>
@@ -402,12 +402,12 @@ export const Header = (props) => {
                         <li><Link to="Credit">Рассрочка</Link></li>
                         <li><a href="_all_stocks.html">Акции</a></li>
                         <li><a href="_contacts.html">Конткаты</a></li>
-                        <li className="global__list"><a href="_about_us.html" className="global__href global__arrow flexcenter">О
-                        Нас<i></i><i></i></a>
+                        <li className="global__list"><Link to="About" className="global__href global__arrow flexcenter">О
+                        Нас<i></i><i></i></Link>
                             <ul>
-                                <li><a href="_certificate.html">Сертификат</a></li>
-                                <li><a href="_jobs.html">Вакансии</a></li>
-                                <li><a href="_cooperation.html">Сотрудничество</a></li>
+                                <li><Link to="Sertificate">Сертификат</Link></li>
+                                <li><Link to="Career">Вакансии</Link></li>
+                                <li><Link to="Cooperation">Сотрудничество</Link></li>
                             </ul>
                         </li>
                         <li><a href="_bonus_program.html" className="header__bonus">Бонусная программа</a></li>

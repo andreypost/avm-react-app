@@ -26,7 +26,6 @@ export const Main = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0)
     const showContentTabs = (container) => {
-      if (!container) return
       let tabs = container.querySelector('.tabs__caption'),
         currentTab = container.querySelector('.active'),
         content = container.querySelector('.tabs__content'),
@@ -52,7 +51,6 @@ export const Main = (props) => {
     }
     showContentTabs(document.getElementById('tabsMainPage'))
     const forbidScrollNav = (elem) => {
-      if (!elem) return
       let uls = elem.querySelectorAll('ul'),
         second = elem.querySelectorAll('.nav__second'),
         third = elem.querySelectorAll('.nav__third'),
