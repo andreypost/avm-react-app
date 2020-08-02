@@ -15,6 +15,7 @@ import { Hall } from './Hall';
 import { Delivery } from './Delivery';
 import { Warranty } from './Warranty';
 import { Credit } from './Credit';
+import { Actions } from './Actions';
 import { About } from './About';
 import { Cooperation } from './Cooperation';
 import { Sertificate } from './Sertificate';
@@ -35,17 +36,13 @@ export const App = () => {
         <Route path="/Delivery" component={Delivery} />
         <Route path="/Warranty" component={Warranty} />
         <Route path="/Credit" component={Credit} />
+        <Route path="/Actions" component={Actions} />
         <Route path="/About" component={About} />
         <Route path="/Cooperation" component={Cooperation} />
         <Route path="/Sertificate" component={Sertificate} />
         <Route path="/Career" component={Career} />
         <Route path="/Contacts" component={Contacts} />
         <Route path="/Bonus" component={Bonus} />
-        {/*<Route path="/faq" component={Faq} />
-        <Route path="/reserve_choose" component={Reserve_Choose} />
-        <Route path="/reserve_identify" component={Reserve_Identify} />
-        <Route path="/reserve_member" component={Reserve_Member} />
-        <Route path="/dash_profile" component={Dash_Profile} /> */}
     </HashRouter>
   );
 }

@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/certificate.png';
 
 export const Sertificate = (props) => {
@@ -53,7 +52,6 @@ export const Sertificate = (props) => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

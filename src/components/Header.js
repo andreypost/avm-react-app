@@ -12,8 +12,14 @@ export const Header = (props) => {
         // let widthInner = window.innerWidth,
         // tooltipElem = null,
         let currentModal = null
+        const onClickHandler = (elems, onClickListener) => {
+            for (let elem of elems) {
+                elem.addEventListener('click', (e) => {
+                    onClickListener(e, elem)
+                })
+            }
+        }
         const showTooltip = (elem, tooltip) => {
-            if (!elem) return
             elem.onmouseover = () => {
                 tooltip.style.display = 'block'
                 tooltip.onclick = (e) => {
@@ -129,16 +135,13 @@ export const Header = (props) => {
             })
         }
         searchHeader(document.getElementById('searchInput'))
-
         const showIconTooltip = (elems) => {
-            for (let elem of elems) {
-                elem.onclick = (e) => {
-                    if (elem.previousElementSibling.innerHTML === '') e.preventDefault()
-                }
+            const onClickListener = (e, elem) => {
+                if (elem.previousElementSibling.innerHTML === '') e.preventDefault()
             }
+            onClickHandler(elems, onClickListener)
         }
-        showIconTooltip(document.querySelectorAll('.header__dataicons a'))
-
+        showIconTooltip(document.querySelectorAll('[data-headertooltip]'))
         const showModal = (modal) => {
             if (currentModal) {
                 hideModal(modal)
@@ -169,8 +172,6 @@ export const Header = (props) => {
                 //     e.preventDefault()
                 //     let input = target.querySelector('input')
                 //     input.checked = !input.checked
-                // } else if (target.tagName == 'A' && (target.href).includes(this.props.pathname)) {
-                //     hideModal(currentModal)
                 // }
             }
             document.addEventListener('keydown', (e) => {
@@ -190,29 +191,25 @@ export const Header = (props) => {
             document.body.style.paddingRight = `${0}px`
         }
         const getAllElementsModal = (elems, modal) => {
-            if (!elems) return
-            for (let elem of elems) {
-                elem.onclick = (e) => {
-                    e.preventDefault()
-                    showModal(modal)
-                }
+            const onClickListener = (e) => {
+                e.preventDefault()
+                showModal(modal)
             }
+            onClickHandler(elems, onClickListener)
         }
         getAllElementsModal(document.querySelectorAll('.header__burget'), document.getElementById('burgerMenuMob'))
         getAllElementsModal(document.querySelectorAll('.navmob__catalogue'), document.getElementById('catalogueMob'))
-
         const isGuest = (elems) => {
-            if (!elems) return
-            for (let elem of elems) {
-                elem.onclick = (e) => {
-                    e.preventDefault()
-                    if (elem.classList.contains('header__user')) {
-                        window.location.assign('/cabinet/')
-                    } else {
-                        showModal(document.getElementById('enterCabinet'))
-                    }
+            const onClickListener = (e, elem) => {
+                e.preventDefault()
+                if (elem.classList.contains('header__user')) {
+                    window.location.assign('/cabinet/')
+                } else {
+                    showModal(document.getElementById('enterCabinet'))
+                    // forgetPassword(document.querySelectorAll('.forgetPass'), document.getElementById('forgetPassModal'))
                 }
             }
+            onClickHandler(elems, onClickListener)
         }
         isGuest(document.querySelectorAll('.header__user'))
         isGuest(document.querySelectorAll('.header__guest'))
@@ -300,7 +297,7 @@ export const Header = (props) => {
                         <use xlinkHref={`${icons}#burger`}></use>
                     </svg>
                 </div>
-                <Link to="/">
+                <Link to="/" replace>
                     <svg className="header__world">
                         <use xlinkHref={`${icons}#logo`}></use>
                     </svg>
@@ -351,7 +348,7 @@ export const Header = (props) => {
                         <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
                         <li><Link to="Warranty" replace>Гарантия и сервис</Link></li>
                         <li><Link to="Credit" replace>Рассрочка</Link></li>
-                        <li><a href="_all_stocks.html">Акции</a></li>
+                        <li><Link to="Actions" replace>Акции</Link></li>
                         <li className="header__about relative">
                             <Link to="About" className="flexcenter" replace>О нас
                                 <svg className="header__callarrow">
@@ -392,7 +389,7 @@ export const Header = (props) => {
                                 <li><a href="_cabinet_comments.html">Мои отзывы и комментарии</a></li>
                                 <li><a href="_cabinet_viewed.html">Просмотренные товары</a></li>
                                 <li><a href="_cabinet_orders.html">Мои заказы</a></li>
-                                <li><Link to="/" className="orange">Выход</Link></li>
+                                <li><Link to="/" className="orange" replace>Выход</Link></li>
                             </ul>
                         </li>
                         <li><Link to="/" replace>Главная</Link></li>
@@ -401,7 +398,7 @@ export const Header = (props) => {
                         <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
                         <li><Link to="Warranty" replace>Гарантия и сервис</Link></li>
                         <li><Link to="Credit" replace>Рассрочка</Link></li>
-                        <li><a href="_all_stocks.html">Акции</a></li>
+                        <li><Link to="Actions" replace>Акции</Link></li>
                         <li><Link to="Contacts" replace>Конткаты</Link></li>
                         <li className="global__list"><Link to="About" className="global__href global__arrow flexcenter" replace>О
                         Нас<i></i><i></i></Link>
@@ -709,7 +706,7 @@ export const Header = (props) => {
                                 </li>
                             </ul>
                         </li>
-                        <li><Link to="Category" className="flexcenter juststart">Все категории</Link></li>
+                        <li><Link to="Category" className="flexcenter juststart" replace>Все категории</Link></li>
                         <li className="global__back orange">
                             <h6>Назад</h6>
                         </li>

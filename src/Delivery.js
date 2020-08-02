@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
 
 export const Delivery = (props) => {
     useEffect(() => {
@@ -117,7 +116,6 @@ export const Delivery = (props) => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

@@ -25,8 +25,6 @@ export const Category = (props) => {
             <li><Link to="/">Главная &gt;</Link></li>
             <li>Каталог товаров</li>
           </ul>
-
-          
         </section>
         <SeoMailing />
       </main>

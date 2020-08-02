@@ -5,6 +5,13 @@ import icons from '../icons.svg';
 export const ModalsPro = (props) => {
     useEffect(() => {
         let currentModal = null
+        const onClickHandler = (elems, onClickListener) => {
+            for (let elem of elems) {
+                elem.addEventListener('click', (e) => {
+                    onClickListener(e, elem)
+                })
+            }
+        }
         const showModal = (modal) => {
             if (currentModal) {
                 hideModal(currentModal)
@@ -49,13 +56,11 @@ export const ModalsPro = (props) => {
             document.body.style.paddingRight = `${0}px`
         }
         const getAllElementsModal = (elems, modal) => {
-            if (!elems) return
-            for (let elem of elems) {
-                elem.onclick = (e) => {
-                    e.preventDefault()
-                    showModal(modal)
-                }
+            const onClickListener = (e) => {
+                e.preventDefault()
+                showModal(modal)
             }
+            onClickHandler(elems, onClickListener)
         }
         getAllElementsModal(document.querySelectorAll('.products__buy'), document.getElementById('addProduct'))
         getAllElementsModal(document.querySelectorAll('.buy__products'), document.getElementById('addProduct'))
@@ -70,6 +75,27 @@ export const ModalsPro = (props) => {
         getAllElementsModal(document.querySelectorAll('.imgModalShow'), document.getElementById('cardImgVideo'))
         getAllElementsModal(document.querySelectorAll('.global__filtermob'), document.getElementById('filterMob'))
         getAllElementsModal(document.querySelectorAll('.global__sortmob'), document.getElementById('filterSearch'))
+        const toggleFilterLists = (elems) => {
+            const onClickListener = (e, elem) => {
+                e.preventDefault()
+                if (elem.classList.contains('articles__filtershow')) {
+                    elem.previousElementSibling.classList.toggle('block')
+                } else {
+                    elem.previousElementSibling.querySelector('.global__list>ul').classList.toggle('block')
+                }
+                elem.children[0].classList.toggle('none')
+                elem.children[1].classList.toggle('block')
+                elem.children[2].classList.toggle('none')
+                elem.children[3].classList.toggle('block')
+            }
+            onClickHandler(elems, onClickListener)
+        }
+        toggleFilterLists(document.querySelectorAll('.global__filterarrow'))
+        return () => {
+            document.body.style.overflow = ''
+            document.body.style.overflowY = ''
+            document.body.style.paddingRight = 0 + 'px'
+        }
     }, [props])
     return (
         <>

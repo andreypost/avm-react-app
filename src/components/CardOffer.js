@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const OfferCard = (props) => {
+export const CardOffer = (props) => {
     return (
         <div className="item offer__card">
             <img src={props.datos.image} alt="" />

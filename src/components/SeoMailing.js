@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 export const SeoMailing = () => {
     useEffect(() => {
         const showTextToggleClick = (elem) => {
-            if (!elem) return
             elem.onclick = () => {
                 elem.previousElementSibling.classList.toggle('active')
             }

@@ -64,7 +64,7 @@ export const Catalogue = () => {
     return (
         <>
             <article className="header__listindex relative">
-                <Link to="Category" className="header__iconcatalog flexcenter">
+                <Link to="Category" className="header__iconcatalog flexcenter" replace>
                     <svg>
                         <use xlinkHref={`${icons}#diamonds`}></use>
                     </svg>
@@ -392,7 +392,7 @@ export const Catalogue = () => {
                                     <li><a href=" ">Blu - ray ресивер</a></li>
                                 </ul>
                             </li>
-                            <li><Link to="Category" className="lastItem">Все категории</Link></li>
+                            <li><Link to="Category" className="lastItem" replace>Все категории</Link></li>
                         </ul>
                     </div>
                 </div>

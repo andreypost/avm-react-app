@@ -70,7 +70,7 @@ section {
 .noneDesk, #headerHoverCall, .nav__second, .nav__third,
 .products__popup, .global__list ul, .global__href i:nth-of-type(1).none,
 .tabs__block, .global__href i:nth-of-type(2), .banner__carousel .carousel-indicators,
-.global__checkmark:after, .promo__offerheader>p span, .header__burget, .header__navmob,
+.global__checkmark:after, .header__burget, .header__navmob,
 .select__hide, .header__listabout, .products__rating input, .products__buymob,
 .footer__mob, .htextmob_768, .global__rating input, .box__table,
 .services__text, .global__filterset, .global__filtermob, .box__column,
@@ -78,6 +78,7 @@ section {
 .htextmob__580, .comparision__addremove, .formtooltip {
   display: none;
 }
+/* .promo__offerheader>p span - display: none; */
 a, i, span, label, button, .global__list ul.block,
 .global__href i:nth-of-type(2).block, .tabs__block.active,
 .ordercab__status h4.active, .header__about:hover .header__listabout,
@@ -218,7 +219,7 @@ th, td, #selectRangePrice input, #selectRangePrice button,
   border: 1px solid var(--grey);
 }
 
-th:nth-child(n+2), td:nth-child(n+2) {
+#addProduct h3, th:nth-child(n+2), td:nth-child(n+2) {
   text-align: center;
 }
 
@@ -369,7 +370,7 @@ body * {
   position: relative;
 }
 
-.marginbot2010 {
+.marginbot2010, .photovideo__section iframe {
   margin-bottom: 20px;
 }
 
@@ -432,7 +433,8 @@ a, .blue, .discount__card .products__name:hover, #headerCall>a, #headerCall>h3,
 .contacts__showroom h3, .contacts__address h3, #feedbackForm h4,
 .header__dataicons span:empty+a:hover::before,
 .specific__description td:nth-child(1), #registrationForm .registration__confirm label,
-.payment__section a, .warranty__section a, .warranty__rights>a, .installplan__icons p, .installplan__section a {
+.payment__section a, .warranty__section a, .warranty__rights>a, .installplan__icons p,
+.installplan__section a, #changeUserPass .change_cancel {
   color: var(--blue);
 }
 .seo__section h2, .global__linksfilter span, .articleinner__img a, .articleinner__video a,
@@ -447,13 +449,13 @@ a, .blue, .discount__card .products__name:hover, #headerCall>a, #headerCall>h3,
 .services__addtext, .error__section a, .item8 a, .promo__button, .aboutus__links a:hover,
 .base__headerbuy a, .basegift__result a, .cabinet__leftside a.active, .wishcab__result button,
 #cabinetForm button, #wishForm button, #oneClickForm button, #cardImgVideo .buy__products,
-.blockcard__hgroup, #forgetPassForm button {
+.blockcard__hgroup, #forgetPassForm button, #receivedOrder>h3 {
   background: var(--blue);
 }
 #headerHoverCall, .header__vertical, .autocomplete__items, .header__dataicons span:empty+a:hover::before,
 .header__listabout, .nav__catalog, .products__popup, .offer__card, .news__card, .articleinner__butt button, .base__descriptprofit,
 .formtooltip, .cardbuy__additional article, .viewedcab__headermob article,
-.header__dataicons span:empty+a:hover::after, .products__popup:after {
+.header__dataicons span:empty+a:hover::after, .products__popup:after, #changeUserPass .change_cancel {
   background: var(--white);
 }
 .column__offer h2, .box__offer h2, .base__switch a.active, .base__iconmob>a, .stocksliderBlock h3,
@@ -470,12 +472,25 @@ footer, .services__price h3 {
 .sliderCreditExsim input[name="period"] {
   pointer-events: none;
 }
+
 .articleinner__minus a {
   visibility: hidden;
 }
+
+.opacityZ, .products__rating label:after, .global__rating label:after,
+.global__label input, .global__filterlabel input, .select__custom select,
+.services__addtext, .stocksliderBlock {
+  opacity: 0;
+}
+
 .opacity {
   opacity: .2;
 }
+
+.zIndexZ {
+  z-index: -999;
+}
+
 .global__leftside {
   flex: 1;
   min-width: 300px;
@@ -676,8 +691,19 @@ footer, .services__price h3 {
 }
 
 .header__input {
-  border: 1px solid var(--blue);
   padding: 10px 20px;
+}
+
+.header__input, .change_cancel:link, .base__descriptprofit,
+.aboutus__links a:link, .contacts__showroom,
+.installcard__price>a, .installcard__form,
+.comment__form .comment__symbol input,
+#registrationForm .registration__symbol input,
+.ordercab__status h4:nth-of-type(2), .block__card,
+.blockcard__click h2, #honestСredit article, #filterSearch article,
+#addProduct h4, .basket__checkout .global__back,
+.received__card {
+  border: 1px solid var(--blue);
 }
 
 .header__button {
@@ -1172,7 +1198,7 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
   background: url(./img/Groupe463.png) center center no-repeat;
 }  /* set four icons as img in html */
 
-.products__icon img {
+.item .products__icon img, .products__icon img {
   width: 32px;
   height: 26px;
 }
@@ -1252,7 +1278,7 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 
 .products__rating label:after, .global__rating label:after {
   background-position:-141px -213px;
-  opacity: 0;
+  /* opacity: 0; */
   transition: .2s;
 }
 
@@ -1278,7 +1304,7 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 }
 
 .products__price span {
-  font-size: 8px;
+  font-size: 10px;
   text-align: left;
 }
 
@@ -1420,6 +1446,10 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
 }
 
 /* producers section */
+
+.producers__section img {
+  height: 80px;
+}
 
 .producers__card {
   grid-template-rows: 60px;
@@ -1626,7 +1656,7 @@ footer h5 {
 
 .global__label input {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   height: 0;
   width: 0;
 }
@@ -1660,7 +1690,7 @@ footer h5 {
 
 .global__filterlabel input {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   height: 0;
   width: 0;
   z-index: 9999;
@@ -1880,7 +1910,7 @@ footer h5 {
 
 .select__custom select {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   z-index: -99999;
 }
 
@@ -2036,7 +2066,7 @@ footer h5 {
 .comment__form input, .comment__form textarea,
 #registrationForm input, #registrationForm textarea,
 #infoUserForm input, #infoUserForm textarea, .verify__forms input,
-.verify__forms textarea {
+.verify__forms textarea, #changeUserPass input {
   width: 100%;
   padding: 10px;
   border: 2px solid var(--slgrey);
@@ -2058,13 +2088,14 @@ footer h5 {
 .comment__form input:focus, .comment__form textarea:focus,
 #registrationForm input:focus, #registrationForm textarea:focus,
 #infoUserForm input:focus, #infoUserForm textarea:focus, .verify__forms input:focus,
-.verify__forms textarea:focus {
+.verify__forms textarea:focus, #changeUserPass input:focus {
   border-color: var(--blue);
 }
 
 #expertVisit button, #signUpShowRoom button, #feedbackForm button,
 #installExpertVisitDesk button, #installExpertVisitMob button,
-.comment__form button, #registrationForm button, #infoUserForm button {
+.comment__form button, #registrationForm button, #infoUserForm button,
+#changeUserPass button, .change_cancel {
   width: 40%;
   margin: 70px auto 60px;
   padding: 10px;
@@ -2117,7 +2148,7 @@ input[type="date" i] {
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0;
+  /* opacity: 0; */
   z-index: 99999;
   transition: all .3s;
 }
@@ -2295,6 +2326,10 @@ input[type="date" i] {
   height: 540px;
   padding: 10px;
   border: 2px solid var(--grey);
+}
+
+.comparison__top {
+  padding-top: 10px;
 }
 
 .articles__leftnews .news__card,
@@ -2654,9 +2689,9 @@ input[type="date" i] {
   font-size: 25px;
 }
 
-.item7 .products__price span {
+/* .item7 .products__price span {
   font-size: 10px;
-}
+} */
 
 .item8 {
   grid-area: item8;
@@ -3047,7 +3082,6 @@ about_us, certificate, jobs - pages */
   width: 260px;
   padding: 27px 0;
   font-size: 24px;
-  border: 1px solid var(--blue);
 }
 
 .certificate__img img {
@@ -3064,11 +3098,10 @@ about_us, certificate, jobs - pages */
 /* contacts__section */
 .contacts__attention, .contacts__showroom {
   padding: 35px 0;
-  border: 1px solid var(--red);
 }
 
-.contacts__showroom {
-  border: 1px solid var(--blue);
+.contacts__attention {
+  border: 1px solid var(--red);
 }
 
 .contacts__attention h3, .contacts__showroom h3 {
@@ -3192,7 +3225,7 @@ about_us, certificate, jobs - pages */
   border-bottom: 2px solid var(--grey);
 }
 
-.base__nav a {
+.base__nav a, .base__nav h4, .base__nav h5 {
   display: inherit;
   margin-bottom: -3px;
   font-size: 16px;
@@ -3218,7 +3251,7 @@ about_us, certificate, jobs - pages */
   width: 20px;
   height: 20px;
   position: absolute;
-  top: -4px;
+  top: 5px;
   left: -4px;
   background-position: -105px -79px;
 }
@@ -3229,7 +3262,7 @@ about_us, certificate, jobs - pages */
 
 .base__social .products__popup {
   min-width: 110px;
-  top: 24px;
+  top: 30px;
   left: 1px;
   padding: 10px;
 }
@@ -3298,18 +3331,6 @@ about_us, certificate, jobs - pages */
   border-bottom: none;
 }
 
-.cardsliderNav div:last-child {
-  border-bottom: 1px solid var(--grey);
-}
-
-.cardsliderNav div.active {
-  border: 1px solid var(--orange);
-}
-
-.cardsliderNav div.active+div {
-  border-top: none;
-}
-
 .cardsliderNav img, .cardsliderNav video {
   max-width: 75px;
   height: 80px;
@@ -3369,7 +3390,7 @@ about_us, certificate, jobs - pages */
 
 .stocksliderBlock {
   width: 100%;
-  opacity: 0;
+  /* opacity: 0; */
   padding: 10px;
   position: absolute;
   top: 0;
@@ -3422,18 +3443,29 @@ about_us, certificate, jobs - pages */
   background: #FFDEB2;
 }
 
+.base__infoblock {
+  grid-template-areas:
+      "item01 item02"
+      "item03 item04";
+  align-items: center;
+  justify-items: center;
+  /* grid-gap: 5px; */
+}
+
+
+
 .base__headerprice h3 {
   font-size: 20px;
   line-height: 26px;
   text-decoration: line-through;
 }
 
-.base__headerprice h1 {
+.base__headerprice h2 {
   font-size: 50px;
   line-height: 66px;
 }
 
-.base__headerprice h1 span {
+.base__headerprice h2 span {
   font-size: 16px;
   line-height: 16px;
   text-align: left;
@@ -3451,7 +3483,7 @@ about_us, certificate, jobs - pages */
 .base__headerbuy a {
   width: 210px;
   height: 60px;
-  margin: 10px auto 0;
+  margin: 10px auto;
   font-size: 20px;
 }
 
@@ -3492,7 +3524,6 @@ about_us, certificate, jobs - pages */
   position: absolute;
   width: 240px;
   padding: 10px;
-  border: 1px solid var(--blue);
   box-shadow: 0 0 7px var(--lightgrey);
   z-index: 999;
 }
@@ -3699,10 +3730,10 @@ about_us, certificate, jobs - pages */
   font-size: 18px;
   line-height: 16px;
 }
-.basefloat__block .base__headerprice h1 {
+.basefloat__block .base__headerprice h2 {
   font-size: 46px;
 }
-.basefloat__block .base__headerprice h1 span {
+.basefloat__block .base__headerprice h2 span {
   font-size: 14px;
 }
 .basefloat__block .base__headerbuy a {
@@ -3745,6 +3776,10 @@ about_us, certificate, jobs - pages */
 .base__description h4 {
   font-size: 18px;
   line-height: 29px;
+}
+.base__contentlinks a {
+  font-size: 16px;
+  text-decoration: underline;
 }
 .base__description iframe, .base__description video {
   width: 100% !important;
@@ -3874,9 +3909,7 @@ about_us, certificate, jobs - pages */
   font-size: 18px;
   padding: 10px;
 }
-.installcard__price>a, .installcard__form {
-  border: 1px solid var(--blue);
-}
+
 #installExpertVisitDesk button {
   width: 60%;
 }
@@ -3923,9 +3956,6 @@ about_us, certificate, jobs - pages */
 .comment__form .comment__symbol input::placeholder {
   font-size: 11px;
   color: var(--middleblue);
-}
-.comment__form .comment__symbol input {
-  border: 1px solid var(--blue);
 }
 
 .comment__form .global__rating label::before {
@@ -4001,8 +4031,7 @@ about_us, certificate, jobs - pages */
 .registration__confirm, #registrationForm p {
   margin-left: 155px;
 }
-#registrationForm>p {
-  margin-top: 8px;
+#registrationForm>p, #changeUserPass p {
   font-size: 11px;
   font-style: italic;
 }
@@ -4037,7 +4066,6 @@ about_us, certificate, jobs - pages */
 }
 #registrationForm .registration__symbol input {
   font-size: 16px;
-  border: 1px solid var(--blue);
 }
 #registrationForm .registration__symbol p {
   margin-left: unset;
@@ -4121,11 +4149,19 @@ about_us, certificate, jobs - pages */
   padding: 17px;
   background: var(--blue)
 }
-.infocab__catalogue label:nth-of-type(1), .infocab__catalogue label:nth-of-type(3),
+/* .infocab__catalogue #infoUserForm label:nth-of-type(1), .infocab__catalogue label:nth-of-type(3),
 .infocab__catalogue label:nth-of-type(5), #newCustomerForm label:nth-of-type(1),
 #newCustomerForm label:nth-of-type(3), #newCustomerForm label:nth-of-type(5),
-#customerCheckForm label:nth-of-type(1) {
+#customerCheckForm label:nth-of-type(1), #changeUserPass label:nth-of-type(1) {
   margin-right: 20px;
+} */
+#infoUserForm label:nth-of-type(1), #changeUserPass>div:nth-of-type(2) label:nth-of-type(1),
+#newCustomerForm label:nth-of-type(1), #newCustomerForm label:nth-of-type(3),
+#newCustomerForm label:nth-of-type(5), #customerCheckForm label:nth-of-type(1) {
+  margin-right: 20px;
+}
+#infoUserForm>div:nth-of-type(n+4) label {
+  margin-right: unset;
 }
 .infocab__catalogue label, .verify__forms label {
   line-height: 30px;
@@ -4138,9 +4174,22 @@ about_us, certificate, jobs - pages */
   font-size: 15px;
   color: #888888;
 }
+#infoUserForm a {
+  font-size: 15px;
+  text-decoration: underline;
+}
+#infoUserForm a, .infocab__confirm h5, .infocab__confirm label:nth-of-type(1) {
+  margin-bottom: 20px;
+}
 .infocab__confirm label, #changeUserPass .showPassword  {
   line-height: unset;
   color: var(--blue);
+}
+.change_cancel {
+  padding: 9px;
+}
+.infocab__confirm>div {
+  margin-top: 40px;
 }
 .cabinet__empty h2 {
   font-size: 20px;
@@ -4255,9 +4304,6 @@ about_us, certificate, jobs - pages */
   border-radius: 15px;
   border: 1px solid var(--orange);
 }
-.ordercab__status h4:nth-of-type(2) {
-  border: 1px solid var(--blue);
-}
 .ordercab__status h4:nth-of-type(3) {
   color: #C5CDD1;
   border: 1px solid #C5CDD1;
@@ -4312,9 +4358,11 @@ about_us, certificate, jobs - pages */
   height: 100%;
   overflow: auto;
   background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+.header__shadow {
   z-index: 999;
 }
-
 #honestСredit {
   background: none;
 }
@@ -4545,7 +4593,6 @@ about_us, certificate, jobs - pages */
 
 .block__card {
   padding: 10px;
-  border: 1px solid var(--blue);
 }
 
 .block__card img, .blockcard__inner>h3, .blockcard__inner>h2 {
@@ -4587,7 +4634,6 @@ about_us, certificate, jobs - pages */
   min-width: 28px;
   padding: 2px;
   font-size: 18px;
-  border: 1px solid var(--blue);
 }
 .blockcard__header h5 {
   max-width: 90%;
@@ -4655,7 +4701,6 @@ about_us, certificate, jobs - pages */
 #honestСredit article, #filterSearch article {
   width: 600px;
   padding: 55px 35px 40px;
-  border: 1px solid var(--blue);
   box-shadow: 0 0 7px var(--lightgrey);
 }
 
@@ -4684,29 +4729,29 @@ about_us, certificate, jobs - pages */
 #infoModal svg {
   width: 45px;
   height: 30px;
-  /* margin-right: 10px; */
 }
 #infoModal h3 span {
   font-size: 14px;
   margin-top: 10px;
 }
+#infoModal h3 span:nth-of-type(2) {
+  margin-top: -10px;
+}
 #addProduct h3 i {
   padding: 20px;
   background: url(./img/checkmark_add.png) center center no-repeat;
 }
-#addProduct h4, #addProduct h5, #basketForm .global__back,
-#basketForm button, .basket__checkout .global__back,
+#addProduct h4, #addProduct h5, .basket__checkout .global__back,
 .basket__checkout button {
   width: 200px;
   height: 40px;
   font-size: 15px;
   cursor: pointer;
 }
-#addProduct h4, #basketForm .global__back, .basket__checkout .global__back {
+#addProduct h4, .basket__checkout .global__back {
   margin-right: 20px;
-  border: 1px solid var(--blue);
 }
-#addProduct h5, #basketForm button, .basket__checkout button,
+#addProduct h5, .basket__checkout button,
 .verify__forms button {
   background: var(--blue);
 }
@@ -4720,11 +4765,12 @@ about_us, certificate, jobs - pages */
 }
 .cardbuy__additional article {
   position: absolute;
-  top: 80px;
+  top: 70px;
   left: 0;
   right: 0;
   padding: 10px;
   border: 1px solid #92A9B5;
+  z-index: 999;
 }
 .cardbuy__additional h3 {
   font-size: 19px;
@@ -4772,7 +4818,7 @@ about_us, certificate, jobs - pages */
 #basketProduct .cardbuy__total {
   height: 180px;
 }
-#basketForm .global__back, #basketForm button,
+
 .basket__checkout .global__back, .basket__checkout button,
 .verify__forms button {
   width: 260px;
@@ -4792,11 +4838,9 @@ about_us, certificate, jobs - pages */
 }
 #receivedOrder>h3 {
   padding: 15px;
-  background: var(--blue);
 }
 .received__card {
   padding: 10px;
-  border: 1px solid var(--blue);
 }
 .received__card img {
   max-width: 240px;
@@ -5432,6 +5476,12 @@ about_us, certificate, jobs - pages */
     padding: 5px 0px;
     font-size: 16px;
   }
+  .base__social::before {
+    top: -4px;
+  }
+  .base__social .products__popup {
+    top: 20px;
+  }
   .blockcard__name {
     max-width: 160px;
     min-width: 160px;
@@ -5445,12 +5495,17 @@ about_us, certificate, jobs - pages */
 
 
 
-
-
-
-
-
-
+@media screen and (min-width: 769px) {
+  .cardsliderNav div.active {
+    border: 1px solid var(--orange);
+  }
+  .cardsliderNav div:last-child {
+    border-bottom: 1px solid var(--grey);
+  }
+  .cardsliderNav div.active+div {
+    border-top: none;
+  }
+}
 
 
 
@@ -5479,7 +5534,7 @@ about_us, certificate, jobs - pages */
   }
   .col768, .articleinner__stars>div, .articleinner__pm, .articleinner__stars02>div,
   .base__switch, #cardSlider, #cardSliderModal, #registrationForm>div,
-  #infoUserForm>div, .base__headerprice h1 {
+  #infoUserForm>div, #changeUserPass>div {
     flex-flow: column;
   }
   .cardsliderNav {
@@ -5501,8 +5556,8 @@ about_us, certificate, jobs - pages */
   .header__search {
     width: 120%; 
   }
-  .manufacturers__articles h1, .base__headerprice h1,
-  .basefloat__block .base__headerprice h1 {
+  .manufacturers__articles h1, .base__headerprice h2,
+  .basefloat__block .base__headerprice h2 {
     font-size: 30px;
   }
   #forgetPassForm h2 {
@@ -5543,13 +5598,13 @@ about_us, certificate, jobs - pages */
     font-size: 11px;
   }
   .header__dataicons span, .error__section h5, .error__section a, .glossary__articles h3,
-  .base__headerprice h1 span, .basefloat__block .base__headerprice h1 span {
+  .base__headerprice h2 span, .basefloat__block .base__headerprice h2 span {
     font-size: 10px;
   }
   .services__price .services__colorstar {
     font-size: 8px;
   }
-  .base__headerprice h1 span, .basefloat__block .base__headerprice h1 span {
+  .base__headerprice h2 span, .basefloat__block .base__headerprice h2 span {
     line-height: 10px;
   }
   .header__input {
@@ -5658,7 +5713,9 @@ about_us, certificate, jobs - pages */
   #cabinetForm>label, #wishForm label {
     margin: 10px auto 5px 10px;
   }
-  #cabinetForm button, #forgetPassForm button {
+  #cabinetForm button, #forgetPassForm button,
+  .discountcab__catalogue>a:nth-of-type(2),
+  #changeUserPass button, .change_cancel {
     width: 55%;
   }
   #forgetPassForm button {
@@ -5775,7 +5832,7 @@ about_us, certificate, jobs - pages */
   .glossaryinner__section>img {
     margin: 0 auto;
   }
-  .glossaryinner__section h3 {
+  .glossaryinner__section h3, #changeUserPass button, .change_cancel {
     margin: 10px 0;
     line-height: 16px;
   }
@@ -5861,7 +5918,7 @@ about_us, certificate, jobs - pages */
   .item8 a {
     padding: 12px;
   }
-  tr {
+  .producers__section img, tr {
     height: 40px;
   }
   th {
@@ -5876,18 +5933,16 @@ about_us, certificate, jobs - pages */
   .cardsliderRight {
     order: 1;
   }
-  .cardsliderNav div.active+div {
+  .cardsliderNav div, .cardsliderNav div.active+div {
     border: 1px solid var(--blue);
   }
   .cardsliderNav div {
     width: 15px;
     height: 15px;
     margin: 5px;
-    border: 1px solid var(--blue);
     border-radius: 50%;
   }
   .cardsliderNav div.active {
-    border: 1px solid var(--blue);
     background-color: var(--blue);
   }
   .cardsliderRight {
@@ -5897,7 +5952,7 @@ about_us, certificate, jobs - pages */
   .cardsliderNav {
     height: unset;
   }
-  .base__headerprice h1 {
+  .base__headerprice h2 {
     /* line-height: 46px; */
     line-height: 28px;
     margin-bottom: 5px;
@@ -5966,14 +6021,10 @@ about_us, certificate, jobs - pages */
   .discountcab__catalogue th, .discountcab__catalogue td {
     height: 40px;
   }
-  .discountcab__catalogue>a:nth-of-type(2) {
-    width: 55%;
-  }
-  .infocab__catalogue label:nth-of-type(1), .infocab__catalogue label:nth-of-type(3),
-  .infocab__catalogue label:nth-of-type(5), #newCustomerForm label:nth-of-type(1),
+  #infoUserForm label:nth-of-type(1), #newCustomerForm label:nth-of-type(1),
   #newCustomerForm label:nth-of-type(3), #newCustomerForm label:nth-of-type(5),
-  #customerCheckForm label:nth-of-type(1) {
-    margin-right: 0;
+  #customerCheckForm label:nth-of-type(1), #changeUserPass>div:nth-of-type(2) label:nth-of-type(1) {
+    margin-right: unset;
   }
   .wishcabsocial__block {
     align-self: flex-start;
@@ -6147,7 +6198,8 @@ about_us, certificate, jobs - pages */
   #infoUserForm input, #infoUserForm textarea, .cabinet__empty h2,
   .viewedcab__headermob article h3, .commentcab__card hgroup h2, .commentcab__card h6,
   .cabinet__empty>a, .term__catalogue h4, .verify__forms input,
-  .verify__forms textarea, .verify__forms label, .start__price h2 {
+  .verify__forms textarea, .verify__forms label, .start__price h2,
+  #changeUserPass label, #changeUserPass input {
     font-size: 13px;
   }
   .px12_580, #wishForm button, #expertVisit input, #expertVisit textarea,
@@ -6156,12 +6208,12 @@ about_us, certificate, jobs - pages */
   .aboutus__links a:hover, #feedbackForm input, #feedbackForm textarea,
   #feedbackForm input::placeholder, .contacts__address h3, .contacts__address h4,
   .contacts__social a, #buyOneClick button, #oneClickForm label,
-  #basketForm .global__back, #basketForm button, #installExpertVisitMob input,
+  #installExpertVisitMob input,
   #installExpertVisitMob textarea, #installExpertVisitMob input::placeholder,
   .reviews__description *, .discountcab__catalogue>a:nth-of-type(2),
   .basket__checkout .global__back, .basket__checkout button,
   .verify__forms button, .verify__methods input, .verify__methods input::placeholder,
-  .searchnews__header a {
+  .searchnews__header a, .base__contentlinks a {
     font-size: 12px;
   }
   .global__hgroup a, .discount__price, .offer__card h6, .news__card h6,
@@ -6207,9 +6259,12 @@ about_us, certificate, jobs - pages */
   td {
     font-size: 7px;
   }
-  .products__price span, .discount__card .products__price span, .item7 .products__price span {
+  /* .products__price span, .discount__card .products__price span, .item7 .products__price span {
     font-size: 6px;
-  }
+  } */
+  /* .item7 .products__price span {
+    font-size: 6px;
+  } */
   .discount__price span, .item9 .discount__sales, .blockcard__inner>h3 span {
     font-size: 5px;
   }
@@ -6267,7 +6322,7 @@ about_us, certificate, jobs - pages */
   .products__div {
     height: 16px;
   }
-  .products__icon img {
+  .item .products__icon img, .products__icon img {
     width: 28px;
   }
   .offer__card, .news__card {
@@ -6522,7 +6577,7 @@ about_us, certificate, jobs - pages */
   .warranty__section h5 {
     margin: 0 10px 25px 10px;
   }
-  .delivery__section h3 i, #addProduct h4, #basketForm .global__back,
+  .delivery__section h3 i, #addProduct h4,
   .basket__checkout .global__back {
     margin-right: 0;
   }
@@ -6575,7 +6630,6 @@ about_us, certificate, jobs - pages */
     height: 40px;
   }
   .base__headerbuy a {
-    width: 150px;
     height: 40px;
   }
   .base__credit, .base__description hgroup h1 {
@@ -6635,17 +6689,16 @@ about_us, certificate, jobs - pages */
   .base__navmob {
     padding: 20px 0 40px;
   }
-  #basketForm .global__back, #basketForm button,
   .basket__checkout .global__back, .basket__checkout button,
   .verify__forms button {
     width: 48%;
     height: 40px;
   }
-  #basketForm>div, .basket__checkout>div {
+  .basket__checkout>div {
     justify-content: space-around;
   }
   .cardbuy__additional article {
-    top: 62px;
+    top: 54px;
   }
   .cardbuy__additional h3:after {
     left: 155px;
@@ -6819,9 +6872,7 @@ about_us, certificate, jobs - pages */
   .inputForm03 {
     width: 100%;
   }
-  .base__headerprice h1 {
-    font-size: 26px;
-  }
+
 }
 
 

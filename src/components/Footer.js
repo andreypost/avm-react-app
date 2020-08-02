@@ -32,7 +32,7 @@ export const Footer = () => {
                 <div className="footer__desk flexcol">
                     <div className="flexbet">
                         <div>
-                            <Link to="/">
+                            <Link to="/" replace>
                                 <svg>
                                     <use xlinkHref={`${icons}#logo`}></use>
                                 </svg>
@@ -45,7 +45,7 @@ export const Footer = () => {
                             <li><Link to="Hall" replace>Зал прослушивания</Link></li>
                             <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
                             <li><Link to="Credit" replace>Рассрочка</Link></li>
-                            <li><a href="_all_stocks.html">Акции</a></li>
+                            <li><Link to="Actions" replace>Акции</Link></li>
                             <li><Link to="Warranty" replace>Гарантия и сервис</Link></li>
                             <li><Link to="About" replace>О Нас</Link></li>
                         </ul>
@@ -79,7 +79,7 @@ export const Footer = () => {
                             <ul>
                                 <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
                                 <li><Link to="Credit" replace>Рассрочка</Link></li>
-                                <li><a href="_all_stocks.html">Акции</a></li>
+                                <li><Link to="Actions" replace>Акции</Link></li>
                                 <li><Link to="Warranty" replace>Гарантия и сервис</Link></li>
                                 <li><Link to="About" replace>О Нас</Link></li>
                             </ul>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const DiscountCard = (props) => {
+export const CardDiscount = (props) => {
     return (
         <div className={"item discount__card " + props.datos.clase} >
             <div className="flexbet">
@@ -49,7 +49,7 @@ export const DiscountCard = (props) => {
                 Честный кредит
                 до
                         24 месяцев. Акция! Акция! Честный кредит до 24 месяцев. Акция!</p>
-                <Link to="ProcardBase" className="products__name">{props.datos.title}</Link>
+                <Link to="ProcardBase" className="products__name" replace>{props.datos.title}</Link>
             </div>
             <div className="flexcenter juststart">
                 <div className="products__rating flexcenter ">

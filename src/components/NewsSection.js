@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import newsData from './newsData';
+import dataNews from './dataNews';
 import { NewsCard } from './NewsCard';
 
 export const NewsSection = () => {
@@ -47,43 +47,43 @@ export const NewsSection = () => {
                         <article className="tabs__block active" data-tab="news">
                             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                                 responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                                <NewsCard datos={newsData[0]} />
-                                <NewsCard datos={newsData[1]} />
-                                <NewsCard datos={newsData[2]} />
-                                <NewsCard datos={newsData[3]} />
-                                <NewsCard datos={newsData[4]} />
-                                <NewsCard datos={newsData[5]} />
-                                <NewsCard datos={newsData[6]} />
-                                <NewsCard datos={newsData[7]} />
-                                <NewsCard datos={newsData[0]} />
+                                <NewsCard datos={dataNews[0]} />
+                                <NewsCard datos={dataNews[1]} />
+                                <NewsCard datos={dataNews[2]} />
+                                <NewsCard datos={dataNews[3]} />
+                                <NewsCard datos={dataNews[4]} />
+                                <NewsCard datos={dataNews[5]} />
+                                <NewsCard datos={dataNews[6]} />
+                                <NewsCard datos={dataNews[7]} />
+                                <NewsCard datos={dataNews[0]} />
                             </OwlCarousel>
                         </article>
                         <article className="tabs__block" data-tab="articles">
                             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                                 responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                                <NewsCard datos={newsData[1]} />
-                                <NewsCard datos={newsData[2]} />
-                                <NewsCard datos={newsData[3]} />
-                                <NewsCard datos={newsData[4]} />
-                                <NewsCard datos={newsData[5]} />
-                                <NewsCard datos={newsData[6]} />
-                                <NewsCard datos={newsData[7]} />
-                                <NewsCard datos={newsData[0]} />
-                                <NewsCard datos={newsData[1]} />
+                                <NewsCard datos={dataNews[1]} />
+                                <NewsCard datos={dataNews[2]} />
+                                <NewsCard datos={dataNews[3]} />
+                                <NewsCard datos={dataNews[4]} />
+                                <NewsCard datos={dataNews[5]} />
+                                <NewsCard datos={dataNews[6]} />
+                                <NewsCard datos={dataNews[7]} />
+                                <NewsCard datos={dataNews[0]} />
+                                <NewsCard datos={dataNews[1]} />
                             </OwlCarousel>
                         </article>
                         <article className="tabs__block" data-tab="reviews">
                             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                                 responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                                <NewsCard datos={newsData[2]} />
-                                <NewsCard datos={newsData[3]} />
-                                <NewsCard datos={newsData[4]} />
-                                <NewsCard datos={newsData[5]} />
-                                <NewsCard datos={newsData[6]} />
-                                <NewsCard datos={newsData[7]} />
-                                <NewsCard datos={newsData[0]} />
-                                <NewsCard datos={newsData[1]} />
-                                <NewsCard datos={newsData[2]} />
+                                <NewsCard datos={dataNews[2]} />
+                                <NewsCard datos={dataNews[3]} />
+                                <NewsCard datos={dataNews[4]} />
+                                <NewsCard datos={dataNews[5]} />
+                                <NewsCard datos={dataNews[6]} />
+                                <NewsCard datos={dataNews[7]} />
+                                <NewsCard datos={dataNews[0]} />
+                                <NewsCard datos={dataNews[1]} />
+                                <NewsCard datos={dataNews[2]} />
                             </OwlCarousel>
                         </article>
                     </div>

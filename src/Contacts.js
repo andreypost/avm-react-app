@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/contacticon_01.png';
 import photo_002 from './img/contacticon_02.png';
 import photo_003 from './img/contacticon_03.png';
@@ -100,9 +99,9 @@ export const Contacts = (props) => {
                                     <h4>Мы постараемся решить Ваш вопрос в кратчайшие сроки.</h4>
                                 </hgroup>
                                 <label htmlFor="name">Имя</label>
-                                <input type="text" name="name" placeholder="Юрий" required="" />
+                                <input type="text" name="name" placeholder="Юрий" required />
                                 <label htmlFor="phone">Номер телефона</label>
-                                <input type="text" name="phone" pattern="[0-9]{10}" placeholder="0673334444" required="" />
+                                <input type="text" name="phone" pattern="[0-9]{10}" placeholder="0673334444" required />
                                 <label htmlFor="comment">Комментарий</label>
                                 <textarea name="comment" rows="5" className="flexcenter"></textarea>
                                 <button form="feedbackForm">ЗАПИСАТЬСЯ</button>
@@ -118,7 +117,6 @@ export const Contacts = (props) => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

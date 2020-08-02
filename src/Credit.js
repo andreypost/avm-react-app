@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/installicon_01.png';
 import photo_002 from './img/installicon_02.png';
 import photo_003 from './img/installicon_03.png';
@@ -372,7 +371,6 @@ export const Credit = (props) => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

@@ -5,7 +5,6 @@ import { Catalogue } from './components/Catalogue';
 import { NewsSection } from './components/NewsSection';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup6.png';
 import photo_002 from './img/services01.png';
 import photo_003 from './img/services02.png';
@@ -47,6 +46,15 @@ export const Services = (props) => {
       onClickHandler(elems, onClickListener)
     }
     toggleAllText(document.querySelectorAll('.services__heading'))
+    const dateCalendarLimit = (elem) => {
+      let today = new Date(),
+        delay = new Date(today)
+      delay.setDate(delay.getDate() + 2)
+      today.setDate(today.getDate() + 45)
+        elem.min = delay.toISOString().split("T")[0]
+        elem.max = today.toISOString().split("T")[0]
+    }
+    dateCalendarLimit(document.querySelector('input[type="date"]'))
   }, [])
   return (
     <>
@@ -432,7 +440,6 @@ export const Services = (props) => {
         <SeoMailing />
       </main>
       <Footer />
-      <ModalsPro pathname={props.history.location.pathname} />
     </>
   )
 }

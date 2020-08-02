@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import icons from './icons.svg';
 import { Header } from './components/Header';
 import { HitsSection } from './components/HitsSection';
-import cardData from './components/cardData';
-import { ProductCard } from './components/ProductCard';
-import { DiscountCard } from './components/DiscountCard';
-import offerData from './offerData';
-import { OfferCard } from './components/OfferCard';
+import dataCard from './components/dataCard';
+import { CardProduct } from './components/CardProduct';
+import { CardDiscount } from './components/CardDiscount';
+import dataOffer from './components/dataOffer';
+import { CardOffer } from './components/CardOffer';
 import { NewsSection } from './components/NewsSection';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
@@ -507,14 +507,14 @@ export const Main = (props) => {
           </hgroup>
           <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
             responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-            <ProductCard datos={cardData[24]} />
-            <DiscountCard datos={cardData[23]} />
-            <ProductCard datos={cardData[2]} />
-            <DiscountCard datos={cardData[15]} />
-            <ProductCard datos={cardData[25]} />
-            <DiscountCard datos={cardData[26]} />
-            <ProductCard datos={cardData[6]} />
-            <DiscountCard datos={cardData[8]} />
+            <CardProduct datos={dataCard[24]} />
+            <CardDiscount datos={dataCard[23]} />
+            <CardProduct datos={dataCard[2]} />
+            <CardDiscount datos={dataCard[15]} />
+            <CardProduct datos={dataCard[25]} />
+            <CardDiscount datos={dataCard[26]} />
+            <CardProduct datos={dataCard[6]} />
+            <CardDiscount datos={dataCard[8]} />
           </OwlCarousel>
           <article className="main__addicons flexcenter alignstart flexwrap">
             <div className="main__dialer flexcol">
@@ -544,19 +544,19 @@ export const Main = (props) => {
           <section className="carousel__section">
             <hgroup className="global__hgroup flexbet">
               <h2>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</h2>
-              <Link to="Category">Все товары</Link>
+              <Link to="Actions">Все товары</Link>
             </hgroup>
             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
               responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-              <OfferCard datos={offerData[0]} />
-              <OfferCard datos={offerData[1]} />
-              <OfferCard datos={offerData[2]} />
-              <OfferCard datos={offerData[0]} />
-              <OfferCard datos={offerData[1]} />
-              <OfferCard datos={offerData[2]} />
-              <OfferCard datos={offerData[0]} />
-              <OfferCard datos={offerData[1]} />
-              <OfferCard datos={offerData[2]} />
+              <CardOffer datos={dataOffer[0]} />
+              <CardOffer datos={dataOffer[1]} />
+              <CardOffer datos={dataOffer[2]} />
+              <CardOffer datos={dataOffer[0]} />
+              <CardOffer datos={dataOffer[1]} />
+              <CardOffer datos={dataOffer[2]} />
+              <CardOffer datos={dataOffer[0]} />
+              <CardOffer datos={dataOffer[1]} />
+              <CardOffer datos={dataOffer[2]} />
             </OwlCarousel>
           </section>
         </article>

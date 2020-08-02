@@ -5,7 +5,7 @@ import photo_002 from '../img/Groupe465.png';
 import photo_003 from '../img/Groupe466.png';
 import photo_004 from '../img/Groupe467.png';
 
-export const ProductCard = (props) => {
+export const CardProduct = (props) => {
     return (
         <div className={"item products__card " + props.datos.clase} >
             <div className="flexbet">
