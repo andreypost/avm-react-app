@@ -17,7 +17,6 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: var(--blue);
 }
 
 *, a:focus, button:focus {
@@ -78,7 +77,7 @@ section {
 .htextmob__580, .comparision__addremove, .formtooltip {
   display: none;
 }
-/* .promo__offerheader>p span - display: none; */
+
 a, i, span, label, button, .global__list ul.block,
 .global__href i:nth-of-type(2).block, .tabs__block.active,
 .ordercab__status h4.active, .header__about:hover .header__listabout,
@@ -389,6 +388,10 @@ body * {
   font-weight: bold;
 }
 
+.italic {
+  font-style: italic;
+}
+
 a:hover, .orange, .header__cataloglinks a:hover, .header__cataloglinks .header__bonus,
 .nav__catalog a:hover, .products__popup a, .discount__log, .news__viewed a,
 .seo__section h4, .tabLink.active, .promo__href a, .item7 .products__price,
@@ -427,14 +430,14 @@ a:hover, .orange, .header__cataloglinks a:hover, .header__cataloglinks .header__
 .wish__symbol p, .catalogue__production, #filterForm button {
   color: var(--white);
 }
-a, .blue, .discount__card .products__name:hover, #headerCall>a, #headerCall>h3,
+body, a, .blue, .discount__card .products__name:hover, #headerCall>a, #headerCall>h3,
 .header__listabout a, .products__price span, .services__heading.active,
 .services__price .services__colorstar, .item7 .products__color,
 .contacts__showroom h3, .contacts__address h3, #feedbackForm h4,
 .header__dataicons span:empty+a:hover::before,
 .specific__description td:nth-child(1), #registrationForm .registration__confirm label,
 .payment__section a, .warranty__section a, .warranty__rights>a, .installplan__icons p,
-.installplan__section a, #changeUserPass .change_cancel {
+.installplan__section a, #changeUserPass .change_cancel, #filterSearch a {
   color: var(--blue);
 }
 .seo__section h2, .global__linksfilter span, .articleinner__img a, .articleinner__video a,
@@ -489,6 +492,11 @@ footer, .services__price h3 {
 
 .zIndexZ {
   z-index: -999;
+}
+
+.exclusive {
+  max-width: 180px;
+  margin: 10px auto 0;
 }
 
 .global__leftside {
@@ -1362,24 +1370,11 @@ a.header__bonus:hover, .global__back:hover, .discount__log:hover {
   padding: 80px 0 40px;
 }
 
-.main__dialer i, .main__room i, .main__expert i, .main__prices i {
+.main__addicons svg {
   width: 72px;
   height: 78px;
   margin-bottom: 10px;
-  background: url(./img/Group67.png) center center no-repeat;
   cursor: unset;
-}
-
-.main__room i {
-  background: url(./img/Group68.png) center center no-repeat;
-}
-
-.main__expert i {
-  background: url(./img/Group69.png) center center no-repeat;
-}
-
-.main__prices i {
-  background: url(./img/Group70.png) center center no-repeat;
 }
 
 .main__addicons h4 {
@@ -4360,9 +4355,11 @@ about_us, certificate, jobs - pages */
   background: rgba(0, 0, 0, 0.4);
   z-index: 9999;
 }
+
 .header__shadow {
   z-index: 999;
 }
+
 #honestСredit {
   background: none;
 }
@@ -4726,7 +4723,7 @@ about_us, certificate, jobs - pages */
   font-size: 20px;
   line-height: 18px;
 }
-#infoModal svg {
+#infoModal svg, #addProduct svg {
   width: 45px;
   height: 30px;
 }
@@ -4736,10 +4733,6 @@ about_us, certificate, jobs - pages */
 }
 #infoModal h3 span:nth-of-type(2) {
   margin-top: -10px;
-}
-#addProduct h3 i {
-  padding: 20px;
-  background: url(./img/checkmark_add.png) center center no-repeat;
 }
 #addProduct h4, #addProduct h5, .basket__checkout .global__back,
 .basket__checkout button {
@@ -6233,7 +6226,7 @@ about_us, certificate, jobs - pages */
   .px10_580, .discount__log, .products__name, .articleinner__stars h4,
   .articleinner__stars h2, .articleinner__stars h3, .articleinner__stars01 h4,
   .articleinner__stars01 h3, .articleinner__img a, .search__result,
-  .item6 .discount__log, .column__article a, .box__offer a,
+  .item6 .discount__log, .column__article a, .box__offer a, .main__addicons h5,
   .comparison__category a, #feedbackForm h4, .blockcard__click h2, .cardbuy__additional h5, .received__count h5,
   .received__count h2, .wishcab__result h6, .start__price a, .searchnews__header h6 {
     font-size: 10px;
@@ -6362,6 +6355,12 @@ about_us, certificate, jobs - pages */
   }
   .main__addicons {
     padding: 20px 0;
+  }
+  .main__addicons svg {
+    height: 64px;
+  }
+  .main__addicons h5 {
+    max-width: 100px;
   }
   .offer__special, .news__section {
     padding: 0 0 20px;
@@ -6530,7 +6529,7 @@ about_us, certificate, jobs - pages */
   .articleinner__verdict h5 {
     margin: 0 0 15px 0;
   }
-  .articleinner__stars02 .global__rating {
+  .articleinner__stars02 .global__rating, .main__addicons h5 {
     margin: 5px;
   }
   .search__result {

@@ -517,23 +517,31 @@ export const Main = (props) => {
             <CardDiscount datos={dataCard[8]} />
           </OwlCarousel>
           <article className="main__addicons flexcenter alignstart flexwrap">
-            <div className="main__dialer flexcol">
-              <div><i></i></div>
+            <div className="flexcol">
+              <svg>
+                <use xlinkHref={`${icons}#star`}></use>
+              </svg>
               <h4>Официальный дилер</h4>
               <h5>с 1999 года</h5>
             </div>
-            <div className="main__room flexcol">
-              <div><i></i></div>
+            <div className="flexcol">
+              <svg>
+                <use xlinkHref={`${icons}#sound`}></use>
+              </svg>
               <h4>Прослушивание</h4>
               <h5>в новом шоу-руме</h5>
             </div>
-            <div className="main__expert flexcol">
-              <div><i></i></div>
+            <div className="flexcol">
+              <svg>
+                <use xlinkHref={`${icons}#expert`}></use>
+              </svg>
               <h4>Ваш личный эксперт</h4>
               <h5>поможет с выбором цена/качество</h5>
             </div>
-            <div className="main__prices flexcol">
-              <div><i></i></div>
+            <div className="flexcol">
+              <svg>
+                <use xlinkHref={`${icons}#prices`}></use>
+              </svg>
               <h4>Доступные цены</h4>
               <h5>на рынке аудио-видео техники</h5>
             </div>
