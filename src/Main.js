@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import { Link } from "react-router-dom";
+// import { createStore } from 'redux';
 import icons from './icons.svg';
 import { Header } from './components/Header';
 import { HitsSection } from './components/HitsSection';
@@ -22,7 +23,38 @@ import photo_006 from './img/Logo_21.png';
 import photo_007 from './img/Logo_22.png';
 import photo_008 from './img/Logo_23.png';
 
+
+// const MyCounter = (state = 0, action) => {
+//   switch (action.type) {
+//       case 'INCREMENT':
+//           return state + 1
+//       case 'DECREMENT':
+//           return state - 1
+//       default:
+//           return state
+//   }
+// }
+
+// let myStore = createStore(MyCounter)
+
+// myStore.subscribe(() => console.log(myStore.getState()))
+
+// myStore.dispatch({ type: 'INCREMENT' })
+
+// myStore.dispatch({ type: 'INCREMENT' })
+
+// myStore.dispatch({ type: 'DECREMENT' })
+
+
+
+
 export const Main = (props) => {
+  // const handleDecriment = () => {
+  //   myStore.dispatch({ type: 'DECREMENT' })
+  // }
+  // const handleIncrement = () => {
+  //   myStore.dispatch({ type: 'INCREMENT' })
+  // }
   useEffect(() => {
     window.scrollTo(0, 0)
     const showContentTabs = (container) => {
@@ -106,6 +138,7 @@ export const Main = (props) => {
       }
     }
     forbidScrollNav(document.querySelector('.nav__first'))
+   
   }, [])
   return (
     <>
@@ -118,6 +151,8 @@ export const Main = (props) => {
             Каталог товаров</Link>
         <></>
       </Header>
+      {/* <h3 onClick={handleDecriment}>my store --</h3> */}
+      {/* <h3 onClick={handleIncrement}>my store ++</h3> */}
       <main>
         <section className="banner__section flexcenter">
           <div className="nav__catalog relative">

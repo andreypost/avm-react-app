@@ -103,7 +103,11 @@ export const ModalsPro = (props) => {
                 <article className="flexcenter relative">
                     <div className="button__closegl"></div>
                     <hgroup>
-                        <h3 className="flexcenter flexwrap black marginbot4020"><i></i>Товар был добавлен в корзину. Товаров в Вашей
+                        <h3 className="flexcenter flexwrap black marginbot4020">
+                            <svg>
+                                <use xlinkHref={`${icons}#checkmarker`}></use>
+                            </svg>
+                            Товар был добавлен в корзину. Товаров в Вашей
                     корзине:&nbsp;<span className="product__count">0</span></h3>
                         <div className="flexcenter justcenter col580">
                             <h4 className="global__back flexcenter marginbot4020">ПРОДОЛЖИТЬ ПОКУПКИ</h4>

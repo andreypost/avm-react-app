@@ -427,7 +427,7 @@ export const Header = (props) => {
                             <label className="global__label">
                                 <input type="checkbox" />
                                 <span className="global__checkmark"></span>Запомнить меня</label>
-                            <a href=" ">Забыли пароль?</a>
+                            <a href=" "className="forgetPass">Забыли пароль?</a>
                         </div>
                         <button form="cabinetForm">ВОЙТИ</button>
                     </form>
