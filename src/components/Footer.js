@@ -4,18 +4,6 @@ import icons from '../icons.svg';
 
 export const Footer = () => {
     useEffect(() => {
-        const toggleAllLists = (elems) => {
-            if (!elems) return
-            for (let elem of elems) {
-                elem.onclick = (e) => {
-                    e.preventDefault()
-                    elem.firstElementChild.classList.toggle('none')
-                    elem.lastElementChild.classList.toggle('block')
-                    if (elem.nextElementSibling) elem.nextElementSibling.classList.toggle('block')
-                }
-            }
-        }
-        toggleAllLists(document.querySelectorAll('.global__href'))
         document.getElementById('arrowUp').onclick = () => {
             window.scrollBy({
                 top: -window.scrollY,
@@ -50,14 +38,14 @@ export const Footer = () => {
                             <li><Link to="About" replace>О Нас</Link></li>
                         </ul>
                     </div>
-                    <h6>Доставка по Киеву и Украине, России и Казахстану, Белоруссии, основные города: Алушта, Белая
+                    <p>Доставка по Киеву и Украине, России и Казахстану, Белоруссии, основные города: Алушта, Белая
                     Церковь, Бердянск, Винница, Днепродзержинск, Донецк, Евпатория, Житомир, Запорожье,
                     Ивано-Франковск, Измаил, Илльичевск, Каменец-Подольский, Керчь, Кировоград, Ковель, Краматорск,
                     Кременчуг, Кривой Рог, Лисичанск, Лубны, Луганск, Луцк, Львов, Макеевка, Мариуполь, Мелитополь,
                     Николаев, Никополь, Миргород, Могилев-Подольский, Мукачево, Нежин, Одесса, Павлоград, Полтава,
                     Ровно, Севастополь, Северодонецк, Симферополь, Славута, Смела, Сумы, Тернополь, Ужгород, Умань,
                     Феодосия, Харьков, Херсон, Хмельницький, Черкассы, Черновцы, Чернигов, Шостка, Ялта, Москва,
-             Минск, Могилев, Гомель и другие.</h6>
+             Минск, Могилев, Гомель и другие.</p>
                 </div>
                 <div className="footer__mob">
                     <div className="horizont"></div>
@@ -109,7 +97,7 @@ export const Footer = () => {
                         </svg>
                     </a>
                 </div>
-                <h5>Copyright © 1999-2020 Pear Solution</h5>
+                <p>Copyright © 1999-2020 Pear Solution</p>
             </section>
             <i id="arrowUp" hidden=""></i>
         </footer>

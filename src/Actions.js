@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import icons from './icons.svg';
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import dataOffer from './components/dataOffer';
@@ -15,7 +16,7 @@ export const Actions = (props) => {
             let store = form.querySelector('.filterStore')
             const setDouble = (elem, i) => {
                 let h5 = document.createElement('h5')
-                h5.innerHTML = elem.parentNode.querySelector('h6').firstChild.textContent
+                h5.innerHTML = elem.parentNode.querySelector('i').firstChild.textContent
                 h5.className = 'filterStoreText'
                 elem.dataset.num = h5.dataset.num = i
                 store.append(h5)
@@ -64,12 +65,6 @@ export const Actions = (props) => {
                         <li><Link to="/">Главная &gt;</Link></li>
                         <li>Акции</li>
                     </ul>
-                    <article className="htextmob_768">
-                        <h4>Акции</h4>
-                    </article>
-                    <article>
-                        <h6 className="global__filtermob flexstart"><i></i>Фильтр</h6>
-                    </article>
                     <article className="flexbet">
                         <div className="global__leftside selfstart">
                             <div className="global__deskfilter">
@@ -169,7 +164,11 @@ export const Actions = (props) => {
                                         </ul>
                                     </li>
                                 </ul>
-                                <a href=" " className="global__filterarrow flexstart"><i></i><i></i><span>Показать
+                                <a href=" " className="global__filterarrow flexstart">
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
+                                    </svg>
+                                    <span className="active">Показать
                                 все</span><span>Скрыть</span></a>
                                 <div className="horizont"></div>
                                 <h3>Производители:</h3>
@@ -273,7 +272,11 @@ export const Actions = (props) => {
                                         </ul>
                                     </li>
                                 </ul>
-                                <a href=" " className="global__filterarrow flexstart"><i></i><i></i><span>Показать
+                                <a href=" " className="global__filterarrow flexstart">
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
+                                    </svg>
+                                    <span className="active">Показать
                                 все</span><span>Скрыть</span></a>
                                 <div className="horizont"></div>
                                 <h3>Выгодные предложения:</h3>
@@ -287,7 +290,8 @@ export const Actions = (props) => {
                             </div>
                         </div>
                         <article className="global__rightside">
-                            <h2 className="allpromo__header">Акции</h2>
+                            <h1 className="allpromo__header">Акции</h1>
+                            <h6 className="global__filtermob"><i></i>Фильтр</h6>
                             <article className="allpromo__catalogue box__grid global__rightside">
                                 <CardPromo datos={dataOffer[0]} />
                                 <CardPromo datos={dataOffer[1]} />
@@ -305,17 +309,17 @@ export const Actions = (props) => {
                             </article>
                             <a href=" " className="promo__button">ПОКАЗАТЬ ЕЩЕ</a>
                             <nav className="pagination__global flexcenter justcenter">
-                                <a href=" " className="pagination__prev"> </a>
+                                <a className="pagination__prev" href=" "> </a>
                                 <div className="pagination__list flexcenter juststart">
-                                    <a href=" " className="pagination__item">1</a>
+                                    <a className="pagination__item" href=" ">1</a>
                                     <p>...</p>
-                                    <a href=" " className="pagination__item active">1</a>
-                                    <a href=" " className="pagination__item">2</a>
-                                    <a href=" " className="pagination__item">3</a>
+                                    <a className="pagination__item active" href=" ">1</a>
+                                    <a className="pagination__item" href=" ">2</a>
+                                    <a className="pagination__item" href=" ">3</a>
                                     <p>...</p>
-                                    <a href=" " className="pagination__item">11</a>
+                                    <a className="pagination__item" href=" ">11</a>
                                 </div>
-                                <a href=" " className="pagination__next"> </a>
+                                <a className="pagination__next" href=" "> </a>
                             </nav>
                         </article>
                     </article>

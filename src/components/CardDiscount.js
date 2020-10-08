@@ -64,7 +64,7 @@ export const CardDiscount = (props) => {
                     <input type="radio" name="productName01" id="productName01_05" /><label
                         htmlFor="productName01_05"></label>
                 </div>
-                <a href=" " className="products__comments">Отзывов: <span>30</span></a>
+                <a href=" " className="receiveComment products__comments">Отзывов: <span>30</span></a>
             </div>
             <div className="products__div flexbet alignend">
                 <div className="products__info flexcol alignstart">

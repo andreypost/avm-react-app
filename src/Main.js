@@ -536,10 +536,10 @@ export const Main = (props) => {
           <h3 className="navmob__catalogue">Каталог товаров</h3>
         </section>
         <section className="carousel__section">
-          <hgroup className="global__hgroup flexbet">
+          <div className="global__hgroup flexbet">
             <h2>ПРОСМОТРЕННЫЕ ТОВАРЫ</h2>
             <a href="_viewed_products.html">Все товары</a>
-          </hgroup>
+          </div>
           <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
             responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
             <CardProduct datos={dataCard[24]} />
@@ -551,44 +551,44 @@ export const Main = (props) => {
             <CardProduct datos={dataCard[6]} />
             <CardDiscount datos={dataCard[8]} />
           </OwlCarousel>
-          <article className="main__addicons flexcenter alignstart flexwrap">
+          <article className="main__addicons flexcenter alignstart flexwrap black">
             <div className="flexcol">
               <svg>
                 <use xlinkHref={`${icons}#star`}></use>
               </svg>
-              <h4>Официальный дилер</h4>
-              <h5>с 1999 года</h5>
+              <h4 className="px13_580">Официальный дилер</h4>
+              <p>с 1999 года</p>
             </div>
             <div className="flexcol">
               <svg>
                 <use xlinkHref={`${icons}#sound`}></use>
               </svg>
-              <h4>Прослушивание</h4>
-              <h5>в новом шоу-руме</h5>
+              <h4 className="px13_580">Прослушивание</h4>
+              <p>в новом шоу-руме</p>
             </div>
             <div className="flexcol">
               <svg>
                 <use xlinkHref={`${icons}#expert`}></use>
               </svg>
-              <h4>Ваш личный эксперт</h4>
-              <h5>поможет с выбором цена/качество</h5>
+              <h4 className="px13_580">Ваш личный эксперт</h4>
+              <p>поможет с выбором цена/качество</p>
             </div>
             <div className="flexcol">
               <svg>
                 <use xlinkHref={`${icons}#prices`}></use>
               </svg>
-              <h4>Доступные цены</h4>
-              <h5>на рынке аудио-видео техники</h5>
+              <h4 className="px13_580">Доступные цены</h4>
+              <p>на рынке аудио-видео техники</p>
             </div>
           </article>
           <HitsSection />
         </section>
         <article className="offer__special">
           <section className="carousel__section">
-            <hgroup className="global__hgroup flexbet">
+            <div className="global__hgroup flexbet">
               <h2>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</h2>
               <Link to="Actions">Все товары</Link>
-            </hgroup>
+            </div>
             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
               responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
               <CardOffer datos={dataOffer[0]} />
@@ -605,10 +605,10 @@ export const Main = (props) => {
         </article>
         <article className="producers__section">
           <section className="carousel__section">
-            <hgroup className="global__hgroup flexbet">
+            <div className="global__hgroup flexbet">
               <h2>ПРОИЗВОДИТЕЛИ</h2>
               <a href="_all_manufacturers.html">Все производители</a>
-            </hgroup>
+            </div>
             <OwlCarousel className="owl-carousel producers__img owl-theme" loop={true} rewind={true} margin={10} nav={false} dots={false} autoplay={true} navText={false}
               responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
               <div className="item">

@@ -51,7 +51,7 @@ export const CardProduct = (props) => {
                 <Link to="ProcardBase" className="products__name">{props.datos.title}</Link>
             </div>
             <div className="flexcenter juststart">
-                <a href=" " className="products__comments">Оставить отзыв</a>
+                <a href=" " className="receiveComment products__comments">Оставить отзыв</a>
             </div>
             <div className="products__div flexbet alignend">
                 <div className="flexcol alignstart">
