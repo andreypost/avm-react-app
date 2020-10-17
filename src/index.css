@@ -149,13 +149,13 @@ a:hover {
 
 h1, .basegift__result p, #expertVisit h2, #signUpShowRoom h2,
 #feedbackForm h2, #installExpertVisitDesk h2, #cardImgVideo p,
-.base__features h2, .base__description h2, #cabinetForm h2, #forgetPassForm h2, #reviewFormSent h2 {
+.base__features p, .base__description h2, #cabinetForm h2, #forgetPassForm h2, #reviewFormSent h2 {
   font-size: 28px;
 }
 
 h2, .glossary__list a, .manufacturers__list a, .item8 a, .aboutus__links a, .base__description h3,
 .blockcard__click i, .slide__counter p:first-child, .discountcab__catalogue>a:nth-of-type(2),
-.pagination__global p, .item7 .products__price, .comment__symbol p {
+.pagination__global p, .item7 .products__price, .comment__symbol p, .total__pay {
   font-size: 24px;
 }
 
@@ -180,7 +180,7 @@ h3, th, td, .box__offer h2, .base__card p, .base__download, .base__description p
 #mailingForm input::placeholder, .footer__href, .services__price ul, #honestСredit ul,
 .listening__section p, .listening__section ul, .manufacturers__articles a,
 .articleinner__pm ul, .articleinner__verdict p, .articleinner__butt button,
-.contacts__article p, .glossary__articles p, .glossaryinner__section p,
+.contacts__article p, .glossary__articles p, .glossaryinner__section p, .received__description p,
 .promo__description a, .stocks__counter h2, .stocks__counter h4, .comparison__row,
 .basefloat__block .base__headerprice i, .basefloat__block .base__headerbuy a,
 .installcard__price>a, .reviews__href *, .cabinet__href, .term__catalogue p,
@@ -198,7 +198,7 @@ input, input::placeholder, textarea , textarea::placeholder, .contacts__form p,
   font-size: 16px;
 }
 
-h5, .blockcard__inner>p span, .infocab__catalogue label,
+h5, .blockcard__inner>p span, .infocab__catalogue label, .received__description i,
 .verify__forms label, .getCredit, .breadcrumbs a, .breadcrumbs li:last-child,
 .header__cataloglinks a, .products__name, .offer__card h6, .news__card h6,
 .filter__result, .column__article p, #cabinetForm>p, .base__infoerror,
@@ -240,7 +240,7 @@ h6, .cardbuy__additional .products__popup a, .base__descriptprofit p, .autocompl
 }
 
 .news__viewed p, .products__price span, .comment__form label, .comment__form a,
-.base__nav a span, .slide__details, .received__card h3 span, .comment__form>div:nth-of-type(1) p,
+.base__nav a span, .slide__details, .received__description p span, .comment__form div:nth-of-type(1) p,
 .reviews__viewed p {
   font-size: 10px;
 }
@@ -288,9 +288,9 @@ th, td, .discountcab__catalogue hgroup h3, #addProduct h3, #infoModal h3,
 }
 
 .header__info *, .products__price, .discount__log, .articleinner__stars01 p,
-.item6 .products__comments, .base__headerprice i, .base__card p,
+.item6 .products__comments, .base__headerprice i, .base__card p, .tabs__caption>a,
 .wishcab__result *, .wishcabsocial__block h5, .viewedcab__header .removeAllCard,
-.blockcard__inner>p, .received__count a, .base__credit>p {
+.blockcard__inner>p, .base__credit>p, .base__variants p {
   white-space: nowrap;
 }
 
@@ -312,8 +312,8 @@ img, table, .widthDesk, .horizont, .header__input, #carouselIndex .carousel-indi
 .products__card>div, .discount__card>div, .news__viewed, .footer__desk>div, .base__sliderstocks>div,
 #carouselTop, .global__searchfilter, .select__item, .services__addtext, .stocksliderBlock,
 .box__column, .column__offer, .column__card, .base__switch, .base__switch a, .reviews__card,
-#cabinetForm>input, #wishForm input, #oneClickForm input, #wishForm textarea,
-.wish__symbol, #cardImgVideo .cardsliderRight, #buyOneClick textarea,
+#cabinetForm>input, #wishForm input, #oneClickForm input, #wishForm textarea, .promo__description *,
+.wish__symbol, #cardImgVideo .cardsliderRight, #buyOneClick textarea, .promo__offerheader,
 .cardbuy__additional .global__filterlabel, .item3 {
   width: 100%;
 }
@@ -437,7 +437,7 @@ body * {
   align-items: center;
 }
 
-.alignstart, .offer__card>div, .news__card>div, .articleinner__pm, .item2,
+.alignstart, .offer__card div, .news__card>div, .articleinner__pm, .item2,
 .infocab__confirm {
   align-items: flex-start;
 }
@@ -458,7 +458,7 @@ body * {
   align-self: flex-end;
 }
 
-.textleft, .header__listabout a, .products__name, .products__price span, th:nth-child(1),
+.textleft, .header__listabout a, .products__name, .products__price span, th:nth-child(1), .base__hgroup h1,
 td:nth-child(1), .footer__mob a, .global__deskfilter, #mailingForm hgroup, .blockcard__inner>p span,
 #expertVisit label, #signUpShowRoom label, #feedbackForm label, #installExpertVisitDesk label,
 .manufacturers__articles a, .articles__leftnews h3, .allpromo__header, .baseDiscountPay span,
@@ -522,7 +522,7 @@ td:nth-child(1), .footer__mob a, .global__deskfilter, #mailingForm hgroup, .bloc
 
 .italic, .base__infoerror, .base__composition>a, .discountcab__catalogue>a:nth-of-type(1),
 .comment__form label, .comment__form a, #changeUserPass p, .discountcab__catalogue hgroup h3,
-.cabinet__empty>a, #oneClickForm label[for="comment"], #newCustomerForm>p, .comment__form>div:nth-of-type(1) p {
+.cabinet__empty>a, #oneClickForm label[for="comment"], #newCustomerForm>p, .comment__form div:nth-of-type(1) p {
   font-style: italic;
 }
 
@@ -585,7 +585,7 @@ input[type="date" i], .global__deskfilter .deskreset__filter, .global__deskfilte
 .services__addtext, .item8 a, .aboutus__links a:hover,
 .base__headerbuy a, .basegift__result button, .cabinet__leftside a.active, .wishcab__result button,
 #cabinetForm button, #wishForm button, #oneClickForm button, #cardImgVideo .buy__products,
-.blockcard__hgroup, #receivedOrder>h3, .discountcab__catalogue>a:nth-of-type(2),
+.blockcard__hgroup, #receivedOrder>p, .discountcab__catalogue>a:nth-of-type(2),
 #addProduct .goBasket, .basket__checkout button, .verify__forms button, .verify__sliderbanks h3,
 .catalogue__production, #filterForm button, .viewedcab__categories.active {
   background: var(--blue);
@@ -635,6 +635,10 @@ textarea {
 .ordercab__card a, .forgetPass, .delivery__article a, .payment__article a,
 .cardbuy__additional .products__popup a, .cabinet__checkbox a:hover {
   text-decoration: underline;
+}
+
+.tabs__caption h2 {
+  text-transform: uppercase;
 }
 
 .exclusive {
@@ -741,7 +745,7 @@ textarea {
 }
 
 .global__filterarrow svg.active, .header__callarrow, .select__clone.select__able:after,
-.base__profits h5.active::after, .additionalServices.active i {
+.base__profits h5.active::after, .additionalServices.active i, .viewedcab__categories.active i {
   transform: rotate(.5turn);
 }
 
@@ -889,8 +893,8 @@ textarea {
 }
 
 /* header__dataicons */
-.header__dataicons a {
-  margin: 0 10px;
+.header__dataicons {
+  min-width: 175px;
 }
 
 .header__dataicons svg {
@@ -1263,7 +1267,7 @@ a.header__bonus:hover, .discount__log:hover {
 .column__description *, .promo__description *, .stocksliderBlock>p,
 .base__card a, .blockcard__name *, .blockcard__header *,
 .comments__text *, .specific__description tr *, .reviews__href *,
-.reviews__description *, .commentcab__card hgroup *,
+.reviews__description *, .commentcab__card hgroup *, .received__description h4,
 .ordercab__card hgroup *, .box__offerheader * , .searchnews__header *,
 .additionalServices span:nth-of-type(n+3) {
   display: -webkit-box;
@@ -1275,26 +1279,22 @@ a.header__bonus:hover, .discount__log:hover {
   padding-right: 20px;
 }
 .offer__card a, .news__card a, .column__article a, .column__href *,
-.blockcard__name *, .blockcard__header *,
+.blockcard__name *, .blockcard__header *, .received__description h4,
 .description__card *, .specific__description tr *, .reviews__href *,
 .commentcab__card hgroup *, .ordercab__card hgroup * , .box__offerheader *,
 .searchnews__header a, .base__card a {
   -webkit-line-clamp: 2;
 }
-.promo__description *, .stocksliderBlock>p {
+.promo__description a, .stocksliderBlock>p {
   -webkit-line-clamp: 3;
 }
 .offer__card h6, .news__card h6, .comments__text *, .reviews__description *,
-.searchnews__header h6 {
+.searchnews__header h6, .promo__description h5 {
   -webkit-line-clamp: 4;
 }
 .glossary__articles p, .column__article h4, .column__description * {
   -webkit-line-clamp: 5;
 }
-/* .description__card img, .promo__description img, .articleinner__section * img,
-.articleinner__section * iframe {
-  width: 100% !important;
-} */
 .description__card img, .promo__description img, .articleinner__section * iframe {
   width: 100% !important;
 }
@@ -1367,7 +1367,11 @@ a.header__bonus:hover, .discount__log:hover {
 }
 
 .products__name {
+  height: 30px;
   margin-top: auto;
+}
+.item2 .products__name {
+  height: 40px;
 }
 
 .products__rating {
@@ -1496,7 +1500,7 @@ a.header__bonus:hover, .discount__log:hover {
   padding-bottom: 40px;
 }
 
-.offer__card>div, .news__card>div {
+.offer__card div, .news__card>div {
   text-align: left;
   height: 180px;
   padding: 0 10px;
@@ -1506,7 +1510,7 @@ a.header__bonus:hover, .discount__log:hover {
   padding: 10px;
 }
 
-.offer__card a, .news__card a {
+.offer__card a, .news__card>div>a {
   height: 45px;
 }
 
@@ -1737,7 +1741,7 @@ a.header__bonus:hover, .discount__log:hover {
   border-right: 1px solid var(--slgrey);
 }
 
-.global__deskfilter li a, .global__filterarrow  {
+.global__deskfilter li a, .global__filterarrow, .received__description i {
   display: inline-flex;
 }
 
@@ -2191,8 +2195,8 @@ input[type="date" i] {
 
 /* articles page */
 
-.articles__leftnews .news__card,
-.comparison__top .products__card, .comparison__top .discount__card, .comporision__base {
+.articles__leftnews .news__card, .comparison__top .products__card, .comparison__top .discount__card,
+.comporision__base {
   width: 260px;
   margin-bottom: 20px;
 }
@@ -2391,7 +2395,6 @@ input[type="date" i] {
   max-width: 260px;
   min-height: 260px;
   max-height: 260px;
-  padding: 10px;
 }
 
 .item2 {
@@ -2471,11 +2474,7 @@ input[type="date" i] {
   background-position: -10px -10px;
 }
 
-.box__offer h2 {
-  padding: 10px;
-}
-
-.box__offerheader, .box__offer .news__viewed, .search__news>* {
+.box__offer h2, .box__offerheader, .box__offer .news__viewed, .search__news>* {
   padding: 10px;
 }
 
@@ -2543,20 +2542,16 @@ input[type="date" i] {
 }
 
 .promo__offerheader {
-  height: 180px;
+  height: 190px;
   padding: 10px;
 }
 
 .promo__description a {
-  margin-bottom: auto;
+  height: 56px;
 }
 
 .promo__offerheader h5 {
-  margin: auto 0 40px 0;
-}
-
-.promo__href {
-  margin-top: auto;
+  height: 62px;
 }
 
 .promo__button {
@@ -3007,11 +3002,11 @@ about_us, certificate, jobs - pages */
   width: 70px;
   height: 70px;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .base__variants img {
-  width: 60px;
-  height: 60px;
+  height: 65px;
 }
 
 .base__sliderstocks>div {
@@ -3426,7 +3421,7 @@ about_us, certificate, jobs - pages */
   border-bottom: 2px solid var(--blue);
 }
 .comment__form input::placeholder, .comment__form textarea::placeholder,
-.comment__form label, .comment__form>div:nth-of-type(1) p {
+.comment__form label, .comment__form div:nth-of-type(1) p {
   color: #888888;
 }
 
@@ -3651,6 +3646,7 @@ about_us, certificate, jobs - pages */
   padding: 5px 10px;
 }
 .viewedcab__headermob h5 i {
+  margin-left: auto;
   background: url(./img/Path2.png) center center no-repeat;
   transition: all .5s;
 }
@@ -3696,7 +3692,7 @@ about_us, certificate, jobs - pages */
   padding: 8px 20px;
   background: #F3FBFF;
 }
-.ordercab__number h3 {
+.ordercab__number h3, .total__pay {
   margin-right: 20px;
 }
 .ordercab__number i {
@@ -3839,8 +3835,7 @@ about_us, certificate, jobs - pages */
 
 /* modal wish discount & others */
 
-#cabinetForm h2, #wishForm h2, #wishForm p, #reviewFormSent h2, #forgetPassForm h2,
-#reviewFormSent .comment__symbol {
+#cabinetForm h2, #wishForm h2, #wishForm p, #reviewFormSent h2, #forgetPassForm h2 {
   margin: 20px 0;
 }
 
@@ -3961,9 +3956,6 @@ about_us, certificate, jobs - pages */
   width: 14px;
   height: 12px;
   background: url(./img/Group3.png) center center no-repeat;
-}
-.cardbuy__total h2, .verify__total h2 {
-  margin-right: 20px;
 }
 .cardbuy__totalprice {
   width: auto;
@@ -4086,13 +4078,13 @@ about_us, certificate, jobs - pages */
 
 /* received order */
 .received__header {
-  margin: 40px auto;
+  margin: 40px 0;
 }
 #receivedOrder {
   width: 1080px;
   margin: 0 auto;
 }
-#receivedOrder>h3 {
+#receivedOrder>p {
   padding: 15px;
 }
 .received__card {
@@ -4108,20 +4100,10 @@ about_us, certificate, jobs - pages */
 .received__description {
   flex: 2;
 }
-.received__card h3 span {
+.received__description p span {
   margin-left: 5px;
 }
-.received__count h3 {
-  padding: 10px 0;
-  border-bottom: 1px solid #2C5970;
-}
-.received__count h3 span:nth-of-type(1) {
-  margin: 0 5px 0 auto;
-}
-.received__count a {
-  padding: 10px 20px;
-  border: 1px solid #2C5970;
-}
+
 /* modals verificationOrder, getProductCredit */
 .verify__article hgroup h3 {
   min-height: 22px;
@@ -4423,7 +4405,7 @@ about_us, certificate, jobs - pages */
     height: 20px;
   }
   .products__buy.products__buymob {
-    margin-top: 10px;
+    margin-top: auto;
   }
   .discount__price {
     order: 2;
@@ -4524,10 +4506,6 @@ about_us, certificate, jobs - pages */
   }
   .header__contacts, .header__rightnav, .cardbuy__additional {
     width: 100%;
-  }
-  .header__dataicons span:empty+a:last-of-type:hover::before,
-  .header__dataicons span:empty+a:last-of-type:hover::after {
-    content: unset;
   }
   .header__info>section, .header__call, .header__contacts>p, .header__rightnav {
     padding: unset;
@@ -4731,13 +4709,13 @@ about_us, certificate, jobs - pages */
   .none768, .header__info, .header__button, .header__cataloglinks a, .header__nav, .news__card .news__href,
   #carouselIndex .carousel-control-next, #carouselIndex .carousel-control-prev,
   .banner__carousel .carousel-control-prev, .banner__carousel .carousel-control-next,
-  .products__icon:hover .products__popup, .item2 h5, .promo__button, .base__topbox img,
-  .base__topbox a, .cardsliderNav img, .cardsliderNav video,
+  .products__icon:hover .products__popup, .promo__button, .base__topbox img,
+  .base__topbox a, .cardsliderNav img, .cardsliderNav video, #arrowUp, .footer__desk,
   .blockcard__name h5, .tabsBlock, .item4, .item9 .discount__log, .column__article h4,
   .item .products__icon img, .products__icon img {
     display: none;
   }
-  .block768, .header__burget, .header__navmob, .tabsBlock.active {
+  .block768, .header__burget, .header__navmob, .footer__mob, .tabsBlock.active {
     display: block;
   }
   .flex768, .item6 .discount__log {
@@ -4756,27 +4734,30 @@ about_us, certificate, jobs - pages */
   .cardsliderNav {
     flex-flow: row wrap;
   }
-  #mailingForm input, #mailingForm button, .header__settings, .paydel__important {
+  #mailingForm input, #mailingForm button, .header__settings, .paydel__important,
+  .column__offer h2 {
     padding: 10px;
   }
-  .header__dataicons {
-    margin: 0 4%;
+ 
+  .header__settings>a:nth-of-type(1), .header__world, .item2 .products__name {
+    height: 25px;
   }
   .header__settings>a:nth-of-type(1), .header__world {
-    /* width: 140px;
-    max-width: 100%; */
-    width: 90%;
-    height: 25px;
+    min-width: 20%;
+    max-width: 90%;
     margin-right: unset;
   }
   .header__search {
-    width: 120%; 
+    min-width: 44%;
+  }
+  .header__dataicons {
+    min-width: 31%;
   }
   .manufacturers__articles i, .baseDiscountPay,
   .basefloat__block .baseDiscountPay {
     font-size: 30px;
   }
-  #cabinetForm button, #mailingForm hgroup h2 {
+  #cabinetForm button, #mailingForm hgroup h2, .offer__card a, .news__card a {
     font-size: 18px;
   }
   h1, #feedbackForm h2, #cabinetForm h2, #wishForm h2, #registrationForm h1, #wishForm button, #forgetPassForm button,
@@ -4786,23 +4767,23 @@ about_us, certificate, jobs - pages */
   .seo__section h2, .paydel__section h2, .warranty__section h2, .installplan__article h2, .base__description h2,
   .jobs__article h2, .manufacturers__articles a, .services__top, #expertVisit button, #honestСredit h2,
   #signUpShowRoom button, #feedbackForm button, #installExpertVisitMob button, .articleinner__verdict>h2,
-  #baseGift>h2, #baseComplect>h2, #chiperComplect>h2, #baseChiper>h2, .base__features h2, .base__composition h2,
+  #baseGift>h2, #baseComplect>h2, #chiperComplect>h2, #baseChiper>h2, .base__features p, .base__composition h2,
   .comments__card h3, .specific__description h2 {
     font-size: 15px;
   }
   #wishForm p, .contacts__article h3, .error__section h2, th, td {
     font-size: 14px;
   }
-  .px13_768, .products__buy, #tabsMainPage .tabs__caption h2, .global__hgroup h2,
-  #tabsNews .tabs__caption h2, .offer__card a, #cabinetForm>label, #mailingForm input::placeholder,
+  .px13_768, .products__buy, #tabsMainPage .tabs__caption h2, .global__hgroup h2, .products__price,
+  #tabsNews .tabs__caption h2, #cabinetForm>label, #mailingForm input::placeholder, .promo__description a,
   #wishForm label, .cabinet__checkbox, #cabinetForm h3, #cabinetForm p, .services__price ul, .listening__section p,
   .listening__section ul, .glossary__list a, .manufacturers__list a, .glossary__articles a,
-  .glossaryinner__section p, #addProduct h3, #addProduct button, #mailingForm button,
+  .glossaryinner__section p, #addProduct h3, #addProduct button, #mailingForm button, .catergory__box a,
   .discountcab__catalogue th, .discountcab__catalogue td, .term__catalogue p, #honestСredit ul,
   .item6 .discount__log, #infoModal h3, #forgetPassForm label, .comparison__row, #cabinetForm>a,
   .paydel__section p, .delivery__article ul, .payment__article ul, .certificate__section p,
   .warranty__section p, .warranty__article ul, .warranty__rights ul, .warranty__centers ul, .base__description p,
-  .installplan__article p, .installplan__article ul, .installplan__article>a,
+  .installplan__article p, .installplan__article ul, .installplan__article>a, .item8 a,
   .bonus__article h3, .bonus__article p, .bonus__article ul, .aboutus__section p, .base__description h3,
   .jobs__article p, .jobs__article ul, .cooperation__article h3, .cooperation__article p,
   .articleinner__description a, .articleinner__description p, .articleinner__verdict p,
@@ -4811,17 +4792,35 @@ about_us, certificate, jobs - pages */
   }
   .seo__section>div p, .error__section p, .error__section ul, .installcard__price>a,
   .discountcab__catalogue hgroup h3, .contacts__article p, .contacts__social a,
-  #feedbackForm label, .articleinner__stars01 p, .articleinner__butt button {
+  #feedbackForm label, .articleinner__stars01 p, .articleinner__butt button,
+  .item2 .products__name, .item7 .products__price, .autocomplete__div, .searchnews__header a {
     font-size: 12px;
   }
   .px11_768, #tabsMainPage .tabs__caption a, #tabsNews .tabs__caption a, .seo__section>p, .breadcrumbs a,
   .breadcrumbs li:last-child, #infoModal h3 span, .articleinner__pm ul, .comparison__category,
-  .base__composition>a {
+  .base__composition>a, .column__offer h2, .box__offer h2, .discount__price, .promo__offerheader h5,
+  .offer__card h6, .news__card h6, .catergory__box h3 {
     font-size: 11px;
   }
   .header__dataicons span, .error__section a, .glossary__articles p, .main__addicons p,
-  .baseDiscountPay span, .basefloat__block .baseDiscountPay span {
+  .baseDiscountPay span, .basefloat__block .baseDiscountPay span, .products__name,
+  .discount__log, .item6 .discount__log, .column__article a, .item2 h5, .box__offer a,
+  .searchnews__header h6 {
     font-size: 10px;
+  }
+  .discount__sales, .footer__section>p, .box__offerheader h5, .box__offer .news__viewed p {
+    font-size: 9px;
+  }
+  .bestseller__product.products__card::before, .bestseller__product.discount__card::before,
+  .bestseller__product.column__card::before, .newitem__product.products__card::before,
+  .newitem__product.discount__card::before, .newitem__product.column__card::before,
+  .markdown__product.products__card::before, .markdown__product.discount__card::before,
+  .markdown__product.column__card::before, .products__comments, .item6 .products__comments,
+  .column__article h5, .column__article p, .column__article .news__viewed a, .discount__price span {
+    font-size: 8px;
+  }
+  .item7 .products__price span {
+    font-size: 6px;
   }
   .paydel__section p, .delivery__article ul, .payment__article ul, .certificate__section p,
   .warranty__section p, .warranty__article ul, .glossaryinner__section p, .warranty__rights ul,
@@ -4833,7 +4832,10 @@ about_us, certificate, jobs - pages */
   .articleinner__pm ul, #honestСredit ul, .base__description p {
     line-height: 16px;
   }
-  .baseDiscountPay span, .basefloat__block .baseDiscountPay span {
+  .offer__card h6, .news__card h6 {
+    line-height: 14px;
+  }
+  .baseDiscountPay span, .basefloat__block .baseDiscountPay span, .searchnews__header h6 {
     line-height: 10px;
   }
   .header__input {
@@ -4844,32 +4846,25 @@ about_us, certificate, jobs - pages */
   .header__input::placeholder {
     color: var(--lightblue);
   }
-
-  .header__dataicons a {
-    margin: 0 0 0 5px;
+  .header__dataicons svg, .products__name {
+    height: 20px;
   }
-
   .header__dataicons svg {
     width: 22px;
-    height: 20px;
   }
   .header__dataicons span {
     width: 15px;
     height: 15px;
   }
-
   span.compare__count {
-    left: 42px;
+    left: 36%;
   }
-  
   span.love__count {
-    left: 70px;
+    left: 60%;
   }
-  
   span.product__count {
-    left: 95px;
+    left: 86%;
   }
-
   .header__dataicons span:empty+a:hover::before {
     right: 0px;
     top: 32px;
@@ -4884,7 +4879,75 @@ about_us, certificate, jobs - pages */
     top: 26px;
     left: 6px;
   }
-
+  .bestseller__product.products__card::before,
+  .bestseller__product.discount__card::before,
+  .bestseller__product.column__card::before,
+  .newitem__product.products__card::before,
+  .newitem__product.discount__card::before,
+  .newitem__product.column__card::before,
+  .markdown__product.products__card::before,
+  .markdown__product.discount__card::before,
+  .markdown__product.column__card::before {
+    width: 80px;
+    top: -8px;
+  }
+  .products__card>img, .discount__card>img {
+    height: 75px;
+  }
+  .products__comments {
+    margin:  10px 0;
+  }
+  .discount__log:after {
+    top: 9px;
+    left: 0px;
+    width: 60px;
+  }
+  .item1 img, .column__article img, .base__features img {
+    min-width: 110px;
+    max-width: 110px;
+    min-height: 80px;
+    max-height: 80px;
+  }
+  .item2 {
+    margin-bottom: 5px;
+  }
+  .item7 .products__price {
+    margin-top: 5px;
+  }
+  .item8 a {
+    padding: 8px 12px;
+  }
+  .products__card, .discount__card, .offer__card, .news__card, .box__offer, .promo__offer,
+  .comporision__base, .catergory__box, .search__news {
+    height: 265px;
+  }
+  .offer__card div, .news__card>div {
+    height: 130px;
+  }
+  .offer__card h6, .news__card h6 {
+    height: 56px;
+  }
+  .box__offer img, .promo__offer img {
+    height: 95px;
+  }
+  .promo__offerheader {
+    height: 160px;
+  }
+  .promo__offerheader h5 {
+    height: 45px;
+  }
+  .comparison__top .products__card,
+  .comparison__top .discount__card,
+  .comporision__base {
+    width: 175px;
+  }
+  .comparison__row>div, .comparison__top>div {
+    min-width: 185px;
+    max-width: 185px;
+  }
+  .column__offer {
+    height: 152px;
+  }
   #registrationForm>*:not(.not) {
     margin-bottom: 0;
   }
@@ -4897,7 +4960,7 @@ about_us, certificate, jobs - pages */
   #tabsMainPage .tabs__caption h2, #tabsNews .tabs__caption h2 {
     margin-right: 5px;
   }
-  .offer__card img, .news__card img {
+  .offer__card img, .news__card img, .search__news img {
     height: 120px;
   }
   .main__addicons {
@@ -4932,7 +4995,7 @@ about_us, certificate, jobs - pages */
     margin-top: 2%;
   }
   #cabinetForm, #wishForm, #reviewFormSent, #forgetPassForm,
-  .services__form, .listening__form, .contacts__form,
+  .footer__mob, .services__form, .listening__form, .contacts__form,
   .onebuy__header, .basket__section, .verify__section {
     width: 90%;
   }
@@ -4966,10 +5029,10 @@ about_us, certificate, jobs - pages */
     height: 60px;
     margin-right: 10px;
   }
-  .seo__section>div p {
+  .marginbot2010, .seo__section>div p {
     margin-bottom: 10px;
   }
-  .services__price, .services__banner {
+  .carousel__section, .services__price, .services__banner {
     padding: 0 10px;
   }
   .banner__carousel .carousel-indicators {
@@ -5062,7 +5125,7 @@ about_us, certificate, jobs - pages */
   .articleinner__verdict {
     margin: 20px auto 10px;
   }
-  .services__form, .listening__form, .contacts__form, .articleinner__pm,
+  .services__form, .listening__form, .contacts__form, .articleinner__pm, .news__card, .offer__card,
   .articleinner__plus, .articleinner__minus, .comporision__base, .comporision__base .base__switch a,
   .base__sliderstocks .cardsliderRight, .base__description video, .aboutus__links a:link {
     border: none;
@@ -5116,10 +5179,7 @@ about_us, certificate, jobs - pages */
   #registrationForm p, .payment__article li, .paydel__important>* {
     margin-left: 0;
   }
-  .item8 a {
-    padding: 12px;
-  }
-  .producers__section img, tr {
+  .promo__description a, .producers__section img, tr {
     height: 40px;
   }
   th {
@@ -5187,7 +5247,7 @@ about_us, certificate, jobs - pages */
     top: -2px;
   }
   #mailingForm input, .item6, .specific__description td, .ordercab__card,
-  .verify__total h3 {
+  .verify__total h3, .item8 {
     width: 100%;
   }
   .specific__description tr {
@@ -5278,19 +5338,18 @@ about_us, certificate, jobs - pages */
     display: flex;
   }
   /*  */
+  .inputForm03, .footer__mob {
+    margin: 0 auto;
+  }
   .inputForm03 {
     padding-left: unset;
     width: 70%;
-    margin: 0 auto;
   }
   #infoModal>article {
     height: 180px;
   }
   .autocomplete__items {
     top: 34px;
-  }
-  .autocomplete__div {
-    font-size: 12px;
   }
   .autocomplete__image {
     margin: 5px;
@@ -5309,25 +5368,14 @@ about_us, certificate, jobs - pages */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 580px) {
-  .none580, #arrowUp, .footer__desk, .promo__href a {
+  .none580, .promo__href a {
     display: none;
   }
   .header__1440 { /* remove all */
     display: none;
   }
-  .block580, .footer__mob, .htextmob__580, #wishDiscount .wish__symbol input::placeholder {
+  .block580, .htextmob__580, #wishDiscount .wish__symbol input::placeholder {
     display: block;
   }
   .flex580 {
@@ -5339,9 +5387,9 @@ about_us, certificate, jobs - pages */
   .col580 {
     flex-flow: column;
   }
-  .carousel__section {
+  /* .carousel__section {
     padding: 0 10px;
-  }
+  } */
   .base__plus {
     font-size: 40px;
   }
@@ -5351,7 +5399,6 @@ about_us, certificate, jobs - pages */
   .cardbuy__totalprice, .comment__symbol p {
     font-size: 20px;
   }
-  .offer__card a, .news__card a,
   .wish__symbol p, .pagination__global p, .navmob__catalogue,
   .blockcard__click i {
     font-size: 18px;
@@ -5359,18 +5406,15 @@ about_us, certificate, jobs - pages */
   .px16_580, .onebuy__header>h2, .basket__section>h2, .verify__section>h2 {
     font-size: 16px;
   }
-  .px15_580, .category__section>h2, .base__profits h3, .cardbuy__total h2, .cardbuy__totalprice span,
-  .base__card p, .verify__methods label i,
-  .verify__total h2, #askQuestionForm h3 {
+  .px15_580, .category__section>h2, .base__profits h3, .total__pay, .cardbuy__totalprice span,
+  .base__card p, .verify__methods label i, #askQuestionForm h3 {
     font-size: 15px;
   }
-  .autocomplete__div h5, .received__count h1 {
+  .autocomplete__div h5 {
     font-size: 14px;
   }
   .px13_580, input, input::placeholder, textarea, textarea::placeholder,
-  .products__price, .item8 a,
-  .promo__description a, .stocks__counter h2, .stocks__counter h3,
-  .stocks__counter h4, .base__switch a, .catergory__box a,
+  .stocks__counter h2, .stocks__counter h3, .stocks__counter h4, .base__switch a,
   .cardbuy__additional>h3, .specific__description td:nth-child(n+2),
    .comment__form button, .reviews__href *, #registrationForm button,
    .discountcab__catalogue>a:nth-of-type(1), #infoUserForm label,
@@ -5379,55 +5423,31 @@ about_us, certificate, jobs - pages */
   .verify__forms label, .start__price i, #changeUserPass label, .category__section .search__result {
     font-size: 13px;
   }
-  .px12_580, .item2 .products__name, .aboutus__links a,
-  #buyOneClick button, #oneClickForm label,
+  .px12_580, .aboutus__links a, #buyOneClick button, #oneClickForm label,
   .reviews__description *, .discountcab__catalogue>a:nth-of-type(2),
-  .basket__checkout .global__back, .basket__checkout button,
-  .verify__forms button, .searchnews__header a, .base__contentlinks a {
+  .basket__checkout .global__back, .basket__checkout button, .verify__forms button, .base__contentlinks a {
     font-size: 12px;
   }
-  .global__hgroup a, .discount__price, .offer__card h6, .news__card h6,
-  #expertVisit label, #signUpShowRoom label, .pagination__item, .articleinner__stars02 h2,
-  .articleinner__stars02 h3, .item7 .products__price,
-  .column__offer h2, .box__offer h2, .promo__offerheader h5,
-  .catergory__box h3, .blockcard__inner>p, .blockcard__click h4,
-  .basegift__result button, .specific__description td:nth-child(1),
-  #installExpertVisitMob label {
+  .global__hgroup a, #expertVisit label, #signUpShowRoom label, .pagination__item, .articleinner__stars02 h2,
+  .articleinner__stars02 h3, .received__description i, .blockcard__inner>p, .blockcard__click h4,
+  .basegift__result button, .specific__description td:nth-child(1), #installExpertVisitMob label {
     font-size: 11px;
   }
-  .px10_580, .discount__log, .products__name, .articleinner__img a,
-  .item6 .discount__log, .column__article a, .box__offer a, .blockcard__name p,
-  .blockcard__click p, .cardbuy__additional h5, .received__count h5,
-  .received__count h2, .wishcab__result h6, .start__price a, .searchnews__header h6 {
+  .px10_580, .articleinner__img a,  .blockcard__name p, .blockcard__click p,
+  .cardbuy__additional h5, .wishcab__result h6, .start__price a {
     font-size: 10px;
   }
-  .discount__sales, #wishForm .wish__symbol input::placeholder {
+  #wishForm .wish__symbol input::placeholder {
     font-size: 9px;
   }
-  .products__comments, .footer__section>p, .item6 .products__comments, .column__article h5, .column__article p,
-  .box__offerheader h5, .box__offer .news__viewed p, .column__article .news__viewed a,
-  th, .blockcard__inner>p span, .received__card h3 span,
-  .bestseller__product.products__card::before,
-  .bestseller__product.discount__card::before,
-  .bestseller__product.column__card::before,
-  .newitem__product.products__card::before,
-  .newitem__product.discount__card::before,
-  .newitem__product.column__card::before,
-  .markdown__product.products__card::before,
-  .markdown__product.discount__card::before,
-  .markdown__product.column__card::before {
+
+  th, .blockcard__inner>p span, .received__description p span {
     font-size: 8px;
   }
   td {
     font-size: 7px;
   }
-  /* .products__price span, .discount__card .products__price span, .item7 .products__price span {
-    font-size: 6px;
-  } */
-  /* .item7 .products__price span {
-    font-size: 6px;
-  } */
-  .discount__price span, .item9 .discount__sales, .blockcard__inner .cardProductPrice span {
+  .blockcard__inner .cardProductPrice span {
     font-size: 5px;
   }
   .contacts__social a {
@@ -5436,67 +5456,25 @@ about_us, certificate, jobs - pages */
   .specific__description td {
     line-height: 15px;
   }
-  .offer__card h6, .news__card h6,
   .commentcab__card h5 {
     line-height: 14px;
-  }
-  .searchnews__header h6 {
-    line-height: 10px;
   }
   th, td {
     line-height: 7px;
   }
-  .item9 .discount__sales {
-    line-height: 5px;
-  }
   .seo__section {
     padding: 40px 10px;
-  }
-  .products__card, .discount__card, .box__offer, .promo__offer, .comporision__base, .catergory__box,
-  .glossaryinner__imgbox img, .search__news {
-    height: 280px;
   }
   .products__div {
     height: 16px;
   }
-  .offer__card, .news__card {
-    height: 260px;
-  }
-  .offer__card>div, .news__card>div {
-    height: 130px;
-  }
-  .offer__card h6, .news__card h6 {
-    height: 56px;
-  }
-  .news__card, .contacts__attention, .contacts__showroom,
+  .contacts__attention, .contacts__showroom,
   .base__profits h5 span, .basefloat__block, .verify__total h3, .reviews__card {
     border: none;
   }
-  .owl-theme .owl-nav [class*='owl-prev'], .owl-theme .owl-nav [class*='owl-next'] {
-    top: 33%;
-  }
-  .owl-theme .owl-nav [class*='owl-prev'], .owl-theme .owl-nav [class*='owl-next'],
-  .horizontalSlider>i {
-    width: 35px;
-    height: 35px;
-    top: 42%;
-    left: -5px;
-    background: url(./img/Path163.png) 46% center no-repeat, rgba(255, 255, 255, 0.3);
-  }
-  .owl-theme .owl-nav [class*='owl-next'],
-  .horizontalSlider .horizontalNext {
-    left: unset;
-    right: -5px;
-    background: url(./img/Path164.png) 54% center no-repeat, rgba(255, 255, 255, 0.3);
-  }
-  .products__comments, .category__section .global__searchfilter,
+  .category__section .global__searchfilter,
   .search__section .global__searchfilter {
     margin: 10px 0;
-  }
-  .discount__log:after {
-    top: 9px;
-    left: 0px;
-    width: 60px;
   }
   .offer__special, .news__section {
     padding: 0 0 20px;
@@ -5505,7 +5483,7 @@ about_us, certificate, jobs - pages */
     padding-left: 40px;
   }
   .width580, .autocomplete__items, .services__form, .basefloat__header,
-  .listening__form, .item8, .contacts__form, .oneclick__input>div {
+  .listening__form, .contacts__form, .oneclick__input>div {
     width: 100%;
   }
   .autocomplete__items {
@@ -5514,11 +5492,11 @@ about_us, certificate, jobs - pages */
   .seo__section>div {
     max-height: 170px;
   }
-  .footer__mob, #expertVisit, #signUpShowRoom, #feedbackForm,
+  #expertVisit, #signUpShowRoom, #feedbackForm,
   .installcard__price>a, #installExpertVisitMob, #askQuestionForm input {
     width: 90%;
   }
-  .footer__mob, .articles__section hgroup h1, .articleinner__section hgroup h1 {
+ .articles__section hgroup h1, .articleinner__section hgroup h1 {
     margin: 0 auto;
   }
   #cabinetForm>input, .base__switch a, #forgetPassForm input {
@@ -5530,8 +5508,7 @@ about_us, certificate, jobs - pages */
   #wishDiscount .wish__symbol input::placeholder {
     padding-bottom: 5px;
   }
-  #oneClickForm input, .offer__card a, .news__card a,
-  .basefloat__block .base__headerbuy a, .infocab__catalogue input,
+  #oneClickForm input, .basefloat__block .base__headerbuy a, .infocab__catalogue input,
   .verify__forms input, .basegift__result button, #askQuestionForm input {
     height: 35px;
   }
@@ -5574,19 +5551,7 @@ about_us, certificate, jobs - pages */
   .pagination__global p {
     padding-bottom: 2px;
   }
-  .products__card>img, .discount__card>img {
-    height: 100px;
-  }
-  .comparison__top .products__card,
-  .comparison__top .discount__card,
-  .comporision__base {
-    width: 175px;
-  }
 
-  .comparison__row>div, .comparison__top>div {
-    min-width: 185px;
-    max-width: 185px;
-  }
   .articles__section hgroup, .together__section .base__leftside,
   .basketcab__slider {
     padding: 0;
@@ -5612,7 +5577,7 @@ about_us, certificate, jobs - pages */
     margin-bottom: 20px;
   }
   .marginbot2010 {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   .articleinner__img img {
     height: 140px;
@@ -5627,32 +5592,12 @@ about_us, certificate, jobs - pages */
   .markdown__catalogue .global__filterset, .viewedproducts__catalogue .global__filterset {
     margin-top: -30px;
   }
-  .item1 img, .column__article img, .base__features img {
-    min-width: 110px;
-    max-width: 110px;
-    min-height: 80px;
-    max-height: 80px;
-  }
-  .item2, .ordercab__number h3 {
-    margin-bottom: 5px;
-  }
-  .item7 .products__price {
-    margin-top: 5px;
-  }
-  .item8 {
-    margin: auto 0 0 auto;
-  }
-  .item8 a {
-    padding: 5px;
-  }
-  .column__offer h2, #receivedOrder>h3, .ordercab__card,
+  #receivedOrder>p, .ordercab__card,
   .base__discount a {
     padding: 10px;
   }
-  .box__offer img, .promo__offer img {
-    height: 95px;
-  }
-  .singlestocks__banner img, #basketProduct .cardbuy__total, .search__news img {
+
+  .singlestocks__banner img, #basketProduct .cardbuy__total {
     height: 120px;
   }
   .delivery__article li:not(:first-child) {
@@ -5689,17 +5634,16 @@ about_us, certificate, jobs - pages */
   #cardImgVideo .cardsliderRight {
     height: 370px;
   }
-  .base__variants {
-    align-items: center;
-  }
   .base__variants a {
     width: 50px;
     height: 50px;
+    margin-left: 5px;
+    margin-bottom: 5px;
   }
   .base__variants img {
-    width: 40px;
+    height: 45px;
   }
-  .base__variants img, .base__headerbuy a, .basket__checkout .global__back,
+  .base__headerbuy a, .basket__checkout .global__back,
   .basket__checkout button, .verify__forms button, #askQuestionForm button {
     height: 40px;
   }
@@ -5769,18 +5713,6 @@ about_us, certificate, jobs - pages */
     min-height: 50px;
     margin-right: 10px;
   }
-  .received__header {
-    margin: 15px auto;
-  }
-  .received__count h3 {
-    padding: 5px 0;
-  }
-  .received__count a {
-    padding: 8px 5px;
-  }
-  .received__count h2 {
-    margin-right: 5px;
-  }
   #cardImgVideo>article {
     padding: 10px 10px 20px;
   }
@@ -5818,7 +5750,7 @@ about_us, certificate, jobs - pages */
     max-height: 95px;
     min-width: 170px;
     min-height: 95px;
-    margin-right: -20px;
+    /* margin-right: -20px; */
   }
   #carouselIndex .carousel-item img, #carouselTop .carousel-inner,
   #carouselTop img, #carouselTop iframe, #carouselTop video,
@@ -5840,18 +5772,6 @@ about_us, certificate, jobs - pages */
   .manufacturers__articles a {
     width: 33%;
   }
-  .bestseller__product.products__card::before,
-  .bestseller__product.discount__card::before,
-  .bestseller__product.column__card::before,
-  .newitem__product.products__card::before,
-  .newitem__product.discount__card::before,
-  .newitem__product.column__card::before,
-  .markdown__product.products__card::before,
-  .markdown__product.discount__card::before,
-  .markdown__product.column__card::before {
-    width: 80px;
-    top: -8px;
-  }
   .verify__promo input {
     height: 25px;
   }
@@ -5872,9 +5792,6 @@ about_us, certificate, jobs - pages */
   .verify__article hgroup h3 {
     min-height: 16px;
   }
-  .header__search {
-    position: unset;
-  }
   .box__table, .box__grid:not(.installplan__icons) {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
@@ -5886,12 +5803,6 @@ about_us, certificate, jobs - pages */
 
 
 @media screen and (max-width: 480px) {
-  .header__dataicons {
-    margin: unset;
-  }
-  .products__card>img, .discount__card>img {
-    height: 75px;
-  }
   .glossaryinner__imgbox img {
     height: 180px;
   }
@@ -5911,11 +5822,7 @@ about_us, certificate, jobs - pages */
 
 
 @media screen and (max-width: 425px) {
-  .products__card, .discount__card, .box__offer, .promo__offer, .comporision__base,
-  .catergory__box, .search__news {
-    height: 260px;
-  }
-  .articleinner__video video, .articleinner__video img, .promo__offerheader {
+  .articleinner__video video, .articleinner__video img {
     height: 160px;
   }
   .glossary__articles img {
@@ -5951,6 +5858,7 @@ about_us, certificate, jobs - pages */
   display: block;
 }
 
+/* delete all .owl-theme .owl-nav for react, also .horizontalSlider>i they are in node_modules\owl.carousel\dist\assets\owl.theme.default.css */
 
 /* 6815
 promo__offer -> _all_stocks, _all_promotions

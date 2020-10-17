@@ -541,7 +541,7 @@ export const Main = (props) => {
             <a href="_viewed_products.html">Все товары</a>
           </div>
           <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-            responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+            responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
             <CardProduct datos={dataCard[24]} />
             <CardDiscount datos={dataCard[23]} />
             <CardProduct datos={dataCard[2]} />
@@ -590,7 +590,7 @@ export const Main = (props) => {
               <Link to="Actions">Все товары</Link>
             </div>
             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-              responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+              responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
               <CardOffer datos={dataOffer[0]} />
               <CardOffer datos={dataOffer[1]} />
               <CardOffer datos={dataOffer[2]} />
@@ -610,7 +610,7 @@ export const Main = (props) => {
               <a href="_all_manufacturers.html">Все производители</a>
             </div>
             <OwlCarousel className="owl-carousel producers__img owl-theme" loop={true} rewind={true} margin={10} nav={false} dots={false} autoplay={true} navText={false}
-              responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+              responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
               <div className="item">
                 <img src={photo_004} alt="" />
               </div>
@@ -637,7 +637,7 @@ export const Main = (props) => {
               </div>
             </OwlCarousel>
             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
-              responsive={{ 0: { items: 2 }, 768: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+              responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
               <div className="item producers__card">
                 <a href=" ">A</a>
                 <a href=" ">Accurate Audio</a>

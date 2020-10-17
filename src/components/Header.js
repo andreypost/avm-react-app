@@ -212,7 +212,7 @@ export const Header = (props) => {
                         </svg>
                     </button>
                 </form>
-                <div className="flexbet header__dataicons relative">
+                <div className="flexcenter header__dataicons relative">
                     {/* <a href=" " className="header__user noneDesk block768"> */}
                     <a href=" " className="header__guest noneDesk block768">
                         <svg>
