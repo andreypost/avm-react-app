@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import { HashRouter, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import './reset.css';
-import './index.css';
+/* delete all .owl-theme .owl-nav for react,
+also .horizontalSlider>i they are in node_modules\owl.carousel\dist\assets\owl.theme.default.css
+.products__credit, .products__gift, .products__video,
+#carouselIndex .carousel-indicators li -->  uncomment
+change ../img to ./img
+*/
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import './index.css';
 import 'bootstrap';
 
 import { Main } from './Main';

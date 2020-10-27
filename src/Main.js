@@ -535,7 +535,7 @@ export const Main = (props) => {
         <section className="header__navmob">
           <h3 className="navmob__catalogue">Каталог товаров</h3>
         </section>
-        <section className="carousel__section">
+        <section className="carousel__section vieded__section">
           <div className="global__hgroup flexbet">
             <h2>ПРОСМОТРЕННЫЕ ТОВАРЫ</h2>
             <a href="_viewed_products.html">Все товары</a>
