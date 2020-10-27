@@ -45,7 +45,7 @@ export const ModalsPro = (props) => {
         }
         const hideModal = (modal) => {
             if (modal.querySelector('h3')?.innerHTML.startsWith('Спасибо за регистрацию!')) {
-                window.location.assign('/')
+                window.location.assign('/avm-react-app/#/')
             } else if (modal.querySelector('h3')?.innerHTML.startsWith('Спасибо!<br><span>Ваш пароль успешно изменен!')) {
                 window.location.assign('/cabinet/')
             } else {
