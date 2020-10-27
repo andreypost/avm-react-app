@@ -8,7 +8,10 @@ import photo_004 from '../img/Image1.png';
 
 export const ModalsPro = (props) => {
     useEffect(() => {
-        let currentModal = null
+        let currentModal = null,
+            textInfoModal = null,
+            infoModal = document.getElementById('infoModal')
+
         const onClickHandler = (elems, onClickListener) => {
             for (let elem of elems) {
                 elem.addEventListener('click', (e) => {
@@ -51,13 +54,51 @@ export const ModalsPro = (props) => {
                 document.body.style.paddingRight = `${0}px`
             }
         }
+        const serializeFormSendXHR = (form, url, id) => {
+            if (!form) return
+            form.onsubmit = (e) => {
+                // if (grecaptcha && grecaptcha.getResponse().length === 0) return // uncomment when key capcha able
+                const callback = (response) => {
+                    if (form.id === 'mailingForm') {
+                        textInfoModal = 'Спасибо, Вы подписались на рассылку!'
+                    } else if (form.id === 'newCustomerForm' || form.id === 'regularCustomerForm' || form.id === 'oneClickForm') {
+                        textInfoModal = 'Спасибо, Ваш заказ оформлен!'
+                    } else if (form.id === 'reviewFormSent') {
+                        textInfoModal = 'Спасибо, Ваш отзыв отправлен!<br><span>Он будет опубликован после проверки модератором!</span>'
+                    } else if (form.id === 'registrationForm' && response === 'error') {
+                        textInfoModal = 'Уже существует пользователь с таким e-mail.<br><span>Если вы уверены, что это Ваш e-mail, воспользуйтесь формой забыли пароль.</span><br><span class="forgetPass">Забыли пароль?</span>'
+                    } else if (form.id === 'registrationForm' && response === 'ok') {
+                        textInfoModal = 'Спасибо за регистрацию!<br><span>На Ваш e-mail выслано письмо для подтверждения входа в личный кабинет.</span>'
+                    } else if (form.id === 'forgetPassForm') {
+                        textInfoModal = 'Спасибо!<br><span>На указаный адрес отправлено письмо<br>с инструкциями по восстановлению пароля.</span>'
+                    } else if (form.id === 'changeUserPass' && response === 'error') {
+                        textInfoModal = 'Извините, но текущий пароль неверный!'
+                    } else if (form.id === 'changeUserPass' && response === 'ok') {
+                        textInfoModal = 'Спасибо!<br><span>Ваш пароль успешно изменен!</span>'
+                    } else if (form.id === 'wishForm') {
+                        textInfoModal = 'Спасибо, Ваш запрос оставлен!<br> <span>С вами свяжется менеджер в ближайшее время!</span>'
+                    }
+                    infoModal.querySelector('h3').innerHTML = textInfoModal
+                    forgetPassword(infoModal.querySelector('.forgetPass'))
+                    showModal(infoModal)
+                    form.reset()
+                }
+                // let data = new FormData(form)
+                // data.product_id = id
+                // sendXHR(url, data, callback)
+                callback('ok')
+                e.preventDefault()
+            }
+        }
+        serializeFormSendXHR(document.getElementById('mailingForm'), '/submit/maillist/')
 
         const forgetPassword = (elem) => {
+            if (!elem) return
             elem.onclick = (e) => {
                 e.preventDefault()
                 let modal = document.getElementById('forgetPassModal')
                 showModal(modal)
-                // serializeFormSendXHR(modal.querySelector('#forgetPassForm'), infoModal, '/submit/restore/')
+                serializeFormSendXHR(modal.querySelector('#forgetPassForm'), '/submit/restore/')
             }
         }
 
@@ -76,7 +117,6 @@ export const ModalsPro = (props) => {
         }
         isGuest(document.querySelectorAll('.header__user'))
         isGuest(document.querySelectorAll('.header__guest'))
-
 
         const getAllElementsModal = (elems, modal) => {
             const onClickListener = (e) => {
@@ -127,6 +167,112 @@ export const ModalsPro = (props) => {
             onClickHandler(elems, onClickListener)
         }
         toggleFilterLists(document.querySelectorAll('.global__filterarrow'))
+
+        let validateOptions = {
+            nameCheck: /.{2,}/,
+            emailCheck: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/,
+            phoneCheck: /[0-9]{10}/,
+            passCheck: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/,
+            divTooltip: document.createElement('div'),
+            createTooltip(input) {
+                validateOptions.divTooltip.className = 'formtooltip'
+                document.body.append(validateOptions.divTooltip)
+                validateOptions.divTooltip.innerHTML = input.dataset.formtooltip
+                validateOptions.divTooltip.style.display = 'block'
+                validateOptions.divTooltip.style.left = `${input.getBoundingClientRect().left}px`
+                validateOptions.divTooltip.style.top = `${input.getBoundingClientRect().bottom + 10 + window.pageYOffset}px`
+            },
+            removeTooltip() {
+                validateOptions.divTooltip.style.display = 'none'
+            },
+            checkValue(input, check) {
+                if (input.value === '' || !check.test(input.value)) {
+                    validateOptions.createTooltip(input)
+                    input.focus()
+                } else {
+                    validateOptions.removeTooltip()
+                }
+            },
+            checkPass(input, pass) {
+                if (input.value !== pass) {
+                    validateOptions.createTooltip(input)
+                    input.focus()
+                } else {
+                    validateOptions.removeTooltip()
+                }
+            },
+            showPass(...inputs) {
+                inputs.forEach((input) => input.type === "password" ? input.type = "text" : input.type = "password")
+            }
+        }
+        const registrationFormValidate = (form) => {
+            if (!form) return
+            let set = {
+                name: [form.querySelector('[name="SignupForm[name]"]'), validateOptions.nameCheck],
+                email: [form.querySelector('[name="SignupForm[email]"]'), validateOptions.emailCheck],
+                phone: [form.querySelector('[name="SignupForm[phone]"]'), validateOptions.phoneCheck],
+                pass: [form.querySelector('[name="SignupForm[password]"]'), validateOptions.passCheck]
+            },
+                confirm = form.querySelector('[name="SignupForm[password_confirm]"]'),
+                terms = form.querySelector('[name="SignupForm[consent]"]')
+            form.querySelector('.showPassword input').onclick = () => {
+                validateOptions.showPass(set.pass[0], confirm)
+            }
+            for (let key in set) {
+                set[key][0].addEventListener('input', () => {
+                    validateOptions.checkValue(set[key][0], set[key][1])
+                })
+            }
+            confirm.oninput = () => {
+                validateOptions.checkPass(confirm, set.pass[0].value)
+            }
+            terms.oninput = () => {
+                if (terms.checked) validateOptions.removeTooltip()
+            }
+            form.querySelector('button').onclick = () => {
+                if (set.name[0].value === '' || !validateOptions.nameCheck.test(set.name[0].value)) {
+                    validateOptions.createTooltip(set.name[0])
+                    set.name[0].focus()
+                    return false
+                }
+                if (set.email[0].value === '' || !validateOptions.emailCheck.test(set.email[0].value)) {
+                    validateOptions.createTooltip(set.email[0])
+                    set.email[0].focus()
+                    return false
+                }
+                if (set.phone[0].value === '' || !validateOptions.phoneCheck.test(set.phone[0].value)) {
+                    validateOptions.createTooltip(set.phone[0])
+                    set.phone[0].focus()
+                    return false
+                }
+                if (set.pass[0].value === '' || !validateOptions.passCheck.test(set.pass[0].value)) {
+                    validateOptions.createTooltip(set.pass[0])
+                    set.pass[0].focus()
+                    return false
+                }
+                if (confirm.value !== set.pass[0].value) {
+                    validateOptions.createTooltip(confirm)
+                    confirm.focus()
+                    return false
+                }
+                if (!terms.checked) {
+                    validateOptions.createTooltip(terms)
+                    terms.focus()
+                    return false
+                }
+                serializeFormSendXHR(form, '/auth/registration/')
+            }
+        }
+        registrationFormValidate(document.getElementById('registrationForm'))
+
+        window.addEventListener('resize', () => {
+            // widthInner = window.innerWidth
+            // getComporisionRowWidth(document.querySelector('.comparison__section'))
+            // scrollCards(document.querySelectorAll('.verticalSlider'))
+            // horizontalSlider(document.querySelectorAll('.horizontalSlider'))
+            // showCommentsToggleClick(document.querySelectorAll('.comments__text i'))
+            validateOptions.removeTooltip()
+        })
 
         return () => {
             document.body.style.overflow = ''
@@ -201,7 +347,7 @@ export const ModalsPro = (props) => {
                         <h3>НОВЫЕ КЛИЕНТЫ</h3>
                         <p>Создав учётную запись на нашем сайте, вы будете тратить меньше времени на оформление заказа, сможете
                     хранить несколько адресов доставки, отслеживать состояние заказов, а также многое другое.</p>
-                        <a href="_registration.html" className="cabinet__href">Зарегистрироваться</a>
+                        <Link to="Registration" className="cabinet__href">Зарегистрироваться</Link>
                     </form>
                 </div>
             </div>

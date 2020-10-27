@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 import { HashRouter, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import './reset.css';
-/* delete all .owl-theme .owl-nav for react,
-also .horizontalSlider>i they are in node_modules\owl.carousel\dist\assets\owl.theme.default.css
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+/* 
 .products__credit, .products__gift, .products__video,
 #carouselIndex .carousel-indicators li -->  uncomment
 change ../img to ./img
 */
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './index.css';
 import 'bootstrap';
 
@@ -28,6 +27,8 @@ import { Sertificate } from './Sertificate';
 import { Career } from './Career';
 import { Contacts } from './Contacts';
 import { Bonus } from './Bonus';
+import { Registration } from './Registration';
+import { Terms } from './Terms';
 import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
 
@@ -35,9 +36,8 @@ export const App = () => {
   return (
     <HashRouter basename='/'>
         <Route exact path="/" component={Main} />
-        <Route path="/Services" component={Services} />
         <Route path="/Category" component={Category} />
-        <Route path="/ProcardBase" component={ProcardBase} />
+        <Route path="/Services" component={Services} />
         <Route path="/Hall" component={Hall} />
         <Route path="/Delivery" component={Delivery} />
         <Route path="/Warranty" component={Warranty} />
@@ -49,6 +49,9 @@ export const App = () => {
         <Route path="/Career" component={Career} />
         <Route path="/Contacts" component={Contacts} />
         <Route path="/Bonus" component={Bonus} />
+        <Route path="/Registration" component={Registration} />
+        <Route path="/Terms" component={Terms} />
+        <Route path="/ProcardBase" component={ProcardBase} />
     </HashRouter>
   );
 }
