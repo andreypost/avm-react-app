@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/avm-react-app/static/css/main.b25262f2.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.abbb8aa5.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.abbb8aa5.chunk.js.map",
+    "main.js": "/avm-react-app/static/js/main.a4bc69ad.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.a4bc69ad.chunk.js.map",
     "runtime-main.js": "/avm-react-app/static/js/runtime-main.c2272596.js",
     "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.c2272596.js.map",
     "static/css/2.01e2fbec.chunk.css": "/avm-react-app/static/css/2.01e2fbec.chunk.css",
-    "static/js/2.a024ae51.chunk.js": "/avm-react-app/static/js/2.a024ae51.chunk.js",
-    "static/js/2.a024ae51.chunk.js.map": "/avm-react-app/static/js/2.a024ae51.chunk.js.map",
+    "static/js/2.68b187eb.chunk.js": "/avm-react-app/static/js/2.68b187eb.chunk.js",
+    "static/js/2.68b187eb.chunk.js.map": "/avm-react-app/static/js/2.68b187eb.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.d7b494472ca1e7a36ddddee562875e7a.js": "/avm-react-app/precache-manifest.d7b494472ca1e7a36ddddee562875e7a.js",
+    "precache-manifest.1bbf9c80c3e2e0a7568ef663c2e70c7b.js": "/avm-react-app/precache-manifest.1bbf9c80c3e2e0a7568ef663c2e70c7b.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
     "static/css/2.01e2fbec.chunk.css.map": "/avm-react-app/static/css/2.01e2fbec.chunk.css.map",
     "static/css/main.b25262f2.chunk.css.map": "/avm-react-app/static/css/main.b25262f2.chunk.css.map",
-    "static/js/2.a024ae51.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.a024ae51.chunk.js.LICENSE.txt",
+    "static/js/2.68b187eb.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.68b187eb.chunk.js.LICENSE.txt",
     "static/media/index.css": "/avm-react-app/static/media/sprites.67030ff7.png",
     "static/media/Image365.png": "/avm-react-app/static/media/Image365.cd74dada.png",
     "static/media/Image_003.jpg": "/avm-react-app/static/media/Image_003.8bf369d2.jpg",
@@ -25,14 +25,13 @@
     "static/media/MaskGroup2.png": "/avm-react-app/static/media/MaskGroup2.23bb1639.png",
     "static/media/MaskGroup3.png": "/avm-react-app/static/media/MaskGroup3.6e79ed0d.png",
     "static/media/MaskGroup6.png": "/avm-react-app/static/media/MaskGroup6.f161d6d8.png",
-    "static/media/Offer_001.png": "/avm-react-app/static/media/Offer_001.ed1d7107.png",
-    "static/media/Offer_002.jpg": "/avm-react-app/static/media/Offer_002.c0244986.jpg",
-    "static/media/Offer_003.jpg": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg",
     "static/media/base_02.png": "/avm-react-app/static/media/base_02.8291f2ad.png",
     "static/media/center_logo_01.png": "/avm-react-app/static/media/center_logo_01.360e334f.png",
     "static/media/center_logo_03.png": "/avm-react-app/static/media/center_logo_03.06eb1c8e.png",
     "static/media/certificate.png": "/avm-react-app/static/media/certificate.a4d29533.png",
     "static/media/gG.png": "/avm-react-app/static/media/gG.e5293c29.png",
+    "static/media/gK.jpg": "/avm-react-app/static/media/gK.e85e9d01.jpg",
+    "static/media/gL.jpg": "/avm-react-app/static/media/gL.66a6193c.jpg",
     "static/media/icons.svg": "/avm-react-app/static/media/icons.5e14a9f7.svg",
     "static/media/installbank_01.png": "/avm-react-app/static/media/installbank_01.6eb7fa9b.png",
     "static/media/installbank_04.png": "/avm-react-app/static/media/installbank_04.31a41044.png",
@@ -48,8 +47,8 @@
   "entrypoints": [
     "static/js/runtime-main.c2272596.js",
     "static/css/2.01e2fbec.chunk.css",
-    "static/js/2.a024ae51.chunk.js",
+    "static/js/2.68b187eb.chunk.js",
     "static/css/main.b25262f2.chunk.css",
-    "static/js/main.abbb8aa5.chunk.js"
+    "static/js/main.a4bc69ad.chunk.js"
   ]
 }
