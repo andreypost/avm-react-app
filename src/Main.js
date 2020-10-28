@@ -607,7 +607,7 @@ export const Main = (props) => {
           <section className="carousel__section">
             <div className="global__hgroup flexbet">
               <h2>ПРОИЗВОДИТЕЛИ</h2>
-              <a href="_all_manufacturers.html">Все производители</a>
+              <Link to="Manufacturers">Все производители</Link>
             </div>
             <OwlCarousel className="owl-carousel producers__img owl-theme" loop={true} rewind={true} margin={10} nav={false} dots={false} autoplay={true} navText={false}
               responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>

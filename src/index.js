@@ -29,6 +29,8 @@ import { Contacts } from './Contacts';
 import { Bonus } from './Bonus';
 import { Registration } from './Registration';
 import { Terms } from './Terms';
+import { Manufacturers } from './Manufacturers';
+
 import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
 
@@ -51,6 +53,7 @@ export const App = () => {
         <Route path="/Bonus" component={Bonus} />
         <Route path="/Registration" component={Registration} />
         <Route path="/Terms" component={Terms} />
+        <Route path="/Manufacturers" component={Manufacturers} />
         <Route path="/ProcardBase" component={ProcardBase} />
     </HashRouter>
   );

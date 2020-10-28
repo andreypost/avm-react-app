@@ -8,7 +8,8 @@ import photo_004 from '../img/Image1.png';
 
 export const ModalsPro = (props) => {
     useEffect(() => {
-        let currentModal = null,
+        let widthInner = window.innerWidth,
+            currentModal = null,
             textInfoModal = null,
             infoModal = document.getElementById('infoModal')
 
@@ -265,8 +266,38 @@ export const ModalsPro = (props) => {
         }
         registrationFormValidate(document.getElementById('registrationForm'))
 
+        // const showContentTabsDesk = (container) => {
+        //     if (!container) return
+        //     let tabs = container.querySelector('.tabsCaption'),
+        //         currentTab = tabs.querySelector('.active'),
+        //         content = container.querySelector('.tabsContent'),
+        //         currentContent = content.querySelector('.active')
+        //     tabs.onclick = (e) => {
+        //         let tab = e.target.closest('.tabLink')
+        //         if (!tab || tab.classList.contains('active')) return
+        //         let newContent = content.querySelector(`[data-tab="${tab.dataset.tab}"]`)
+        //         currentContent.classList.remove('active')
+        //         newContent.classList.add('active')
+        //         currentTab.classList.remove('active')
+        //         tab.classList.add('active')
+        //     }
+        // }
+        const showContentTabsDesk = (container) => {
+            if (!container) return
+            container.onclick = (e) => {
+                let tab = e.target.closest('.tabLink')
+                if (!tab || tab.classList.contains('active')) return
+                let newContent = container.querySelector(`.tabsContent [data-tab="${tab.dataset.tab}"]`)
+                container.querySelector('.tabsContent .active').classList.remove('active')
+                newContent.classList.add('active')
+                container.querySelector('.tabsCaption .active').classList.remove('active')
+                tab.classList.add('active')
+            }
+        }
+        showContentTabsDesk(document.getElementById('manufacturesLinks'))
+
         window.addEventListener('resize', () => {
-            // widthInner = window.innerWidth
+            widthInner = window.innerWidth
             // getComporisionRowWidth(document.querySelector('.comparison__section'))
             // scrollCards(document.querySelectorAll('.verticalSlider'))
             // horizontalSlider(document.querySelectorAll('.horizontalSlider'))
@@ -656,8 +687,8 @@ export const ModalsPro = (props) => {
                             className="basketHeaderResult">0</span>&nbsp;товара)</h2>
                         <hgroup className="cabinet__empty marginbot4020 noneDesk">
                             <h2 className="black marginbot2010">Ваша корзина покапуста</h2>
-                            <h3 className="flexcenter justcenter marginbot2010 px13_580">Чтобы сделать заказ, перейдите на&nbsp;<a
-                                href="index.html">Главную Страницу</a>&nbsp;сайта</h3>
+                            <h3 className="flexcenter justcenter marginbot2010 px13_580">Чтобы сделать заказ, перейдите на&nbsp;<Link
+                                to="/">Главную Страницу</Link>&nbsp;сайта</h3>
                         </hgroup>
                         <article className="cabinet__content noneDesk widthDesk active">
                             <hgroup className="blockcard__hgroup flexcenter textcenter none768 white">
@@ -793,8 +824,8 @@ export const ModalsPro = (props) => {
                                     </div>
                                 </article>
                                 <div className="flexcenter justcenter">
-                                    <a href="_category.html" className="global__back flexcenter marginbot4020">ПРОДОЛЖИТЬ
-                                ПОКУПКИ</a>
+                                    <Link to="Category" className="global__back flexcenter marginbot4020">ПРОДОЛЖИТЬ
+                                ПОКУПКИ</Link>
                                     <button className="makeOrder flexcenter white marginbot4020">ОФОРМИТЬ
                                 ЗАКАЗ</button>
                                 </div>
