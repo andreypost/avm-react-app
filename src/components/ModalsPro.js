@@ -8,8 +8,8 @@ import photo_004 from '../img/Image1.png';
 
 export const ModalsPro = (props) => {
     useEffect(() => {
-        let widthInner = window.innerWidth,
-            currentModal = null,
+        let currentModal = null,
+            // widthInner = window.innerWidth,
             textInfoModal = null,
             infoModal = document.getElementById('infoModal')
 
@@ -266,22 +266,6 @@ export const ModalsPro = (props) => {
         }
         registrationFormValidate(document.getElementById('registrationForm'))
 
-        // const showContentTabsDesk = (container) => {
-        //     if (!container) return
-        //     let tabs = container.querySelector('.tabsCaption'),
-        //         currentTab = tabs.querySelector('.active'),
-        //         content = container.querySelector('.tabsContent'),
-        //         currentContent = content.querySelector('.active')
-        //     tabs.onclick = (e) => {
-        //         let tab = e.target.closest('.tabLink')
-        //         if (!tab || tab.classList.contains('active')) return
-        //         let newContent = content.querySelector(`[data-tab="${tab.dataset.tab}"]`)
-        //         currentContent.classList.remove('active')
-        //         newContent.classList.add('active')
-        //         currentTab.classList.remove('active')
-        //         tab.classList.add('active')
-        //     }
-        // }
         const showContentTabsDesk = (container) => {
             if (!container) return
             container.onclick = (e) => {
@@ -297,7 +281,7 @@ export const ModalsPro = (props) => {
         showContentTabsDesk(document.getElementById('manufacturesLinks'))
 
         window.addEventListener('resize', () => {
-            widthInner = window.innerWidth
+            // widthInner = window.innerWidth
             // getComporisionRowWidth(document.querySelector('.comparison__section'))
             // scrollCards(document.querySelectorAll('.verticalSlider'))
             // horizontalSlider(document.querySelectorAll('.horizontalSlider'))

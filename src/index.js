@@ -30,6 +30,8 @@ import { Bonus } from './Bonus';
 import { Registration } from './Registration';
 import { Terms } from './Terms';
 import { Manufacturers } from './Manufacturers';
+import { Glossary } from './Glossary';
+import { GlossaryInner } from './GlossaryInner';
 
 import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
@@ -54,6 +56,8 @@ export const App = () => {
         <Route path="/Registration" component={Registration} />
         <Route path="/Terms" component={Terms} />
         <Route path="/Manufacturers" component={Manufacturers} />
+        <Route path="/Glossary" component={Glossary} />
+        <Route path="/GlossaryInner" component={GlossaryInner} />
         <Route path="/ProcardBase" component={ProcardBase} />
     </HashRouter>
   );
