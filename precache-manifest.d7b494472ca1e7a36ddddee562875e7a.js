@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "94dcc1f68b3e9f359942d9297431f42d",
+    "revision": "4c5070f5a808934e6f929477499723af",
     "url": "/avm-react-app/index.html"
   },
   {
-    "revision": "f3bb5b95e99810432769",
+    "revision": "4199bd10d4b695c70175",
     "url": "/avm-react-app/static/css/2.01e2fbec.chunk.css"
   },
   {
-    "revision": "e8a3d208fca55c7cb17a",
+    "revision": "b92719017c4e8abd6157",
     "url": "/avm-react-app/static/css/main.b25262f2.chunk.css"
   },
   {
-    "revision": "f3bb5b95e99810432769",
-    "url": "/avm-react-app/static/js/2.e701cc03.chunk.js"
+    "revision": "4199bd10d4b695c70175",
+    "url": "/avm-react-app/static/js/2.a024ae51.chunk.js"
   },
   {
     "revision": "925e52c28b12d63edac5d05fc71f820f",
-    "url": "/avm-react-app/static/js/2.e701cc03.chunk.js.LICENSE.txt"
+    "url": "/avm-react-app/static/js/2.a024ae51.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e8a3d208fca55c7cb17a",
-    "url": "/avm-react-app/static/js/main.134e53b4.chunk.js"
+    "revision": "b92719017c4e8abd6157",
+    "url": "/avm-react-app/static/js/main.abbb8aa5.chunk.js"
   },
   {
     "revision": "bb8877cb9a8a66ce9f93",
@@ -102,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a4d29533973bc8f3b503c77904ef9cc3",
     "url": "/avm-react-app/static/media/certificate.a4d29533.png"
+  },
+  {
+    "revision": "e5293c290d20a3674889b545fc99b50a",
+    "url": "/avm-react-app/static/media/gG.e5293c29.png"
   },
   {
     "revision": "5e14a9f780585c63fcc24403ed9b27d8",
