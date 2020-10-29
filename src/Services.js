@@ -21,41 +21,6 @@ import photo_010 from './img/MaskGroup3.png';
 export const Services = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0)
-    const onClickHandlerServices = (elems, onClickListener) => {
-      for (let elem of elems) {
-        elem.addEventListener('click', (e) => {
-          onClickListener(e, elem)
-        })
-      }
-    }
-    const pausePlayVideo = (elems) => {
-      const onClickListener = (e, elem) => {
-        let target = e.target.closest('.carousel-control-prev,.carousel-control-next, .carousel-indicators')
-        if (!target) return
-        let iframe = elem.querySelector('.carousel-inner .active iframe')
-        if (!iframe) return
-        elem.querySelector('.carousel-inner .active iframe').src = iframe.src
-      }
-      onClickHandlerServices(elems, onClickListener)
-    }
-    pausePlayVideo(document.querySelectorAll('.carousel'))
-    const toggleAllText = (elems) => {
-      const onClickListener = (e, elem) => {
-        elem.nextElementSibling.classList.toggle('block')
-        elem.classList.toggle('active')
-      }
-      onClickHandlerServices(elems, onClickListener)
-    }
-    toggleAllText(document.querySelectorAll('.services__heading'))
-    const dateCalendarLimit = (elem) => {
-      let today = new Date(),
-        delay = new Date(today)
-      delay.setDate(delay.getDate() + 2)
-      today.setDate(today.getDate() + 45)
-      elem.min = delay.toISOString().split("T")[0]
-      elem.max = today.toISOString().split("T")[0]
-    }
-    dateCalendarLimit(document.querySelector('input[type="date"]'))
   }, [])
   return (
     <>

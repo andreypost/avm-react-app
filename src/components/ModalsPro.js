@@ -266,6 +266,27 @@ export const ModalsPro = (props) => {
         }
         registrationFormValidate(document.getElementById('registrationForm'))
 
+        const showContentTabs = (container) => {
+            if (!container) return
+            container.onclick = (e) => {
+                let tab = e.target.closest('.tab')
+                if (!tab || tab.classList.contains('active')) return
+                let newContent = container.querySelector(`.tabs__content [data-tab="${tab.dataset.tab}"]`)
+                container.querySelector('.tabs__content>.active').classList.remove('active')
+                newContent.classList.add('active')
+                container.querySelector('.tabs__caption .active').classList.remove('active')
+                tab.classList.add('active')
+                if (container.querySelector('A')) container.querySelector('A').href = tab.dataset.href
+            }
+        }
+        showContentTabs(document.getElementById('tabsMainPage'))
+        showContentTabs(document.getElementById('tabsNews'))
+        // showContentTabs(document.getElementById('anchorFormComment'))
+        // showContentTabs(document.getElementById('formComment'))
+        // showContentTabs(document.getElementById('viewedcabProducts'))
+        // showContentTabs(document.querySelector('.verifyOrderArticle'))  // needs to start in verificationOrder modal to get click
+        // showContentTabs(document.querySelector('.productCreditArticle'))
+
         const showContentTabsDesk = (container) => {
             if (!container) return
             container.onclick = (e) => {
@@ -279,6 +300,42 @@ export const ModalsPro = (props) => {
             }
         }
         showContentTabsDesk(document.getElementById('manufacturesLinks'))
+
+        const pausePlayVideo = (elems) => {
+            if (!elems) return
+            const onClickListener = (e, elem) => {
+                let target = e.target.closest('.carousel-control-prev,.carousel-control-next, .carousel-indicators')
+                if (!target) return
+                let iframe = elem.querySelector('.carousel-inner .active iframe')
+                if (!iframe) return
+                elem.querySelector('.carousel-inner .active iframe').src = iframe.src
+            }
+            onClickHandler(elems, onClickListener)
+        }
+        pausePlayVideo(document.querySelectorAll('.carousel'))
+
+        const dateCalendarLimit = (elems) => {
+            if (!elems) return
+            let today = new Date(),
+                delay = new Date(today)
+            delay.setDate(delay.getDate() + 2)
+            today.setDate(today.getDate() + 30)
+            for (let elem of elems) {
+                elem.min = delay.toISOString().split("T")[0]
+                elem.max = today.toISOString().split("T")[0]
+            }
+        }
+        dateCalendarLimit(document.querySelectorAll('input[type="date"]'))
+
+        const toggleHiddenElem = (elems) => {
+            const onClickListener = (e, elem) => {
+                elem.nextElementSibling.classList.toggle('block')
+                elem.classList.toggle('active')
+            }
+            onClickHandler(elems, onClickListener)
+        }
+        toggleHiddenElem(document.querySelectorAll('.services__heading'))
+        toggleHiddenElem(document.querySelectorAll('.viewedcab__categories'))
 
         window.addEventListener('resize', () => {
             // widthInner = window.innerWidth

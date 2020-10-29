@@ -5,7 +5,7 @@ import icons from '../icons.svg';
 export const Header = (props) => {
     useEffect(() => {
         const showTooltip = (elem) => {
-            let tooltip = document.getElementById('headerHoverCall')
+            let tooltip = elem.querySelector('#headerHoverCall')
             elem.onmouseover = () => {
                 tooltip.style.display = 'block'
                 tooltip.querySelector('.button__closegl').onclick = () => {

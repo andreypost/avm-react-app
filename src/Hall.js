@@ -13,27 +13,6 @@ import photo_003 from './img/MaskGroup15.png';
 export const Hall = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
-        const pausePlayVideo = (elem) => {
-            elem.onclick = (e) => {
-                let target = e.target.closest('.carousel-control-prev,.carousel-control-next, .carousel-indicators')
-                if (!target) return
-                let iframe = elem.querySelector('.carousel-inner .active iframe')
-                if (!iframe) return
-                elem.querySelector('.carousel-inner .active iframe').src = iframe.src
-            }
-        }
-        pausePlayVideo(document.querySelector('.carousel'))
-        const dateCalendarLimit = (elems) => {
-            let today = new Date(),
-                delay = new Date(today)
-            delay.setDate(delay.getDate() + 2)
-            today.setDate(today.getDate() + 30)
-            for (let elem of elems) {
-                elem.min = delay.toISOString().split("T")[0]
-                elem.max = today.toISOString().split("T")[0]
-            }
-        }
-        dateCalendarLimit(document.querySelectorAll('input[type="date"]'))
     }, [])
     return (
         <>

@@ -57,31 +57,6 @@ export const Main = (props) => {
   // }
   useEffect(() => {
     window.scrollTo(0, 0)
-    const showContentTabs = (container) => {
-      let tabs = container.querySelector('.tabs__caption'),
-        currentTab = container.querySelector('.active'),
-        content = container.querySelector('.tabs__content'),
-        currentContent = content.querySelector('.active')
-      tabs.onclick = (e) => {
-        let tab = e.target.closest('.tab')
-        if (!tab || tab.classList.contains('active')) return
-        let blocks = content.querySelectorAll('.tabs__block')
-        for (let block of blocks) {
-          if (block.dataset.tab === tab.dataset.tab) {
-            block.classList.add('active')
-            currentContent.classList.remove('active')
-            currentContent = block
-            if (container.querySelector('A')) {
-              container.querySelector('A').href = tab.dataset.href
-            }
-          }
-        }
-        currentTab.classList.remove('active')
-        currentTab = tab
-        currentTab.classList.add('active')
-      }
-    }
-    showContentTabs(document.getElementById('tabsMainPage'))
     const forbidScrollNav = (elem) => {
       let uls = elem.querySelectorAll('ul'),
         second = elem.querySelectorAll('.nav__second'),

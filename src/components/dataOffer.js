@@ -1,11 +1,6 @@
-import photo_000 from '../img/gA.jpg';
-import photo_001 from '../img/gB.jpg';
-import photo_002 from '../img/gC.jpg';
-import photo_003 from '../img/gD.jpg';
-import photo_004 from '../img/gE.jpg';
-import photo_005 from '../img/gF.png';
-import photo_006 from '../img/gG.png';
-import photo_007 from '../img/gH.jpg';
+import photo_000 from '../img/Offer_001.png';
+import photo_001 from '../img/Offer_002.jpg';
+import photo_002 from '../img/Offer_003.jpg';
 
 export default [
     {

@@ -1,36 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import dataNews from './dataNews';
 import { NewsCard } from './NewsCard';
 
 export const NewsSection = () => {
-    useEffect(() => {
-        const showContentTabs = (container) => {
-            let tabs = container.querySelector('.tabs__caption'),
-                currentTab = container.querySelector('.active'),
-                content = container.querySelector('.tabs__content'),
-                currentContent = content.querySelector('.active')
-            tabs.onclick = (e) => {
-                let tab = e.target.closest('.tab')
-                if (!tab || tab.classList.contains('active')) return
-                let blocks = content.querySelectorAll('.tabs__block')
-                for (let block of blocks) {
-                    if (block.dataset.tab === tab.dataset.tab) {
-                        block.classList.add('active')
-                        currentContent.classList.remove('active')
-                        currentContent = block
-                        if (container.querySelector('A')) {
-                            container.querySelector('A').href = tab.dataset.href
-                        }
-                    }
-                }
-                currentTab.classList.remove('active')
-                currentTab = tab
-                currentTab.classList.add('active')
-            }
-        }
-        showContentTabs(document.getElementById('tabsNews'))
-    }, [])
     return (
         <article className="news__section">
             <section className="carousel__section">
