@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import dataGlossary from './dataGlossary';
 
 export const BoxGlossary = (props) => {
+    useEffect(() => {
+        document.querySelector('.glossary__articles ').onclick = (e) => {
+            if (e.target.tagName === 'A') {
+                dataGlossary[26].image = e.target.parentNode.parentNode.querySelector('img').src
+                dataGlossary[26].title = dataGlossary[26].header = e.target.innerHTML
+                dataGlossary[26].text = e.target.nextSibling.innerHTML
+                // console.log(e.target.nextSibling)
+                // e.preventDefault()
+            }
+        }
+
+    })
     return (
         <div className="flexcenter">
             <div>

@@ -113,7 +113,6 @@ export const Main = (props) => {
       }
     }
     forbidScrollNav(document.querySelector('.nav__first'))
-   
   }, [])
   return (
     <>
