@@ -117,9 +117,9 @@ export const Category = (props) => {
                   <h4>Отображать по:</h4>
                   <select name="">
                     <option value="10"></option>
-                    <option value="0" data-option-url="/#/Category">10</option>
-                    <option value="1" data-option-url="/#/Category">20</option>
-                    <option value="2" data-option-url="/#/Category">30</option>
+                    <option value="0" data-option-url="/avm-react-app/#/Category">10</option>
+                    <option value="1" data-option-url="/avm-react-app/#/Category">20</option>
+                    <option value="2" data-option-url="/avm-react-app/#/Category">30</option>
                   </select>
                 </div>
               </div>
