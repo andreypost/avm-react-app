@@ -41,7 +41,6 @@ export const Category = (props) => {
                 baseSelect.selectedIndex = i
                 cloneSelect.innerHTML = this.innerHTML
                 sameSelected = this.parentNode.getElementsByClassName('same__selected')
-                console.log(sameSelected.length)
                 for (let k = 0; k < sameSelected.length; k++) {
                   sameSelected[k].removeAttribute('class')
                 }
@@ -50,7 +49,7 @@ export const Category = (props) => {
               }
             }
             cloneSelect.click()
-            window.location.assign(e.target.dataset.optionUrl)
+            // window.location.assign(e.target.dataset.optionUrl)
           })
           items.append(optionsBox)
         }
@@ -69,7 +68,7 @@ export const Category = (props) => {
         y = document.getElementsByClassName('select__clone')
       if (!x && !y) return
       for (i = 0; i < y.length; i++) {
-        if (elem == y[i]) {
+        if (elem === y[i]) {
           arrNo.push(i)
         } else {
           y[i].classList.remove('select__able')

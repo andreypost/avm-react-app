@@ -1,6 +1,6 @@
 import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import cardData from './dataCard';
+import dataCard from './dataCard';
 import { CardProduct } from './CardProduct';
 import { CardDiscount } from './CardDiscount';
 
@@ -20,53 +20,53 @@ export const HitsSection = () => {
                 <article className="tabs__block active" data-tab="hits">
                     <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={true} navText={false}
                         responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                        <CardProduct datos={cardData[0]} />
-                        <CardDiscount datos={cardData[1]} />
-                        <CardProduct datos={cardData[2]} />
-                        <CardDiscount datos={cardData[3]} />
-                        <CardProduct datos={cardData[4]} />
-                        <CardDiscount datos={cardData[5]} />
-                        <CardProduct datos={cardData[6]} />
-                        <CardDiscount datos={cardData[7]} />
+                        <CardProduct datos={dataCard[0]} />
+                        <CardDiscount datos={dataCard[1]} />
+                        <CardProduct datos={dataCard[2]} />
+                        <CardDiscount datos={dataCard[3]} />
+                        <CardProduct datos={dataCard[4]} />
+                        <CardDiscount datos={dataCard[5]} />
+                        <CardProduct datos={dataCard[6]} />
+                        <CardDiscount datos={dataCard[7]} />
                     </OwlCarousel>
                 </article>
                 <article className="tabs__block" data-tab="sales">
                     <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={true} navText={false}
                         responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                        <CardProduct datos={cardData[31]} />
-                        <CardDiscount datos={cardData[30]} />
-                        <CardProduct datos={cardData[29]} />
-                        <CardDiscount datos={cardData[28]} />
-                        <CardProduct datos={cardData[27]} />
-                        <CardDiscount datos={cardData[26]} />
-                        <CardProduct datos={cardData[25]} />
-                        <CardDiscount datos={cardData[24]} />
+                        <CardProduct datos={dataCard[31]} />
+                        <CardDiscount datos={dataCard[30]} />
+                        <CardProduct datos={dataCard[29]} />
+                        <CardDiscount datos={dataCard[28]} />
+                        <CardProduct datos={dataCard[27]} />
+                        <CardDiscount datos={dataCard[26]} />
+                        <CardProduct datos={dataCard[25]} />
+                        <CardDiscount datos={dataCard[24]} />
                     </OwlCarousel>
                 </article>
                 <article className="tabs__block" data-tab="novelty">
                     <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={true} navText={false}
                         responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                        <CardDiscount datos={cardData[8]} />
-                        <CardProduct datos={cardData[9]} />
-                        <CardDiscount datos={cardData[10]} />
-                        <CardProduct datos={cardData[11]} />
-                        <CardDiscount datos={cardData[12]} />
-                        <CardProduct datos={cardData[13]} />
-                        <CardDiscount datos={cardData[14]} />
-                        <CardProduct datos={cardData[15]} />
+                        <CardDiscount datos={dataCard[8]} />
+                        <CardProduct datos={dataCard[9]} />
+                        <CardDiscount datos={dataCard[10]} />
+                        <CardProduct datos={dataCard[11]} />
+                        <CardDiscount datos={dataCard[12]} />
+                        <CardProduct datos={dataCard[13]} />
+                        <CardDiscount datos={dataCard[14]} />
+                        <CardProduct datos={dataCard[15]} />
                     </OwlCarousel>
                 </article>
                 <article className="tabs__block" data-tab="stocks">
                     <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                         responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                        <CardDiscount datos={cardData[23]} />
-                        <CardProduct datos={cardData[22]} />
-                        <CardDiscount datos={cardData[21]} />
-                        <CardProduct datos={cardData[20]} />
-                        <CardDiscount datos={cardData[19]} />
-                        <CardProduct datos={cardData[18]} />
-                        <CardDiscount datos={cardData[17]} />
-                        <CardProduct datos={cardData[16]} />
+                        <CardDiscount datos={dataCard[23]} />
+                        <CardProduct datos={dataCard[22]} />
+                        <CardDiscount datos={dataCard[21]} />
+                        <CardProduct datos={dataCard[20]} />
+                        <CardDiscount datos={dataCard[19]} />
+                        <CardProduct datos={dataCard[18]} />
+                        <CardDiscount datos={dataCard[17]} />
+                        <CardProduct datos={dataCard[16]} />
                     </OwlCarousel>
                 </article>
             </div>

@@ -9,14 +9,12 @@ export const BoxGlossary = (props) => {
                 dataGlossary[26].image = e.target.parentNode.parentNode.querySelector('img').src
                 dataGlossary[26].title = dataGlossary[26].header = e.target.innerHTML
                 dataGlossary[26].text = e.target.nextSibling.innerHTML
-                // console.log(e.target.nextSibling)
-                // e.preventDefault()
             }
         }
 
     })
     return (
-        <div className="flexcenter">
+        <div className={"tabsBlock flexcenter " + props.datos.class} id={props.datos.id} data-tab={props.datos.id}>
             <div>
                 <img src={props.datos.image} alt="" />
             </div>

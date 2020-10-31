@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { BoxGlossary } from './components/BoxGlossary';
@@ -26,10 +27,10 @@ export const Glossary = (props) => {
                         <li>Глоссарий</li>
                     </ul>
                 </section>
-                <section className="glossary__section textleft">
+                <section id="manufacturesLinks" className="glossary__section textleft">
                     <h1 className="marginbot2010">Глоссарий</h1>
-                    <article className="glossary__list flexcenter justcenter flexwrap textcenter">
-                        <a href=" ">A</a>
+                    <article className="tabsCaption glossary__list flexcenter justcenter flexwrap textcenter">
+                        {/* <a href=" ">A</a>
                         <a href=" ">B</a>
                         <a href=" ">C</a>
                         <a href=" ">D</a>
@@ -54,9 +55,35 @@ export const Glossary = (props) => {
                         <a href=" ">W</a>
                         <a href=" ">X</a>
                         <a href=" ">Y</a>
-                        <a href=" ">Z</a>
+                        <a href=" ">Z</a> */}
+                        <HashLink to="#A" className="tabLink active" data-tab="A">A</HashLink>
+                        <HashLink to="#B" className="tabLink" data-tab="B">B</HashLink>
+                        <HashLink to="#C" className="tabLink" data-tab="C">C</HashLink>
+                        <HashLink to="#D" className="tabLink" data-tab="D">D</HashLink>
+                        <HashLink to="#E" className="tabLink" data-tab="E">E</HashLink>
+                        <HashLink to="#F" className="tabLink" data-tab="F">F</HashLink>
+                        <HashLink to="#G" className="tabLink" data-tab="G">G</HashLink>
+                        <HashLink to="#H" className="tabLink" data-tab="H">H</HashLink>
+                        <HashLink to="#I" className="tabLink" data-tab="I">I</HashLink>
+                        <HashLink to="#J" className="tabLink" data-tab="J">J</HashLink>
+                        <HashLink to="#K" className="tabLink" data-tab="K">K</HashLink>
+                        <HashLink to="#L" className="tabLink" data-tab="L">L</HashLink>
+                        <HashLink to="#M" className="tabLink" data-tab="M">M</HashLink>
+                        <HashLink to="#N" className="tabLink" data-tab="N">N</HashLink>
+                        <HashLink to="#O" className="tabLink" data-tab="O">O</HashLink>
+                        <HashLink to="#P" className="tabLink" data-tab="P">P</HashLink>
+                        <HashLink to="#Q" className="tabLink" data-tab="Q">Q</HashLink>
+                        <HashLink to="#R" className="tabLink" data-tab="R">R</HashLink>
+                        <HashLink to="#S" className="tabLink" data-tab="S">S</HashLink>
+                        <HashLink to="#T" className="tabLink" data-tab="T">T</HashLink>
+                        <HashLink to="#U" className="tabLink" data-tab="U">U</HashLink>
+                        <HashLink to="#V" className="tabLink" data-tab="V">V</HashLink>
+                        <HashLink to="#W" className="tabLink" data-tab="W">W</HashLink>
+                        <HashLink to="#X" className="tabLink" data-tab="X">X</HashLink>
+                        <HashLink to="#Y" className="tabLink" data-tab="Y">Y</HashLink>
+                        <HashLink to="#Z" className="tabLink" data-tab="Z">Z</HashLink>
                     </article>
-                    <article className="glossary__articles">
+                    <article className="tabsContent glossary__articles">
                         <BoxGlossary datos={dataGlossary[0]} />
                         <BoxGlossary datos={dataGlossary[1]} />
                         <BoxGlossary datos={dataGlossary[2]} />
@@ -84,19 +111,6 @@ export const Glossary = (props) => {
                         <BoxGlossary datos={dataGlossary[24]} />
                         <BoxGlossary datos={dataGlossary[25]} />
                     </article>
-                    <nav className="pagination__global flexcenter justcenter">
-                        <a className="pagination__prev" href=" "> </a>
-                        <div className="pagination__list flexcenter juststart">
-                            <a className="pagination__item" href=" ">1</a>
-                            <p>...</p>
-                            <a className="pagination__item active" href=" ">1</a>
-                            <a className="pagination__item" href=" ">2</a>
-                            <a className="pagination__item" href=" ">3</a>
-                            <p>...</p>
-                            <a className="pagination__item" href=" ">11</a>
-                        </div>
-                        <a className="pagination__next" href=" "> </a>
-                    </nav>
                 </section>
             </main>
             <Footer />
