@@ -494,7 +494,7 @@ export const Main = (props) => {
               <li data-target="#carouselIndex" data-slide-to="3"></li>
               <li data-target="#carouselIndex" data-slide-to="4"></li>
               <li data-target="#carouselIndex" data-slide-to="5"></li>
-              <a href="_all_stocks.html" className="flexcenter">Все акции</a>
+              <Link to="Actions" className="flexcenter" replace>Все акции</Link>
             </ol>
             <a className="carousel-control-prev" href="#carouselIndex" role="button" data-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true"></span>
