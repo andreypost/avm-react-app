@@ -109,11 +109,14 @@ export const ModalsPro = (props) => {
                 e.preventDefault()
                 elem.firstElementChild.classList.toggle('active')
                 if (elem.nextElementSibling) elem.nextElementSibling.classList.toggle('block')
+                if (elem.closest('.services__heading') || elem.closest('.viewedcab__categories')) elem.classList.toggle('activeElem')
             }
             onClickHandler(elems, onClickListener)
         }
         toggleAllLists(document.querySelectorAll('.arrow__href'))  /* rotate svg and colored svg icons */
         toggleAllLists(document.querySelectorAll('.global__linksfilter')) /* just set blue color to square then reload page and return back to white, page: _all_promotions and others */
+        toggleAllLists(document.querySelectorAll('.services__heading'))
+        toggleAllLists(document.querySelectorAll('.viewedcab__categories'))
 
         const toggleFilterLists = (elems) => {
             const onClickListener = (e, elem) => {
@@ -343,16 +346,6 @@ export const ModalsPro = (props) => {
             }
         }
         dateCalendarLimit(document.querySelectorAll('input[type="date"]'))
-
-        const toggleHiddenElem = (elems) => {
-            const onClickListener = (e, elem) => {
-                elem.nextElementSibling.classList.toggle('block')
-                elem.classList.toggle('active')
-            }
-            onClickHandler(elems, onClickListener)
-        }
-        toggleHiddenElem(document.querySelectorAll('.services__heading'))
-        toggleHiddenElem(document.querySelectorAll('.viewedcab__categories'))
 
         window.addEventListener('resize', () => {
             // widthInner = window.innerWidth
