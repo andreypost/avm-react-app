@@ -11,7 +11,8 @@ export const ModalsPro = (props) => {
         let currentModal = null,
             // widthInner = window.innerWidth,
             textInfoModal = null,
-            infoModal = document.getElementById('infoModal')
+            infoModal = document.getElementById('infoModal'),
+            body = document.querySelector('body')
 
         const onClickHandler = (elems, onClickListener) => {
             for (let elem of elems) {
@@ -20,14 +21,22 @@ export const ModalsPro = (props) => {
                 })
             }
         }
+        const showIconTooltip = (elems) => {
+            const onClickListener = (e, elem) => {
+                if (elem.previousElementSibling.innerHTML === '') e.preventDefault()
+            }
+            onClickHandler(elems, onClickListener)
+            // if (widthInner <= 768) return
+        }
+        showIconTooltip(document.querySelectorAll('[data-headertooltip]'))
         const showModal = (modal) => {
             if (currentModal) {
                 hideModal(currentModal)
                 currentModal = null
             }
             let width = document.documentElement.clientWidth
-            document.body.style.overflowY = 'hidden'
-            document.body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
+            body.style.overflowY = 'hidden'
+            body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
             currentModal = modal
             currentModal.style.display = 'block'
             currentModal.onclick = (e) => {
@@ -51,55 +60,8 @@ export const ModalsPro = (props) => {
                 window.location.assign('/cabinet/')
             } else {
                 modal.style.display = 'none'
-                document.body.style.overflowY = ''
-                document.body.style.paddingRight = `${0}px`
-            }
-        }
-        const serializeFormSendXHR = (form, url, id) => {
-            if (!form) return
-            form.onsubmit = (e) => {
-                // if (grecaptcha && grecaptcha.getResponse().length === 0) return // uncomment when key capcha able
-                const callback = (response) => {
-                    if (form.id === 'mailingForm') {
-                        textInfoModal = 'Спасибо, Вы подписались на рассылку!'
-                    } else if (form.id === 'newCustomerForm' || form.id === 'regularCustomerForm' || form.id === 'oneClickForm') {
-                        textInfoModal = 'Спасибо, Ваш заказ оформлен!'
-                    } else if (form.id === 'reviewFormSent') {
-                        textInfoModal = 'Спасибо, Ваш отзыв отправлен!<br><span>Он будет опубликован после проверки модератором!</span>'
-                    } else if (form.id === 'registrationForm' && response === 'error') {
-                        textInfoModal = 'Уже существует пользователь с таким e-mail.<br><span>Если вы уверены, что это Ваш e-mail, воспользуйтесь формой забыли пароль.</span><br><span class="forgetPass">Забыли пароль?</span>'
-                    } else if (form.id === 'registrationForm' && response === 'ok') {
-                        textInfoModal = 'Спасибо за регистрацию!<br><span>На Ваш e-mail выслано письмо для подтверждения входа в личный кабинет.</span>'
-                    } else if (form.id === 'forgetPassForm') {
-                        textInfoModal = 'Спасибо!<br><span>На указаный адрес отправлено письмо<br>с инструкциями по восстановлению пароля.</span>'
-                    } else if (form.id === 'changeUserPass' && response === 'error') {
-                        textInfoModal = 'Извините, но текущий пароль неверный!'
-                    } else if (form.id === 'changeUserPass' && response === 'ok') {
-                        textInfoModal = 'Спасибо!<br><span>Ваш пароль успешно изменен!</span>'
-                    } else if (form.id === 'wishForm') {
-                        textInfoModal = 'Спасибо, Ваш запрос оставлен!<br> <span>С вами свяжется менеджер в ближайшее время!</span>'
-                    }
-                    infoModal.querySelector('h3').innerHTML = textInfoModal
-                    forgetPassword(infoModal.querySelector('.forgetPass'))
-                    showModal(infoModal)
-                    form.reset()
-                }
-                // let data = new FormData(form)
-                // data.product_id = id
-                // sendXHR(url, data, callback)
-                callback('ok')
-                e.preventDefault()
-            }
-        }
-        serializeFormSendXHR(document.getElementById('mailingForm'), '/submit/maillist/')
-
-        const forgetPassword = (elem) => {
-            if (!elem) return
-            elem.onclick = (e) => {
-                e.preventDefault()
-                let modal = document.getElementById('forgetPassModal')
-                showModal(modal)
-                serializeFormSendXHR(modal.querySelector('#forgetPassForm'), '/submit/restore/')
+                body.style.overflowY = ''
+                body.style.paddingRight = `${0}px`
             }
         }
 
@@ -145,13 +107,13 @@ export const ModalsPro = (props) => {
         const toggleAllLists = (elems) => {
             const onClickListener = (e, elem) => {
                 e.preventDefault()
-                elem.firstElementChild.classList.toggle('none')
-                elem.lastElementChild.classList.toggle('block')
-                elem.nextElementSibling.classList.toggle('block')
+                elem.firstElementChild.classList.toggle('active')
+                if (elem.nextElementSibling) elem.nextElementSibling.classList.toggle('block')
             }
             onClickHandler(elems, onClickListener)
         }
-        toggleAllLists(document.querySelectorAll('.global__href'))
+        toggleAllLists(document.querySelectorAll('.arrow__href'))  /* rotate svg and colored svg icons */
+        toggleAllLists(document.querySelectorAll('.global__linksfilter')) /* just set blue color to square then reload page and return back to white, page: _all_promotions and others */
 
         const toggleFilterLists = (elems) => {
             const onClickListener = (e, elem) => {
@@ -169,6 +131,61 @@ export const ModalsPro = (props) => {
         }
         toggleFilterLists(document.querySelectorAll('.global__filterarrow'))
 
+        const serializeFormSendXHR = (form, url, id) => {
+            if (!form) return
+            form.onsubmit = (e) => {
+                // if (grecaptcha && grecaptcha.getResponse().length === 0) return // uncomment when key capcha able
+                const callback = (response) => {
+                    if (form.id === 'mailingForm') {
+                        textInfoModal = 'Спасибо, Вы подписались на рассылку!'
+                    } else if (form.id === 'newCustomerForm' || form.id === 'regularCustomerForm' || form.id === 'oneClickForm') {
+                        textInfoModal = 'Спасибо, Ваш заказ оформлен!'
+                        // headerProductCount.innerHTML = ''
+                    } else if (form.id === 'reviewFormSent' || form.id === 'commentFormTop' || form.id === 'commentFormBot') {
+                        textInfoModal = 'Спасибо, Ваш отзыв отправлен!<br><span>Он будет опубликован после проверки модератором!</span>'
+                    } else if (form.id === 'registrationForm' && response.result === 'error') {
+                        textInfoModal = 'Уже существует пользователь с таким e-mail.<br><span>Если вы уверены, что это Ваш e-mail, воспользуйтесь формой забыли пароль.</span><br><span class="forgetPass">Забыли пароль?</span>'
+                    } else if (form.id === 'registrationForm' && response.result === 'ok') {
+                        textInfoModal = 'Спасибо за регистрацию!<br><span>На Ваш e-mail выслано письмо для подтверждения входа в личный кабинет.</span>'
+                    } else if (form.id === 'forgetPassForm') {
+                        textInfoModal = 'Спасибо!<br><span>На указаный адрес отправлено письмо<br>с инструкциями по восстановлению пароля.</span>'
+                    } else if (form.id === 'changeUserPass' && response.result === 'error') {
+                        textInfoModal = 'Извините, но текущий пароль неверный!'
+                    } else if (form.id === 'changeUserPass' && response.result === 'ok') {
+                        textInfoModal = 'Спасибо!<br><span>Ваш пароль успешно изменен!</span>'
+                    } else if (form.id === 'wishForm' || form.id === 'questionFormTop' || form.id === 'questionFormBot' || form.id === 'installExpertVisitDesk' || form.id === 'installExpertVisitMob') {
+                        textInfoModal = 'Спасибо, Ваш запрос оставлен!<br> <span>С вами свяжется менеджер в ближайшее время!</span>'
+                    }
+                    infoModal.querySelector('h3').innerHTML = textInfoModal
+                    forgetPassword(infoModal.querySelector('.forgetPass'))
+                    showModal(infoModal)
+                    form.reset()
+                }
+                // let data = new FormData(form)
+                // data.product_id = id
+                // sendXHR(url, data, callback)
+                callback('ok')
+                e.preventDefault()
+            }
+        }
+        serializeFormSendXHR(document.getElementById('mailingForm'), '/submit/maillist/')
+        // serializeFormSendXHR(document.getElementById('commentFormTop'), '/submit/review/')
+        // serializeFormSendXHR(document.getElementById('commentFormBot'), '/submit/review/')
+        // serializeFormSendXHR(document.getElementById('questionFormTop'), '/submit/question/')
+        // serializeFormSendXHR(document.getElementById('questionFormBot'), '/submit/question/')
+        // serializeFormSendXHR(document.getElementById('installExpertVisitDesk'), '/submit/expert/')
+        // serializeFormSendXHR(document.getElementById('installExpertVisitMob'), '/submit/expert/')
+
+        const forgetPassword = (elem) => {
+            if (!elem) return
+            elem.onclick = (e) => {
+                e.preventDefault()
+                let modal = document.getElementById('forgetPassModal')
+                showModal(modal)
+                serializeFormSendXHR(modal.querySelector('#forgetPassForm'), '/submit/restore/')
+            }
+        }
+
         let validateOptions = {
             nameCheck: /.{2,}/,
             emailCheck: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/,
@@ -177,7 +194,7 @@ export const ModalsPro = (props) => {
             divTooltip: document.createElement('div'),
             createTooltip(input) {
                 validateOptions.divTooltip.className = 'formtooltip'
-                document.body.append(validateOptions.divTooltip)
+                body.append(validateOptions.divTooltip)
                 validateOptions.divTooltip.innerHTML = input.dataset.formtooltip
                 validateOptions.divTooltip.style.display = 'block'
                 validateOptions.divTooltip.style.left = `${input.getBoundingClientRect().left}px`
@@ -347,9 +364,9 @@ export const ModalsPro = (props) => {
         })
 
         return () => {
-            document.body.style.overflow = ''
-            document.body.style.overflowY = ''
-            document.body.style.paddingRight = 0 + 'px'
+            body.style.overflow = ''
+            body.style.overflowY = ''
+            body.style.paddingRight = 0 + 'px'
         }
     }, [props])
     return (
@@ -366,8 +383,11 @@ export const ModalsPro = (props) => {
                     </div>
                     <div className="horizont"></div>
                     <ul className="burger__list">
-                        <li className="global__list"><a href=" " className="global__href global__arrow flexcenter">Личный
-                        кабинет<i></i><i></i></a>
+                        <li className="global__list"><a href=" " className="arrow__href flexcenter">Личный кабинет
+                            <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </a>
                             <ul>
                                 <li><a href="_cabinet_discount.html">Дисконтная программа</a></li>
                                 <li><a href="_cabinet_info.html">Моя информация</a></li>
@@ -387,8 +407,11 @@ export const ModalsPro = (props) => {
                         <li><Link to="Credit" replace>Рассрочка</Link></li>
                         <li><Link to="Actions" replace>Акции</Link></li>
                         <li><Link to="Contacts" replace>Конткаты</Link></li>
-                        <li className="global__list"><Link to="About" className="global__href global__arrow flexcenter">О
-                        Нас<i></i><i></i></Link>
+                        <li className="global__list"><Link to="About" className="arrow__href flexcenter">О Нас
+                            <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </Link>
                             <ul>
                                 <li><Link to="Sertificate" replace>Сертификат</Link></li>
                                 <li><Link to="Career" replace>Вакансии</Link></li>
@@ -428,35 +451,54 @@ export const ModalsPro = (props) => {
                     <div className="button__closegl"></div>
                     <h3 className="catalogue__production textcenter white">Каталог товаров</h3>
                     <ul className="catalogue__list">
-                        <li className="global__list"><a href=" " className="global__href global__arrow flexcenter">Домашние
-                        кинотеатры<i></i><i></i></a>
+                        <li className="global__list"><a href=" " className="arrow__href flexcenter">Домашние кинотеатры
+                            <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </a>
                             <ul>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                 <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                 <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                 <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                 <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
@@ -465,35 +507,55 @@ export const ModalsPro = (props) => {
                                 </li>
                             </ul>
                         </li>
-                        <li className="global__list"><a href=" " className="global__href global__arrow flexcenter">Акустические
-                        системы, HiFi/HiEnd<i></i><i></i></a>
+                        <li className="global__list"><a href=" " className="arrow__href flexcenter">Акустические
+                        системы, HiFi/HiEnd
+                         <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </a>
                             <ul>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                 <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
@@ -502,35 +564,55 @@ export const ModalsPro = (props) => {
                                 </li>
                             </ul>
                         </li>
-                        <li className="global__list"><a href=" " className="global__href global__arrow flexcenter">Стерео
-                        Системы, HiFI/HiEnd<i></i><i></i></a>
+                        <li className="global__list"><a href=" " className="arrow__href flexcenter">Стерео
+                        Системы, HiFI/HiEnd
+                            <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </a>
                             <ul>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
@@ -539,35 +621,55 @@ export const ModalsPro = (props) => {
                                 </li>
                             </ul>
                         </li>
-                        <li className="global__list"><a href=" " className="global__href global__arrow flexcenter">Виниловые
-                        проигрыватели<i></i><i></i></a>
+                        <li className="global__list"><a href=" " className="arrow__href flexcenter">Виниловые
+                        проигрыватели
+                            <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </a>
                             <ul>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
@@ -576,35 +678,55 @@ export const ModalsPro = (props) => {
                                 </li>
                             </ul>
                         </li>
-                        <li className="global__list"><a href=" " className="global__href global__arrow flexcenter">Кабели,
-                        HiFi/Hiend<i></i><i></i></a>
+                        <li className="global__list"><a href=" " className="arrow__href flexcenter">Кабели,
+                        HiFi/Hiend
+                            <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </a>
                             <ul>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
@@ -613,35 +735,55 @@ export const ModalsPro = (props) => {
                                 </li>
                             </ul>
                         </li>
-                        <li className="global__list"><a href=" " className="global__href global__arrow flexcenter">Наушники и
-                        портатив<i></i><i></i></a>
+                        <li className="global__list"><a href=" " className="arrow__href flexcenter">Наушники и
+                        портатив
+                            <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </a>
                             <ul>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
@@ -650,35 +792,55 @@ export const ModalsPro = (props) => {
                                 </li>
                             </ul>
                         </li>
-                        <li className="global__list"><a href=" " className="global__href global__arrow flexcenter">Профессиональное
-                        оборудование<i></i><i></i></a>
+                        <li className="global__list"><a href=" " className="arrow__href flexcenter">Профессиональное
+                        оборудование
+                            <svg>
+                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                            </svg>
+                        </a>
                             <ul>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                    <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
                                     </ul>
                                 </li>
-                                <li><a href=" " className="global__href global__arrow flexcenter">Напольная
-                                акустика<i></i><i></i></a>
+                                <li><a href=" " className="arrow__href flexcenter">Напольная
+                                акустика
+                                <svg>
+                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                    </svg>
+                                </a>
                                     <ul>
                                         <li><a href=" ">Напольная акустика</a></li>
                                         <li><a href=" ">Напольная акустика</a></li>
@@ -1245,7 +1407,7 @@ export const ModalsPro = (props) => {
                                     htmlFor="reviewFormSent01_05"></label>
                             </div>
                         </div>
-                        <div className="flexbet widthDesk comment__symbol">
+                        <div className="flexbet widthDesk comment__symbol marginbot4020">
                             <p className="flexcenter">dslkvflcfs</p>
                             <input type="text" placeholder="Введите символ с картинки" required="" />
                         </div>

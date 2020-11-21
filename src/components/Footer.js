@@ -51,7 +51,11 @@ export const Footer = () => {
                     <div className="horizont"></div>
                     <ul>
                         <li className="global__list"><a href=" "
-                            className="global__href footer__href flexcenter">Покупателям<i></i><i></i></a>
+                            className="arrow__href footer__href flexcenter">Покупателям
+                            <svg>
+                                <use xlinkHref={`${icons}#triangle`}></use>
+                            </svg>
+                        </a>
                             <ul>
                                 <li><Link to="Category" replace>Каталог товаров</Link></li>
                                 <li><Link to="Glossary">Глоссарий</Link></li>
@@ -63,7 +67,11 @@ export const Footer = () => {
                     <div className="horizont"></div>
                     <ul>
                         <li className="global__list"><a href=" "
-                            className="global__href footer__href flexcenter">Информация<i></i><i></i></a>
+                            className="arrow__href footer__href flexcenter">Информация
+                            <svg>
+                                <use xlinkHref={`${icons}#triangle`}></use>
+                            </svg>
+                        </a>
                             <ul>
                                 <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
                                 <li><Link to="Credit" replace>Рассрочка</Link></li>

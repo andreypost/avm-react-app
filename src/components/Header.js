@@ -20,6 +20,7 @@ export const Header = (props) => {
             }
         }
         showTooltip(document.querySelector('.header__call'))
+
         // const searchHeader = (searchInput) => {
         //     let searchSelected,
         //         searchRequestId,
@@ -111,15 +112,7 @@ export const Header = (props) => {
         //     })
         // }
         // searchHeader(document.getElementById('searchInput'))
-
-        const showIconTooltip = (elems) => {
-            for (let elem of elems) {
-                elem.onclick = (e) => {
-                    if (elem.previousElementSibling.innerHTML === '') e.preventDefault()
-                }
-            }
-        }
-        showIconTooltip(document.querySelectorAll('[data-headertooltip]'))
+        
     }, [])
     return (
         <header>

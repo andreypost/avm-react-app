@@ -64,8 +64,8 @@ section {
   align-items: center;
 }
 .noneDesk, #headerHoverCall, .nav__second, .nav__third,
-.products__popup, .global__list ul, .global__href i:nth-of-type(1).none,
-.tabs__block, .global__href i:nth-of-type(2), .banner__carousel .carousel-indicators,
+.products__popup, .global__list ul, .arrow__href i:nth-of-type(1).none,
+.tabs__block, .arrow__href i:nth-of-type(2), .banner__carousel .carousel-indicators,
 .global__checkmark:after, .header__burget, .header__navmob,
 .select__hide, .header__listabout, .products__rating input, .products__buymob,
 .footer__mob, .global__rating input, .box__table,
@@ -77,7 +77,7 @@ section {
 }
 
 a, i, span, label, button, .global__list ul.block,
-.global__href i:nth-of-type(2).block, .tabs__block.active,
+.arrow__href i:nth-of-type(2).block, .tabs__block.active,
 .ordercab__status h4.active, .header__about:hover .header__listabout,
 .nav__first li:hover .nav__second, .nav__second li:hover .nav__third,
 .products__icon:hover .products__popup, .global__label input:checked~.global__checkmark::after,
@@ -95,8 +95,8 @@ display: block;
 .header__search, .header__dataicons span:empty+a:hover::before,
 .nav__catalog ul li a, .products__card, .discount__card, .products__comments,
 .start__price.active, .box__column.active, .pagination__item,
-.select__item div, .select__clone, .item1, .item2 h5, .promo__offerheader,
-.contacts__social, .base__social:hover .products__popup,
+.select__item div, .select__clone, .item2 h5, .promo__offerheader,
+.contacts__social, .base__social:hover .products__popup, .discount__log,
 .cardsliderNav div, .specific__description tr, .infocab__confirm,
 .base__icon:hover .products__popup {
   display: flex;
@@ -166,7 +166,7 @@ h2, .glossary__list a, .manufacturers__list a, .item8 a, .aboutus__links a, .bas
 
 #mailingForm button, .seo__section>div p, .onebuy__header>h2, .basket__section>h2, .verify__section>h2,
 #askQuestionForm h3, .blockcard__inner>p, .cardbuy__totalprice span, .cabinet__empty h2,
-.commentcab__card hgroup h2, .cabinet__empty>a, .articles__leftnews h3, .articleinner__stars02 h2,
+.commentcab__title, .cabinet__empty>a, .articles__leftnews h3, .articleinner__stars02 h2,
 .column__article a, .column__article h4, .item2 .products__name, .item9 .discount__log,
 .jobs__article h2, .contacts__article h3, .contacts__social a, .catergory__box a, .stocksliderBlock>h3,
 .stocksliderBlock>p, .base__headerprice i, .base__headerbuy a, #cabinetForm button, #wishForm button,
@@ -256,7 +256,7 @@ h6, .cardbuy__additional .products__popup a, .base__descriptprofit p, .autocompl
 .articleinner__description a, .articleinner__description p, .articleinner__verdict p,
 .contacts__article h3, .contacts__address, .contacts__workmode, .contacts__delivery,
 .base__nav, .headerbuy__gift, .base__description p,
-.infocab__catalogue label, .verify__forms label, .commentcab__card h5, .verify__total h3,
+.infocab__catalogue label, .verify__forms label, .commentcab__card p, .verify__total h3,
 .paydel__section p, .delivery__article ul, .payment__article ul, .warranty__section p,
 .warranty__article ul, .warranty__rights ul, .warranty__centers ul, .installplan__article p,
 .installplan__article ul, .installplan__article>a, .bonus__article h3, .bonus__article p,
@@ -267,7 +267,7 @@ h6, .cardbuy__additional .products__popup a, .base__descriptprofit p, .autocompl
 
 .services__price ul, .services__grid h3, .glossary__articles p, .manufacturers__description h3,
 .manufacturers__articles a, .contacts__social a, .term__catalogue p, .articleinner__pm ul,
-#honestСredit ul, .comments__answer h3 {
+#honestСredit ul, .comments__answer h3, .breadcrumbs a, .breadcrumbs li:last-child {
   line-height: 24px;
 }
 
@@ -299,7 +299,7 @@ img, table, .widthDesk, .horizont, .header__input, #carouselIndex .carousel-indi
 .box__column, .column__offer, .column__card, .base__switch, .base__switch a, .reviews__card,
 #cabinetForm>input, #wishForm input, #oneClickForm input, #wishForm textarea, .promo__description *,
 .wish__symbol, #cardImgVideo .cardsliderRight, #buyOneClick textarea, .promo__offerheader,
-.cardbuy__additional .global__filterlabel, .item3 {
+.cardbuy__additional .global__filterlabel, .cabinet__content {
   width: 100%;
 }
 
@@ -413,7 +413,7 @@ body * {
   margin: 0 auto 40px auto;
 }
 
-.flexcolumn, .infocab__confirm, .products__card, .discount__card, .promo__offerheader {
+.flexcolumn, .infocab__confirm, .products__card, .discount__card, .promo__offerheader, .discount__log {
   flex-flow: column;
 }
 
@@ -425,9 +425,8 @@ body * {
   justify-content: flex-start;
 }
 
-.justcenter, .box__table, .box__grid, .header__dataicons span:empty+a:hover::before,
-.header__navlist, .pagination__item, .select__item div, .select__clone, .item1,
-.cardsliderNav div {
+.justcenter, .box__table, .box__grid, .header__dataicons span:empty+a:hover::before, .base__variants,
+.header__navlist, .pagination__item, .select__item div, .select__clone, .cardsliderNav div {
   justify-content: center;
 }
 
@@ -443,7 +442,7 @@ body * {
 
 .aligncenter, .header__dataicons span:empty+a:hover::before, .nav__catalog ul li a,
 .header__navlist, .products__card, .discount__card, .producers__card, .pagination__item,
-.select__item div, .select__clone, .item1, .cardsliderNav div {
+.select__item div, .select__clone, .cardsliderNav div {
   align-items: center;
 }
 
@@ -472,7 +471,8 @@ body * {
 td:nth-child(1), .footer__mob a, .global__deskfilter, #mailingForm hgroup, .blockcard__inner>p span,
 #expertVisit label, #signUpShowRoom label, #feedbackForm label, #installExpertVisitDesk label,
 .manufacturers__articles a, .articles__leftnews h3, .allpromo__header, .baseDiscountPay span,
-.specific__description td:nth-child(n+2), .basketcab__catalogue .blockcard__hgroup h3:nth-of-type(2) {
+.specific__description td:nth-child(n+2), .basketcab__catalogue .blockcard__hgroup h3:nth-of-type(2),
+.breadcrumbs, .commentcab__title {
   text-align: left;
 }
 
@@ -488,7 +488,7 @@ td:nth-child(1), .footer__mob a, .global__deskfilter, #mailingForm hgroup, .bloc
 }
 
 .relative, #carouselIndex .carousel-indicators,
-.products__rating label, .global__rating label,
+.products__rating label, .global__rating label, .verticalSlider,
 .discount__sales, .global__label, .global__filterlabel,
 .filter__result, .filterStoreText, .comparision__addremove a, .contacts__social a,
 .base__profits h5, .base__navmob a, .base__download, .base__description h2 {
@@ -537,8 +537,8 @@ td:nth-child(1), .footer__mob a, .global__deskfilter, #mailingForm hgroup, .bloc
 }
 
 a:hover, .orange, .header__cataloglinks a:hover, .header__cataloglinks .header__bonus,
-.nav__catalog a:hover, .products__popup a, .discount__log, .news__viewed a,
-.seo__section>p, .tabLink.active, .promo__href a, .item7 .products__price,
+.nav__catalog a:hover, .products__popup a, .discount__log, .news__viewed a, .comments__plus,
+.seo__section>p, .tabLink.active, .promo__href a, .item7 .products__price, .comments__minus,
 .comparison__category a.active, .base__navmob a.active, .header__about:hover>a,
 .header__listindex:hover>a, #carouselIndex .carousel-indicators a, .autocomplete__div h4,
 .discount__card .products__price, #addProduct .goBasket:hover, .global__back:hover, .basket__checkout button:hover,
@@ -575,10 +575,10 @@ a:hover, .orange, .header__cataloglinks a:hover, .header__cataloglinks .header__
   color: var(--white);
 }
 body, a, input, input::placeholder, textarea, .blue, .discount__card .products__name:hover, #headerCall>a, #headerCall>p,
-.header__listabout a, .products__price span, .services__heading.active, .item7 .products__color,
+.header__listabout a, .products__price span, .services__heading.activeElem, .item7 .products__color,
 .header__dataicons span:empty+a:hover::before, .verify__article hgroup h3.active,
 .specific__description td:nth-child(1), #registrationForm .registration__confirm label,
-#changeUserPass .change_cancel, #filterSearch a, .articles__filtershow:hover,
+#changeUserPass .change_cancel, #filterSearch a, .articles__filtershow:hover, .articleinner__section p>a,
 input[type="date" i], .global__deskfilter .deskreset__filter, .global__deskfilter .global__filterarrow {
   color: var(--blue);
 }
@@ -597,7 +597,7 @@ input[type="date" i], .global__deskfilter .deskreset__filter, .global__deskfilte
 #cabinetForm button, #wishForm button, #oneClickForm button, #cardImgVideo .buy__products,
 .blockcard__hgroup, #receivedOrder>p, .discountcab__catalogue>a:nth-of-type(2),
 #addProduct .goBasket, .basket__checkout button, .verify__forms button, .verify__sliderbanks h3,
-.catalogue__production, #filterForm button, .viewedcab__categories.active {
+.catalogue__production, #filterForm button, .viewedcab__categories.activeElem {
   background: var(--blue);
 }
 #headerHoverCall, .header__vertical, .autocomplete__items, .header__dataicons span:empty+a:hover::before,
@@ -640,7 +640,7 @@ textarea {
 }
 
 .underline, #carouselIndex .carousel-indicators a, #honestСredit a:hover,
-.start__price a, .comment__form a,
+.start__price a, .comment__form a, .articleinner__section p>a,
 .registration__confirm a, #infoUserForm a, .cabinet__empty h3 a, .ordercab__number h4,
 .ordercab__card a, .forgetPass, .delivery__article a, .payment__article a,
 .cardbuy__additional .products__popup a, .cabinet__checkbox a:hover {
@@ -665,9 +665,11 @@ textarea {
 .global__rightside {
   flex: 4;
 }
-
+.breadcrumbs {
+  margin: 20px 0;
+}
 .breadcrumbs a, .breadcrumbs li:last-child {
-  margin: 20px 5px 20px 0;
+  margin-right: 5px;
 }
 
 /* width owl carouseles && short bootstrap carouseles */
@@ -728,11 +730,13 @@ textarea {
   stroke: var(--white);
 }
 
-#headerHoverCall .button__closegl, .global__filterarrow svg {
+#headerHoverCall .button__closegl, .burger__list .arrow__href svg,
+.catalogue__list .arrow__href svg {
   stroke: var(--blue);
 }
 
-.header__about:hover .header__callarrow {
+.header__about:hover .header__callarrow, .burger__list .arrow__href svg.active,
+.catalogue__list .arrow__href svg.active {
   stroke: var(--orange);
 }
 
@@ -754,12 +758,18 @@ textarea {
   height: 9px;
 }
 
-.global__filterarrow svg.active, .header__callarrow, .select__clone.select__able:after,
-.base__profits h5.active::after, .additionalServices.active i, .viewedcab__categories.active i {
+.global__filterarrow svg, .header__callarrow, .select__clone.select__able:after, .arrow__href svg.active,
+.base__profits h5.active::after, .additionalServices.active i, .viewedcab__categories.activeElem i,
+.articles__deskfilter .arrow__href svg {
   transform: rotate(.5turn);
 }
 
-.header__call:hover .header__callarrow, .header__about:hover .header__callarrow {
+.arrow__href svg {
+  margin-left: auto;
+}
+
+.header__call:hover .header__callarrow, .header__about:hover .header__callarrow, .articles__deskfilter .arrow__href svg.active,
+.global__filterarrow svg.active {
   transform: rotate(1turn);
 }
 
@@ -1242,7 +1252,7 @@ a.header__bonus:hover, .discount__log:hover {
 }
 
 #carouselIndex .carousel-indicators li {
-  background: url(./img/Image364.png) center center no-repeat;
+  /* background: url(./img/Image364.png) center center no-repeat; */
   background-size: contain !important;
 }
 
@@ -1290,8 +1300,8 @@ a.header__bonus:hover, .discount__log:hover {
 .column__article a, .column__article h4, .column__href *,
 .column__description *, .promo__description *, .stocksliderBlock>p,
 .base__card a, .blockcard__name *, .blockcard__header *,
-.comments__text *, .specific__description tr *, .reviews__href a,
-.reviews__description p, .commentcab__card hgroup *, .received__description h4,
+.comments__text p, .specific__description tr *, .reviews__href a,
+.reviews__description p, .commentcab__title, .received__description h4,
 .ordercab__card hgroup *, .box__offerheader * , .searchnews__header *,
 .additionalServices span:nth-of-type(n+3) {
   display: -webkit-box;
@@ -1305,14 +1315,14 @@ a.header__bonus:hover, .discount__log:hover {
 .offer__card a, .news__card a, .column__article a, .column__href *,
 .blockcard__name *, .blockcard__header *, .received__description h4,
 .description__card *, .specific__description tr *, .reviews__href a,
-.commentcab__card hgroup *, .ordercab__card hgroup * , .box__offerheader *,
+.commentcab__title, .ordercab__card hgroup * , .box__offerheader *,
 .searchnews__header a, .base__card a {
   -webkit-line-clamp: 2;
 }
 .promo__description a, .stocksliderBlock>p {
   -webkit-line-clamp: 3;
 }
-.offer__card h6, .news__card h6, .comments__text *, .reviews__description p,
+.offer__card h6, .news__card h6, .comments__text p, .reviews__description p,
 .searchnews__header h6, .promo__description h5 {
   -webkit-line-clamp: 4;
 }
@@ -1364,12 +1374,13 @@ a.header__bonus:hover, .discount__log:hover {
 }
 
 .products__compare, .products__love, .base__ear {
-  width: 22px;
+  min-width: 22px;
   height: 26px;
   background: url(./img/Group3764.png) center center no-repeat;
 }
 
 .products__love {
+  margin-left: 10px;
   background: url(./img/Group3765.png) center center no-repeat;
 }
 
@@ -1379,10 +1390,6 @@ a.header__bonus:hover, .discount__log:hover {
 
 .products__love.active {
   background: url(./img/Group95.png) center center no-repeat;
-}
-
-.products__card .products__love, .discount__card .products__love, .column__card .products__love {
-  margin-left: 10px;
 }
 
 .products__card>img, .discount__card>img, .base__topbox img {
@@ -1395,11 +1402,11 @@ a.header__bonus:hover, .discount__log:hover {
   margin-top: auto;
 }
 .item2 .products__name {
-  height: 40px;
+  height: unset;
 }
 
 .products__rating {
-  width: 60px;
+  min-width: 70px;
   flex-direction: row-reverse;
   margin-right: 10px;
 }
@@ -1441,10 +1448,7 @@ a.header__bonus:hover, .discount__log:hover {
 }
 
 .discount__log:after {
-  position: absolute;
-  top: 12px;
-  left: 2px;
-  width: 70px;
+  width: 100%;
   height: 2px;
   background-position: -56px -171px;
 }
@@ -1637,7 +1641,7 @@ a.header__bonus:hover, .discount__log:hover {
 .footer__mob a {
   margin: 10px auto 10px 30px;
 }
-.footer__mob a:not(.global__href) {
+.footer__mob a:not(.arrow__href) {
   padding-left: 10px;
 }
 
@@ -1649,18 +1653,10 @@ a.header__bonus:hover, .discount__log:hover {
   background: #ACB8BF;
 }
 
-.footer__href i {
+.footer__href svg {
   width: 10px;
   height: 8px;
-  margin: 0 20px 0 auto;
-}
-
-.footer__href i:first-child {
-  background: url(./img/Path798.png) center center no-repeat;
-}
-
-.footer__href i:last-child {
-  background: url(./img/Path799.png) center center no-repeat;
+  margin-right: 20px;
 }
 
 /* pagination global */
@@ -1809,7 +1805,7 @@ a.header__bonus:hover, .discount__log:hover {
 }
 .global__linksfilter i {
   margin: 5px 10px 5px 2px;
-  width: 15px;
+  min-width: 15px;
   height: 15px;
   background: url(./img/Group774.png);
 }
@@ -1827,27 +1823,6 @@ a.header__bonus:hover, .discount__log:hover {
   height: 13px;
   margin-right: 10px;
 }
-
-/* .global__filterarrow i {
-  width: 21px;
-  height: 13px;
-  margin-right: 10px;
-  background: url(./img/Path210.png) center center no-repeat;
-}
-
-.global__filterarrow i:nth-of-type(2) {
-  background: url(./img/Path211.png) center center no-repeat;
-} */
-
-/* .global__filterarrow span:nth-of-type(2), .global__filterarrow i:nth-of-type(2),
-.global__filterarrow span:nth-of-type(1).none, .global__filterarrow i:nth-of-type(1).none {
-  display: none;
-}
-
-.global__filterarrow span:nth-of-type(2).block, .global__filterarrow i:nth-of-type(2).block {
-  display: block;
-} */
-
 
 /* filter range price */
 
@@ -1964,7 +1939,7 @@ a.header__bonus:hover, .discount__log:hover {
 /*  global stars rate */
 
 .global__rating {
-  width: 170px;
+  min-width: 170px;
   flex-direction: row-reverse;
 }
 
@@ -2098,6 +2073,12 @@ input[type="date" i] {
   background: url(./img/Path528.png) 98% center no-repeat;
 }
 
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+    background-color: var(--lightblue);
+}
+
 .services__add h2 {
   margin: 30px auto;
   padding: 10px;
@@ -2228,19 +2209,10 @@ input[type="date" i] {
   padding-left: 4px;
 }
 
-.articles__filterarrow {
-  margin: 15px 0;
-}
-
-.articles__filterarrow i {
+.articles__deskfilter .arrow__href svg {
   width: 12px;
   height: 8px;
-  margin-right: 10px;
-  background: url(./img/Path299.png) center center no-repeat;
-}
-
-.articles__filterarrow i:nth-of-type(2) {
-  background: url(./img/Path300.png) center center no-repeat;
+  margin: 15px 10px 15px 0;
 }
 
 /* article inner page */
@@ -2303,27 +2275,22 @@ input[type="date" i] {
   height: 240px;
 }
 
-.articleinner__img img, .articleinner__video video, .articleinner__video img,
+.articleinner__img img, .articleinner__video video, .articleinner__video iframe, .articleinner__video img,
 .articleinner__verdict {
   margin: 40px auto 20px;
 }
 
-.articleinner__video video, .articleinner__video img {
+.articleinner__video video, .articleinner__video iframe, .articleinner__video img {
   height: 460px;
 }
 
-.articleinner__compare>li {
+.articleinner__compare>li:nth-of-type(1), .articleinner__compare>li>ul>li, .articleinner__img p {
   padding: 20px 0;
 }
 
 .articleinner__pm, .articleinner__plus, .articleinner__minus {
   border-bottom: 2px solid var(--grey);
 }
-
-/* .articleinner__compare {
-  grid-template-rows: 80px;
-  grid-auto-rows: 120px;
-} */
 
 .articleinner__line {
   position: absolute;
@@ -2344,7 +2311,7 @@ input[type="date" i] {
   background: url(./img/Group454.png) center center no-repeat;
 }
 
-.articleinner__pm li:not(.articleinner__plus):not(.articleinner__minus) {
+.articleinner__pm>ul>li:not(.articleinner__plus):not(.articleinner__minus) {
   padding-left: 40px;
 }
 .articleinner__stars02 .global__rating {
@@ -2390,7 +2357,12 @@ input[type="date" i] {
 .column__offer h2, .box__offer h2 {
   padding: 16px 20px;
 }
-
+.column__article img {
+  min-width: 260px;
+  max-width: 260px;
+  min-height: 260px;
+  max-height: 260px;
+}
 .column__article h4, .column__article h5 {
   margin: 20px 0;
 }
@@ -2400,9 +2372,13 @@ input[type="date" i] {
 }
 
 .column__card {
-  grid-template-areas: "item1 item2 item2 item2 item2 item3 item7"
-                        "item1 item4 item4 item4 item4 item4 item8"
-                        "item1 item5 item5 item6 item6 item6 item9";
+  grid-template-areas: "item1 item2 item3 item7"
+                        "item1 item4 item4 item8"
+                        "item1  item5 item6 item9";
+  grid-template-columns: 25% 48% 6% 20%;
+  grid-template-rows: 70px 80px 70px;
+  justify-content: center;
+  align-items: center;
   grid-gap: 5px;
   padding: 10px;
 }
@@ -2411,19 +2387,12 @@ input[type="date" i] {
   grid-area: item1;
 }
 
-.item1 img, .column__article img {
-  min-width: 260px;
-  max-width: 260px;
-  min-height: 260px;
-  max-height: 260px;
+.item1 img {
+  max-height: 246px;
 }
 
 .item2 {
   grid-area: item2;
-}
-
-.item2 h5 {
-  margin-top: 5px;
 }
 
 .item3 {
@@ -2432,21 +2401,17 @@ input[type="date" i] {
 
 .item4 {
   grid-area: item4;
-  margin-top: auto;
 }
 
 .item5 {
   grid-area: item5;
-  /* width: 100px; */
 }
 
 .item6 {
   grid-area: item6;
-  margin-left: auto;
 }
-
-.item6 .products__rating {
-  width: 70px;
+.item3, .item6 {
+  justify-self: flex-end;
 }
 
 .item6 .products__rating label:before, .item6 .products__rating label:after,
@@ -2461,22 +2426,12 @@ input[type="date" i] {
   background-position: -114px -31px;
 }
 
-.item6 .products__comments {
-  margin-left: auto;
-}
-
 .item7 {
   grid-area: item7;
 }
 
-.item7 .products__price {
-  margin-top: 10px;
-}
-
 .item8 {
   grid-area: item8;
-  width: 200px;
-  margin: auto;
 }
 
 .item8 a {
@@ -2485,12 +2440,9 @@ input[type="date" i] {
 
 .item9 {
   grid-area: item9;
-  width: 260px;
 }
 
 .item9 .discount__log:after {
-  top: 20px;
-  left: 70px;
   width: 120px;
   background-position: -10px -10px;
 }
@@ -2963,11 +2915,12 @@ about_us, certificate, jobs - pages */
 .cardsliderArrowPrev, .cardsliderArrowNext {
   position: absolute;
   top: 40%;
-  left: -45px;
+  left: -100px;
+  z-index: 99;
 }
 .cardsliderArrowNext {
   left: unset;
-  right: -45px;
+  right: -100px;
 }
 .cardsliderNav {
   height: 452px;
@@ -3050,6 +3003,7 @@ about_us, certificate, jobs - pages */
 
 .stocksliderBlock.active {
   opacity: 1;
+  z-index: 99;
 }
 
 .stocksliderBlock>h3 {
@@ -3136,14 +3090,18 @@ about_us, certificate, jobs - pages */
 }
 
 .base__credit>a {
-  padding: 5px 25px;
+  padding: 5px 0;
+}
+.base__credit>a, .base__discount a {
+  width: 170px;
+  margin: auto;
 }
 .start__price {
   margin-top: 20px;
 }
 
 .base__discount a {
-  padding: 10px 37px;
+  padding: 10px 0;
   background: #EAECF5;
 }
 
@@ -3183,24 +3141,32 @@ about_us, certificate, jobs - pages */
   height: 25px;
   background: url(./img/gift.png) center center no-repeat;
 }
+.verticalBox, .base__card {
+  min-height: 160px;
+  max-height: 160px;
+}
 .verticalBox {
-  min-height: 140px;
-  max-height: 140px;
   overflow: hidden;
 }
-.base__card {
-  min-height: 140px;
-  max-height: 140px;
-}
 .base__card img {
-  max-width: 80px;
-  height: 60px;
+  max-width: 110px;
+  height: 80px;
   margin-bottom: 5px;
 }
 
 .base__card a {
   max-width: 160px;
   margin: 0 auto 20px;
+  height: 26px;
+}
+
+.vertical__switch {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  width: 34px;
+  margin: auto;
 }
 
 #baseGift .basegift__result>div, #baseComplect .basegift__result>div, #baseChiper .basegift__result>div {
@@ -3233,7 +3199,7 @@ about_us, certificate, jobs - pages */
 /* vertical slider */
 .verticalArrowup, .verticalArrowdown {
   width: 55px;
-  height: 45px;
+  height: 55px;
   background: url(./img/Path474.png) center center no-repeat;
 }
 .verticalArrowdown {
@@ -3360,6 +3326,7 @@ about_us, certificate, jobs - pages */
   padding-left: 20px;
 }
 .comments__text>i {
+  display: none;
   padding-top: 20px;
   width: 38px;
   height: 12px;
@@ -3367,9 +3334,6 @@ about_us, certificate, jobs - pages */
 }
 .comments__text>i.active {
   background: url(./img/Ellipse124.png) center center no-repeat;
-}
-.comments__text p.active {
-  -webkit-line-clamp: unset
 }
 .comments__hand {
   margin-left: auto;
@@ -3389,7 +3353,7 @@ about_us, certificate, jobs - pages */
 .commentsDislike.active {
   background: url(./img/base_dis_02.png) center center no-repeat;
 }
-.services__heading.active span, .base__comments>a, .wishcab__result h6, .cabinet__href, #oneClickForm label[for="comment"] {
+.services__heading.activeElem span, .base__comments>a, .wishcab__result h6, .cabinet__href, #oneClickForm label[for="comment"] {
   border-bottom: 2px dashed var(--blue);
 }
 .base__comments>a {
@@ -3439,6 +3403,9 @@ about_us, certificate, jobs - pages */
 .comment__form a {
   max-width: 145px;
   margin-right: auto;
+}
+.comment__symbol {
+  margin-top: 40px;
 }
 .comment__symbol p, .comment__form .comment__symbol input {
   width: 40%;
@@ -3646,10 +3613,10 @@ about_us, certificate, jobs - pages */
   background: url(./img/Group6.png) center center no-repeat;
 }
 .viewedcab__header .removeAllCard {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .viewedcab__headermob h5 {
-  padding: 5px 10px;
+  padding: 5px;
 }
 .viewedcab__headermob h5 i {
   margin-left: auto;
@@ -3676,11 +3643,14 @@ about_us, certificate, jobs - pages */
 .commentcab__card .products__rating {
   min-width: 100px;
 }
-.commentcab__card h3 {
+.comments__plus, .comments__minus, .commentcab__card h3 {
   margin-bottom: 5px;
 }
 .comments__answer p {
   margin-top: 20px;
+}
+.commentcab__card .products__rating, .commentcab__card h4 {
+  margin-top: 10px;
 }
 .commentcab__card h4 span {
   margin-left: 30px;
@@ -3870,7 +3840,7 @@ about_us, certificate, jobs - pages */
   top: -40px;
   left: 20px;
 }
-#cardImgVideo .global__back {
+#cardImgVideo .global__back, .base__description h2::before, .base__hgroup h1::before {
   width: 20px;
   height: 20px;
   background: url(./img/Path665.png) center center no-repeat; 
@@ -3879,12 +3849,6 @@ about_us, certificate, jobs - pages */
   padding: 10px 30px;
 }
 
-#cardImgVideo .cardsliderArrowPrev {
-  left: -10%;
-}
-#cardImgVideo .cardsliderArrowNext {
-  right: -10%;
-}
 #buyOneClick>article, #basketProduct>article, #verificationOrder>article,
 #getProductCredit>article {
   padding: 40px 0;
@@ -4219,15 +4183,10 @@ about_us, certificate, jobs - pages */
   padding-left: 20px;
 }
 
-.global__arrow i {
+.burger__list .arrow__href svg, .catalogue__list .arrow__href svg {
   width: 17px;
   height: 6px;
-  margin: 0 10px 0 auto;
-  background: url(./img/Path825.png) center center no-repeat;
-}
-
-.global__arrow i:nth-of-type(2) {
-  background: url(./img/Path826.png) center center no-repeat;
+  margin-right: 10px;
 }
 
 /* modal catalogue mobile & others */
@@ -4416,6 +4375,12 @@ about_us, certificate, jobs - pages */
   .discount__price {
     order: 2;
   }
+ .column__article img {
+    min-width: 180px;
+    max-width: 180px;
+    min-height: 180px;
+    max-height: 180px;
+  }
   .item7 .discount__price {
     order: unset;
   }
@@ -4425,7 +4390,7 @@ about_us, certificate, jobs - pages */
   .discount__log, .discount__card .products__price {
     margin: 0;
   }
-  .header__cataloglinks, .products__info, .item5, .item9, #receivedOrder {
+  .header__cataloglinks, .products__info, #receivedOrder {
     width: 100%;
   }
   .products__info {
@@ -4441,23 +4406,6 @@ about_us, certificate, jobs - pages */
   #getProductCredit>article, #infoModal>article {
     width: 90%;
   }
-  .item1 img, .column__article img {
-    min-width: 180px;
-    max-width: 180px;
-    min-height: 180px;
-    max-height: 180px;
-  }
-  .item8 {
-    width: 140px;
-    margin: 0 0 0 auto;
-  }
-  .item6__margin .products__comments {
-    margin-left: unset;
-    margin-right: auto;
-  }
-  .item9 .discount__log:after {
-    left: 10px;
-  }
   .header__cataloglinks>li>a, .comparison__category {
     margin: 20px auto;
   }
@@ -4472,12 +4420,6 @@ about_us, certificate, jobs - pages */
   }
   .global__rightside .global__searchfilter * {
     font-size: 13px;
-  }
-  #cardImgVideo .cardsliderArrowPrev {
-    left: -12%;
-  }
-  #cardImgVideo .cardsliderArrowNext {
-    right: -12%;
   }
   .additionalServices span:nth-of-type(n+2) {
     font-size: 10px;
@@ -4656,18 +4598,12 @@ about_us, certificate, jobs - pages */
   .block__card {
     padding: 5px;
   }
-  #cardImgVideo .cardsliderArrowPrev {
-    left: -14%;
-  }
-  #cardImgVideo .cardsliderArrowNext {
-    right: -14%;
-  }
    .viewedcab__headermob article {
     position: absolute;
     top: 30px;
     left: 0;
     right: 0;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #92A9B5;
     z-index: 99;
   }
@@ -4718,7 +4654,7 @@ about_us, certificate, jobs - pages */
   .banner__carousel .carousel-control-prev, .banner__carousel .carousel-control-next,
   .products__icon:hover .products__popup, .promo__button, .base__topbox img,
   .base__topbox a, .cardsliderNav img, .cardsliderNav video, #arrowUp, .footer__desk,
-  .blockcard__name h5, .tabsBlock, .item4, .item9 .discount__log, .column__article h4,
+  .blockcard__name h5, .tabsBlock, .item4, .item5, .item9, .column__article h4,
   .item .products__icon img, .products__icon img {
     display: none;
   }
@@ -4741,17 +4677,20 @@ about_us, certificate, jobs - pages */
   .cardsliderNav {
     flex-flow: row wrap;
   }
+  #cardSlider .cardsliderArrowPrev {
+    left: 0;
+  }
+  #cardSlider .cardsliderArrowNext {
+    right: 0;
+  }
   #mailingForm input, #mailingForm button, .header__settings, .paydel__important,
   .column__offer h2 {
     padding: 10px;
   }
- 
-  .header__settings>a:nth-of-type(1), .header__world, .item2 .products__name {
-    height: 25px;
-  }
   .header__settings>a:nth-of-type(1), .header__world {
     min-width: 20%;
     max-width: 90%;
+    height: 25px;
     margin-right: unset;
   }
   .header__search {
@@ -4788,17 +4727,17 @@ about_us, certificate, jobs - pages */
   .glossaryinner__section p, #addProduct h3, #addProduct button, #mailingForm button, .catergory__box a,
   .discountcab__catalogue th, .discountcab__catalogue td, .term__catalogue p, #honestСredit ul,
   .item6 .discount__log, #infoModal h3, #forgetPassForm label, .comparison__row, #cabinetForm>a,
-  .paydel__section p, .delivery__article ul, .payment__article ul, .certificate__section p,
+  .paydel__section p, .delivery__article ul, .payment__article ul, .certificate__section p, .commentcab__card p,
   .warranty__section p, .warranty__article ul, .warranty__rights ul, .warranty__centers ul, .base__description p,
   .installplan__article p, .installplan__article ul, .installplan__article>a, .item8 a, .reviews__href a,
   .bonus__article h3, .bonus__article p, .bonus__article ul, .aboutus__section p, .base__description h3,
   .jobs__article p, .jobs__article ul, .cooperation__article h3, .cooperation__article p,
   .articleinner__description a, .articleinner__description p, .articleinner__verdict p,
-  .comments__card p {
+  .comments__card p, .commentcab__title {
     font-size: 13px;
   }
-  .seo__section>div p, .error__section p, .error__section ul, .installcard__price>a,
-  .discountcab__catalogue hgroup h3, .contacts__article p, .contacts__social a,
+  .seo__section>div p, .error__section p, .error__section ul, .installcard__price>a, .commentcab__card h4,
+  .discountcab__catalogue hgroup h3, .contacts__article p, .contacts__social a, .commentcab__card h3,
   #feedbackForm label, .articleinner__stars01 p, .articleinner__butt button, .reviews__description p,
   .item2 .products__name, .item7 .products__price, .autocomplete__div, .searchnews__header a {
     font-size: 12px;
@@ -4829,6 +4768,9 @@ about_us, certificate, jobs - pages */
   .item7 .products__price span {
     font-size: 6px;
   }
+  .breadcrumbs a, .breadcrumbs li:last-child {
+    line-height: 18px;
+  }
   .paydel__section p, .delivery__article ul, .payment__article ul, .certificate__section p,
   .warranty__section p, .warranty__article ul, .glossaryinner__section p, .warranty__rights ul,
   .warranty__centers ul, .installplan__article p, .installplan__article ul, .installplan__article>a,
@@ -4839,8 +4781,11 @@ about_us, certificate, jobs - pages */
   .articleinner__pm ul, #honestСredit ul, .base__description p {
     line-height: 16px;
   }
-  .offer__card h6, .news__card h6 {
+  .offer__card h6, .news__card h6, .commentcab__card p {
     line-height: 14px;
+  }
+  .commentcab__card h4 {
+    margin-top: 10px;
   }
   .baseDiscountPay span, .basefloat__block .baseDiscountPay span, .searchnews__header h6 {
     line-height: 10px;
@@ -4924,15 +4869,13 @@ about_us, certificate, jobs - pages */
   .products__comments {
     margin:  10px 0;
   }
-  .discount__log:after {
-    top: 9px;
-    left: 0px;
-    width: 60px;
-  }
-  .item1 img, .base__features img {
+ .base__features img {
     min-width: 100px;
     max-width: 100px;
     min-height: 80px;
+    max-height: 80px;
+  }
+  .item1 img {
     max-height: 80px;
   }
   .column__article img, .articleinner__butt button {
@@ -4942,12 +4885,6 @@ about_us, certificate, jobs - pages */
   .column__article img {
     min-height: 120px;
     max-height: 120px;
-  }
-  .item2 {
-    margin-bottom: 5px;
-  }
-  .item7 .products__price {
-    margin-top: 5px;
   }
   .item8 a {
     padding: 8px 12px;
@@ -5058,15 +4995,15 @@ about_us, certificate, jobs - pages */
   #addProduct>article {
     height: 280px;
   }
-  .breadcrumbs a, .breadcrumbs li:last-child {
-    margin: 5px 5px 10px 0;
+  .breadcrumbs {
+    margin: 0;
   }
   .contacts__address img, .contacts__workmode img, .contacts__delivery img {
     width: 60px;
     height: 60px;
     margin-right: 10px;
   }
-  .marginbot2010, .seo__section>div p {
+  .marginbot2010, .seo__section>div p, .base__card a {
     margin-bottom: 10px;
   }
   .carousel__section, .services__price, .services__banner {
@@ -5095,7 +5032,7 @@ about_us, certificate, jobs - pages */
   .services__top, .services__heading, .services__middle, .comparison__row p {
     padding: 5px;
   }
-  .services__heading span, .services__heading.active span {
+  .services__heading span, .services__heading.activeElem span {
     border-bottom-width: 1px;
   }
   .error__section h1 {
@@ -5107,7 +5044,7 @@ about_us, certificate, jobs - pages */
   #expertVisit button, #signUpShowRoom button, #feedbackForm button {
     margin: 30px auto 10px;
   }
-  .global__hgroup, .glossary__articles, .articleinner__compare>li {
+  .global__hgroup, .glossary__articles, .articleinner__compare>li:nth-of-type(1), .articleinner__compare>li>ul>li {
     padding: 10px 0;
   }
   .glossary__articles img, .banks__img img {
@@ -5155,10 +5092,10 @@ about_us, certificate, jobs - pages */
   .articleinner__insta, .articleinner__face, .articleinner__tweet {
     width: 30px;
   }
-  .articleinner__video video, .articleinner__video img {
+  .articleinner__video video, .articleinner__video iframe, .articleinner__video img {
     height: 240px;
   }
-  .articleinner__img img, .articleinner__video video, .articleinner__video img,
+  .articleinner__img img, .articleinner__video video, .articleinner__video iframe, .articleinner__video img,
   .articleinner__verdict {
     margin: 20px auto 10px;
   }
@@ -5201,11 +5138,11 @@ about_us, certificate, jobs - pages */
     flex: 1;
   }
   .column__card {
-    grid-template-areas: "item5 item3 item2 item2"
-                        "item1 item1 item9 item9"
+    grid-template-areas: "item3 item3 item2 item2"
                         "item1 item1 item6 item6"
                         "item1 item1 item7 item8";
-    grid-template-columns: 1fr 1fr 3fr 1fr;
+    grid-template-columns: 15% 15% 42% 25%;
+    grid-template-rows: 50px 30px 40px;
   }
   .singlestocks__banner img {
     height: 220px;
@@ -5223,7 +5160,7 @@ about_us, certificate, jobs - pages */
     height: 50px;
   }
   th:nth-child(1), td:nth-child(1),
-  .articleinner__pm li:not(.articleinner__plus):not(.articleinner__minus) {
+  .articleinner__pm>ul>li:not(.articleinner__plus):not(.articleinner__minus) {
     padding-left: 5px;
   }
   .base__sliderstocks .cardsliderRight {
@@ -5239,6 +5176,12 @@ about_us, certificate, jobs - pages */
   }
   #cardImgVideo>article {
     padding: 40px;
+  }
+  #cardImgVideo .cardsliderArrowPrev {
+    left: -9%;
+  }
+  #cardImgVideo .cardsliderArrowNext {
+    right: -9%;
   }
   .cardsliderNav div, .cardsliderNav div.active+div {
     border: 1px solid var(--blue);
@@ -5266,22 +5209,18 @@ about_us, certificate, jobs - pages */
     max-height: 180px;
   }
   .base__description h2, .base__hgroup h1 {
-    padding-left: 20px;
+    padding-left: 25px;
   }
   .base__description h2 {
     margin: 10px 0 20px;
   }
   .base__description h2::before, .base__hgroup h1::before {
     position: absolute;
-    top: -8px;
+    top: 0;
     left: 0;
-    width: 12px;
-    height: 18px;
-    background-position: -10px -250px;
-  }
-  .base__description h2::before,
-  .base__hgroup h1::before {
-    top: -2px;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .reviews__card {
     grid-template-areas:
@@ -5292,8 +5231,8 @@ about_us, certificate, jobs - pages */
     grid-gap: 5px;
     padding: 10px 0;
   }
-  #mailingForm input, .item6, .specific__description td, .ordercab__card,
-  .verify__total h3, .item8 {
+  #mailingForm input, .base__sliderstocks article, #cardSlider, .item6, .specific__description td, .ordercab__card,
+  .verify__total h3 {
     width: 100%;
   }
   .specific__description tr {
@@ -5407,6 +5346,12 @@ about_us, certificate, jobs - pages */
   .box__table, .box__grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
+  .commentcab__card img {
+    max-width: 135px;
+    min-width: 135px;
+    max-height: 80px;
+    min-height: 80px;
+  }
 }
 
 
@@ -5430,12 +5375,9 @@ about_us, certificate, jobs - pages */
   .row580 {
     flex-flow: row;
   }
-  .col580 {
+  .col580, .viewedcab__header>div {
     flex-flow: column;
   }
-  /* .carousel__section {
-    padding: 0 10px;
-  } */
   .base__plus {
     font-size: 40px;
   }
@@ -5464,8 +5406,7 @@ about_us, certificate, jobs - pages */
   .cardbuy__additional>h3, .specific__description td:nth-child(n+2),
    .comment__form button, #registrationForm button,
    .discountcab__catalogue>a:nth-of-type(1), #infoUserForm label,
-  .cabinet__empty h2, .viewedcab__headermob article h3, .commentcab__card hgroup h2,
-  .commentcab__card h6, .cabinet__empty>a,
+  .cabinet__empty h2, .viewedcab__headermob article h3, .cabinet__empty>a,
   .verify__forms label, .start__price i, #changeUserPass label, .category__section .search__result {
     font-size: 13px;
   }
@@ -5501,9 +5442,6 @@ about_us, certificate, jobs - pages */
   .specific__description td {
     line-height: 15px;
   }
-  .commentcab__card h5 {
-    line-height: 14px;
-  }
   th, td {
     line-height: 7px;
   }
@@ -5517,7 +5455,7 @@ about_us, certificate, jobs - pages */
     border: none;
   }
   .category__section .global__searchfilter,
-  .search__section .global__searchfilter {
+  .search__section .global__searchfilter, .viewedcab__header .removeAllCard {
     margin: 10px 0;
   }
   .offer__special, .news__section {
@@ -5606,8 +5544,11 @@ about_us, certificate, jobs - pages */
   .articleinner__stars01 {
     grid-auto-rows: minmax(25px, auto);
   }
-  .global__rating, .basefloat__block .base__headerbuy a, .base__discount a {
+  .basefloat__block .base__headerbuy a, .base__discount a {
     width: 120px;
+  }
+  .global__rating {
+    min-width: 120px;
   }
   .global__rating label:before, .global__rating label:after {
     background-position: -10px -214px;
@@ -5636,8 +5577,7 @@ about_us, certificate, jobs - pages */
   .markdown__catalogue .global__filterset, .viewedproducts__catalogue .global__filterset {
     margin-top: -30px;
   }
-  #receivedOrder>p, .ordercab__card,
-  .base__discount a {
+  #receivedOrder>p, .ordercab__card {
     padding: 10px;
   }
 
@@ -5721,12 +5661,12 @@ about_us, certificate, jobs - pages */
     grid-template-columns: 38% 12% 38% 12%;
   }
   .verticalBox,  .base__card {
-    min-height: 125px;
-    max-height: 125px;
+    min-height: 145px;
+    max-height: 145px;
   }
   .base__card img {
-    max-width: 60px;
-    height: 50px;
+    max-width: 90px;
+    height: 70px;
   }
   .basegift__result>div {
     margin-left: 20px;
@@ -5759,6 +5699,28 @@ about_us, certificate, jobs - pages */
   }
   #cardImgVideo>article {
     padding: 10px 10px 20px;
+  }
+  .cardsliderArrowPrev, .cardsliderArrowNext {
+    height: 35px;
+    width: 35px;
+    background: url(./img/Path163.png) 46% center no-repeat, rgba(255, 255, 255, 0.3);
+  }
+  .cardsliderArrowNext {
+    background: url(./img/Path164.png) 54% center no-repeat, rgba(255, 255, 255, 0.3);
+  }
+  #cardSlider .cardsliderArrowPrev {
+    top: 33%;
+    left: 0;
+  }
+  #cardSlider .cardsliderArrowNext {
+    top: 33%;
+    right: 0;
+  }
+  #cardImgVideo .cardsliderArrowPrev {
+    left: -5%;
+  }
+  #cardImgVideo .cardsliderArrowNext {
+    right: -5%;
   }
   .basefloat__block {
     padding: 20px 0;
@@ -5810,12 +5772,6 @@ about_us, certificate, jobs - pages */
     margin: 0 5px;
     padding: 5px;
   }
-  .commentcab__card img {
-    max-width: 135px;
-    min-width: 135px;
-    max-height: 80px;
-    min-height: 80px;
-  }
   .ordercab__card hgroup * {
     -webkit-line-clamp: 1;
   }
@@ -5852,7 +5808,7 @@ about_us, certificate, jobs - pages */
 
 
 @media screen and (max-width: 425px) {
-  .articleinner__video video, .articleinner__video img {
+  .articleinner__video video, .articleinner__video iframe, .articleinner__video img {
     height: 160px;
   }
   .glossary__articles img {
