@@ -731,7 +731,7 @@ textarea {
 }
 
 #headerHoverCall .button__closegl, .burger__list .arrow__href svg,
-.catalogue__list .arrow__href svg {
+.catalogue__list .arrow__href svg, .global__deskfilter svg, .global__filterarrow svg {
   stroke: var(--blue);
 }
 
@@ -1252,7 +1252,7 @@ a.header__bonus:hover, .discount__log:hover {
 }
 
 #carouselIndex .carousel-indicators li {
-  /* background: url(./img/Image364.png) center center no-repeat; */
+  background: url(./img/Image364.png) center center no-repeat;
   background-size: contain !important;
 }
 
@@ -3399,13 +3399,12 @@ about_us, certificate, jobs - pages */
 .comment__form label, .comment__form div:nth-of-type(1) p {
   color: #888888;
 }
-
+.comment__symbol {
+  margin-top: 40px;
+}
 .comment__form a {
   max-width: 145px;
   margin-right: auto;
-}
-.comment__symbol {
-  margin-top: 40px;
 }
 .comment__symbol p, .comment__form .comment__symbol input {
   width: 40%;

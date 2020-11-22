@@ -6,7 +6,7 @@ import './reset.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 /* 
-.products__credit, .products__gift, .products__video,
+.products__credit, .products__gift, .products__video, -->  uncomment
 #carouselIndex .carousel-indicators li -->  uncomment
 change ../img to ./img
 */
