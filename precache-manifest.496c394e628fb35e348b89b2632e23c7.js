@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e5432ffcd9b8396e62148eec73be16bd",
+    "revision": "05248702543dda10eabeb43005425d15",
     "url": "/avm-react-app/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avm-react-app/static/css/2.01e2fbec.chunk.css"
   },
   {
-    "revision": "ec149db818b5bdd3a90f",
-    "url": "/avm-react-app/static/css/main.c2215b08.chunk.css"
+    "revision": "3966c008fc26f5229210",
+    "url": "/avm-react-app/static/css/main.11f25da2.chunk.css"
   },
   {
     "revision": "75497b82da05a81bdf93",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avm-react-app/static/js/2.ccbec1b5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ec149db818b5bdd3a90f",
-    "url": "/avm-react-app/static/js/main.87143bbe.chunk.js"
+    "revision": "3966c008fc26f5229210",
+    "url": "/avm-react-app/static/js/main.2a94a83e.chunk.js"
   },
   {
     "revision": "bb8877cb9a8a66ce9f93",
@@ -116,8 +116,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avm-react-app/static/media/gL.66a6193c.jpg"
   },
   {
-    "revision": "34cca0d5825668d6a6db3dc077eec594",
-    "url": "/avm-react-app/static/media/icons.34cca0d5.svg"
+    "revision": "8d87fc000d6ed4f77b8d65bbcfa65eb3",
+    "url": "/avm-react-app/static/media/icons.8d87fc00.svg"
   },
   {
     "revision": "6eb7fa9b0f11d2fc2dd5c9a28275af91",
