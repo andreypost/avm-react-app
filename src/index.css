@@ -64,8 +64,7 @@ section {
   align-items: center;
 }
 .noneDesk, #headerHoverCall, .nav__second, .nav__third,
-.products__popup, .global__list ul, .arrow__href i:nth-of-type(1).none,
-.tabs__block, .arrow__href i:nth-of-type(2), .banner__carousel .carousel-indicators,
+.products__popup, .global__list ul, .tabs__block, .banner__carousel .carousel-indicators,
 .global__checkmark:after, .header__burget, .header__navmob,
 .select__hide, .header__listabout, .products__rating input, .products__buymob,
 .footer__mob, .global__rating input, .box__table,
@@ -76,8 +75,7 @@ section {
   display: none;
 }
 
-a, i, span, label, button, .global__list ul.block,
-.arrow__href i:nth-of-type(2).block, .tabs__block.active,
+a, i, span, label, button, .global__list ul.block, .tabs__block.active,
 .ordercab__status h4.active, .header__about:hover .header__listabout,
 .nav__first li:hover .nav__second, .nav__second li:hover .nav__third,
 .products__icon:hover .products__popup, .global__label input:checked~.global__checkmark::after,
@@ -731,8 +729,7 @@ textarea {
   stroke: var(--white);
 }
 
-#headerHoverCall .button__closegl, .burger__list .arrow__href svg,
-.catalogue__list .arrow__href svg, .global__deskfilter svg, .global__filterarrow svg {
+#headerHoverCall .button__closegl, .arrow__href svg, .global__filterarrow svg {
   stroke: var(--blue);
 }
 
@@ -765,6 +762,10 @@ textarea {
   transform: rotate(.5turn);
 }
 
+.burger__list .arrow__href svg.active, .catalogue__list .arrow__href svg.active {
+  transform: scaleX(1.6) rotate(.5turn);
+}
+
 .arrow__href svg {
   margin-left: auto;
 }
@@ -773,6 +774,7 @@ textarea {
 .global__filterarrow svg.active {
   transform: rotate(1turn);
 }
+
 
 .header__line {
   width: 130px;
@@ -1390,7 +1392,6 @@ a.header__bonus:hover, .discount__log:hover {
   background: url(./img/Group95.png) center center no-repeat;
 }
 
-/* .products__card>img, .discount__card>img, .base__topbox img { */
 .products__card>a>img, .discount__card>a>img, .base__topbox img {
   margin: 10px 0;
   height: 110px;
@@ -1441,7 +1442,7 @@ a.header__bonus:hover, .discount__log:hover {
   min-height: 47px;
 }
 .discount__log {
-  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 .discount__log:after {
   width: 100%;
@@ -4175,6 +4176,7 @@ about_us, certificate, jobs - pages */
 }
 
 .burger__list .arrow__href svg, .catalogue__list .arrow__href svg {
+  transform: scaleX(1.6);
   width: 17px;
   height: 6px;
   margin-right: 10px;
@@ -4858,7 +4860,6 @@ about_us, certificate, jobs - pages */
     width: 80px;
     top: -8px;
   }
-  /* .products__card>img, .discount__card>img { */
   .products__card>a>img, .discount__card>a>img {
     height: 75px;
   }

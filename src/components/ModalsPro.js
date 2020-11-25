@@ -378,7 +378,7 @@ export const ModalsPro = (props) => {
                     <ul className="burger__list">
                         <li className="global__list"><a href=" " className="arrow__href flexcenter">Личный кабинет
                             <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </a>
                             <ul>
@@ -402,7 +402,7 @@ export const ModalsPro = (props) => {
                         <li><Link to="Contacts" replace>Конткаты</Link></li>
                         <li className="global__list"><Link to="About" className="arrow__href flexcenter">О Нас
                             <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </Link>
                             <ul>
@@ -446,14 +446,14 @@ export const ModalsPro = (props) => {
                     <ul className="catalogue__list">
                         <li className="global__list"><a href=" " className="arrow__href flexcenter">Домашние кинотеатры
                             <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </a>
                             <ul>
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                  <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -465,7 +465,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                  <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -477,7 +477,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                  <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -489,7 +489,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                  <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -503,14 +503,14 @@ export const ModalsPro = (props) => {
                         <li className="global__list"><a href=" " className="arrow__href flexcenter">Акустические
                         системы, HiFi/HiEnd
                          <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </a>
                             <ul>
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                  <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -522,7 +522,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -534,7 +534,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -546,7 +546,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -560,14 +560,14 @@ export const ModalsPro = (props) => {
                         <li className="global__list"><a href=" " className="arrow__href flexcenter">Стерео
                         Системы, HiFI/HiEnd
                             <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </a>
                             <ul>
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -579,7 +579,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -591,7 +591,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -603,7 +603,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -617,14 +617,14 @@ export const ModalsPro = (props) => {
                         <li className="global__list"><a href=" " className="arrow__href flexcenter">Виниловые
                         проигрыватели
                             <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </a>
                             <ul>
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -636,7 +636,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -648,7 +648,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -660,7 +660,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -674,14 +674,14 @@ export const ModalsPro = (props) => {
                         <li className="global__list"><a href=" " className="arrow__href flexcenter">Кабели,
                         HiFi/Hiend
                             <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </a>
                             <ul>
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -693,7 +693,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -705,7 +705,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -717,7 +717,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -731,14 +731,14 @@ export const ModalsPro = (props) => {
                         <li className="global__list"><a href=" " className="arrow__href flexcenter">Наушники и
                         портатив
                             <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </a>
                             <ul>
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -750,7 +750,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -762,7 +762,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -774,7 +774,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -788,14 +788,14 @@ export const ModalsPro = (props) => {
                         <li className="global__list"><a href=" " className="arrow__href flexcenter">Профессиональное
                         оборудование
                             <svg>
-                                <use xlinkHref={`${icons}#arrowModal`}></use>
+                                <use xlinkHref={`${icons}#arrow`}></use>
                             </svg>
                         </a>
                             <ul>
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -807,7 +807,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -819,7 +819,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                     <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
@@ -831,7 +831,7 @@ export const ModalsPro = (props) => {
                                 <li><a href=" " className="arrow__href flexcenter">Напольная
                                 акустика
                                 <svg>
-                                        <use xlinkHref={`${icons}#arrowModal`}></use>
+                                        <use xlinkHref={`${icons}#arrow`}></use>
                                     </svg>
                                 </a>
                                     <ul>
