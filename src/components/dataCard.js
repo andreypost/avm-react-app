@@ -1,4 +1,6 @@
+import empty from '../img/empty_img.png'
 import photo_000 from '../img/Image_000.jpg';
+import photo_000_1 from '../img/Image_000_1.jpg';
 import photo_001 from '../img/Image_001.png';
 import photo_002 from '../img/Image_002.jpg';
 import photo_003 from '../img/Image_003.jpg';
@@ -15,15 +17,16 @@ import photo_007 from '../img/Image_007.jpg';
 export default [
     {
         // 0
-        'image': photo_000,
+        'image': [photo_000, photo_000_1],
         'title': 'Усилитель мощности Naim Nap v175',
-        'price': '42120',
+        'description': 'Английская фирма Naim широко известна аудиофипам всего мира. Ее стереоусилители, предварительные усилители, CD-проигрыватели и громкоговорители давно занимают лидирующие места среди музыкальных систем, Но сегодня просмотр кино в жизни многих людей является не менее любимым способом времяпрепровождения, поэтому компанией была разработана театральная система на основе нового аудиопроцессора av2. В качестве обеспечения усилительной части системы предлагаются двухканальный "мощник" nap 150 и трехканальный nap v175. При желании получить семиканальную систему можно приобрести дополнительный стереоусилитель nap 150.',
+        'price': '63000',
         'basePrice': '78813',
         'clase': 'bestseller__product',
     },
     {
         // 1
-        'image': photo_001,
+        'image': [photo_001, empty],
         'title': 'Напольная акустика Energy Take Fps',
         'price': '8925',
         'basePrice': '10455',
@@ -31,7 +34,7 @@ export default [
     },
     {
         // 2
-        'image': photo_002,
+        'image': [photo_002, empty],
         'title': 'Проигрыватель винила THORENS Range Series TD 170-1 сильвер',
         'price': '9450',
         'basePrice': '0',

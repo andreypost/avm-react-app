@@ -24,7 +24,10 @@ import photo_022 from '../img/gW.jpg';
 import photo_023 from '../img/gX.jpg';
 import photo_024 from '../img/gY.jpg';
 import photo_025 from '../img/gZ.jpg';
-export default [
+
+
+
+let data = [
     {
         // 0
         'image': photo_000,
@@ -208,12 +211,11 @@ export default [
         'text': 'Этот аппарат допускает конфигурирование многозонной аудио/видеосистемы. Функция многозонного конфигурирования позволяет включать воспроизведение с других источников в главной, второй и&nbsp;третьей&nbsp;зонах (Zone 2, Zone 3). С помощью прилагаемого пульта ДУ аппаратом можно управлять из второй, третьей или четвертой зоны.',
         'id': 'Z',
     },
-    {
-        // 26 base for GlossaryInner page
-        'image': photo_000,
-        'header' : 'AIR SURROUND XTREME',
-        'title': 'AIR SURROUND XTREME',
-        'text': 'Технология AIR SURROUND XTREME позволяет получить реалистичное звучание формата 7.1 на системе, включающей только левую/правую АС и сабвуфер. Это достигается путем имитации звука через виртуальные центральный, тыловой и задний каналы.',
-        'id': 'A',
-    },
 ]
+
+Object.defineProperty(data, 'index', {
+    enumerable: false,
+    writable: true
+})
+data.index = 0
+export default data

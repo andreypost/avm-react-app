@@ -43,9 +43,9 @@ export const CardDiscount = (props) => {
                     <i className="products__love" data-product="id"></i>
                 </div>
             </div>
-            <img src={props.datos.image} alt="" />
+            <Link to="ProcardBase"><img src={props.datos.image[0]} alt="" /></Link>
             <div className="description__card">
-                <p className="discount__sales marginbot2010">Акция! Честный кредит до 24 месяцев. Акция! Акция!
+                <p className="discount__sales">Акция! Честный кредит до 24 месяцев. Акция! Акция!
                 Честный кредит
                 до
                         24 месяцев. Акция! Акция! Честный кредит до 24 месяцев. Акция!</p>

@@ -23,20 +23,20 @@ export const GlossaryInner = (props) => {
                     <ul className="flexstart breadcrumbs flexwrap">
                         <li><Link to="/">Главная &gt;</Link></li>
                         <li><Link to="Glossary">Глоссарий &gt;</Link></li>
-                        <li>{dataGlossary[26].title}</li>
+                        <li>{dataGlossary[dataGlossary.index].title}</li>
                     </ul>
                 </section>
                 <section className="glossaryinner__section textleft">
-                    <h1 className="marginbot2010">{dataGlossary[26].header}</h1>
+                    <h1 className="marginbot2010">{dataGlossary[dataGlossary.index].header}</h1>
                     <p className="marginbot2010">{new Date().getDate()} 20 марта 2019</p>
                     <div className="glossaryinner__header">
-                        <img src={dataGlossary[26].image} alt="" />
+                        <img src={dataGlossary[dataGlossary.index].image} alt="" />
                     </div>
-                    <p>{dataGlossary[26].text}</p>
+                    <p>{dataGlossary[dataGlossary.index].text}</p>
                     <div className="glossaryinner__imgbox flexcenter">
-                        <img src={dataGlossary[26].image} alt="" />
+                        <img src={dataGlossary[dataGlossary.index].image} alt="" />
                     </div>
-                    <p>{dataGlossary[26].text}</p>
+                    <p>{dataGlossary[dataGlossary.index].text}</p>
                 </section>
             </main>
             <Footer />

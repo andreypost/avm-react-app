@@ -46,7 +46,8 @@ export const CardProduct = (props) => {
                     <i className="products__love" data-product="id"></i>
                 </div>
             </div>
-            <img src={props.datos.image} alt="" />
+            <Link to="ProcardBase"><img src={props.datos.image[0]} alt="" /></Link>
+            {/* <img src={props.datos.image} alt="" /> */}
             <div className="description__card">
                 <Link to="ProcardBase" className="products__name">{props.datos.title}</Link>
             </div>

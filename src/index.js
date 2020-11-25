@@ -9,6 +9,10 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 .products__credit, .products__gift, .products__video, -->  uncomment
 #carouselIndex .carousel-indicators li -->  uncomment
 change ../img to ./img
+change: .products__card>img, .discount__card>img, .base__topbox img {
+        .products__card>img, .discount__card>img {
+    to: .products__card>a>img, .discount__card>a>img, .base__topbox img {
+        .products__card>a>img, .discount__card>a>img {
 */
 import './index.css';
 import 'bootstrap';

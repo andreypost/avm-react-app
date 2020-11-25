@@ -29,7 +29,7 @@ export const ProcardBase = (props) => {
       <section>
             <ul className="flexstart breadcrumbs flexwrap">
                 <li><Link to="/">Главная &gt;</Link></li>
-                <li><a href="_all_manufacturers.html">Производители &gt;</a></li>
+                <li><Link to="Manufacturers">Производители &gt;</Link></li>
                 <li>Минисистема Marshall Acton Black</li>
             </ul>
         </section>
