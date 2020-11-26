@@ -4,11 +4,9 @@ import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import dataGategory from './components/dataGategory';
 import { CardCategory } from './components/CardCategory';
-import dataCard from './components/dataCard';
+import dataHits from './components/dataHits';
 import { CardProduct } from './components/CardProduct';
 import { CardDiscount } from './components/CardDiscount';
-import dataOffer from './components/dataOffer';
-import { CardOffer } from './components/CardOffer';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
@@ -124,37 +122,13 @@ export const Category = (props) => {
               </div>
             </div>
             <article className="box__grid">
-              <CardProduct datos={dataCard[0]} />
-              <CardDiscount datos={dataCard[1]} />
-              <CardOffer datos={dataOffer[1]} />
-              <CardProduct datos={dataCard[22]} />
-              <CardDiscount datos={dataCard[21]} />
-              <CardProduct datos={dataCard[20]} />
-              <CardDiscount datos={dataCard[10]} />
-              <CardProduct datos={dataCard[11]} />
-              <CardOffer datos={dataOffer[0]} />
-              <CardDiscount datos={dataCard[12]} />
-              <CardProduct datos={dataCard[13]} />
-              <CardDiscount datos={dataCard[14]} />
-              <CardProduct datos={dataCard[2]} />
-              <CardOffer datos={dataOffer[2]} />
-              <CardDiscount datos={dataCard[3]} />
-              <CardProduct datos={dataCard[31]} />
-              <CardDiscount datos={dataCard[30]} />
-              <CardProduct datos={dataCard[29]} />
-              <CardDiscount datos={dataCard[28]} />
-              <CardProduct datos={dataCard[27]} />
-              <CardProduct datos={dataCard[4]} />
-              <CardDiscount datos={dataCard[5]} />
-              <CardProduct datos={dataCard[22]} />
-              <CardDiscount datos={dataCard[21]} />
-              <CardProduct datos={dataCard[20]} />
-              <CardProduct datos={dataCard[6]} />
-              <CardDiscount datos={dataCard[7]} />
-              <CardProduct datos={dataCard[22]} />
-              <CardOffer datos={dataOffer[2]} />
-              <CardDiscount datos={dataCard[21]} />
-              <CardProduct datos={dataCard[20]} />
+              {dataHits.map((card, i) => {
+                if (card.basePrice > 0) {
+                  return <CardDiscount key={card.code} datos={dataHits[i]} />
+                } else if (card.basePrice === '0') {
+                  return <CardProduct key={card.code} datos={dataHits[i]} />
+                }
+              })}
             </article>
             <nav className="pagination__global flexcenter justcenter">
               <a className="pagination__prev" href=" "> </a>

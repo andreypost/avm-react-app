@@ -8,7 +8,8 @@ export const BoxGlossary = (props) => {
     return (
         <div className={"tabsBlock flexcenter " + props.datos.class} id={props.datos.id} data-tab={props.datos.id} data-index={props.datos.index}>
             <div>
-                <img src={props.datos.image} alt="" />
+                <Link to="GlossaryInner"><img src={props.datos.image} onClick={handleSetGlossaryIndex} alt="" /></Link>
+                
             </div>
             <div>
                 <Link to="GlossaryInner" onClick={handleSetGlossaryIndex}>{props.datos.title}</Link>

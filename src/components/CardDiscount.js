@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const CardDiscount = (props) => {
+    const handleSetCardIndex = (e) => {
+        localStorage.setItem('cardIndex', e.target.closest('.item').dataset.index)
+    }
     return (
-        <div className={"item discount__card " + props.datos.clase} data-id={props.datos.id}>
+        <div className={"item discount__card " + props.datos.clase} data-index={props.datos.index}>
             <div className="flexbet">
                 <div className="flexcenter">
                     <div className="products__icon relative">
@@ -43,13 +46,13 @@ export const CardDiscount = (props) => {
                     <i className="products__love" data-product="id"></i>
                 </div>
             </div>
-            <Link to="ProcardBase" className="products__img"><img src={props.datos.image} alt="" /></Link>
+            <Link to="ProcardBase"><img src={props.datos.image[0]} onClick={handleSetCardIndex} alt="" /></Link>
             <div className="description__card">
                 <p className="discount__sales">Акция! Честный кредит до 24 месяцев. Акция! Акция!
                 Честный кредит
                 до
                         24 месяцев. Акция! Акция! Честный кредит до 24 месяцев. Акция!</p>
-                <Link to="ProcardBase" className="products__name" replace>{props.datos.title}</Link>
+                <Link to="ProcardBase" className="products__name" onClick={handleSetCardIndex}>{props.datos.title}</Link>
             </div>
             <div className="flexcenter juststart">
                 <div className="products__rating flexcenter ">
@@ -69,7 +72,7 @@ export const CardDiscount = (props) => {
             <div className="products__div flexbet alignend">
                 <div className="products__info flexcol alignstart">
                     <h5 className="discount__price flexcenter relative">{props.datos.basePrice}<span>&nbsp;грн</span></h5>
-                    <h3 className="products__price flexcenter">{props.datos.price}<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
+                    <h3 className="products__price flexcenter">{props.datos.sellingPrice}<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
                 </div>
                 <div className="flexcol">
                     <a href=" " className="products__buy">КУПИТЬ</a>

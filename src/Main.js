@@ -6,9 +6,8 @@ import icons from './icons.svg';
 import { Header } from './components/Header';
 import { HitsSection } from './components/HitsSection';
 // import dataHits from './components/dataHits';
-import dataCard from './components/dataCard';
-import { CardProduct } from './components/CardProduct';
-import { CardDiscount } from './components/CardDiscount';
+// import { CardProduct } from './components/CardProduct';
+// import { CardDiscount } from './components/CardDiscount';
 import dataOffer from './components/dataOffer';
 import { CardOffer } from './components/CardOffer';
 import { NewsSection } from './components/NewsSection';
@@ -511,24 +510,13 @@ export const Main = (props) => {
           <h3 className="navmob__catalogue">Каталог товаров</h3>
         </section>
         <section className="carousel__section vieded__section">
-          <div className="global__hgroup flexbet">
+          {/* <div className="global__hgroup flexbet">
             <h2>ПРОСМОТРЕННЫЕ ТОВАРЫ</h2>
             <a href="_viewed_products.html">Все товары</a>
           </div>
-          {/* {dataHits.map((card, i) => 
-            <CardProduct key={card.id} datos={dataHits[i]} />
-          )} */}
           <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
             responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-            <CardProduct datos={dataCard[24]} />
-            <CardDiscount datos={dataCard[23]} />
-            <CardProduct datos={dataCard[2]} />
-            <CardDiscount datos={dataCard[15]} />
-            <CardProduct datos={dataCard[25]} />
-            <CardDiscount datos={dataCard[26]} />
-            <CardProduct datos={dataCard[6]} />
-            <CardDiscount datos={dataCard[8]} />
-          </OwlCarousel>
+          </OwlCarousel> */}
           <article className="main__addicons flexcenter alignstart flexwrap black">
             <div className="flexcol">
               <svg>

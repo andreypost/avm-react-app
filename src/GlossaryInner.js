@@ -11,6 +11,11 @@ export const GlossaryInner = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
+    const handle = () => {
+        console.log(localStorage.getItem('glossaryIndex'))
+        localStorage.removeItem('glossaryIndex')
+        // console.log(localStorage.getItem('glossaryIndex'))
+    }
     return (
         <>
             <Header pathname={props.history.location.pathname}>
@@ -24,7 +29,7 @@ export const GlossaryInner = (props) => {
                     <ul className="flexstart breadcrumbs flexwrap">
                         <li><Link to="/">Главная &gt;</Link></li>
                         <li><Link to="Glossary">Глоссарий &gt;</Link></li>
-                        <li>{dataGlossary[index].title}</li>
+                        <li onClick={handle}>{dataGlossary[index].title}</li>
                     </ul>
                 </section>
                 <section className="glossaryinner__section textleft">

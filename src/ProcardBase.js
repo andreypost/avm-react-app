@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
-// import dataHits from './components/dataHits';
+import dataHits from './components/dataHits';
 // import { ProductCard } from './components/ProductCard';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer'
@@ -14,9 +14,14 @@ import { ModalsPro } from "./components/ModalsPro";
 // import photo_004 from './img/Image1.png';
 
 export const ProcardBase = (props) => {
+  let index = localStorage.getItem('cardIndex') || 0
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+  // const handle = () => {
+  //   console.log(localStorage.getItem('cardIndex'))
+  //   localStorage.removeItem('cardIndex')
+  // }
   return (
     <>
       <Header pathname={props.history.location.pathname}>
@@ -29,8 +34,8 @@ export const ProcardBase = (props) => {
       <section>
             <ul className="flexstart breadcrumbs flexwrap">
                 <li><Link to="/">Главная &gt;</Link></li>
-                <li><Link to="Manufacturers">Производители &gt;</Link></li>
-                {/* <li> {dataHits[dataHits.index].title} </li> */}
+                <li><Link to="Category">Каталог товаров &gt;</Link></li>
+                <li>{dataHits[index].title}</li>
             </ul>
         </section>
        

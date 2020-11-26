@@ -6,8 +6,11 @@ import photo_003 from '../img/Groupe466.png';
 import photo_004 from '../img/Groupe467.png';
 
 export const CardProduct = (props) => {
+    const handleSetCardIndex = (e) => {
+        localStorage.setItem('cardIndex', e.target.closest('.item').dataset.index)
+    }
     return (
-        <div className={"item products__card " + props.datos.clase} data-id={props.datos.id}>
+        <div className={"item products__card " + props.datos.clase} data-index={props.datos.index}>
             <div className="flexbet">
                 <div className="flexcenter">
                     <div className="products__icon relative">
@@ -46,17 +49,16 @@ export const CardProduct = (props) => {
                     <i className="products__love" data-product="id"></i>
                 </div>
             </div>
-            {/* <Link to="ProcardBase" className="products__img"><img src={props.datos.image[0]} alt="" /></Link> */}
-            <Link to="ProcardBase" className="products__img"><img src={props.datos.image} alt="" /></Link>
+            <Link to="ProcardBase"><img src={props.datos.image[0]} onClick={handleSetCardIndex} alt="" /></Link>
             <div className="description__card">
-                <Link to="ProcardBase" className="products__name">{props.datos.title}</Link>
+                <Link to="ProcardBase" className="products__name" onClick={handleSetCardIndex}>{props.datos.title}</Link>
             </div>
             <div className="flexcenter juststart">
                 <a href=" " className="receiveComment products__comments">Оставить отзыв</a>
             </div>
             <div className="products__div flexbet alignend">
                 <div className="flexcol alignstart">
-                    <h3 className="products__price flexcenter">{props.datos.price}<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
+                    <h3 className="products__price flexcenter">{props.datos.sellingPrice}<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
                 </div>
                 <div className="flexcol">
                     <i className="discount__log selfnend relative" data-product="">Хочу скидку!</i>
