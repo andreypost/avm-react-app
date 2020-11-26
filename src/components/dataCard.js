@@ -1,6 +1,4 @@
-import empty from '../img/empty_img.png'
 import photo_000 from '../img/Image_000.jpg';
-import photo_000_1 from '../img/Image_000_1.jpg';
 import photo_001 from '../img/Image_001.png';
 import photo_002 from '../img/Image_002.jpg';
 import photo_003 from '../img/Image_003.jpg';
@@ -81,6 +79,7 @@ export default [
         'price': '6499',
         'basePrice': '0',
         'clase': 'bestseller__product',
+        'id': '14',
     },
     {
         // 8
@@ -145,6 +144,7 @@ export default [
         'price': '6499',
         'basePrice': '0',
         'clase': 'newitem__product',
+        'id': '15',
     },
     {
         // 16
@@ -209,6 +209,7 @@ export default [
         'price': '6499',
         'basePrice': '0',
         'clase': 'markdown__product',
+        'id': '16',
     },
     {
         // 24
@@ -273,5 +274,6 @@ export default [
         'price': '6499',
         'basePrice': '0',
         'clase': '',
+        'id': '18',
     }
 ]

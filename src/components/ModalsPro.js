@@ -348,14 +348,13 @@ export const ModalsPro = (props) => {
         dateCalendarLimit(document.querySelectorAll('input[type="date"]'))
 
         window.addEventListener('resize', () => {
+            validateOptions.removeTooltip()
             // widthInner = window.innerWidth
             // getComporisionRowWidth(document.querySelector('.comparison__section'))
             // scrollCards(document.querySelectorAll('.verticalSlider'))
             // horizontalSlider(document.querySelectorAll('.horizontalSlider'))
             // showCommentsToggleClick(document.querySelectorAll('.comments__text i'))
-            validateOptions.removeTooltip()
         })
-
         return () => {
             body.style.overflow = ''
             body.style.overflowY = ''

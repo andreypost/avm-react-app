@@ -1650,6 +1650,7 @@ a.header__bonus:hover, .discount__log:hover {
   width: 10px;
   height: 8px;
   margin-right: 20px;
+  stroke: none;
 }
 
 /* pagination global */

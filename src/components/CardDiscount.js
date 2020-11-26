@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const CardDiscount = (props) => {
     return (
-        <div className={"item discount__card " + props.datos.clase} >
+        <div className={"item discount__card " + props.datos.clase} data-id={props.datos.id}>
             <div className="flexbet">
                 <div className="flexcenter">
                     <div className="products__icon relative">
@@ -43,7 +43,7 @@ export const CardDiscount = (props) => {
                     <i className="products__love" data-product="id"></i>
                 </div>
             </div>
-            <Link to="ProcardBase"><img src={props.datos.image} alt="" /></Link>
+            <Link to="ProcardBase" className="products__img"><img src={props.datos.image} alt="" /></Link>
             <div className="description__card">
                 <p className="discount__sales">Акция! Честный кредит до 24 месяцев. Акция! Акция!
                 Честный кредит

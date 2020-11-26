@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
-// import cardData from './components/cardData';
+// import dataHits from './components/dataHits';
 // import { ProductCard } from './components/ProductCard';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer'
@@ -30,7 +30,7 @@ export const ProcardBase = (props) => {
             <ul className="flexstart breadcrumbs flexwrap">
                 <li><Link to="/">Главная &gt;</Link></li>
                 <li><Link to="Manufacturers">Производители &gt;</Link></li>
-                <li>Минисистема Marshall Acton Black</li>
+                {/* <li> {dataHits[dataHits.index].title} </li> */}
             </ul>
         </section>
        

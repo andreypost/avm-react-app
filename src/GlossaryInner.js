@@ -7,6 +7,7 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
 export const GlossaryInner = (props) => {
+    let index = localStorage.getItem('glossaryIndex') || 0
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -23,20 +24,20 @@ export const GlossaryInner = (props) => {
                     <ul className="flexstart breadcrumbs flexwrap">
                         <li><Link to="/">Главная &gt;</Link></li>
                         <li><Link to="Glossary">Глоссарий &gt;</Link></li>
-                        <li>{dataGlossary[dataGlossary.index].title}</li>
+                        <li>{dataGlossary[index].title}</li>
                     </ul>
                 </section>
                 <section className="glossaryinner__section textleft">
-                    <h1 className="marginbot2010">{dataGlossary[dataGlossary.index].header}</h1>
+                    <h1 className="marginbot2010">{dataGlossary[index].header}</h1>
                     <p className="marginbot2010">{new Date().getDate()} 20 марта 2019</p>
                     <div className="glossaryinner__header">
-                        <img src={dataGlossary[dataGlossary.index].image} alt="" />
+                        <img src={dataGlossary[index].image} alt="" />
                     </div>
-                    <p>{dataGlossary[dataGlossary.index].text}</p>
+                    <p>{dataGlossary[index].text}</p>
                     <div className="glossaryinner__imgbox flexcenter">
-                        <img src={dataGlossary[dataGlossary.index].image} alt="" />
+                        <img src={dataGlossary[index].image} alt="" />
                     </div>
-                    <p>{dataGlossary[dataGlossary.index].text}</p>
+                    <p>{dataGlossary[index].text}</p>
                 </section>
             </main>
             <Footer />

@@ -7,7 +7,7 @@ import photo_004 from '../img/Groupe467.png';
 
 export const CardProduct = (props) => {
     return (
-        <div className={"item products__card " + props.datos.clase} >
+        <div className={"item products__card " + props.datos.clase} data-id={props.datos.id}>
             <div className="flexbet">
                 <div className="flexcenter">
                     <div className="products__icon relative">
@@ -46,8 +46,8 @@ export const CardProduct = (props) => {
                     <i className="products__love" data-product="id"></i>
                 </div>
             </div>
-            <Link to="ProcardBase"><img src={props.datos.image} alt="" /></Link>
-            {/* <img src={props.datos.image} alt="" /> */}
+            {/* <Link to="ProcardBase" className="products__img"><img src={props.datos.image[0]} alt="" /></Link> */}
+            <Link to="ProcardBase" className="products__img"><img src={props.datos.image} alt="" /></Link>
             <div className="description__card">
                 <Link to="ProcardBase" className="products__name">{props.datos.title}</Link>
             </div>

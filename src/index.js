@@ -16,7 +16,6 @@ change: .products__card>img, .discount__card>img, .base__topbox img {
 */
 import './index.css';
 import 'bootstrap';
-
 import { Main } from './Main';
 import { Category } from './Category';
 import { Services } from './Services';
@@ -36,11 +35,14 @@ import { Terms } from './Terms';
 import { Manufacturers } from './Manufacturers';
 import { Glossary } from './Glossary';
 import { GlossaryInner } from './GlossaryInner';
-
 import { ProcardBase } from './ProcardBase';
 import * as serviceWorker from './serviceWorker';
 
 export const App = () => {
+  // const [index, setIndex] = useState('0') // settings for lifting up states: Glossary, GlossaryInner;
+  // const handleIndexSet = (value) => {
+    // setIndex(value)
+  // }
   return (
     <HashRouter basename='/'>
         <Route exact path="/" component={Main} />
@@ -62,6 +64,8 @@ export const App = () => {
         <Route path="/Manufacturers" component={Manufacturers} />
         <Route path="/Glossary" component={Glossary} />
         <Route path="/GlossaryInner" component={GlossaryInner} />
+        {/* <Route path="/Glossary" render={(props) => ( <Glossary {...props} index={index} setIndex={handleIndexSet} />)} /> */}
+        {/* <Route path="/GlossaryInner" render={(props) => ( <GlossaryInner {...props} index={index} setIndex={handleIndexSet} />)} /> */}
         <Route path="/ProcardBase" component={ProcardBase} />
     </HashRouter>
   );
