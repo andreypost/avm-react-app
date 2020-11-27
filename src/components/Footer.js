@@ -28,7 +28,7 @@ export const Footer = () => {
                         </div>
                         <ul className="flexcenter">
                             <li><Link to="Category" replace>Каталог товаров</Link></li>
-                            <li><Link to="Glossary">Глоссарий</Link></li>
+                            <li><Link to="Glossary" replace>Глоссарий</Link></li>
                             <li><Link to="Services" replace>Услуги</Link></li>
                             <li><Link to="Hall" replace>Зал прослушивания</Link></li>
                             <li><Link to="Delivery" replace>Оплата и доставка</Link></li>
@@ -58,7 +58,7 @@ export const Footer = () => {
                         </a>
                             <ul>
                                 <li><Link to="Category" replace>Каталог товаров</Link></li>
-                                <li><Link to="Glossary">Глоссарий</Link></li>
+                                <li><Link to="Glossary" replace>Глоссарий</Link></li>
                                 <li><Link to="Services" replace>Услуги</Link></li>
                                 <li><Link to="Hall" replace>Зал прослушивания</Link></li>
                             </ul>

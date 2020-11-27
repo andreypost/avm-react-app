@@ -9,7 +9,6 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
 export const Glossary = (props) => {
-    let alfa = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -31,7 +30,7 @@ export const Glossary = (props) => {
                 <section id="manufacturesLinks" className="glossary__section textleft">
                     <h1 className="marginbot2010">Глоссарий</h1>
                     <article className="tabsCaption glossary__list flexcenter justcenter flexwrap textcenter">
-                        {alfa.map((list,i) =>
+                        {['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'].map((list,i) =>
                             i === 0 ? <HashLink key={list} to={`#${list}`} className="tabLink active" data-tab={list}>{list}</HashLink> :
                             <HashLink key={list} to={`#${list}`} className="tabLink" data-tab={list}>{list}</HashLink>
                         )}

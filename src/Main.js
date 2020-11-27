@@ -551,15 +551,9 @@ export const Main = (props) => {
             </div>
             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
               responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-              <CardOffer datos={dataOffer[0]} />
-              <CardOffer datos={dataOffer[1]} />
-              <CardOffer datos={dataOffer[2]} />
-              <CardOffer datos={dataOffer[0]} />
-              <CardOffer datos={dataOffer[1]} />
-              <CardOffer datos={dataOffer[2]} />
-              <CardOffer datos={dataOffer[0]} />
-              <CardOffer datos={dataOffer[1]} />
-              <CardOffer datos={dataOffer[2]} />
+              {dataOffer.map((card, i) =>
+                <CardOffer key={i} datos={card} />
+              )}
             </OwlCarousel>
           </section>
         </article>

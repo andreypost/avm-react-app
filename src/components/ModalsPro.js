@@ -1333,9 +1333,7 @@ export const ModalsPro = (props) => {
                 <article className="relative">
                     <div className="button__closegl"></div>
                     <div className="marginbot2010">
-                        <h2 className="honestTitle marginbot2010 red">Акция! Честный кредит до 24 месяцев. Акция! Честный Акция! Честный
-                        кредит до
-                    24 месяцев. Акция! Честный</h2>
+                        <h2 className="honestTitle marginbot2010 red">Предновогодняя распродажа в Аудио Видео Мире!</h2>
                         <ul className="honestContent">
                             <li>Для всех участников акции действует специальное предложение -
                         покупайте в этот же день любой другой товар со ЗНАЧИТЕЛЬНОЙ СКИДКОЙ!</li>

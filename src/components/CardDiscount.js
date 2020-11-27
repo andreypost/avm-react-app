@@ -48,10 +48,7 @@ export const CardDiscount = (props) => {
             </div>
             <Link to="ProcardBase"><img src={props.datos.image[0]} onClick={handleSetCardIndex} alt="" /></Link>
             <div className="description__card">
-                <p className="discount__sales">Акция! Честный кредит до 24 месяцев. Акция! Акция!
-                Честный кредит
-                до
-                        24 месяцев. Акция! Акция! Честный кредит до 24 месяцев. Акция!</p>
+                <p className="discount__sales">Предновогодняя распродажа в Аудио Видео Мире!</p>
                 <Link to="ProcardBase" className="products__name" onClick={handleSetCardIndex}>{props.datos.title}</Link>
             </div>
             <div className="flexcenter juststart">

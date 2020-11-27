@@ -20,43 +20,25 @@ export const NewsSection = () => {
                         <article className="tabs__block active" data-tab="news">
                             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                                 responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                                <NewsCard datos={dataNews[0]} />
-                                <NewsCard datos={dataNews[1]} />
-                                <NewsCard datos={dataNews[2]} />
-                                <NewsCard datos={dataNews[3]} />
-                                <NewsCard datos={dataNews[4]} />
-                                <NewsCard datos={dataNews[5]} />
-                                <NewsCard datos={dataNews[6]} />
-                                <NewsCard datos={dataNews[7]} />
-                                <NewsCard datos={dataNews[0]} />
+                                {dataNews.map((card, i) =>
+                                    card.clase === 'news' ? <NewsCard key={i} datos={card} /> : null
+                                )}
                             </OwlCarousel>
                         </article>
                         <article className="tabs__block" data-tab="articles">
                             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                                 responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                                <NewsCard datos={dataNews[1]} />
-                                <NewsCard datos={dataNews[2]} />
-                                <NewsCard datos={dataNews[3]} />
-                                <NewsCard datos={dataNews[4]} />
-                                <NewsCard datos={dataNews[5]} />
-                                <NewsCard datos={dataNews[6]} />
-                                <NewsCard datos={dataNews[7]} />
-                                <NewsCard datos={dataNews[0]} />
-                                <NewsCard datos={dataNews[1]} />
+                                {dataNews.map((card, i) =>
+                                   card.clase === 'article' ? <NewsCard key={i} datos={card} /> : null
+                                )}
                             </OwlCarousel>
                         </article>
                         <article className="tabs__block" data-tab="reviews">
                             <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={false} navText={false}
                                 responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
-                                <NewsCard datos={dataNews[2]} />
-                                <NewsCard datos={dataNews[3]} />
-                                <NewsCard datos={dataNews[4]} />
-                                <NewsCard datos={dataNews[5]} />
-                                <NewsCard datos={dataNews[6]} />
-                                <NewsCard datos={dataNews[7]} />
-                                <NewsCard datos={dataNews[0]} />
-                                <NewsCard datos={dataNews[1]} />
-                                <NewsCard datos={dataNews[2]} />
+                                {dataNews.map((card, i) =>
+                                    card.clase === 'rewiew' ? <NewsCard key={i} datos={card} /> : null
+                                )}
                             </OwlCarousel>
                         </article>
                     </div>
