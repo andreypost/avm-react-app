@@ -72,7 +72,7 @@ export const CardDiscount = (props) => {
             <div className="products__div flexbet alignend">
                 <div className="products__info flexcol alignstart">
                     <h5 className="discount__price flexcenter relative">{props.datos.basePrice}<span>&nbsp;грн</span></h5>
-                    <h3 className="products__price flexcenter">{props.datos.sellingPrice}<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
+                    <h3 className="products__price flexcenter">{props.datos.sellingPrice}<span>&nbsp;грн</span></h3>
                 </div>
                 <div className="flexcol">
                     <a href=" " className="products__buy">КУПИТЬ</a>

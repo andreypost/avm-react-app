@@ -58,7 +58,7 @@ export const CardProduct = (props) => {
             </div>
             <div className="products__div flexbet alignend">
                 <div className="flexcol alignstart">
-                    <h3 className="products__price flexcenter">{props.datos.sellingPrice}<span>&nbsp;грн/<br />&nbsp;комплект</span></h3>
+                    <h3 className="products__price flexcenter">{props.datos.sellingPrice}<span>&nbsp;грн</span></h3>
                 </div>
                 <div className="flexcol">
                     <i className="discount__log selfnend relative" data-product="">Хочу скидку!</i>
