@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1bfc2f83b673fdf25b577c7d0cd01ec3",
+    "revision": "e927dcc3d779de1c44aa5044b760f7ef",
     "url": "/avm-react-app/index.html"
   },
   {
-    "revision": "79aa09f33f0634091702",
+    "revision": "18d546cf083b5a581243",
     "url": "/avm-react-app/static/css/2.01e2fbec.chunk.css"
   },
   {
-    "revision": "d4e753f67b61d79e71c8",
+    "revision": "8e5e25c070eb8789f735",
     "url": "/avm-react-app/static/css/main.572951c1.chunk.css"
   },
   {
-    "revision": "79aa09f33f0634091702",
-    "url": "/avm-react-app/static/js/2.e90ceda9.chunk.js"
+    "revision": "18d546cf083b5a581243",
+    "url": "/avm-react-app/static/js/2.2af2fcf2.chunk.js"
   },
   {
     "revision": "925e52c28b12d63edac5d05fc71f820f",
-    "url": "/avm-react-app/static/js/2.e90ceda9.chunk.js.LICENSE.txt"
+    "url": "/avm-react-app/static/js/2.2af2fcf2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d4e753f67b61d79e71c8",
-    "url": "/avm-react-app/static/js/main.7500d3b7.chunk.js"
+    "revision": "8e5e25c070eb8789f735",
+    "url": "/avm-react-app/static/js/main.b64c6073.chunk.js"
   },
   {
     "revision": "bb8877cb9a8a66ce9f93",
@@ -69,15 +69,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "ed1d7107998c6acaf128f962a925c8e5",
-    "url": "/avm-react-app/static/media/Offer_001.ed1d7107.png"
+    "url": "/avm-react-app/static/media/Offer_000.ed1d7107.png"
   },
   {
     "revision": "c0244986d0732a409b5c370d1481e941",
-    "url": "/avm-react-app/static/media/Offer_002.c0244986.jpg"
+    "url": "/avm-react-app/static/media/Offer_001.c0244986.jpg"
   },
   {
     "revision": "7c0b1c7efcd0dee310d7e320d163e689",
-    "url": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg"
+    "url": "/avm-react-app/static/media/Offer_002.7c0b1c7e.jpg"
+  },
+  {
+    "revision": "74892c25e803b94db011a9a7fd5a2f7f",
+    "url": "/avm-react-app/static/media/Offer_003.74892c25.jpg"
+  },
+  {
+    "revision": "8585b816d32de2be35a9f7a6c0ba5663",
+    "url": "/avm-react-app/static/media/Offer_004.8585b816.png"
   },
   {
     "revision": "8291f2ad08104bfebcbd8bbca633923f",
@@ -626,6 +634,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "96c4229bbaeae186ad48ff947f1c8e2d",
     "url": "/avm-react-app/static/media/news_006.96c4229b.jpg"
+  },
+  {
+    "revision": "e27a27e1ee71b915092baf7d9d89c04e",
+    "url": "/avm-react-app/static/media/news_014.e27a27e1.jpg"
   },
   {
     "revision": "232f83153274aba055b505cf541db019",

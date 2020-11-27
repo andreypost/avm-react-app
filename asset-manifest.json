@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/avm-react-app/static/css/main.572951c1.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.7500d3b7.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.7500d3b7.chunk.js.map",
+    "main.js": "/avm-react-app/static/js/main.b64c6073.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.b64c6073.chunk.js.map",
     "runtime-main.js": "/avm-react-app/static/js/runtime-main.c2272596.js",
     "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.c2272596.js.map",
     "static/css/2.01e2fbec.chunk.css": "/avm-react-app/static/css/2.01e2fbec.chunk.css",
-    "static/js/2.e90ceda9.chunk.js": "/avm-react-app/static/js/2.e90ceda9.chunk.js",
-    "static/js/2.e90ceda9.chunk.js.map": "/avm-react-app/static/js/2.e90ceda9.chunk.js.map",
+    "static/js/2.2af2fcf2.chunk.js": "/avm-react-app/static/js/2.2af2fcf2.chunk.js",
+    "static/js/2.2af2fcf2.chunk.js.map": "/avm-react-app/static/js/2.2af2fcf2.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.52bf300d25230f679fbafd54dcb233c9.js": "/avm-react-app/precache-manifest.52bf300d25230f679fbafd54dcb233c9.js",
+    "precache-manifest.98f0d9a7dbe07a81c031f2451bc2d907.js": "/avm-react-app/precache-manifest.98f0d9a7dbe07a81c031f2451bc2d907.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
     "static/css/2.01e2fbec.chunk.css.map": "/avm-react-app/static/css/2.01e2fbec.chunk.css.map",
     "static/css/main.572951c1.chunk.css.map": "/avm-react-app/static/css/main.572951c1.chunk.css.map",
-    "static/js/2.e90ceda9.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.e90ceda9.chunk.js.LICENSE.txt",
+    "static/js/2.2af2fcf2.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.2af2fcf2.chunk.js.LICENSE.txt",
     "static/media/index.css": "/avm-react-app/static/media/sprites.67030ff7.png",
     "static/media/Image365.png": "/avm-react-app/static/media/Image365.cd74dada.png",
     "static/media/Logo_23.png": "/avm-react-app/static/media/Logo_23.e0df6fc4.png",
@@ -23,9 +23,11 @@
     "static/media/MaskGroup2.png": "/avm-react-app/static/media/MaskGroup2.23bb1639.png",
     "static/media/MaskGroup3.png": "/avm-react-app/static/media/MaskGroup3.6e79ed0d.png",
     "static/media/MaskGroup6.png": "/avm-react-app/static/media/MaskGroup6.f161d6d8.png",
-    "static/media/Offer_001.png": "/avm-react-app/static/media/Offer_001.ed1d7107.png",
-    "static/media/Offer_002.jpg": "/avm-react-app/static/media/Offer_002.c0244986.jpg",
-    "static/media/Offer_003.jpg": "/avm-react-app/static/media/Offer_003.7c0b1c7e.jpg",
+    "static/media/Offer_000.png": "/avm-react-app/static/media/Offer_000.ed1d7107.png",
+    "static/media/Offer_001.jpg": "/avm-react-app/static/media/Offer_001.c0244986.jpg",
+    "static/media/Offer_002.jpg": "/avm-react-app/static/media/Offer_002.7c0b1c7e.jpg",
+    "static/media/Offer_003.jpg": "/avm-react-app/static/media/Offer_003.74892c25.jpg",
+    "static/media/Offer_004.png": "/avm-react-app/static/media/Offer_004.8585b816.png",
     "static/media/base_02.png": "/avm-react-app/static/media/base_02.8291f2ad.png",
     "static/media/center_logo_01.png": "/avm-react-app/static/media/center_logo_01.360e334f.png",
     "static/media/center_logo_03.png": "/avm-react-app/static/media/center_logo_03.06eb1c8e.png",
@@ -163,14 +165,15 @@
     "static/media/news_000.png": "/avm-react-app/static/media/news_000.7ef4c390.png",
     "static/media/news_004.jpg": "/avm-react-app/static/media/news_004.85721095.jpg",
     "static/media/news_006.jpg": "/avm-react-app/static/media/news_006.96c4229b.jpg",
+    "static/media/news_014.jpg": "/avm-react-app/static/media/news_014.e27a27e1.jpg",
     "static/media/services05.png": "/avm-react-app/static/media/services05.232f8315.png",
     "static/media/services06.png": "/avm-react-app/static/media/services06.219112c7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c2272596.js",
     "static/css/2.01e2fbec.chunk.css",
-    "static/js/2.e90ceda9.chunk.js",
+    "static/js/2.2af2fcf2.chunk.js",
     "static/css/main.572951c1.chunk.css",
-    "static/js/main.7500d3b7.chunk.js"
+    "static/js/main.b64c6073.chunk.js"
   ]
 }
