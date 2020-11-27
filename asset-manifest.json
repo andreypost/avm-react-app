@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/avm-react-app/static/css/main.572951c1.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.7593190e.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.7593190e.chunk.js.map",
+    "main.js": "/avm-react-app/static/js/main.7500d3b7.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.7500d3b7.chunk.js.map",
     "runtime-main.js": "/avm-react-app/static/js/runtime-main.c2272596.js",
     "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.c2272596.js.map",
     "static/css/2.01e2fbec.chunk.css": "/avm-react-app/static/css/2.01e2fbec.chunk.css",
-    "static/js/2.23a0e0be.chunk.js": "/avm-react-app/static/js/2.23a0e0be.chunk.js",
-    "static/js/2.23a0e0be.chunk.js.map": "/avm-react-app/static/js/2.23a0e0be.chunk.js.map",
+    "static/js/2.e90ceda9.chunk.js": "/avm-react-app/static/js/2.e90ceda9.chunk.js",
+    "static/js/2.e90ceda9.chunk.js.map": "/avm-react-app/static/js/2.e90ceda9.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.e0cdd2ae4f15641ce1f91ad2dbf18f47.js": "/avm-react-app/precache-manifest.e0cdd2ae4f15641ce1f91ad2dbf18f47.js",
+    "precache-manifest.52bf300d25230f679fbafd54dcb233c9.js": "/avm-react-app/precache-manifest.52bf300d25230f679fbafd54dcb233c9.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
     "static/css/2.01e2fbec.chunk.css.map": "/avm-react-app/static/css/2.01e2fbec.chunk.css.map",
     "static/css/main.572951c1.chunk.css.map": "/avm-react-app/static/css/main.572951c1.chunk.css.map",
-    "static/js/2.23a0e0be.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.23a0e0be.chunk.js.LICENSE.txt",
+    "static/js/2.e90ceda9.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.e90ceda9.chunk.js.LICENSE.txt",
     "static/media/index.css": "/avm-react-app/static/media/sprites.67030ff7.png",
     "static/media/Image365.png": "/avm-react-app/static/media/Image365.cd74dada.png",
     "static/media/Logo_23.png": "/avm-react-app/static/media/Logo_23.e0df6fc4.png",
+    "static/media/Logo_25.png": "/avm-react-app/static/media/Logo_25.6a2d7056.png",
     "static/media/MaskGroup1.png": "/avm-react-app/static/media/MaskGroup1.4b23662b.png",
     "static/media/MaskGroup15.png": "/avm-react-app/static/media/MaskGroup15.671e04aa.png",
     "static/media/MaskGroup2.png": "/avm-react-app/static/media/MaskGroup2.23bb1639.png",
@@ -168,8 +169,8 @@
   "entrypoints": [
     "static/js/runtime-main.c2272596.js",
     "static/css/2.01e2fbec.chunk.css",
-    "static/js/2.23a0e0be.chunk.js",
+    "static/js/2.e90ceda9.chunk.js",
     "static/css/main.572951c1.chunk.css",
-    "static/js/main.7593190e.chunk.js"
+    "static/js/main.7500d3b7.chunk.js"
   ]
 }
