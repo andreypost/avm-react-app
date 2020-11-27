@@ -206,8 +206,8 @@ export const Header = (props) => {
                     </button>
                 </form>
                 <div className="flexcenter header__dataicons relative">
-                    {/* <a href=" " className="header__user noneDesk block768"> */}
-                    <a href=" " className="header__guest noneDesk block768">
+                    {/* <a href=" " className="header__user noneDesk block1024"> */}
+                    <a href=" " className="header__guest noneDesk block1024">
                         <svg>
                             <use xlinkHref={`${icons}#avatar`}></use>
                         </svg>

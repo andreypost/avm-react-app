@@ -98,13 +98,9 @@ export const Category = (props) => {
           <article className="category__section">
             <h1 className="marginbot4020">Каталог товаров</h1>
             <article className="box__grid">
-              <CardCategory datos={dataGategory[0]} />
-              <CardCategory datos={dataGategory[1]} />
-              <CardCategory datos={dataGategory[2]} />
-              <CardCategory datos={dataGategory[3]} />
-              <CardCategory datos={dataGategory[4]} />
-              <CardCategory datos={dataGategory[5]} />
-              <CardCategory datos={dataGategory[6]} />
+              {dataGategory.map((item, i) =>
+                <CardCategory key={item.title} datos={dataGategory[i]} />
+              )}
             </article>
             <h2 className="textleft">Список товаров</h2>
             <div className="flexbet global__searchfilter">
@@ -122,13 +118,9 @@ export const Category = (props) => {
               </div>
             </div>
             <article className="box__grid">
-              {dataHits.map((card, i) => {
-                if (card.basePrice > 0) {
-                  return <CardDiscount key={card.code} datos={dataHits[i]} />
-                } else if (card.basePrice === '0') {
-                  return <CardProduct key={card.code} datos={dataHits[i]} />
-                }
-              })}
+              {dataHits.map((card, i) =>
+                card.basePrice > 0 ? <CardDiscount key={card.code} datos={dataHits[i]} /> : <CardProduct key={card.code} datos={dataHits[i]} />
+              )}
             </article>
             <nav className="pagination__global flexcenter justcenter">
               <a className="pagination__prev" href=" "> </a>
