@@ -15,9 +15,12 @@ import { NewsSection } from './components/NewsSection';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
-import photo_001 from './img/MaskGroup1.png';
-import photo_002 from './img/MaskGroup2.png';
-import photo_003 from './img/MaskGroup3.png';
+import photo_00 from './img/MaskGroup0.png';
+import photo_01 from './img/MaskGroup1.png';
+import photo_02 from './img/MaskGroup2.jpg';
+import photo_03 from './img/MaskGroup3.jpg';
+import photo_04 from './img/MaskGroup4.jpg';
+import photo_05 from './img/MaskGroup5.jpg';
 import photo_004 from './img/Logo_19.png';
 import photo_005 from './img/Logo_20.png';
 import photo_006 from './img/Logo_21.png';
@@ -450,36 +453,19 @@ export const Main = (props) => {
           </div>
           <div id="carouselIndex" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              {[photo_00, photo_01, photo_02, photo_03, photo_04, photo_05].map((img, i) =>
+              i === 0 ?
+                <div className="carousel-item active" key={img}>
+                  <a href=" ">
+                    <img src={img} className="d-block w-100" alt="..." />
+                  </a>
+                </div> : 
+                <div className="carousel-item" key={img}>
                 <a href=" ">
-                  <img src={photo_001} className="d-block w-100" alt="..." />
+                  <img src={img} className="d-block w-100" alt="..." />
                 </a>
               </div>
-              <div className="carousel-item">
-                <a href=" ">
-                  <img src={photo_002} className="d-block w-100" alt="..." />
-                </a>
-              </div>
-              <div className="carousel-item">
-                <a href=" ">
-                  <img src={photo_003} className="d-block w-100" alt="..." />
-                </a>
-              </div>
-              <div className="carousel-item">
-                <a href=" ">
-                  <img src={photo_001} className="d-block w-100" alt="..." />
-                </a>
-              </div>
-              <div className="carousel-item">
-                <a href=" ">
-                  <img src={photo_002} className="d-block w-100" alt="..." />
-                </a>
-              </div>
-              <div className="carousel-item">
-                <a href=" ">
-                  <img src={photo_003} className="d-block w-100" alt="..." />
-                </a>
-              </div>
+              )}
             </div>
             <ol className="carousel-indicators banner__imgbottom">
               <li data-target="#carouselIndex" data-slide-to="0" className="active"></li>

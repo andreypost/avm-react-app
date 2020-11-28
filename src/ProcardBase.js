@@ -10,7 +10,7 @@ import { Footer } from './components/Footer'
 import { ModalsPro } from "./components/ModalsPro";
 // import photo_001 from './img/MaskGroup1.png';
 // import photo_002 from './img/MaskGroup2.png';
-// import photo_003 from './img/MaskGroup3.png';
+// import photo_003 from './img/MaskGroup3.jpg';
 // import photo_004 from './img/Image1.png';
 
 export const ProcardBase = (props) => {

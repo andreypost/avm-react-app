@@ -293,19 +293,9 @@ export const Actions = (props) => {
                             <h1 className="allpromo__header">Акции</h1>
                             <h6 className="global__filtermob"><i></i>Фильтр</h6>
                             <article className="allpromo__catalogue box__grid global__rightside">
-                                <CardPromo datos={dataOffer[0]} />
-                                <CardPromo datos={dataOffer[1]} />
-                                <CardPromo datos={dataOffer[2]} />
-                                <CardPromo datos={dataOffer[0]} />
-                                <CardPromo datos={dataOffer[1]} />
-                                <CardPromo datos={dataOffer[2]} />
-                                <CardPromo datos={dataOffer[0]} />
-                                <CardPromo datos={dataOffer[1]} />
-                                <CardPromo datos={dataOffer[2]} />
-                                <CardPromo datos={dataOffer[0]} />
-                                <CardPromo datos={dataOffer[1]} />
-                                <CardPromo datos={dataOffer[2]} />
-                                <CardPromo datos={dataOffer[0]} />
+                                {dataOffer.map(data =>
+                                    <CardPromo datos={data} key={data.image} />
+                                )}
                             </article>
                             <a href=" " className="promo__button">ПОКАЗАТЬ ЕЩЕ</a>
                             <nav className="pagination__global flexcenter justcenter">

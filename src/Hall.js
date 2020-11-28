@@ -7,8 +7,7 @@ import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup6.png';
-import photo_002 from './img/MaskGroup3.png';
-import photo_003 from './img/MaskGroup15.png';
+import photo_002 from './img/MaskGroup7.png';
 
 export const Hall = (props) => {
     useEffect(() => {
@@ -42,17 +41,10 @@ export const Hall = (props) => {
                                     frameBorder="0" allowFullScreen="" title="video_01"></iframe>
                             </div>
                             <div className="carousel-item">
-                                <iframe src="https://www.youtube.com/embed/RG9TMn1FJzc"
-                                    frameBorder="0" allowFullScreen="" title="video_02"></iframe>
-                            </div>
-                            <div className="carousel-item">
                                 <img src={photo_001} className="d-block w-100" alt="..." />
                             </div>
                             <div className="carousel-item">
                                 <img src={photo_002} className="d-block w-100" alt="..." />
-                            </div>
-                            <div className="carousel-item">
-                                <img src={photo_003} className="d-block w-100" alt="..." />
                             </div>
                         </div>
                         <a className="carousel-control-prev" href="#carouselTop" role="button" data-slide="prev">

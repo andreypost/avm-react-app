@@ -13,10 +13,8 @@ import photo_004 from './img/services03.png';
 import photo_005 from './img/services04.png';
 import photo_006 from './img/services05.png';
 import photo_007 from './img/services06.png';
-import photo_008 from './img/MaskGroup1.png';
-import photo_009 from './img/MaskGroup2.png';
-import photo_010 from './img/MaskGroup3.png';
-
+import photo_008 from './img/MaskGroup0.png';
+import photo_009 from './img/MaskGroup1.png';
 
 export const Services = (props) => {
   useEffect(() => {
@@ -53,14 +51,7 @@ export const Services = (props) => {
                 <img src={photo_001} className="d-block w-100" alt="..." />
               </div>
               <div className="carousel-item">
-                <iframe src="https://www.youtube.com/embed/RG9TMn1FJzc"
-                  frameBorder="0" allowFullScreen="" title="video_02"></iframe>
-              </div>
-              <div className="carousel-item">
                 <img src={photo_009} className="d-block w-100" alt="..." />
-              </div>
-              <div className="carousel-item">
-                <img src={photo_010} className="d-block w-100" alt="..." />
               </div>
             </div>
             <a className="carousel-control-prev" href="#carouselTop" role="button" data-slide="prev">
@@ -489,9 +480,6 @@ export const Services = (props) => {
               </div>
               <div className="carousel-item">
                 <img src={photo_009} className="d-block w-100" alt="..." />
-              </div>
-              <div className="carousel-item">
-                <img src={photo_010} className="d-block w-100" alt="..." />
               </div>
               <div className="carousel-item">
                 <img src={photo_001} className="d-block w-100" alt="..." />

@@ -3,6 +3,7 @@ import photo_001 from '../img/Offer_001.jpg';
 import photo_002 from '../img/Offer_002.jpg';
 import photo_003 from '../img/Offer_003.jpg';
 import photo_004 from '../img/Offer_004.png';
+import photo_005 from '../img/Offer_005.jpg';
 
 export default [
     {
@@ -42,17 +43,10 @@ export default [
         'valid': 'Завершена'
     },
     {
-        'image': photo_003,
-        'title': 'Спецпредложения',
-        'text': '',
-        'date': '11 сентября 2020',
+        'image': photo_005,
+        'title': 'До -45% на Denon, DALI,Polk Audio',
+        'text': 'Мы же решили поддержать вас приятными скидками на: акустические системы, AV-ресиверы, hi-fi наушники, саундбары и портативные колонки таких именитых брендов как Denon, DALI и Polk Audio!Только до 03.04 вы можете приобрести комплект своей мечты по очень выгодной цене!',
+        'date': '11 сентября 2019',
         'valid': 'Действует'
     },
-    {
-        'image': photo_003,
-        'title': 'Спецпредложения',
-        'text': '',
-        'date': '11 сентября 2020',
-        'valid': 'Действует'
-    }
 ]
