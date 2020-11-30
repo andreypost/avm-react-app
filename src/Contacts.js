@@ -113,7 +113,7 @@ export const Contacts = (props) => {
                 <SeoMailing />
             </main>
             <Footer />
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div className="header__shadow block"></div>}>
                 <ModalsPro pathname={props.history.location.pathname} />
             </Suspense>
         </>
