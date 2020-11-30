@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
+// import { ModalsPro } from "./components/ModalsPro";
+const ModalsPro = lazy(() => import('./components/ModalsPro'));
 
 export const Manufacturers = (props) => {
     useEffect(() => {
@@ -43,10 +44,10 @@ export const Manufacturers = (props) => {
                 </section>
                 <section id="manufacturesLinks">
                     <article className="tabsCaption manufacturers__list flexcenter justcenter flexwrap marginbot4020">
-                    {['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'].map((lit,i) => 
-                    i === 0 ? <HashLink key={lit} to={`#${lit}`} className="tabLink active" data-tab={lit}>{lit}</HashLink> :
-                            <HashLink key={lit} to={`#${lit}`} className="tabLink" data-tab={lit}>{lit}</HashLink>
-                    )}
+                        {['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'].map((lit, i) =>
+                            i === 0 ? <HashLink key={lit} to={`#${lit}`} className="tabLink active" data-tab={lit}>{lit}</HashLink> :
+                                <HashLink key={lit} to={`#${lit}`} className="tabLink" data-tab={lit}>{lit}</HashLink>
+                        )}
                     </article>
                     <article className="tabsContent manufacturers__articles">
                         <div id="A" className="tabsBlock active marginbot4020" data-tab="A">
@@ -1879,7 +1880,9 @@ export const Manufacturers = (props) => {
                 </section>
             </main>
             <Footer />
-            <ModalsPro pathname={props.history.location.pathname} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <ModalsPro pathname={props.history.location.pathname} />
+            </Suspense>
         </>
     )
 }

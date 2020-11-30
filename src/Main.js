@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import { Link } from "react-router-dom";
 // import { createStore } from 'redux';
 import icons from './icons.svg';
 import { Header } from './components/Header';
 import { HitsSection } from './components/HitsSection';
-// import dataHits from './components/dataHits';
+import dataHits from './components/dataHits';
 // import { CardProduct } from './components/CardProduct';
 // import { CardDiscount } from './components/CardDiscount';
 import dataOffer from './components/dataOffer';
@@ -14,7 +14,7 @@ import dataProducers from './components/dataProducers';
 import { NewsSection } from './components/NewsSection';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
+// import { ModalsPro } from "./components/ModalsPro";
 import photo_00 from './img/MaskGroup0.png';
 import photo_01 from './img/MaskGroup1.png';
 import photo_02 from './img/MaskGroup2.jpg';
@@ -28,6 +28,7 @@ import photo_007 from './img/Logo_22.png';
 import photo_008 from './img/Logo_23.png';
 import photo_009 from './img/Logo_24.png';
 import photo_010 from './img/Logo_25.png';
+const ModalsPro = lazy(() => import('./components/ModalsPro'));
 
 // const MyCounter = (state = 0, action) => {
 //   switch (action.type) {
@@ -454,17 +455,17 @@ export const Main = (props) => {
           <div id="carouselIndex" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
               {[photo_00, photo_01, photo_02, photo_03, photo_04, photo_05].map((img, i) =>
-              i === 0 ?
-                <div className="carousel-item active" key={img}>
-                  <a href=" ">
-                    <img src={img} className="d-block w-100" alt="..." />
-                  </a>
-                </div> : 
-                <div className="carousel-item" key={img}>
-                <a href=" ">
-                  <img src={img} className="d-block w-100" alt="..." />
-                </a>
-              </div>
+                i === 0 ?
+                  <div className="carousel-item active" key={img}>
+                    <a href=" ">
+                      <img src={img} className="d-block w-100" alt="..." />
+                    </a>
+                  </div> :
+                  <div className="carousel-item" key={img}>
+                    <a href=" ">
+                      <img src={img} className="d-block w-100" alt="..." />
+                    </a>
+                  </div>
               )}
             </div>
             <ol className="carousel-indicators banner__imgbottom">
@@ -573,7 +574,9 @@ export const Main = (props) => {
         <SeoMailing />
       </main>
       <Footer />
-      <ModalsPro pathname={props.history.location.pathname} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ModalsPro pathname={props.history.location.pathname} />
+      </Suspense>
     </>
   )
 }

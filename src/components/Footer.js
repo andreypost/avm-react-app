@@ -84,7 +84,6 @@ export const Footer = () => {
                     <div className="horizont"></div>
                 </div>
                 <div className="footer__social flexcenter justcenter">
-                    
                     <a href=" ">
                         <svg>
                             <use xlinkHref={`${icons}#insta`}></use>

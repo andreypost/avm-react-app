@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { Link } from "react-router-dom";
 import icons from './icons.svg';
 import { Header } from './components/Header';
@@ -7,49 +7,12 @@ import dataOffer from './components/dataOffer';
 import { CardPromo } from './components/CardPromo';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
+// import { ModalsPro } from "./components/ModalsPro";
+const ModalsPro = lazy(() => import('./components/ModalsPro'));
 
 export const Actions = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
-        const resetInputCheckbox = (form) => {
-            let store = form.querySelector('.filterStore')
-            const setDouble = (elem, i) => {
-                let h5 = document.createElement('h5')
-                h5.innerHTML = elem.parentNode.querySelector('i').firstChild.textContent
-                h5.className = 'filterStoreText'
-                elem.dataset.num = h5.dataset.num = i
-                store.append(h5)
-            }
-            let inputs = form.querySelectorAll('input')
-            for (let i = 0; i < inputs.length; i++) {
-                inputs[i].onclick = () => {
-                    if (!inputs[i].dataset.num || inputs[i].dataset.num === '') {
-                        setDouble(inputs[i], i)
-                    } else {
-                        store.querySelector(`h5[data-num="${inputs[i].dataset.num}"]`).remove()
-                        inputs[i].dataset.num = ''
-                    }
-                }
-            }
-            form.querySelector('.filterStore').onclick = (e) => {
-                let target = e.target.closest('.filterStoreText')
-                if (!target) return
-                let input = form.querySelector(`input[data-num="${target.dataset.num}"]`)
-                input.checked = false
-                input.dataset.num = ''
-                target.remove()
-            }
-            form.querySelector('.mobreset__filter').onclick = () => {
-                let checked = form.querySelectorAll('input:checked')
-                for (let input of checked) {
-                    input.checked = false
-                    input.dataset.num = ''
-                }
-                store.innerHTML = ''
-            }
-        }
-        resetInputCheckbox(document.getElementById('filterForm'))
     })
     return (
         <>
@@ -317,7 +280,9 @@ export const Actions = (props) => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro pathname={props.history.location.pathname} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <ModalsPro pathname={props.history.location.pathname} />
+            </Suspense>
         </>
     )
 }

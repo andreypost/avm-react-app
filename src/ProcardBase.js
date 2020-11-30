@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 // import OwlCarousel from 'react-owl-carousel';
 import { Link } from "react-router-dom";
 import { Header } from './components/Header';
@@ -7,11 +7,12 @@ import dataHits from './components/dataHits';
 // import { ProductCard } from './components/ProductCard';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer'
-import { ModalsPro } from "./components/ModalsPro";
+// import { ModalsPro } from "./components/ModalsPro";
 // import photo_001 from './img/MaskGroup1.png';
 // import photo_002 from './img/MaskGroup2.png';
 // import photo_003 from './img/MaskGroup3.jpg';
 // import photo_004 from './img/Image1.png';
+const ModalsPro = lazy(() => import('./components/ModalsPro'));
 
 export const ProcardBase = (props) => {
   let index = localStorage.getItem('cardIndex') || 0
@@ -42,7 +43,9 @@ export const ProcardBase = (props) => {
         <SeoMailing />
       </main>
       <Footer />
-      <ModalsPro pathname={props.history.location.pathname} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <ModalsPro pathname={props.history.location.pathname} />
+      </Suspense>
     </>
   )
 }

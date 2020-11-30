@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
+// import { ModalsPro } from "./components/ModalsPro";
+const ModalsPro = lazy(() => import('./components/ModalsPro'));
 
 export const About = (props) => {
     useEffect(() => {
@@ -59,7 +60,9 @@ export const About = (props) => {
                 <SeoMailing />
             </main>
             <Footer />
-            <ModalsPro pathname={props.history.location.pathname} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <ModalsPro pathname={props.history.location.pathname} />
+            </Suspense>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
@@ -36,37 +36,42 @@ import { Manufacturers } from './Manufacturers';
 import { Glossary } from './Glossary';
 import { GlossaryInner } from './GlossaryInner';
 import { ProcardBase } from './ProcardBase';
+// import { Footer } from './components/Footer';
 import * as serviceWorker from './serviceWorker';
 
 export const App = () => {
   // const [index, setIndex] = useState('0') // settings for lifting up states: Glossary, GlossaryInner;
   // const handleIndexSet = (value) => {
-    // setIndex(value)
+  // setIndex(value)
   // }
+  useEffect(() => {
+    return () => {}
+  })
   return (
     <HashRouter basename='/'>
-        <Route exact path="/" component={Main} />
-        <Route path="/Category" component={Category} />
-        <Route path="/Services" component={Services} />
-        <Route path="/Hall" component={Hall} />
-        <Route path="/Delivery" component={Delivery} />
-        <Route path="/Warranty" component={Warranty} />
-        <Route path="/Credit" component={Credit} />
-        <Route path="/Actions" component={Actions} />
-        <Route path="/About" component={About} />
-        <Route path="/Cooperation" component={Cooperation} />
-        <Route path="/Sertificate" component={Sertificate} />
-        <Route path="/Career" component={Career} />
-        <Route path="/Contacts" component={Contacts} />
-        <Route path="/Bonus" component={Bonus} />
-        <Route path="/Registration" component={Registration} />
-        <Route path="/Terms" component={Terms} />
-        <Route path="/Manufacturers" component={Manufacturers} />
-        <Route path="/Glossary" component={Glossary} />
-        <Route path="/GlossaryInner" component={GlossaryInner} />
-        {/* <Route path="/Glossary" render={(props) => ( <Glossary {...props} index={index} setIndex={handleIndexSet} />)} /> */}
-        {/* <Route path="/GlossaryInner" render={(props) => ( <GlossaryInner {...props} index={index} setIndex={handleIndexSet} />)} /> */}
-        <Route path="/ProcardBase" component={ProcardBase} />
+      <Route exact path="/" component={Main} />
+      <Route path="/Category" component={Category} />
+      <Route path="/Services" component={Services} />
+      <Route path="/Hall" component={Hall} />
+      <Route path="/Delivery" component={Delivery} />
+      <Route path="/Warranty" component={Warranty} />
+      <Route path="/Credit" component={Credit} />
+      <Route path="/Actions" component={Actions} />
+      <Route path="/About" component={About} />
+      <Route path="/Cooperation" component={Cooperation} />
+      <Route path="/Sertificate" component={Sertificate} />
+      <Route path="/Career" component={Career} />
+      <Route path="/Contacts" component={Contacts} />
+      <Route path="/Bonus" component={Bonus} />
+      <Route path="/Registration" component={Registration} />
+      <Route path="/Terms" component={Terms} />
+      <Route path="/Manufacturers" component={Manufacturers} />
+      <Route path="/Glossary" component={Glossary} />
+      <Route path="/GlossaryInner" component={GlossaryInner} />
+      {/* <Route path="/Glossary" render={(props) => ( <Glossary {...props} index={index} setIndex={handleIndexSet} />)} /> */}
+      {/* <Route path="/GlossaryInner" render={(props) => ( <GlossaryInner {...props} index={index} setIndex={handleIndexSet} />)} /> */}
+      <Route path="/ProcardBase" component={ProcardBase} />
+      {/* <Footer /> */}
     </HashRouter>
   );
 }

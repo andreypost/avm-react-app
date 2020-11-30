@@ -6,7 +6,7 @@ import photo_002 from '../img/Image365.png';
 import photo_003 from '../img/base_02.png';
 import photo_004 from '../img/Image1.png';
 
-export const ModalsPro = (props) => {
+const ModalsPro = () => {
     useEffect(() => {
         let currentModal = null,
             // widthInner = window.innerWidth,
@@ -105,6 +105,11 @@ export const ModalsPro = (props) => {
         getAllElementsModal(document.querySelectorAll('.receiveComment'), document.getElementById('sentReviewModal'))
 
         const toggleAllLists = (elems) => {
+            // elems.forEach(elem => {
+            //     elem.firstElementChild.classList.remove('active')
+            //     if (elem.nextElementSibling) elem.nextElementSibling.classList.remove('block')
+            //     if (elem.closest('.services__heading') || elem.closest('.viewedcab__categories')) elem.classList.remove('activeElem')
+            // })
             const onClickListener = (e, elem) => {
                 e.preventDefault()
                 elem.firstElementChild.classList.toggle('active')
@@ -346,6 +351,45 @@ export const ModalsPro = (props) => {
             }
         }
         dateCalendarLimit(document.querySelectorAll('input[type="date"]'))
+        
+        const resetInputCheckbox = (form) => {
+            let store = form.querySelector('.filterStore')
+            const setDouble = (elem, i) => {
+                let h5 = document.createElement('h5')
+                h5.innerHTML = elem.parentNode.querySelector('i').firstChild.textContent
+                h5.className = 'filterStoreText'
+                elem.dataset.num = h5.dataset.num = i
+                store.append(h5)
+            }
+            let inputs = form.querySelectorAll('input')
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].onclick = () => {
+                    if (!inputs[i].dataset.num || inputs[i].dataset.num === '') {
+                        setDouble(inputs[i], i)
+                    } else {
+                        store.querySelector(`h5[data-num="${inputs[i].dataset.num}"]`).remove()
+                        inputs[i].dataset.num = ''
+                    }
+                }
+            }
+            form.querySelector('.filterStore').onclick = (e) => {
+                let target = e.target.closest('.filterStoreText')
+                if (!target) return
+                let input = form.querySelector(`input[data-num="${target.dataset.num}"]`)
+                input.checked = false
+                input.dataset.num = ''
+                target.remove()
+            }
+            form.querySelector('.mobreset__filter').onclick = () => {
+                let checked = form.querySelectorAll('input:checked')
+                for (let input of checked) {
+                    input.checked = false
+                    input.dataset.num = ''
+                }
+                store.innerHTML = ''
+            }
+        }
+        resetInputCheckbox(document.getElementById('filterForm'))
 
         window.addEventListener('resize', () => {
             validateOptions.removeTooltip()
@@ -359,8 +403,19 @@ export const ModalsPro = (props) => {
             body.style.overflow = ''
             body.style.overflowY = ''
             body.style.paddingRight = 0 + 'px'
+            // const removeAllLists = (elems) => {
+            //     elems.forEach(elem => {
+            //         elem.firstElementChild.classList.remove('active')
+            //         if (elem.nextElementSibling) elem.nextElementSibling.classList.remove('block')
+            //         // if (elem.closest('.services__heading') || elem.closest('.viewedcab__categories')) elem.classList.remove('activeElem')
+            //     })
+            // }
+            // removeAllLists(document.querySelectorAll('.arrow__href'))  /* rotate svg and colored svg icons & open ul list footer */
+            // removeAllLists(document.querySelectorAll('.global__linksfilter')) /* just set blue color to square then reload page and return back to white, page: _all_promotions and others */
+            // removeAllLists(document.querySelectorAll('.services__heading'))
+            // removeAllLists(document.querySelectorAll('.viewedcab__categories'))
         }
-    }, [props])
+    }, [])
     return (
         <>
             <div id="burgerMenuMob">
@@ -1554,3 +1609,4 @@ export const ModalsPro = (props) => {
         </>
     )
 }
+export default ModalsPro

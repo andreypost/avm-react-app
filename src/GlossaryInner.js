@@ -1,21 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import dataGlossary from './components/dataGlossary';
 import { Footer } from './components/Footer';
-import { ModalsPro } from "./components/ModalsPro";
+// import { ModalsPro } from "./components/ModalsPro";
+const ModalsPro = lazy(() => import('./components/ModalsPro'));
 
 export const GlossaryInner = (props) => {
     let index = localStorage.getItem('glossaryIndex') || 0
     useEffect(() => {
         window.scrollTo(0, 0)
     })
-    const handle = () => {
-        console.log(localStorage.getItem('glossaryIndex'))
-        localStorage.removeItem('glossaryIndex')
-        // console.log(localStorage.getItem('glossaryIndex'))
-    }
     return (
         <>
             <Header pathname={props.history.location.pathname}>
@@ -29,7 +25,7 @@ export const GlossaryInner = (props) => {
                     <ul className="flexstart breadcrumbs flexwrap">
                         <li><Link to="/">Главная &gt;</Link></li>
                         <li><Link to="Glossary">Глоссарий &gt;</Link></li>
-                        <li onClick={handle}>{dataGlossary[index].title}</li>
+                        <li>{dataGlossary[index].title}</li>
                     </ul>
                 </section>
                 <section className="glossaryinner__section textleft">
@@ -46,7 +42,9 @@ export const GlossaryInner = (props) => {
                 </section>
             </main>
             <Footer />
-            <ModalsPro pathname={props.history.location.pathname} />
+            <Suspense fallback={<div>Loading...</div>}>
+                <ModalsPro pathname={props.history.location.pathname} />
+            </Suspense>
         </>
     )
 }
