@@ -1,22 +1,21 @@
 {
   "files": {
-    "static/js/0.514a4bb5.chunk.js": "/avm-react-app/static/js/0.514a4bb5.chunk.js",
-    "static/js/0.514a4bb5.chunk.js.map": "/avm-react-app/static/js/0.514a4bb5.chunk.js.map",
-    "main.css": "/avm-react-app/static/css/main.572951c1.chunk.css",
-    "main.js": "/avm-react-app/static/js/main.fa3e11f2.chunk.js",
-    "main.js.map": "/avm-react-app/static/js/main.fa3e11f2.chunk.js.map",
-    "runtime-main.js": "/avm-react-app/static/js/runtime-main.77cbc56a.js",
-    "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.77cbc56a.js.map",
-    "static/css/3.01e2fbec.chunk.css": "/avm-react-app/static/css/3.01e2fbec.chunk.css",
-    "static/js/3.4a13f0ae.chunk.js": "/avm-react-app/static/js/3.4a13f0ae.chunk.js",
-    "static/js/3.4a13f0ae.chunk.js.map": "/avm-react-app/static/js/3.4a13f0ae.chunk.js.map",
+    "main.css": "/avm-react-app/static/css/main.c2960b07.chunk.css",
+    "main.js": "/avm-react-app/static/js/main.8bb61c4e.chunk.js",
+    "main.js.map": "/avm-react-app/static/js/main.8bb61c4e.chunk.js.map",
+    "runtime-main.js": "/avm-react-app/static/js/runtime-main.cbb5b615.js",
+    "runtime-main.js.map": "/avm-react-app/static/js/runtime-main.cbb5b615.js.map",
+    "static/css/2.01e2fbec.chunk.css": "/avm-react-app/static/css/2.01e2fbec.chunk.css",
+    "static/js/2.8b29f8bd.chunk.js": "/avm-react-app/static/js/2.8b29f8bd.chunk.js",
+    "static/js/2.8b29f8bd.chunk.js.map": "/avm-react-app/static/js/2.8b29f8bd.chunk.js.map",
+    "static/js/3.b5765bc6.chunk.js": "/avm-react-app/static/js/3.b5765bc6.chunk.js",
+    "static/js/3.b5765bc6.chunk.js.map": "/avm-react-app/static/js/3.b5765bc6.chunk.js.map",
     "index.html": "/avm-react-app/index.html",
-    "precache-manifest.ad2f6bdb6a5ae399dbf99f28f7f47918.js": "/avm-react-app/precache-manifest.ad2f6bdb6a5ae399dbf99f28f7f47918.js",
+    "precache-manifest.9fbf230c89d94ae5f065ad1598afa180.js": "/avm-react-app/precache-manifest.9fbf230c89d94ae5f065ad1598afa180.js",
     "service-worker.js": "/avm-react-app/service-worker.js",
-    "static/css/3.01e2fbec.chunk.css.map": "/avm-react-app/static/css/3.01e2fbec.chunk.css.map",
-    "static/css/main.572951c1.chunk.css.map": "/avm-react-app/static/css/main.572951c1.chunk.css.map",
-    "static/js/3.4a13f0ae.chunk.js.LICENSE.txt": "/avm-react-app/static/js/3.4a13f0ae.chunk.js.LICENSE.txt",
-    "static/media/Image1.png": "/avm-react-app/static/media/Image1.4e9d0bdd.png",
+    "static/css/2.01e2fbec.chunk.css.map": "/avm-react-app/static/css/2.01e2fbec.chunk.css.map",
+    "static/css/main.c2960b07.chunk.css.map": "/avm-react-app/static/css/main.c2960b07.chunk.css.map",
+    "static/js/2.8b29f8bd.chunk.js.LICENSE.txt": "/avm-react-app/static/js/2.8b29f8bd.chunk.js.LICENSE.txt",
     "static/media/index.css": "/avm-react-app/static/media/sprites.67030ff7.png",
     "static/media/Image365.png": "/avm-react-app/static/media/Image365.cd74dada.png",
     "static/media/Logo_23.png": "/avm-react-app/static/media/Logo_23.e0df6fc4.png",
@@ -177,10 +176,10 @@
     "static/media/services06.png": "/avm-react-app/static/media/services06.219112c7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.77cbc56a.js",
-    "static/css/3.01e2fbec.chunk.css",
-    "static/js/3.4a13f0ae.chunk.js",
-    "static/css/main.572951c1.chunk.css",
-    "static/js/main.fa3e11f2.chunk.js"
+    "static/js/runtime-main.cbb5b615.js",
+    "static/css/2.01e2fbec.chunk.css",
+    "static/js/2.8b29f8bd.chunk.js",
+    "static/css/main.c2960b07.chunk.css",
+    "static/js/main.8bb61c4e.chunk.js"
   ]
 }
