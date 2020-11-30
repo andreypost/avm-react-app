@@ -12,7 +12,8 @@ export const ModalsPro = () => {
             // widthInner = window.innerWidth,
             textInfoModal = null,
             infoModal = document.getElementById('infoModal'),
-            body = document.querySelector('body')
+            body = document.querySelector('body'),
+            arrowUp = document.getElementById('arrowUp')
 
         const onClickHandler = (elems, onClickListener) => {
             for (let elem of elems) {
@@ -391,6 +392,16 @@ export const ModalsPro = () => {
         }
         resetInputCheckbox(document.getElementById('filterForm'))
 
+        arrowUp.onclick = () => {
+            window.scrollBy({
+                top: -window.scrollY,
+                behavior: 'smooth'
+            })
+        }
+        window.addEventListener('scroll', () => {
+            arrowUp.hidden = document.documentElement.clientHeight / 2 > document.documentElement.scrollTop
+        })
+
         window.addEventListener('resize', () => {
             validateOptions.removeTooltip()
             // widthInner = window.innerWidth
@@ -418,6 +429,7 @@ export const ModalsPro = () => {
     }, [])
     return (
         <>
+            <i id="arrowUp" hidden=""></i>
             <div id="burgerMenuMob">
                 <article className="relative">
                     <div className="button__closegl"></div>

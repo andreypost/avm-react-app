@@ -1,19 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import icons from '../icons.svg';
 
 export const Footer = () => {
-    useEffect(() => {
-        document.getElementById('arrowUp').onclick = () => {
-            window.scrollBy({
-                top: -window.scrollY,
-                behavior: 'smooth'
-            })
-        }
-        window.addEventListener('scroll', () => {
-            document.getElementById('arrowUp').hidden = document.documentElement.clientHeight / 2 > document.documentElement.scrollTop
-        })
-    }, [])
     return (
         <footer>
             <section className="footer__section">
@@ -107,7 +96,6 @@ export const Footer = () => {
                 </div>
                 <p>Copyright © 1999-2020 Pear Solution</p>
             </section>
-            <i id="arrowUp" hidden=""></i>
         </footer>
     )
 }

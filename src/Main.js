@@ -1,10 +1,10 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { useEffect } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import { Link } from "react-router-dom";
 // import { createStore } from 'redux';
 import icons from './icons.svg';
 import { Header } from './components/Header';
-// import { HitsSection } from './components/HitsSection';
+import { HitsSection } from './components/HitsSection';
 // import dataHits from './components/dataHits';
 // import { CardProduct } from './components/CardProduct';
 // import { CardDiscount } from './components/CardDiscount';
@@ -28,8 +28,6 @@ import photo_007 from './img/Logo_22.png';
 import photo_008 from './img/Logo_23.png';
 import photo_009 from './img/Logo_24.png';
 import photo_010 from './img/Logo_25.png';
-const HitsSection = lazy(() => import('./components/HitsSection'));
-
 // const MyCounter = (state = 0, action) => {
 //   switch (action.type) {
 //       case 'INCREMENT':
@@ -46,7 +44,7 @@ const HitsSection = lazy(() => import('./components/HitsSection'));
 // myStore.dispatch({ type: 'INCREMENT' })
 // myStore.dispatch({ type: 'DECREMENT' })
 
-export const Main = (props) => {
+const Main = (props) => {
   // const handleDecriment = () => {
   //   myStore.dispatch({ type: 'DECREMENT' })
   // }
@@ -528,9 +526,7 @@ export const Main = (props) => {
               <p>на рынке аудио-видео техники</p>
             </div>
           </article>
-          <Suspense fallback={<div className="spinner"></div>}>
-            <HitsSection />
-          </Suspense>
+          <HitsSection />
         </section>
         <article className="offer__special">
           <section className="carousel__section">
@@ -580,3 +576,4 @@ export const Main = (props) => {
     </>
   )
 }
+export default Main

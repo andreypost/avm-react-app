@@ -5,7 +5,7 @@ import { Catalogue } from './components/Catalogue';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-export const Registration = (props) => {
+const Registration = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -81,3 +81,4 @@ export const Registration = (props) => {
         </>
     )
 }
+export default Registration

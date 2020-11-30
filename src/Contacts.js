@@ -9,7 +9,7 @@ import photo_001 from './img/contacticon_01.png';
 import photo_002 from './img/contacticon_02.png';
 import photo_003 from './img/contacticon_03.png';
 
-export const Contacts = (props) => {
+const Contacts = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -116,3 +116,4 @@ export const Contacts = (props) => {
         </>
     )
 }
+export default Contacts

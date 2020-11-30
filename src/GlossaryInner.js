@@ -6,7 +6,7 @@ import dataGlossary from './components/dataGlossary';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-export const GlossaryInner = (props) => {
+const GlossaryInner = (props) => {
     let index = localStorage.getItem('glossaryIndex') || 0
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -45,3 +45,4 @@ export const GlossaryInner = (props) => {
         </>
     )
 }
+export default GlossaryInner

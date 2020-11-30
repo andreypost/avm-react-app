@@ -16,7 +16,7 @@ import photo_007 from './img/services06.png';
 import photo_008 from './img/MaskGroup0.png';
 import photo_009 from './img/MaskGroup1.png';
 
-export const Services = (props) => {
+const Services = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -503,3 +503,4 @@ export const Services = (props) => {
     </>
   )
 }
+export default Services

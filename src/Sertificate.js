@@ -7,7 +7,7 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/certificate.png';
 
-export const Sertificate = (props) => {
+const Sertificate = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -52,3 +52,4 @@ export const Sertificate = (props) => {
         </>
     )
 }
+export default Sertificate

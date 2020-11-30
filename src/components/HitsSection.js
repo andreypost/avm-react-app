@@ -4,7 +4,7 @@ import dataHits from './dataHits';
 import { CardProduct } from './CardProduct';
 import { CardDiscount } from './CardDiscount';
 
-const HitsSection = () => {
+export const HitsSection = () => {
     return (
         <div id="tabsMainPage">
             <div className="tabs__caption global__hgroup flexbet">
@@ -20,6 +20,18 @@ const HitsSection = () => {
                 <article className="tabs__block active" data-tab="hits">
                     <OwlCarousel className="owl-carousel owl-theme" loop={false} rewind={true} margin={10} nav={true} dots={false} autoplay={true} navText={false}
                         responsive={{ 0: { items: 2 }, 580: { items: 3 }, 1024: { items: 4 }, 1280: { items: 5 } }}>
+                        {dataHits.map((card, i) =>
+                            card.clase === 'bestseller__product' ?
+                                (card.basePrice > 0 ? <CardDiscount key={card.code} datos={dataHits[i]} /> : <CardProduct key={card.code} datos={dataHits[i]} />) : null
+                        )}
+                        {dataHits.map((card, i) =>
+                            card.clase === 'bestseller__product' ?
+                                (card.basePrice > 0 ? <CardDiscount key={card.code} datos={dataHits[i]} /> : <CardProduct key={card.code} datos={dataHits[i]} />) : null
+                        )}
+                        {dataHits.map((card, i) =>
+                            card.clase === 'bestseller__product' ?
+                                (card.basePrice > 0 ? <CardDiscount key={card.code} datos={dataHits[i]} /> : <CardProduct key={card.code} datos={dataHits[i]} />) : null
+                        )}
                         {dataHits.map((card, i) =>
                             card.clase === 'bestseller__product' ?
                                 (card.basePrice > 0 ? <CardDiscount key={card.code} datos={dataHits[i]} /> : <CardProduct key={card.code} datos={dataHits[i]} />) : null
@@ -57,4 +69,3 @@ const HitsSection = () => {
         </div>
     )
 }
-export default HitsSection

@@ -13,7 +13,7 @@ import { ModalsPro } from "./components/ModalsPro";
 // import photo_003 from './img/MaskGroup3.jpg';
 // import photo_004 from './img/Image1.png';
 
-export const ProcardBase = (props) => {
+const ProcardBase = (props) => {
   let index = localStorage.getItem('cardIndex') || 0
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -46,3 +46,4 @@ export const ProcardBase = (props) => {
     </>
   )
 }
+export default ProcardBase

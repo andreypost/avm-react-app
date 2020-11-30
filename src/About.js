@@ -6,7 +6,7 @@ import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-export const About = (props) => {
+const About = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -63,3 +63,4 @@ export const About = (props) => {
         </>
     )
 }
+export default About

@@ -9,7 +9,7 @@ import photo_001 from './img/center_logo_01.png';
 import photo_002 from './img/center_logo_02.png';
 import photo_003 from './img/center_logo_03.png';
 
-export const Warranty = (props) => {
+const Warranty = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -245,3 +245,4 @@ export const Warranty = (props) => {
         </>
     )
 }
+export default Warranty

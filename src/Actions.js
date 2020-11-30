@@ -9,7 +9,7 @@ import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-export const Actions = (props) => {
+const Actions = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -283,3 +283,4 @@ export const Actions = (props) => {
         </>
     )
 }
+export default Actions
