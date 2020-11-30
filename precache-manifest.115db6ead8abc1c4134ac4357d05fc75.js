@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5a23ebf5fe8ad406611dd9f1b4fb22b8",
+    "revision": "f639fcfed1a78cac072dc9795faae9b9",
     "url": "/avm-react-app/index.html"
   },
   {
-    "revision": "a61d2a6b91899435e507",
-    "url": "/avm-react-app/static/css/2.01e2fbec.chunk.css"
+    "revision": "13fa3fa8c9f1d75c7f99",
+    "url": "/avm-react-app/static/css/3.01e2fbec.chunk.css"
   },
   {
-    "revision": "138570bdf5ec25c95afe",
+    "revision": "95ed587f3e419fd3b9d8",
     "url": "/avm-react-app/static/css/main.572951c1.chunk.css"
   },
   {
-    "revision": "a61d2a6b91899435e507",
-    "url": "/avm-react-app/static/js/2.1bddb666.chunk.js"
+    "revision": "450bb64827132e605d8d",
+    "url": "/avm-react-app/static/js/0.514a4bb5.chunk.js"
+  },
+  {
+    "revision": "13fa3fa8c9f1d75c7f99",
+    "url": "/avm-react-app/static/js/3.4a13f0ae.chunk.js"
   },
   {
     "revision": "925e52c28b12d63edac5d05fc71f820f",
-    "url": "/avm-react-app/static/js/2.1bddb666.chunk.js.LICENSE.txt"
+    "url": "/avm-react-app/static/js/3.4a13f0ae.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "138570bdf5ec25c95afe",
-    "url": "/avm-react-app/static/js/main.7c3bf7a2.chunk.js"
+    "revision": "95ed587f3e419fd3b9d8",
+    "url": "/avm-react-app/static/js/main.ed90b49b.chunk.js"
   },
   {
-    "revision": "bb8877cb9a8a66ce9f93",
-    "url": "/avm-react-app/static/js/runtime-main.c2272596.js"
+    "revision": "2f25b9521c034ac7f74a",
+    "url": "/avm-react-app/static/js/runtime-main.77cbc56a.js"
   },
   {
     "revision": "4e9d0bdd49d4c608fc1eb2cc611e033f",
