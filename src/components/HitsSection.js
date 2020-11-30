@@ -4,7 +4,7 @@ import dataHits from './dataHits';
 import { CardProduct } from './CardProduct';
 import { CardDiscount } from './CardDiscount';
 
-export const HitsSection = () => {
+const HitsSection = () => {
     return (
         <div id="tabsMainPage">
             <div className="tabs__caption global__hgroup flexbet">
@@ -57,3 +57,4 @@ export const HitsSection = () => {
         </div>
     )
 }
+export default HitsSection

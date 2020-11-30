@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import icons from './icons.svg';
 import { Header } from './components/Header';
@@ -7,8 +7,7 @@ import dataOffer from './components/dataOffer';
 import { CardPromo } from './components/CardPromo';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-// import { ModalsPro } from "./components/ModalsPro";
-const ModalsPro = lazy(() => import('./components/ModalsPro'));
+import { ModalsPro } from "./components/ModalsPro";
 
 export const Actions = (props) => {
     useEffect(() => {
@@ -280,9 +279,7 @@ export const Actions = (props) => {
                 <SeoMailing />
             </main>
             <Footer />
-            <Suspense fallback={<div className="header__shadow block"></div>}>
-                <ModalsPro pathname={props.history.location.pathname} />
-            </Suspense>
+            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

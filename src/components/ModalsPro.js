@@ -6,7 +6,7 @@ import photo_002 from '../img/Image365.png';
 import photo_003 from '../img/base_02.png';
 import photo_004 from '../img/Image1.png';
 
-const ModalsPro = () => {
+export const ModalsPro = () => {
     useEffect(() => {
         let currentModal = null,
             // widthInner = window.innerWidth,
@@ -1609,4 +1609,3 @@ const ModalsPro = () => {
         </>
     )
 }
-export default ModalsPro

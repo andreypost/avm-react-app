@@ -1,11 +1,11 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Header } from './components/Header';
 import { Catalogue } from './components/Catalogue';
 import { NewsSection } from './components/NewsSection';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-// import { ModalsPro } from "./components/ModalsPro";
+import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup6.png';
 import photo_002 from './img/services01.png';
 import photo_003 from './img/services02.png';
@@ -15,7 +15,6 @@ import photo_006 from './img/services05.png';
 import photo_007 from './img/services06.png';
 import photo_008 from './img/MaskGroup0.png';
 import photo_009 from './img/MaskGroup1.png';
-const ModalsPro = lazy(() => import('./components/ModalsPro'));
 
 export const Services = (props) => {
   useEffect(() => {
@@ -500,9 +499,7 @@ export const Services = (props) => {
         <SeoMailing />
       </main>
       <Footer />
-      <Suspense fallback={<div className="header__shadow block"></div>}>
-        <ModalsPro pathname={props.history.location.pathname} />
-      </Suspense>
+      <ModalsPro pathname={props.history.location.pathname} />
     </>
   )
 }

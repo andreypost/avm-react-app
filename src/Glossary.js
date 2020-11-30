@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import { Header } from './components/Header';
@@ -6,8 +6,7 @@ import { Catalogue } from './components/Catalogue';
 import { BoxGlossary } from './components/BoxGlossary';
 import dataGlossary from './components/dataGlossary';
 import { Footer } from './components/Footer';
-// import { ModalsPro } from "./components/ModalsPro";
-const ModalsPro = lazy(() => import('./components/ModalsPro'));
+import { ModalsPro } from "./components/ModalsPro";
 
 export const Glossary = (props) => {
     useEffect(() => {
@@ -44,9 +43,7 @@ export const Glossary = (props) => {
                 </section>
             </main>
             <Footer />
-            <Suspense fallback={<div className="header__shadow block"></div>}>
-                <ModalsPro pathname={props.history.location.pathname} />
-            </Suspense>
+            <ModalsPro pathname={props.history.location.pathname} />
         </>
     )
 }

@@ -3722,7 +3722,11 @@ about_us, certificate, jobs - pages */
 .header__shadow {
   z-index: 999;
 }
-
+.spinner {
+  /* height: 474px; */
+  /* background: white; */
+  /* width: 100%; */
+}
 #honestСredit {
   background: none;
 }

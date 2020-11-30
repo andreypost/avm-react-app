@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 // import { createStore } from 'redux';
 import icons from './icons.svg';
 import { Header } from './components/Header';
-import { HitsSection } from './components/HitsSection';
-import dataHits from './components/dataHits';
+// import { HitsSection } from './components/HitsSection';
+// import dataHits from './components/dataHits';
 // import { CardProduct } from './components/CardProduct';
 // import { CardDiscount } from './components/CardDiscount';
 import dataOffer from './components/dataOffer';
@@ -14,7 +14,7 @@ import dataProducers from './components/dataProducers';
 import { NewsSection } from './components/NewsSection';
 import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
-// import { ModalsPro } from "./components/ModalsPro";
+import { ModalsPro } from "./components/ModalsPro";
 import photo_00 from './img/MaskGroup0.png';
 import photo_01 from './img/MaskGroup1.png';
 import photo_02 from './img/MaskGroup2.jpg';
@@ -28,7 +28,7 @@ import photo_007 from './img/Logo_22.png';
 import photo_008 from './img/Logo_23.png';
 import photo_009 from './img/Logo_24.png';
 import photo_010 from './img/Logo_25.png';
-const ModalsPro = lazy(() => import('./components/ModalsPro'));
+const HitsSection = lazy(() => import('./components/HitsSection'));
 
 // const MyCounter = (state = 0, action) => {
 //   switch (action.type) {
@@ -528,7 +528,9 @@ export const Main = (props) => {
               <p>на рынке аудио-видео техники</p>
             </div>
           </article>
-          <HitsSection />
+          <Suspense fallback={<div className="spinner"></div>}>
+            <HitsSection />
+          </Suspense>
         </section>
         <article className="offer__special">
           <section className="carousel__section">
@@ -574,9 +576,7 @@ export const Main = (props) => {
         <SeoMailing />
       </main>
       <Footer />
-      <Suspense fallback={<div className="header__shadow block"></div>}>
-        <ModalsPro pathname={props.history.location.pathname} />
-      </Suspense>
+      <ModalsPro pathname={props.history.location.pathname} />
     </>
   )
 }
