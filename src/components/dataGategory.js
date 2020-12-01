@@ -6,7 +6,7 @@ import photo_004 from '../img/cE.jpg';
 import photo_005 from '../img/cF.jpg';
 import photo_006 from '../img/cG.jpg';
 
-export default [
+let arr = [
     {
         'image': photo_000,
         'title': 'Аудио техника',
@@ -36,3 +36,4 @@ export default [
         'title': 'Виниловые проигрыватели',
     },
 ]
+export default arr

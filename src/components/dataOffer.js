@@ -5,7 +5,7 @@ import photo_003 from '../img/Offer_003.jpg';
 import photo_004 from '../img/Offer_004.png';
 import photo_005 from '../img/Offer_005.jpg';
 
-export default [
+let arr = [
     {
         'image': photo_000,
         'title': 'Ресивер DENON AVR-X7200W с ярким подарком DBT-1713UD',
@@ -50,3 +50,4 @@ export default [
         'valid': 'Действует'
     },
 ]
+export default arr

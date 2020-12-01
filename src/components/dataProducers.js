@@ -1,4 +1,4 @@
-export default [
+let arr = [
     {
         0: 'A',
         1: 'Accurate Audio',
@@ -225,3 +225,4 @@ export default [
         4: 'ZMF',
     },
 ]
+export default arr

@@ -15,7 +15,7 @@ import photo_013 from '../img/news_013.jpg';
 import photo_014 from '../img/news_014.jpg';
 import photo_015 from '../img/news_015.jpg';
 
-export default [
+let arr = [
     {
         'image': photo_000,
         'title': 'Грациозная акустика Estelon XA Diamond',
@@ -129,3 +129,4 @@ export default [
         'clase': 'rewiew',
     }
 ]
+export default arr
