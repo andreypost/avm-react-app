@@ -30,14 +30,27 @@ export const ModalsPro = () => {
             // if (widthInner <= 768) return
         }
         showIconTooltip(document.querySelectorAll('[data-headertooltip]'))
+
+        const handleScroll = {
+            removeScroll() {
+                let width = document.documentElement.clientWidth
+                body.style.height = '100%'
+                body.style.overflowY = 'hidden'
+                body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
+            },
+            unsetScroll() {
+                body.style.height = 'unset'
+                body.style.overflowY = ''
+                body.style.paddingRight = `${0}px`
+            }
+        }
+
         const showModal = (modal) => {
             if (currentModal) {
                 hideModal(currentModal)
                 currentModal = null
             }
-            let width = document.documentElement.clientWidth
-            body.style.overflowY = 'hidden'
-            body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
+            handleScroll.removeScroll()
             currentModal = modal
             currentModal.style.display = 'block'
             currentModal.onclick = (e) => {
@@ -61,8 +74,7 @@ export const ModalsPro = () => {
                 window.location.assign('/cabinet/')
             } else {
                 modal.style.display = 'none'
-                body.style.overflowY = ''
-                body.style.paddingRight = `${0}px`
+                handleScroll.unsetScroll()
             }
         }
 
@@ -81,6 +93,61 @@ export const ModalsPro = () => {
         }
         isGuest(document.querySelectorAll('.header__user'))
         isGuest(document.querySelectorAll('.header__guest'))
+
+        const forbidScrollNav = (elem) => {
+            let uls = elem.querySelectorAll('ul'),
+              second = elem.querySelectorAll('.nav__second'),
+              third = elem.querySelectorAll('.nav__third'),
+              secondLinks = elem.querySelectorAll('.nav__second>li>a')
+            for (let ul of uls) {
+              ul.previousElementSibling.classList.add('active')
+            }
+            for (let dos of second) {
+              dos.onmouseover = () => {
+                handleScroll.removeScroll()
+                dos.onmouseout = () => {
+                    handleScroll.unsetScroll()
+                }
+              }
+            }
+            const addMargin = () => {
+              for (let a of secondLinks) {
+                a.classList.add('marginRight')
+              }
+            }
+            const removeMargin = () => {
+              for (let a of secondLinks) {
+                a.classList.remove('marginRight')
+              }
+            }
+            const addRight = () => {
+              for (let tres of third) {
+                tres.style.right = 40.35 + '%'
+              }
+            }
+            const removeRight = () => {
+              for (let tres of third) {
+                tres.style.right = 40 + '%'
+              }
+            }
+            for (let tres of third) {
+              tres.onmouseover = () => {
+                for (let dos of second) {
+                  dos.style.overflowY = 'hidden'
+                }
+                addMargin()
+                addRight()
+                tres.onmouseout = (e) => {
+                  for (let dos of second) {
+                    dos.style.overflowY = 'scroll'
+                  }
+                  removeMargin()
+                  removeRight()
+                }
+              }
+            }
+          }
+          forbidScrollNav(document.querySelector('.nav__first'))
 
         const getAllElementsModal = (elems, modal) => {
             const onClickListener = (e) => {
@@ -106,16 +173,18 @@ export const ModalsPro = () => {
         getAllElementsModal(document.querySelectorAll('.receiveComment'), document.getElementById('sentReviewModal'))
 
         const toggleAllLists = (elems) => {
-            // elems.forEach(elem => {
-            //     elem.firstElementChild.classList.remove('active')
-            //     if (elem.nextElementSibling) elem.nextElementSibling.classList.remove('block')
-            //     if (elem.closest('.services__heading') || elem.closest('.viewedcab__categories')) elem.classList.remove('activeElem')
-            // })
             const onClickListener = (e, elem) => {
-                e.preventDefault()
-                elem.firstElementChild.classList.toggle('active')
-                if (elem.nextElementSibling) elem.nextElementSibling.classList.toggle('block')
-                if (elem.closest('.services__heading') || elem.closest('.viewedcab__categories')) elem.classList.toggle('activeElem')
+                if (elem.firstElementChild) elem.firstElementChild.classList.toggle('active')
+                // elem.nextElementSibling?.classList.toggle('block')
+                if (elem.nextElementSibling) {
+                    e.preventDefault()
+                    elem.nextElementSibling.classList.toggle('block')
+                }
+                if (elem.closest('.services__heading') || elem.closest('.viewedcab__categories')) {
+                    e.preventDefault()
+                    elem.classList.toggle('activeElem')
+                }
+                if (e.target.closest('.see__seo')) elem.previousElementSibling.classList.toggle('active')
             }
             onClickHandler(elems, onClickListener)
         }
@@ -123,15 +192,18 @@ export const ModalsPro = () => {
         toggleAllLists(document.querySelectorAll('.global__linksfilter')) /* just set blue color to square then reload page and return back to white, page: _all_promotions and others */
         toggleAllLists(document.querySelectorAll('.services__heading'))
         toggleAllLists(document.querySelectorAll('.viewedcab__categories'))
+        toggleAllLists(document.querySelectorAll('.see__seo'))
 
         const toggleFilterLists = (elems) => {
             const onClickListener = (e, elem) => {
                 e.preventDefault()
+                handleScroll.removeScroll()
                 if (elem.classList.contains('articles__filtershow')) {
                     elem.previousElementSibling.classList.toggle('block')
                 } else if (elem.previousElementSibling.querySelector('.global__list')) {
                     elem.previousElementSibling.querySelector('.global__list>ul').classList.toggle('block')
                 }
+                handleScroll.unsetScroll()
                 for (let el of elem.querySelectorAll('*')) {
                     el.classList.toggle('active')
                 }
@@ -411,9 +483,8 @@ export const ModalsPro = () => {
             // showCommentsToggleClick(document.querySelectorAll('.comments__text i'))
         })
         return () => {
-            body.style.overflow = ''
-            body.style.overflowY = ''
-            body.style.paddingRight = 0 + 'px'
+            handleScroll.unsetScroll()
+            validateOptions.removeTooltip()
             // const removeAllLists = (elems) => {
             //     elems.forEach(elem => {
             //         elem.firstElementChild.classList.remove('active')

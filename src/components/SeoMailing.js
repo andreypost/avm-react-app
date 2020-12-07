@@ -1,14 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 export const SeoMailing = () => {
-    useEffect(() => {
-        const showTextToggleClick = (elem) => {
-            elem.onclick = () => {
-                elem.previousElementSibling.classList.toggle('active')
-            }
-        }
-        showTextToggleClick(document.querySelector('.see__seo'))
-    }, [])
     return (
         <>
             <article className="mailing__article">
