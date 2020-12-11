@@ -9,11 +9,11 @@ import photo_004 from '../img/Image1.png';
 export const ModalsPro = () => {
     useEffect(() => {
         let currentModal = null,
-            // widthInner = window.innerWidth,
-            textInfoModal = null,
             infoModal = document.getElementById('infoModal'),
+            textInfoModal = infoModal.querySelector('h3'),
             body = document.querySelector('body'),
             arrowUp = document.getElementById('arrowUp')
+        // widthInner = window.innerWidth,
 
         const onClickHandler = (elems, onClickListener) => {
             for (let elem of elems) {
@@ -50,7 +50,9 @@ export const ModalsPro = () => {
                 hideModal(currentModal)
                 currentModal = null
             }
-            handleScroll.removeScroll()
+            let width = document.documentElement.clientWidth
+            body.style.overflowY = 'hidden'
+            body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
             currentModal = modal
             currentModal.style.display = 'block'
             currentModal.onclick = (e) => {
@@ -74,7 +76,8 @@ export const ModalsPro = () => {
                 window.location.assign('/cabinet/')
             } else {
                 modal.style.display = 'none'
-                handleScroll.unsetScroll()
+                body.style.overflowY = ''
+                body.style.paddingRight = `${0}px`
             }
         }
 
@@ -96,58 +99,61 @@ export const ModalsPro = () => {
 
         const forbidScrollNav = (elem) => {
             let uls = elem.querySelectorAll('ul'),
-              second = elem.querySelectorAll('.nav__second'),
-              third = elem.querySelectorAll('.nav__third'),
-              secondLinks = elem.querySelectorAll('.nav__second>li>a')
+                second = elem.querySelectorAll('.nav__second'),
+                third = elem.querySelectorAll('.nav__third'),
+                secondLinks = elem.querySelectorAll('.nav__second>li>a')
             for (let ul of uls) {
-              ul.previousElementSibling.classList.add('active')
+                ul.previousElementSibling.classList.add('active')
             }
             for (let dos of second) {
-              dos.onmouseover = () => {
-                handleScroll.removeScroll()
-                dos.onmouseout = () => {
-                    handleScroll.unsetScroll()
+                dos.onmouseover = () => {
+                    let width = document.documentElement.clientWidth
+                    body.style.overflowY = 'hidden'
+                    body.style.paddingRight = `${document.documentElement.clientWidth - width}px`
+                    dos.onmouseout = () => {
+                        body.style.overflowY = ''
+                        body.style.paddingRight = `${0}px`
+                    }
                 }
-              }
             }
             const addMargin = () => {
-              for (let a of secondLinks) {
-                a.classList.add('marginRight')
-              }
+                for (let a of secondLinks) {
+                    a.classList.add('marginRight')
+                }
             }
             const removeMargin = () => {
-              for (let a of secondLinks) {
-                a.classList.remove('marginRight')
-              }
+                for (let a of secondLinks) {
+                    a.classList.remove('marginRight')
+                }
             }
             const addRight = () => {
-              for (let tres of third) {
-                tres.style.right = 40.35 + '%'
-              }
+                for (let tres of third) {
+                    tres.style.right = 40.35 + '%'
+                }
             }
             const removeRight = () => {
-              for (let tres of third) {
-                tres.style.right = 40 + '%'
-              }
+                for (let tres of third) {
+                    tres.style.right = 40 + '%'
+                }
             }
             for (let tres of third) {
-              tres.onmouseover = () => {
-                for (let dos of second) {
-                  dos.style.overflowY = 'hidden'
+                tres.onmouseover = () => {
+                    for (let dos of second) {
+                        dos.style.overflowY = 'hidden'
+                    }
+                    addMargin()
+                    addRight()
+                    tres.onmouseout = (e) => {
+                        for (let dos of second) {
+                            dos.style.overflowY = 'scroll'
+                        }
+                        removeMargin()
+                        removeRight()
+                    }
                 }
-                addMargin()
-                addRight()
-                tres.onmouseout = (e) => {
-                  for (let dos of second) {
-                    dos.style.overflowY = 'scroll'
-                  }
-                  removeMargin()
-                  removeRight()
-                }
-              }
             }
-          }
-          forbidScrollNav(document.querySelector('.nav__first'))
+        }
+        forbidScrollNav(document.querySelector('.nav__first'))
 
         const getAllElementsModal = (elems, modal) => {
             const onClickListener = (e) => {
@@ -184,7 +190,7 @@ export const ModalsPro = () => {
                     elem.classList.toggle('activeElem')
                     elem.nextElementSibling.classList.toggle('block')
                 }
-                elem.firstElementChild.classList.toggle('active') 
+                elem.firstElementChild.classList.toggle('active')
             }
             onClickHandler(elems, onClickListener)
         }
@@ -218,26 +224,31 @@ export const ModalsPro = () => {
                 // if (grecaptcha && grecaptcha.getResponse().length === 0) return // uncomment when key capcha able
                 const callback = (response) => {
                     if (form.id === 'mailingForm') {
-                        textInfoModal = 'Спасибо, Вы подписались на рассылку!'
+                        textInfoModal.innerHTML = 'Спасибо, Вы подписались на рассылку!'
                     } else if (form.id === 'newCustomerForm' || form.id === 'regularCustomerForm' || form.id === 'oneClickForm') {
-                        textInfoModal = 'Спасибо, Ваш заказ оформлен!'
+                        textInfoModal.innerHTML = 'Спасибо, Ваш заказ оформлен!'
                         // headerProductCount.innerHTML = ''
                     } else if (form.id === 'reviewFormSent' || form.id === 'commentFormTop' || form.id === 'commentFormBot') {
-                        textInfoModal = 'Спасибо, Ваш отзыв отправлен!<br><span>Он будет опубликован после проверки модератором!</span>'
+                        textInfoModal.innerHTML = 'Спасибо, Ваш отзыв отправлен!<br><span>Он будет опубликован после проверки модератором!</span>'
                     } else if (form.id === 'registrationForm' && response.result === 'error') {
-                        textInfoModal = 'Уже существует пользователь с таким e-mail.<br><span>Если вы уверены, что это Ваш e-mail, воспользуйтесь формой забыли пароль.</span><br><span class="forgetPass">Забыли пароль?</span>'
+                        textInfoModal.innerHTML = 'Уже существует пользователь с таким e-mail.<br><span>Если вы уверены, что это Ваш e-mail, воспользуйтесь формой забыли пароль.</span><br><span class="forgetPass">Забыли пароль?</span>'
                     } else if (form.id === 'registrationForm' && response.result === 'ok') {
-                        textInfoModal = 'Спасибо за регистрацию!<br><span>На Ваш e-mail выслано письмо для подтверждения входа в личный кабинет.</span>'
+                        textInfoModal.innerHTML = 'Спасибо за регистрацию!<br><span>На Ваш e-mail выслано письмо для подтверждения входа в личный кабинет.</span>'
                     } else if (form.id === 'forgetPassForm') {
-                        textInfoModal = 'Спасибо!<br><span>На указаный адрес отправлено письмо<br>с инструкциями по восстановлению пароля.</span>'
+                        textInfoModal.innerHTML = 'Спасибо!<br><span>На указаный адрес отправлено письмо<br>с инструкциями по восстановлению пароля.</span>'
                     } else if (form.id === 'changeUserPass' && response.result === 'error') {
-                        textInfoModal = 'Извините, но текущий пароль неверный!'
+                        textInfoModal.innerHTML = 'Извините, но текущий пароль неверный!'
                     } else if (form.id === 'changeUserPass' && response.result === 'ok') {
-                        textInfoModal = 'Спасибо!<br><span>Ваш пароль успешно изменен!</span>'
+                        textInfoModal.innerHTML = 'Спасибо!<br><span>Ваш пароль успешно изменен!</span>'
                     } else if (form.id === 'wishForm' || form.id === 'questionFormTop' || form.id === 'questionFormBot' || form.id === 'installExpertVisitDesk' || form.id === 'installExpertVisitMob') {
-                        textInfoModal = 'Спасибо, Ваш запрос оставлен!<br> <span>С вами свяжется менеджер в ближайшее время!</span>'
+                        textInfoModal.innerHTML = 'Спасибо, Ваш запрос оставлен!<br> <span>С вами свяжется менеджер в ближайшее время!</span>'
+                    } else if (form.id === 'cabinetForm' && response.result === 'ok') {
+                        // location.reload()
+                        form.reset()
+                        return
+                    } else if (form.id === 'cabinetForm' && response.result === 'error') {
+                        textInfoModal.innerHTML = 'Извините, но введенный логин или пароль неверный!'
                     }
-                    infoModal.querySelector('h3').innerHTML = textInfoModal
                     forgetPassword(infoModal.querySelector('.forgetPass'))
                     showModal(infoModal)
                     form.reset()
@@ -424,7 +435,7 @@ export const ModalsPro = () => {
             }
         }
         dateCalendarLimit(document.querySelectorAll('input[type="date"]'))
-        
+
         const resetInputCheckbox = (form) => {
             let store = form.querySelector('.filterStore')
             const setDouble = (elem, i) => {
@@ -560,7 +571,7 @@ export const ModalsPro = () => {
                         <label htmlFor="email">Эл. почта или телефон</label>
                         <input type="email" name="email" required />
                         <label htmlFor="password">Пароль</label>
-                        <input type="password" name="password" required />
+                        <input type="password" name="password" autoComplete="off" required />
                         <div className="cabinet__checkbox flexbet">
                             <label className="global__label">
                                 <input type="checkbox" />
