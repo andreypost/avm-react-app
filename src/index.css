@@ -1,5 +1,4 @@
 :root {
-  --white: #FFFFFF;
   --black: #000000;
   --red: #FF0000;
   --blue: #0E425C;
@@ -67,9 +66,9 @@ section {
 .products__popup, .global__list ul, .tabs__block, .banner__carousel .carousel-indicators,
 .global__checkmark:after, .header__burget, .header__navmob,
 .select__hide, .header__listabout, .products__rating input, .products__buymob,
-.footer__mob, .global__rating input, .box__table,
-.services__text, .global__filterset, .global__filtermob, .box__column,
-.item6 .discount__log, .ordercab__status h4, .header__dataicons span:empty,
+.footer__mob, .global__rating input, .box__table, .item2 .discount__sales,
+.services__text, .global__filterset, .global__filtermob, 
+.ordercab__status h4, .header__dataicons span:empty, .box__column,
 .htextmob__580, .formtooltip, .productCreditArticle>article>button,
 #getProductCredit .removeOrders, .installplan__article .noneDesk, .global__filterarrow span {
   display: none;
@@ -118,7 +117,7 @@ a, i, input, button, .header__avatar, .button__closegl, .header__about,
   cursor: pointer;
 }
 
-.global__label, .global__filterlabel, .base__profits h5,
+.global__label, .global__filterlabel, .base__profits h5, #infoModal h3,
 .comments__text p, .blockcard__click i, .sliderMin, .sliderMax,
 #cardImgVideo .cardsliderRight {
   user-select: none;
@@ -284,7 +283,7 @@ th, td, .discountcab__catalogue hgroup h3, #addProduct h3, #infoModal h3,
   line-height: 16px;
 }
 
-.header__info *, .products__price, .discount__log, .articleinner__stars01 p,
+.header__info *, .products__price, .discount__log, .articleinner__stars01 p, .base__comments>a,
 .item6 .products__comments, .base__headerprice i, .base__card p, .tabs__caption>a,
 .wishcab__result *, .wishcabsocial__block h5, .viewedcab__header .removeAllCard,
 .blockcard__inner>p, .base__credit>p, .base__variants p, #viewedcabProducts .tabs__caption h3 {
@@ -297,7 +296,7 @@ img, table, .widthDesk, .horizont, .header__input, #carouselIndex .carousel-indi
 .box__column, .column__offer, .column__card, .base__switch, .base__switch a, .reviews__card,
 #cabinetForm>input, #wishForm input, #oneClickForm input, #wishForm textarea, .promo__description *,
 .wish__symbol, #cardImgVideo .cardsliderRight, #buyOneClick textarea, .promo__offerheader,
-.cardbuy__additional .global__filterlabel, .cabinet__content {
+.cardbuy__additional .global__filterlabel, .cabinet__content, .autocomplete__items  {
   width: 100%;
 }
 
@@ -471,7 +470,7 @@ td:nth-child(1), .footer__mob a, .global__deskfilter, #mailingForm hgroup, .bloc
 #expertVisit label, #signUpShowRoom label, #feedbackForm label, #installExpertVisitDesk label,
 .manufacturers__articles a, .articles__leftnews h3, .allpromo__header, .baseDiscountPay span,
 .specific__description td:nth-child(n+2), .basketcab__catalogue .blockcard__hgroup h3:nth-of-type(2),
-.breadcrumbs, .commentcab__title {
+.breadcrumbs, .commentcab__title, .autocomplete__items {
   text-align: left;
 }
 
@@ -481,7 +480,7 @@ td:nth-child(1), .footer__mob a, .global__deskfilter, #mailingForm hgroup, .bloc
 
 .textcenter, section, th:nth-child(n+2), td:nth-child(n+2), #wishForm .wish__symbol input::placeholder,
 .box__offer h2, .base__card, .base__plus, .base__equal, #selectRangePrice input, #selectRangePrice button,
-.others__bank td:nth-child(1), .installcard__price>a, .basefloat__block,
+.others__bank td:nth-child(1), .installcard__price>a, .basefloat__block, .base__comments>a,
 .comment__form .comment__symbol input, .popup-credit-content th:nth-child(1), .popup-credit-content td:nth-child(1) {
   text-align: center;
 }
@@ -537,8 +536,8 @@ td:nth-child(1), .footer__mob a, .global__deskfilter, #mailingForm hgroup, .bloc
 
 a:hover, .orange, .header__cataloglinks a:hover, .header__cataloglinks .header__bonus,
 .nav__catalog a:hover, .products__popup a, .discount__log, .news__viewed a, .comments__plus,
-.seo__section>p, .tabLink.active, .promo__href a, .item7 .products__price, .comments__minus,
-.comparison__category a.active, .base__navmob a.active, .header__about:hover>a,
+.seo__section>p, .tabLink.active, .promo__href a, .item7 .products__price, .item7 .products__price span, .comments__minus,
+.comparison__category a.active, .base__navmob a.active, .header__about:hover>a, .item8 a:hover,
 .header__listindex:hover>a, #carouselIndex .carousel-indicators a, .autocomplete__div h4,
 .discount__card .products__price, .discount__card .products__price span, #addProduct .goBasket:hover, .global__back:hover, .basket__checkout button:hover,
 .verify__forms button:hover {
@@ -571,7 +570,7 @@ a:hover, .orange, .header__cataloglinks a:hover, .header__cataloglinks .header__
 .column__offer h2, .box__offer h2, .item8 a, .base__switch a.active, .aboutus__links a:hover, .comment__symbol p, .cabinet__leftside a.active,
 .cabinet__empty>a:hover, #cabinetForm button, #wishForm button, #oneClickForm button,
 .wish__symbol p, #filterForm button {
-  color: var(--white);
+  color: white;
 }
 body, a, input, input::placeholder, textarea, .blue, .discount__card .products__name:hover, #headerCall>a, #headerCall>p,
 .header__listabout a, .products__price span, .services__heading.activeElem, .item7 .products__color,
@@ -603,7 +602,7 @@ input[type="date" i], .global__deskfilter .deskreset__filter, .global__deskfilte
 .header__listabout, .nav__catalog, .products__popup, .offer__card, .news__card, .articleinner__butt button, .base__descriptprofit,
 .formtooltip, .cardbuy__additional article, .viewedcab__headermob article, .sticky, #addProduct .global__back,
 .header__dataicons span:empty+a:hover::after, .products__popup:after, #changeUserPass .change_cancel {
-  background: var(--white);
+  background: white;
 }
 .column__offer h2, .box__offer h2, .base__switch a.active, .base__stockhref, .stocksliderBlock>h3,
 .stocksliderPin.active, .slide__counter>div:last-of-type, .viewedcab__headermob h5,
@@ -626,8 +625,11 @@ footer, .services__middle {
   opacity: 0;
 }
 
-.opacity {
-  opacity: .2;
+.nav__second>li>a.active:after, .products__rating label:hover:after, .products__rating label:hover~label:after, .products__rating input:checked~label:after,
+.global__rating label:hover:after, .global__rating label:hover~label:after, .global__rating input:checked~label:after, #tabsMainPage .tabs__caption h2.active,
+#tabsNews .tabs__caption h2.active, #viewedcabProducts .tabs__caption h3.active, .services__grid>div:hover .services__addtext,
+.stocksliderBlock.active, .verify__article hgroup h3.active {
+  opacity: 1;
 }
 
 .zIndexZ {
@@ -726,7 +728,7 @@ textarea {
 }
 
 .header__callarrow, .header__line {
-  stroke: var(--white);
+  stroke: white;
 }
 
 #headerHoverCall .button__closegl, .arrow__href svg, .global__filterarrow svg {
@@ -739,7 +741,7 @@ textarea {
 }
 
 .header__avatar>svg, .header__iconcatalog svg {
-  fill: var(--white);
+  fill: white;
 }
 
 .header__dataicons svg {
@@ -902,12 +904,12 @@ textarea {
 }
 
 .autocomplete__items {
-  width: 100%;
   position: absolute;
+  left: 0;
+  right: 0;
   top: 50px;
   border: 1px solid var(--lightblue);
   border-top: none;
-  text-align: left;
   z-index: 9999;
 }
 
@@ -1043,31 +1045,31 @@ a.header__bonus:hover, .discount__log:hover {
 }
 
 .nav__first>li:nth-of-type(1)>ul {
-  background: url(./img/Image1.png) 90% 50% / 30% no-repeat var(--white);
+  background: url(./img/Image1.png) 90% 50% / 30% no-repeat white;
 }
 
 .nav__first>li:nth-of-type(2)>ul {
-  background: url(./img/Image2.png) 90% 50% / 30% no-repeat var(--white);
+  background: url(./img/Image2.png) 90% 50% / 30% no-repeat white;
 }
 
 .nav__first>li:nth-of-type(3)>ul {
-  background: url(./img/Image364.png) 90% 50% / 30% no-repeat var(--white);
+  background: url(./img/Image364.png) 90% 50% / 30% no-repeat white;
 }
 
 .nav__first>li:nth-of-type(4)>ul {
-  background: url(./img/Image1.png) 90% 50% / 30% no-repeat var(--white);
+  background: url(./img/Image1.png) 90% 50% / 30% no-repeat white;
 }
 
 .nav__first>li:nth-of-type(5)>ul {
-  background: url(./img/Image2.png) 90% 50% / 30% no-repeat var(--white);
+  background: url(./img/Image2.png) 90% 50% / 30% no-repeat white;
 }
 
 .nav__first>li:nth-of-type(6)>ul {
-  background: url(./img/Image364.png) 90% 50% / 30% no-repeat var(--white);
+  background: url(./img/Image364.png) 90% 50% / 30% no-repeat white;
 }
 
 .nav__first>li:nth-of-type(7)>ul {
-  background: url(./img/Image1.png) 90% 50% / 30% no-repeat var(--white);
+  background: url(./img/Image1.png) 90% 50% / 30% no-repeat white;
 }
 .nav__second, .nav__third {
   width: 280%;
@@ -1114,9 +1116,6 @@ a.header__bonus:hover, .discount__log:hover {
 }
 .nav__second>li>a:after {
   opacity: .4;
-}
-.nav__second>li>a.active:after {
-  opacity: 1;
 }
 .nav__second>li>a:after {
   margin-right: 720px;
@@ -1202,7 +1201,6 @@ a.header__bonus:hover, .discount__log:hover {
   border-left: 1px solid var(--lightblue);
   border-top: 1px solid var(--lightblue);
   border-bottom: 1px solid var(--lightblue);
-  /* opacity: 1; */
 }
 
 #carouselIndex .carousel-indicators li:last-of-type {
@@ -1282,8 +1280,6 @@ a.header__bonus:hover, .discount__log:hover {
 .owl-carousel .products__card, .owl-carousel .discount__card, .owl-carousel .offer__card,
 .owl-carousel .news__card {
   max-width: 264px;
-  /* min-width: 100%; */
-  /* max-width: 100%; */
 }
 .owl-carousel .products__card, .owl-carousel .discount__card {
   margin-top: 10px;
@@ -1297,8 +1293,8 @@ a.header__bonus:hover, .discount__log:hover {
 }
 .discount__sales, .description__card a, .offer__card a, .news__card a,
 .offer__card h6, .news__card h6, .glossary__articles p,
-.column__article a, .column__article h4, .column__href *,
-.column__description *, .promo__description *, .stocksliderBlock>p,
+.column__article a, .column__article h4, .column__href>*,
+.column__description>h4, .promo__description *, .stocksliderBlock>p,
 .base__card a, .blockcard__name *, .blockcard__header *,
 .comments__text p, .specific__description tr *, .reviews__href a,
 .reviews__description p, .commentcab__title, .received__description h4,
@@ -1312,7 +1308,7 @@ a.header__bonus:hover, .discount__log:hover {
   -webkit-line-clamp: 1;
   padding-right: 20px;
 }
-.offer__card a, .news__card a, .column__article a, .column__href *,
+.offer__card a, .news__card a, .column__article a, .column__href>*,
 .blockcard__name *, .blockcard__header *, .received__description h4,
 .discount__sales, .description__card a, .specific__description tr *, .reviews__href a,
 .commentcab__title, .ordercab__card hgroup * , .box__offerheader *,
@@ -1326,7 +1322,7 @@ a.header__bonus:hover, .discount__log:hover {
 .searchnews__header h6, .promo__description h5 {
   -webkit-line-clamp: 4;
 }
-.glossary__articles p, .column__article h4, .column__description * {
+.glossary__articles p, .column__article h4, .column__description>h4 {
   -webkit-line-clamp: 5;
 }
 .description__card img, .promo__description img, .articleinner__section * iframe {
@@ -1422,15 +1418,8 @@ a.header__bonus:hover, .discount__log:hover {
 
 .products__rating label:after, .global__rating label:after {
   background-position:-141px -213px;
-  /* opacity: 0; */
   transition: .2s;
 }
-
-.products__rating label:hover:after, .products__rating label:hover~label:after, .products__rating input:checked~label:after,
-.global__rating label:hover:after, .global__rating label:hover~label:after, .global__rating input:checked~label:after {
-  opacity: 1;
-}
-
 .products__comments {
   margin: 15px 0;
 }
@@ -1507,13 +1496,7 @@ a.header__bonus:hover, .discount__log:hover {
 #viewedcabProducts .tabs__caption h3 {
   margin-right: 20px;
   transition: all .2s;
-  opacity: 0.4;
-}
-
-#tabsMainPage .tabs__caption h2.active,
-#tabsNews .tabs__caption h2.active,
-#viewedcabProducts .tabs__caption h3.active {
-  opacity: 1;
+  opacity: .4;
 }
 
 /* offer, news sections */
@@ -1690,7 +1673,6 @@ a.header__bonus:hover, .discount__log:hover {
 
 .global__label input, .global__filterlabel input {
   position: absolute;
-  /* opacity: 0; */
   height: 0;
   width: 0;
   z-index: 9999;
@@ -1716,7 +1698,7 @@ a.header__bonus:hover, .discount__log:hover {
   top: 0px;
   width: 8px;
   height: 13px;
-  border: solid var(--white);
+  border: solid white;
   border-width: 0 3px 3px 0;
   transform: rotate(30deg);
 }
@@ -1902,7 +1884,6 @@ a.header__bonus:hover, .discount__log:hover {
 
 .select__custom select {
   position: absolute;
-  /* opacity: 0; */
   z-index: -99999;
 }
 
@@ -2042,7 +2023,7 @@ a.header__bonus:hover, .discount__log:hover {
   margin: 60px auto;
   padding: 10px 30px;
   font-size: 20px;
-  color: var(--white);
+  color: white;
   background: var(--blue);
 }
 
@@ -2095,10 +2076,6 @@ input::-webkit-datetime-edit-year-field:focus {
   top: 0;
   z-index: 99999;
   transition: all .3s;
-}
-
-.services__grid>div:hover .services__addtext {
-  opacity: 1;
 }
 
 .services__grid img {
@@ -2482,7 +2459,7 @@ input::-webkit-datetime-edit-year-field:focus {
     position: absolute;
     top: -10px;
     font-size: 12px;
-    color: var(--white);
+    color: white;
     background: var(--orange);
     border-radius: 8px;
     padding: 3px;
@@ -2996,7 +2973,6 @@ about_us, certificate, jobs - pages */
 }
 
 .stocksliderBlock.active {
-  opacity: 1;
   z-index: 99;
 }
 
@@ -3508,7 +3484,7 @@ about_us, certificate, jobs - pages */
   top: -8px;
   left: 2px;
   content: "";
-  border-bottom: 10px solid var(--white);
+  border-bottom: 10px solid white;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
 }
@@ -3705,7 +3681,7 @@ about_us, certificate, jobs - pages */
 #basketProduct, #verificationOrder, #getProductCredit,
 #burgerMenuMob, #catalogueMob, #filterMob, #filterSearch,
 #cardImgVideo, #buyOneClick, #infoModal,
-#sentReviewModal, #forgetPassModal, .header__shadow, .spinner {
+#sentReviewModal, #forgetPassModal, .header__shadow {
   display: none;
   position: fixed;
   left: 0;
@@ -3722,10 +3698,7 @@ about_us, certificate, jobs - pages */
 .header__shadow {
   z-index: 999;
 }
-.spinner {
-  color: var(--lightblue);
-  background: white;
-}
+
 #honestСredit {
   background: none;
 }
@@ -3738,7 +3711,7 @@ about_us, certificate, jobs - pages */
 #forgetPassModal>div {
   width: 1080px;
   margin: 1% auto 0;
-  background: var(--white);
+  background: white;
 }
 
 #enterCabinet>div, #sentReviewModal>div, #infoModal>article,
@@ -4078,9 +4051,6 @@ about_us, certificate, jobs - pages */
   transition: all .5s;
   border-bottom: 2px solid var(--blue);
 }
-.verify__article hgroup h3.active {
-  opacity: 1;
-}
 .verify__forms button {
   margin: 0 auto;
 }
@@ -4265,7 +4235,7 @@ about_us, certificate, jobs - pages */
   top: -10px;
   right: 0;
   content: "";
-  border-bottom: 10px solid var(--white);
+  border-bottom: 10px solid white;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
 }
@@ -4527,15 +4497,14 @@ about_us, certificate, jobs - pages */
     margin: 10px 5px -20px;
     border: 1px solid #FFCF8F;
     border-radius: 50%;
-    background: var(--white) !important;
+    background: white !important;
   }
   #carouselIndex .carousel-indicators.banner__imgbottom .active,
   .banner__carousel .carousel-indicators .active {
     background: #FFCF8F !important;
   }
   .autocomplete__items {
-    left: 5%;
-    top: 143px;
+    top: 26px;
   }
   #mailingForm hgroup, #mailingForm input {
     margin: 0 0 20px;
@@ -4551,7 +4520,7 @@ about_us, certificate, jobs - pages */
     text-align: left;
   }
   #enterCabinet>div, #sentReviewModal>div,
-   #forgetPassModal>div, .autocomplete__items {
+   #forgetPassModal>div {
     width: 90%;
   }
   .global__filterset {
@@ -4631,20 +4600,23 @@ about_us, certificate, jobs - pages */
 
 
 @media screen and (max-width: 768px) {
-  .none768, .news__card .news__href,
+  .none768, .news__card .news__href, .item2 h5,
   #carouselIndex .carousel-control-next, #carouselIndex .carousel-control-prev,
   .banner__carousel .carousel-control-prev, .banner__carousel .carousel-control-next,
   .products__icon:hover .products__popup, .promo__button, .base__topbox img,
   .base__topbox a, .cardsliderNav img, .cardsliderNav video, #arrowUp, .footer__desk,
-  .blockcard__name h5, .tabsBlock, .item4, .item5, .item9, .column__article h4,
+  .blockcard__name h5, .tabsBlock, .item4, .item5, .column__article h4,
   .item .products__icon img, .products__icon img {
     display: none;
   }
   .block768, .footer__mob, .tabsBlock.active {
     display: block;
   }
-  .flex768, .item6 .discount__log {
+  .flex768 {
     display: flex;
+  }
+  .item2 .discount__sales {
+    display: -webkit-box;
   }
   .col768, .articleinner__pm, .articleinner__stars02>div,
   .base__switch, #cardSlider, #cardSliderModal, #infoUserForm>div, #changeUserPass>div {
@@ -4695,7 +4667,7 @@ about_us, certificate, jobs - pages */
   .listening__section ul, .glossary__list a, .manufacturers__list a, .glossary__articles a,
   .glossaryinner__section p, #addProduct h3, #addProduct button, #mailingForm button, .catergory__box a,
   .discountcab__catalogue th, .discountcab__catalogue td, .term__catalogue p, #honestСredit ul,
-  .item6 .discount__log, #infoModal h3, #forgetPassForm label, .comparison__row, #cabinetForm>a,
+  #infoModal h3, #forgetPassForm label, .comparison__row, #cabinetForm>a,
   .paydel__section p, .delivery__article ul, .payment__article ul, .certificate__section p, .commentcab__card p,
   .warranty__section p, .warranty__article ul, .warranty__rights ul, .warranty__centers ul, .base__description p,
   .installplan__article p, .installplan__article ul, .installplan__article>a, .item8 a, .reviews__href a,
@@ -4708,22 +4680,21 @@ about_us, certificate, jobs - pages */
   .seo__section>div p, .error__section p, .error__section ul, .installcard__price>a, .commentcab__card h4,
   .discountcab__catalogue hgroup h3, .contacts__article p, .contacts__social a, .commentcab__card h3,
   #feedbackForm label, .articleinner__stars01 p, .articleinner__butt button, .reviews__description p,
-  .item2 .products__name, .item7 .products__price, .autocomplete__div, .searchnews__header a {
+  .item2 .products__name, .autocomplete__div, .searchnews__header a {
     font-size: 12px;
   }
   .px11_768,  #tabsMainPage>div:first-child a, #tabsNews .tabs__caption a, .seo__section>p, .breadcrumbs a,
   .breadcrumbs li:last-child, #infoModal h3 span, .articleinner__pm ul, .comparison__category,
   .base__composition>a, .column__offer h2, .box__offer h2, .discount__price, .promo__offerheader h5,
-  .offer__card h6, .news__card h6, .catergory__box h3 {
+  .offer__card h6, .news__card h6, .catergory__box h3, .item7 .products__price {
     font-size: 11px;
   }
-  .error__section a, .glossary__articles p, .main__addicons p,
+  .error__section a, .glossary__articles p, .main__addicons p, .item9 .discount__log,
   .baseDiscountPay span, .basefloat__block .baseDiscountPay span, .products__name,
-  .discount__log, .item6 .discount__log, .column__article a, .item2 h5, .box__offer a,
-  .searchnews__header h6 {
+  .discount__log, .column__article a, .box__offer a, .searchnews__header h6 {
     font-size: 10px;
   }
-  .discount__sales, .footer__section>p, .box__offerheader h5, .box__offer .news__viewed p {
+  .footer__section>p, .box__offerheader h5, .box__offer .news__viewed p {
     font-size: 9px;
   }
   .bestseller__product.products__card::before, .bestseller__product.discount__card::before,
@@ -4731,11 +4702,11 @@ about_us, certificate, jobs - pages */
   .newitem__product.discount__card::before, .newitem__product.column__card::before,
   .markdown__product.products__card::before, .markdown__product.discount__card::before,
   .markdown__product.column__card::before, .products__comments, .item6 .products__comments,
-  .column__article h5, .column__article p, .column__article .news__viewed a, .discount__price span {
+  .column__article h5, .column__article p, .column__article .news__viewed a {
     font-size: 8px;
   }
-  .item7 .products__price span {
-    font-size: 6px;
+  .discount__sales, .item7 .products__price span, .discount__price span   {
+    font-size: 5px;
   }
   .breadcrumbs a, .breadcrumbs li:last-child {
     line-height: 18px;
@@ -4764,6 +4735,9 @@ about_us, certificate, jobs - pages */
   }
   .item2 .products__name {
     height: 24px;
+  }
+  .item2 .discount__sales {
+    height: 18px;
   }
   .owl-theme .owl-nav [class*='owl-prev'], .owl-theme .owl-nav [class*='owl-next'] {
     top: 33%;
@@ -4801,7 +4775,7 @@ about_us, certificate, jobs - pages */
     height: 75px;
   }
   .products__comments {
-    margin:  10px 0;
+    margin:  10px auto 10px 0;
   }
  .base__features img {
     min-width: 100px;
@@ -4809,9 +4783,7 @@ about_us, certificate, jobs - pages */
     min-height: 80px;
     max-height: 80px;
   }
-  .item1 img {
-    max-height: 80px;
-  }
+ 
   .column__article img, .articleinner__butt button {
     min-width: 120px;
     max-width: 120px;
@@ -4820,8 +4792,46 @@ about_us, certificate, jobs - pages */
     min-height: 120px;
     max-height: 120px;
   }
-  .item8 a {
-    padding: 8px 12px;
+  .column__card {   /* height: 122.52 px*/
+    grid-template-areas: "item3 item3 item2 item2"
+                        "item1 item1 item6 item6"
+                        "item1 item1 item7 item8";
+    grid-template-columns: 23% 23% 24% 26%;
+    grid-template-rows: 25px 40px 25px;
+    position: relative;
+  }
+  .item1 img { /* 75.32   157.02*/
+    max-height: 75px;
+  }
+  .item6 {
+    align-self: flex-end;
+  }
+  .item7 {
+    justify-self: flex-start;
+  }
+  .item8 a { /* 22.72px / 86.05*/
+    padding: 5px;
+  }
+  .item9 {
+    position: absolute;
+    width: 48%;
+    top: 0;
+    right: 3%;
+  }
+  .item9 .discount__sales {
+    top: 36px;
+  }
+  .item9 .discount__log {
+    width: 60px;
+    top: 58px;
+    margin-left: auto;
+  }
+  .item9 .discount__log:after {
+    width: 100%;
+    background-position: -56px -171px;
+  }
+  .discount__price:before, .base__card i::before {
+    border-top-width: 1px;
   }
   .vieded__section>article, #tabsMainPage article, .offer__special article, #tabsNews article {
     height: 285px;
@@ -4898,7 +4908,7 @@ about_us, certificate, jobs - pages */
     width: 95%;
     margin-top: 2%;
   }
-  #cabinetForm, #wishForm, #reviewFormSent, #forgetPassForm,
+  .autocomplete__items, #cabinetForm, #wishForm, #reviewFormSent, #forgetPassForm,
   .footer__mob, .services__form, .listening__form, .contacts__form,
   .onebuy__header, .basket__section, .verify__section {
     width: 90%;
@@ -5066,13 +5076,6 @@ about_us, certificate, jobs - pages */
   }
   .column__article>div:last-of-type {
     flex: 1;
-  }
-  .column__card {
-    grid-template-areas: "item3 item3 item2 item2"
-                        "item1 item1 item6 item6"
-                        "item1 item1 item7 item8";
-    grid-template-columns: 15% 15% 42% 25%;
-    grid-template-rows: 50px 30px 40px;
   }
   .singlestocks__banner img {
     height: 220px;
@@ -5253,7 +5256,7 @@ about_us, certificate, jobs - pages */
     display: flex;
   }
   /*  */
-  .inputForm03, .footer__mob {
+  .inputForm03, .footer__mob, .autocomplete__items {
     margin: 0 auto;
   }
   .inputForm03 {
@@ -5263,8 +5266,11 @@ about_us, certificate, jobs - pages */
   #infoModal>article {
     height: 180px;
   }
+  .header__search {
+    position: unset;
+  }
   .autocomplete__items {
-    top: 34px;
+    top: 36px;
   }
   .autocomplete__image {
     margin: 5px;
@@ -5377,7 +5383,7 @@ about_us, certificate, jobs - pages */
   .products__div {
     min-height: 16px;
   }
-  .contacts__attention, .contacts__showroom, .base__profits h5 span, .basefloat__block, .verify__total h3 {
+  .autocomplete__items, .contacts__attention, .contacts__showroom, .base__profits h5 span, .basefloat__block, .verify__total h3 {
     border: none;
   }
   .category__section .global__searchfilter,
@@ -5393,9 +5399,6 @@ about_us, certificate, jobs - pages */
   .width580, .autocomplete__items, .services__form, .basefloat__header,
   .listening__form, .contacts__form, .oneclick__input>div {
     width: 100%;
-  }
-  .autocomplete__items {
-    left: 0;
   }
   .seo__section>div {
     max-height: 170px;
@@ -5660,15 +5663,11 @@ about_us, certificate, jobs - pages */
   .commentcard__article .base__comments>a {
     font-size: 18px;
     border-bottom: none;
-    color: var(--white);
+    color: white;
     margin: 0 auto;
     background: var(--orange);
-    width: 50%;
-    text-align: center;
+    width: 160px;
     padding: 10px;
-  }
-  .commentcard__article hgroup {
-    margin-bottom: 0;
   }
   #carouselIndex .carousel-item img, #carouselTop .carousel-inner,
   #carouselTop img, #carouselTop iframe, #carouselTop video,

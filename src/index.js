@@ -13,12 +13,6 @@ change: .products__card>img, .discount__card>img, .base__topbox img {
         .products__card>img, .discount__card>img {
     to: .products__card>a>img, .discount__card>a>img, .base__topbox img {
         .products__card>a>img, .discount__card>a>img {
-
-add class .spinner {
-  color: var(--lightblue);
-  background: white;
-}
-also add it to: modals styles, -= modal enter cabinet =- 
 */
 import './index.css';
 import 'bootstrap';
@@ -74,7 +68,7 @@ export const App = () => {
   })
   return (
     <HashRouter basename='/'>
-      <Suspense fallback={<div className="spinner block">Loading...</div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <Route exact path="/" component={Main} />
         <Route path="/Category" component={Category} />
         <Route path="/Services" component={Services} />

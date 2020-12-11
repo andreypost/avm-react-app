@@ -174,25 +174,25 @@ export const ModalsPro = () => {
 
         const toggleAllLists = (elems) => {
             const onClickListener = (e, elem) => {
-                if (elem.firstElementChild) elem.firstElementChild.classList.toggle('active')
-                // elem.nextElementSibling?.classList.toggle('block')
-                if (elem.nextElementSibling) {
+                if (e.target.closest('.see__seo')) {
+                    elem.previousElementSibling.classList.toggle('active')
+                    return
+                } else if (elem.closest('.arrow__href')) {
                     e.preventDefault()
                     elem.nextElementSibling.classList.toggle('block')
-                }
-                if (elem.closest('.services__heading') || elem.closest('.viewedcab__categories')) {
-                    e.preventDefault()
+                } else if (elem.closest('.services__heading') || elem.closest('.viewedcab__categories')) {
                     elem.classList.toggle('activeElem')
+                    elem.nextElementSibling.classList.toggle('block')
                 }
-                if (e.target.closest('.see__seo')) elem.previousElementSibling.classList.toggle('active')
+                elem.firstElementChild.classList.toggle('active') 
             }
             onClickHandler(elems, onClickListener)
         }
-        toggleAllLists(document.querySelectorAll('.arrow__href'))  /* rotate svg and colored svg icons */
+        toggleAllLists(document.querySelectorAll('.see__seo'))
+        toggleAllLists(document.querySelectorAll('.arrow__href'))  /* rotate svg and colored svg icons open lists */
         toggleAllLists(document.querySelectorAll('.global__linksfilter')) /* just set blue color to square then reload page and return back to white, page: _all_promotions and others */
         toggleAllLists(document.querySelectorAll('.services__heading'))
         toggleAllLists(document.querySelectorAll('.viewedcab__categories'))
-        toggleAllLists(document.querySelectorAll('.see__seo'))
 
         const toggleFilterLists = (elems) => {
             const onClickListener = (e, elem) => {
