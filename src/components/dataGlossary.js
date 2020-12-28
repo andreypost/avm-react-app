@@ -25,8 +25,6 @@ import photo_023 from '../img/gX.jpg';
 import photo_024 from '../img/gY.jpg';
 import photo_025 from '../img/gZ.jpg';
 
-
-
 let dataGlossary = [
     {
         'image': photo_000,

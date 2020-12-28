@@ -6,7 +6,7 @@ import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-const Career = (props) => {
+export default function Career(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -117,4 +117,3 @@ const Career = (props) => {
         </>
     )
 }
-export default Career

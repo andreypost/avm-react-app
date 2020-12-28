@@ -7,7 +7,7 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup1.png';
 
-const Bonus = (props) => {
+export default function Bonus(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -130,4 +130,3 @@ const Bonus = (props) => {
         </>
     )
 }
-export default Bonus

@@ -71,7 +71,7 @@ export const CardDiscount = (props) => {
                     <h5 className="discount__price flexcenter relative">{props.datos.basePrice}<span>&nbsp;грн</span></h5>
                     <h3 className="products__price flexcenter">{props.datos.sellingPrice}<span>&nbsp;грн</span></h3>
                 </div>
-                <div className="flexcol">
+                <div>
                     <a href=" " className="products__buy">КУПИТЬ</a>
                 </div>
             </div>

@@ -12,7 +12,7 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
 
-const Category = (props) => {
+export default function Category(props) {
   useEffect(() => {
     window.scrollTo(0, 0)
     const createSelect = (elems) => {
@@ -144,4 +144,3 @@ const Category = (props) => {
     </>
   )
 }
-export default Category

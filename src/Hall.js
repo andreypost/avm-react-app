@@ -9,7 +9,7 @@ import { ModalsPro } from "./components/ModalsPro";
 import photo_001 from './img/MaskGroup6.png';
 import photo_002 from './img/MaskGroup7.png';
 
-const Hall = (props) => {
+export default function Hall(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -124,4 +124,3 @@ const Hall = (props) => {
         </>
     )
 }
-export default Hall

@@ -6,7 +6,7 @@ import { Catalogue } from './components/Catalogue';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-const Manufacturers = (props) => {
+export default function Manufacturers(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -1883,4 +1883,3 @@ const Manufacturers = (props) => {
         </>
     )
 }
-export default Manufacturers

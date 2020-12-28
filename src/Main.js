@@ -44,7 +44,7 @@ import photo_010 from './img/Logo_25.png';
 // myStore.dispatch({ type: 'INCREMENT' })
 // myStore.dispatch({ type: 'DECREMENT' })
 
-const Main = (props) => {
+export default function Main(props) {
   // const handleDecriment = () => {
   //   myStore.dispatch({ type: 'DECREMENT' })
   // }
@@ -53,6 +53,8 @@ const Main = (props) => {
   // }
   useEffect(() => {
     window.scrollTo(0, 0)
+    // document.title = props.title
+    // document.querySelector('meta[name="description"]').setAttribute("content", props.description)
   }, [])
   return (
     <>
@@ -520,4 +522,3 @@ const Main = (props) => {
     </>
   )
 }
-export default Main

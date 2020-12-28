@@ -5,7 +5,7 @@ import { Catalogue } from './components/Catalogue';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-const Terms = (props) => {
+export default function Terms(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -79,4 +79,3 @@ const Terms = (props) => {
         </>
     )
 }
-export default Terms

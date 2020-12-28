@@ -6,7 +6,7 @@ import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-const Cooperation = (props) => {
+export default function Cooperation(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -72,4 +72,3 @@ const Cooperation = (props) => {
         </>
     )
 }
-export default Cooperation

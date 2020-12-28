@@ -8,7 +8,7 @@ import dataGlossary from './components/dataGlossary';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-const Glossary = (props) => {
+export default function Glossary(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     })
@@ -47,4 +47,3 @@ const Glossary = (props) => {
         </>
     )
 }
-export default Glossary

@@ -18,7 +18,7 @@ import photo_010 from './img/installbank_05.png';
 import photo_011 from './img/installbank_06.png';
 import photo_012 from './img/installbank_07.png';
 
-const Credit = (props) => {
+export default function Credit(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -376,4 +376,3 @@ const Credit = (props) => {
         </>
     )
 }
-export default Credit

@@ -119,6 +119,7 @@ import photo_023_0 from '../img/hits_023_0.jpg';
 import photo_023_1 from '../img/hits_023_1.jpg';
 import photo_023_2 from '../img/hits_023_2.jpg';
 import photo_023_3 from '../img/hits_023_3.jpg';
+
 let dataHits = [
     {
         'image': [photo_000_0, photo_000_1, photo_000_2, photo_000_3, photo_000_4, photo_000_5, photo_000_6, photo_000_7],
