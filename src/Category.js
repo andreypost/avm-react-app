@@ -11,7 +11,6 @@ import { SeoMailing } from './components/SeoMailing';
 import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
-
 export default function Category(props) {
   useEffect(() => {
     window.scrollTo(0, 0)
