@@ -7,7 +7,7 @@ import { Footer } from './components/Footer';
 import { ModalsPro } from "./components/ModalsPro";
 
 export default function GlossaryInner(props) {
-    let index = localStorage.getItem('glossaryIndex') || 0
+    let index = window.localStorage.getItem('glossaryIndex') || 0
     useEffect(() => {
         window.scrollTo(0, 0)
     })

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const BoxGlossary = (props) => {
     const handleSetGlossaryIndex = (e) => {
-        localStorage.setItem('glossaryIndex', e.target.closest('.tabsBlock').dataset.index)
+        window.localStorage.setItem('glossaryIndex', e.target.closest('.tabsBlock').dataset.index)
     }
     return (
         <div className={"tabsBlock flexcenter " + props.datos.class} id={props.datos.id} data-tab={props.datos.id} data-index={props.datos.index}>

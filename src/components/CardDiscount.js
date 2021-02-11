@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const CardDiscount = (props) => {
     const handleSetCardIndex = (e) => {
-        localStorage.setItem('cardIndex', e.target.closest('.item').dataset.index)
+        window.localStorage.setItem('cardIndex', e.target.closest('.item').dataset.index)
     }
     return (
         <div className={"item discount__card " + props.datos.clase} data-index={props.datos.index}>

@@ -14,13 +14,13 @@ import { ModalsPro } from "./components/ModalsPro";
 // import photo_004 from './img/Image1.png';
 
 export default function ProcardBase(props) {
-  let index = localStorage.getItem('cardIndex') || 0
+  let index = window.localStorage.getItem('cardIndex') || 0
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
   // const handle = () => {
-  //   console.log(localStorage.getItem('cardIndex'))
-  //   localStorage.removeItem('cardIndex')
+  //   console.log(window.localStorage.getItem('cardIndex'))
+  //   window.localStorage.removeItem('cardIndex')
   // }
   return (
     <>

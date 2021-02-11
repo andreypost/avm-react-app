@@ -7,7 +7,7 @@ import photo_004 from '../img/Groupe467.png';
 
 export const CardProduct = (props) => {
     const handleSetCardIndex = (e) => {
-        localStorage.setItem('cardIndex', e.target.closest('.item').dataset.index)
+        window.localStorage.setItem('cardIndex', e.target.closest('.item').dataset.index)
     }
     return (
         <div className={"item products__card " + props.datos.clase} data-index={props.datos.index}>
